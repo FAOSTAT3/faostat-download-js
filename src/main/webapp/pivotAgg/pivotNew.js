@@ -5,7 +5,8 @@ FAOSTATNEWOLAP = {};
 FAOSTATNEWOLAP.pivotlimit = 10000;
 FAOSTATNEWOLAP.pivotlimitExcel = 200000;
 FAOSTATNEWOLAP.limitPivotPreview = 5000;//lignes
-FAOSTATNEWOLAP.PP = {PP1: [], PP2: [], PP3: []};//para&meters for the exclstoredprocedure : to be change to avoir SQL injection
+FAOSTATNEWOLAP.PP = {PP1: [], PP2: [], PP3: []};
+//para&meters for the exclstoredprocedure : to be change to avoir SQL injection
 FAOSTATNEWOLAP.excelpayload = {};
 FAOSTATNEWOLAP.schema = {};
 FAOSTATNEWOLAP.rendererV = 0;
@@ -37,13 +38,10 @@ function utf8_encode(argString) {
   //   example 1: utf8_encode('Kevin van Zonneveld');
   //   returns 1: 'Kevin van Zonneveld'
 
-  if (argString === null || typeof argString === 'undefined') {
-    return '';
-  }
+  if (argString === null || typeof argString === 'undefined') { return ''; }
 
   var string = (argString + ''); // .replace(/\r\n/g, "\n").replace(/\r/g, "\n");
-  var utftext = '',
-    start, end, stringl = 0;
+  var utftext = '', start, end, stringl = 0;
 
   start = end = 0;
   stringl = string.length;
@@ -51,41 +49,25 @@ function utf8_encode(argString) {
     var c1 = string.charCodeAt(n);
     var enc = null;
 
-    if (c1 < 128) {
-      end++;
-    } else if (c1 > 127 && c1 < 2048) {
-      enc = String.fromCharCode(
-        (c1 >> 6) | 192, (c1 & 63) | 128
-      );
+    if (c1 < 128) {      end++;    } else if (c1 > 127 && c1 < 2048) {
+      enc = String.fromCharCode(     (c1 >> 6) | 192, (c1 & 63) | 128   );
     } else if ((c1 & 0xF800) != 0xD800) {
-      enc = String.fromCharCode(
-        (c1 >> 12) | 224, ((c1 >> 6) & 63) | 128, (c1 & 63) | 128
-      );
+      enc = String.fromCharCode(        (c1 >> 12) | 224, ((c1 >> 6) & 63) | 128, (c1 & 63) | 128      );
     } else { // surrogate pairs
-      if ((c1 & 0xFC00) != 0xD800) {
-        throw new RangeError('Unmatched trail surrogate at ' + n);
-      }
+      if ((c1 & 0xFC00) != 0xD800) { throw new RangeError('Unmatched trail surrogate at ' + n);      }
       var c2 = string.charCodeAt(++n);
-      if ((c2 & 0xFC00) != 0xDC00) {
-        throw new RangeError('Unmatched lead surrogate at ' + (n - 1));
-      }
+      if ((c2 & 0xFC00) != 0xDC00) {  throw new RangeError('Unmatched lead surrogate at ' + (n - 1));   }
       c1 = ((c1 & 0x3FF) << 10) + (c2 & 0x3FF) + 0x10000;
-      enc = String.fromCharCode(
-        (c1 >> 18) | 240, ((c1 >> 12) & 63) | 128, ((c1 >> 6) & 63) | 128, (c1 & 63) | 128
-      );
+      enc = String.fromCharCode( (c1 >> 18) | 240, ((c1 >> 12) & 63) | 128, ((c1 >> 6) & 63) | 128, (c1 & 63) | 128 );
     }
     if (enc !== null) {
-      if (end > start) {
-        utftext += string.slice(start, end);
-      }
+      if (end > start) {        utftext += string.slice(start, end);      }
       utftext += enc;
       start = end = n + 1;
     }
   }
 
-  if (end > start) {
-    utftext += string.slice(start, stringl);
-  }
+  if (end > start) {    utftext += string.slice(start, stringl);  }
 
   return utftext;
 }
@@ -97,14 +79,9 @@ function addCommas(nStr) {
         x2 = x.length > 1 ? FAOSTATNEWOLAP.decimalSeparator + x[1] : '';
         rgx = /(\d+)(\d{3})/;
 
-        while (rgx.test(x1)) {
-            x1 = x1.replace(rgx, '$1' + FAOSTATNEWOLAP.thousandSeparator + '$2');
-        }
+        while (rgx.test(x1)) {  x1 = x1.replace(rgx, '$1' + FAOSTATNEWOLAP.thousandSeparator + '$2');  }
         //console.log("ij"+FAOSTATNEWOLAP.thousandSeparator+"r");
-        if (FAOSTATNEWOLAP.thousandSeparator === " ") {
-
-            x1 = x1.replace(/\s/g, "");
-        }
+        if (FAOSTATNEWOLAP.thousandSeparator === " ") { x1 = x1.replace(/\s/g, ""); }
         return x1 + x2;
     };
 function ExtractCode(arr, separateur)
@@ -112,33 +89,23 @@ function ExtractCode(arr, separateur)
     ret = [];
     for (i = 0; i < arr.length; i++)
     {
-        if (arr[i].type === ">") {
-            ret.push(separateur + arr[i].code + ">" + separateur);
-        }
-        else {
-            ret.push(separateur + arr[i].code + separateur);
-        }
+        if (arr[i].type === ">") {   ret.push(separateur + arr[i].code + ">" + separateur);     }
+        else {  ret.push(separateur + arr[i].code + separateur);   }
     }
     return ret;
 }
 function ExtractCodel(arr)//for aggregate
 {
     ret = [];
-    for (i = 0; i < arr.length; i++)
-    {
-        if (arr[i].type === ">") {
-            ret.push({'code':arr[i].code,'type':'list'} );
-        }
-        
+    for (i = 0; i < arr.length; i++){
+        if (arr[i].type === ">") {ret.push({'code':arr[i].code,'type':'list'} );  }
     }
     return ret;
 }
 
 function checkMemory()
-{
-    for (var b in window) {
-        if (window.hasOwnProperty(b))
-            console.log(b + ' ' + memorySizeOf(eval(b)));
+{for (var b in window) {
+        if (window.hasOwnProperty(b)){ console.log(b + ' ' + memorySizeOf(eval(b)));}
     }
 }
 
@@ -210,8 +177,8 @@ function oldSchoolCSV(format)
             "  @Limit ="+FAOSTATNEWOLAP.pivotlimitExcel ;
 
 var mesOptionsPivot = {};
-for(j in FAOSTATOLAP2.options)
-    {mesOptionsPivot[j]=FAOSTATOLAP2.options[j]};
+for(var j in FAOSTATOLAP2.options)
+{mesOptionsPivot[j]=FAOSTATOLAP2.options[j];}
 mesOptionsPivot.lang=F3DWLD.CONFIG.lang;
     if (F3DWLD.CONFIG.domainCode == "HS" ||F3DWLD.CONFIG.domainCode == "TM" || F3DWLD.CONFIG.domainCode == "FT") {
         mesOptionsPivot.rows=["Reporter Countries","Partner Countries","Item","Element"];
@@ -232,24 +199,14 @@ mesOptionsPivot.lang=F3DWLD.CONFIG.lang;
             "   @DecPlaces = 2 , " +
             "  @Limit ="+FAOSTATNEWOLAP.pivotlimitExcel ;
 }
-
-  
-
-    
-    if(FAOSTATNEWOLAP.firstCall==0){
+if(FAOSTATNEWOLAP.firstCall==0){
     mesOptionsPivot.rows = FAOSTATNEWOLAP.internalData.rowAttrs;
     mesOptionsPivot.cols = FAOSTATNEWOLAP.internalData.colAttrs;}
 else{mesOptionsPivot.rows =null;mesOptionsPivot.cols=null}
     mesOptionsPivot.vals = ["Value"];
     mesOptionsPivot.domain = F3DWLD.CONFIG.domainCode;
-    if (F3DWLD.CONFIG.wdsPayload.showUnits)
-    {
-        mesOptionsPivot.vals.push("Unit")
-    }
-    if (F3DWLD.CONFIG.wdsPayload.showFlags)
-    {
-        mesOptionsPivot.vals.push("Flag")
-    }
+    if (F3DWLD.CONFIG.wdsPayload.showUnits){ mesOptionsPivot.vals.push("Unit");}
+    if (F3DWLD.CONFIG.wdsPayload.showFlags){  mesOptionsPivot.vals.push("Flag");}
 
 
 document.getElementById('CSVOLAPsql').value= selectFinal;  
@@ -319,8 +276,6 @@ function stopWorker() {     w.terminate();}
     */
 }
 function oldSchool(maLimit, excel){
-     
-     
     var selectFinal = "EXECUTE Warehouse.dbo.usp_GetDataTESTP " +
             " @DomainCode = '" + F3DWLD.CONFIG.domainCode + "',  " +
             " @lang = '" + F3DWLD.CONFIG.lang + "',  " +

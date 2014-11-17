@@ -167,10 +167,10 @@ FAOSTATOLAP2.options = {
                         }
                     }
                 },
-                rows: ["Area", "Element", "Item"],
+                rows: ["Area", "Element","Unit", "Item"],
                 cols: ["Year"],
-                vals: ["Value", "Unit", "Flag"],
-                linkedAttributes: []
+                vals: ["Value",  "Flag"],
+                linkedAttributes: [[ "Element","Unit"]]
             },
     F:{
                 derivedAttributes: {
@@ -269,7 +269,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
                 }
                 else {
                     return mp["ReporterName"];
@@ -279,7 +279,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
                 }
                 else {
                     return mp["PartnerName"];
@@ -289,7 +289,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ElementName"] + "</th><th>" + mp["ElementCode"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ElementName"] + "</th><th>" + mp["ElementCode"] + "</th></table>";
                 }
                 else {
                     return mp["ElementName"];
@@ -299,7 +299,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
                 }
                 else {
                     return mp["ItemName"];
@@ -588,7 +588,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
                 }
                 else {
                     return mp["ReporterName"];
@@ -598,7 +598,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
                 }
                 else {
                     return mp["PartnerName"];
@@ -608,7 +608,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ElementCode"] + "</th><th>" + mp["ElementName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ElementCode"] + "</th><th>" + mp["ElementName"] + "</th></table>";
                 }
                 else {
                     return mp["ElementName"];
@@ -618,7 +618,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
                 }
                 else {
                     return mp["ItemName"];
@@ -638,7 +638,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
                 }
                 else {
                     return mp["ReporterName"];
@@ -648,7 +648,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
                 }
                 else {
                     return mp["PartnerName"];
@@ -658,7 +658,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ElementCode"] + "</th><th>" + mp["ElementName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ElementCode"] + "</th><th>" + mp["ElementName"] + "</th></table>";
                 }
                 else {
                     return mp["ElementName"];
@@ -668,7 +668,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
                 }
                 else {
                     return mp["ItemName"];
@@ -688,7 +688,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
                 }
                 else {
                     return mp["ReporterName"];
@@ -698,7 +698,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
                 }
                 else {
                     return mp["PartnerName"];
@@ -708,7 +708,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ElementCode"] + "</th><th>" + mp["ElementName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ElementCode"] + "</th><th>" + mp["ElementName"] + "</th></table>";
                 }
                 else {
                     return mp["ElementName"];
@@ -718,7 +718,7 @@ FAOSTATOLAP2.optionsHS = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
                 }
                 else {
                     return mp["ItemName"];
