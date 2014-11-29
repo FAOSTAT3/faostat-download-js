@@ -197,6 +197,7 @@ td {	font-size:12px;	}
 
 .gt-inner-left {
 	/* text-align : left ; */
+        box-sizing: content-box !important;
 }
 .gt-inner-center {
 	text-align : center ;

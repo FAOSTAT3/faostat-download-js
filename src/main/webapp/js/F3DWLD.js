@@ -163,7 +163,8 @@ var F3DWLD = (function() {
                 $.get("http://faostat3.fao.org/faostat.olap.ws/rest/GetFlags/" + F3DWLD.CONFIG.lang + "/" + newFlag, function(data) {
                     data = data.replace("localhost:8080/", "faostat3.fao.org/");
                     data = data.replace("168.202.28.210/", "faostat3.fao.org/");
-                    $("#testinline").append(data);
+                    alert('ok1')
+                    $("#myGrid1_div").append(data);
                     $('#preview_hr').css('display', 'block');
                 });
             }
@@ -368,7 +369,8 @@ var F3DWLD = (function() {
                     $.get("http://faostat3.fao.org/faostat.olap.ws/rest/GetFlags/" + F3DWLD.CONFIG.lang + "/" + newFlag, function(data) {
                         data = data.replace("localhost:8080/", "faostat3.fao.org/");
                         data = data.replace("168.202.28.210/", "faostat3.fao.org/");
-                        $("#testinline").append(data);
+                              alert('ok2')
+                        $("#myGrid1_div").append(data);
                         $('#preview_hr').css('display', 'block');
                     });
 
@@ -538,8 +540,8 @@ var F3DWLD = (function() {
                             $.get("http://faostat3.fao.org/faostat.olap.ws/rest/GetFlags/" + F3DWLD.CONFIG.lang + "/" + newFlag, function(data) {
                                 data = data.replace("localhost:8080/", "faostat3.fao.org/");
                                 data = data.replace("168.202.28.210/", "faostat3.fao.org/");
-                                $("#testinline").append(data);
-
+                                $("#myGrid1_div").append(data);
+      alert('ok3')
                                 if (isEx) {
                                     $('#testinline').css("display", "none");
                                     if (outputFormat == "csv") {
@@ -1742,7 +1744,7 @@ if(outputFormat==="csv") {
         });
        
         $('#codes_menu').jqxCheckBox({width: 120, height: 25});
-        $('#units_menu').jqxCheckBox({width: 120, height: 25, checked: true});
+        $('#units_menu').jqxCheckBox({width: 120, height: 25, checked: false});
         $('#nested_by').jqxCheckBox({width: 120, height: 25, checked: false});
         $('#export_csv').jqxRadioButton({width: 120, height: 25, checked: true, groupName: 'type_export'});
         $('#export_xls').jqxRadioButton({width: 120, height: 25, groupName: 'type_export'});
@@ -1815,7 +1817,7 @@ if(outputFormat==="csv") {
         });
         F3DWLD.CONFIG.wdsPayload.showFlags = true;
         F3DWLD.CONFIG.wdsPayload.showCodes = false;
-        F3DWLD.CONFIG.wdsPayload.showUnits = true;
+        F3DWLD.CONFIG.wdsPayload.showUnits = false;//changeUnit
         F3DWLD.CONFIG.wdsPayload.showNullValues = false;
         $("#flags_menu").bind('change', function(event) {
             var checked = event.args.checked;

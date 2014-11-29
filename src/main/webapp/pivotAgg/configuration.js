@@ -4,12 +4,12 @@ function changechkTreeview()
 {
    FAOSTATOLAPV3.grouped=document.getElementById('chkTreeview').checked;
    FAOSTATOLAPV3.mygrid="";
-$("#testinline").pivotUI(finalData,{"rows":["Area","Item","Year"],"cols":["Element"],"vals":["Value"]},false);}
+$("#testinline").pivotUI(FAOSTATNEWOLAP.originalData,{"rows":["Area","Item","Year"],"cols":["Element"],"vals":["Value"]},false);}
 
 function newGrid(r){
    var r2d2=[];
-    console.log(r);
-  $("#myGrid1_div").remove();
+    
+    $("#mesFlags").empty();
 for(ligne in r.tree)
     {
         //console.log(ligne);
@@ -63,17 +63,22 @@ var colsOption = [];
 
 
 for(var i in r.rowAttrs){
-   r.rowAttrs[i];
+
    dsOption.fields.push({name : r.rowAttrs[i]  });
-   colsOption.push({id:  r.rowAttrs[i] , header:  r.rowAttrs[i] , width :150,frozen : true ,grouped : FAOSTATOLAPV3.grouped  });
+   colsOption.push({id:  r.rowAttrs[i] , header:  r.rowAttrs[i] , frozen : true ,grouped : FAOSTATOLAPV3.grouped});
    
 }
 
 for(var i in r.colKeys){
  // console.log(r.colKeys[i].toString());
-   dsOption.fields.push({name : r.colKeys[i].toString().replace(/[^a-zA-Z0-9]/g,"_")  });
+   dsOption.fields.push(
+           {name : r.colKeys[i].toString().replace(/[^a-zA-Z0-9]/g,"_"),type:'float'  }
+           );
    colsOption.push({id:  r.colKeys[i].toString().replace(/[^a-zA-Z0-9]/g,"_") ,
-       width :150,header:  r.colKeys[i].toString()  });
+       header:  r.colKeys[i].toString().replace(/"/g,"'") , toolTip : true ,toolTipWidth : 150,editor:{
+        type:"textarea",width:"300px",height:"200px"
+    }  });
+
    
 }
 
@@ -83,6 +88,7 @@ Sigma.ToolFactroy.register(
 	{
 		cls : 'mybutton-cls',  
 		toolTip : 'I am a new button',
+              
 		action : function(event,grid) {  alert( 'The id of this grid is  '+grid.id)  }
 	}
 );
@@ -93,20 +99,34 @@ var gridOption={
 	id : grid_demo_id,
 	width: "800",  //"100%", // 700,
 	height: "330",  //"100%", // 330,
-	container :'pvtRendererArea',// 'gridbox',// $(".pvtRendererArea")[0],//
+	container :"myGrid1_div",//pvtRendererArea",//testinline2",//'',//myGrid1_div',//pivot_table',// 'gridbox',// $(".pvtRendererArea")[0],//
 	replaceContainer : true, 
 	dataset : dsOption ,
+         resizable : true,
 	columns : colsOption,
 	pageSize : 15 ,
         pageSizeList : [15,25,50,150],
         SigmaGridPath : 'grid/',
-	toolbarContent : 'nav | goto | mybutton | pagesize '
+	toolbarContent : 'nav | goto | pagesize ',/*| mybutton |*/
+onMouseOver : function(value,  record,  cell,  row,  colNo, rowNo,  columnObj,  grid){
+		
+		
+		if (columnObj && columnObj.toolTip) {
+			grid.showCellToolTip(cell,columnObj.toolTipWidth);
+		}else{
+			grid.hideCellToolTip();
+		}
+	},
+	onMouseOut : function(value,  record,  cell,  row,  colNo, rowNo,  columnObj,  grid){
+		grid.hideCellToolTip();
+	}
+
 };
 
 
-console.log(r2d2);
-console.log(colsOption );
-console.log(dsOption.fields);
+//console.log(r2d2);
+//console.log(colsOption );
+//console.log(dsOption.fields);
 //Sigma.Msg.Grid.en.PAGE_AFTER='okokk'+gridOption.pageSize;
   FAOSTATOLAPV3.mygrid=new Sigma.Grid( gridOption );
   
@@ -116,8 +136,9 @@ console.log( FAOSTATOLAPV3.mygrid);
   FAOSTATOLAPV3.mygrid.pageSizeSelect.onchange=function()
   {document.getElementById('page_after').innerHTML="/"+FAOSTATOLAPV3.mygrid.getPageInfo().totalPageNum;};
  
- if(FAOSTATOLAPV3.grouped){$("#myGrid1_div").append($("<label for=\"chkTreeview\">Treeview/sorting columns</label><input checked onchange=\"changechkTreeview()\" type=\"checkbox\" id=\"chkTreeview\">"));}
-else{$("#myGrid1_div").append($("<label for=\"chkTreeview\">Treeview/Sorting columns</label><input  onchange=\"changechkTreeview()\" type=\"checkbox\" id=\"chkTreeview\">"));}
+ if(FAOSTATOLAPV3.grouped){$("#mesFlags").append($("<label for=\"chkTreeview\">Treeview/sorting columns</label><input checked onchange=\"changechkTreeview()\" type=\"checkbox\" id=\"chkTreeview\">"));}
+else{$("#mesFlags").append($("<label for=\"chkTreeview\">Treeview/Sorting columns</label><input  onchange=\"changechkTreeview()\" type=\"checkbox\" id=\"chkTreeview\">"));}
+$("#nested_by").hide();
 }
 
 
@@ -167,10 +188,10 @@ FAOSTATOLAP2.options = {
                         }
                     }
                 },
-                rows: ["Area", "Element","Unit", "Item"],
+                rows: ["Area", "Item", "Element"],
                 cols: ["Year"],
                 vals: ["Value",  "Flag"],
-                linkedAttributes: [[ "Element","Unit"]]
+                linkedAttributes: []
             },
     F:{
                 derivedAttributes: {
@@ -205,7 +226,7 @@ FAOSTATOLAP2.options = {
                         }
                     }
                 },
-                rows: ["Pays", "Elements", "Articles"],
+                rows: ["Pays", "Articles", "Elements"],
                 cols: ["Annees"],
                 vals: ["Value", "Unit", "Flag"],
                 linkedAttributes: []
@@ -243,7 +264,7 @@ FAOSTATOLAP2.options = {
                  }
              }
          },
-                 rows: ["Area", "Element", "Item"],
+                 rows: ["Area", "Item", "Element"],
                  cols: ["Year"],
                  vals: ["Value", "Unit", "Flag"],
                  linkedAttributes: []
@@ -317,7 +338,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
                 }
                 else {
                     return mp["ReporterName"];
@@ -327,7 +348,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
                 }
                 else {
                     return mp["PartnerName"];
@@ -337,7 +358,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ElementCode"] + "</th><th>" + mp["ElementName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ElementCode"] + "</th><th>" + mp["ElementName"] + "</th></table>";
                 }
                 else {
                     return mp["ElementName"];
@@ -347,7 +368,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
                 }
                 else {
                     return mp["ItemName"];
@@ -367,7 +388,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ReporterCode"] + "</th><th>" + mp["ReporterName"] + "</th></table>";
                 }
                 else {
                     return mp["ReporterName"];
@@ -377,7 +398,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["PartnerCode"] + "</th><th>" + mp["PartnerName"] + "</th></table>";
                 }
                 else {
                     return mp["PartnerName"];
@@ -387,7 +408,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ElementCode"] + "</th><th>" + mp["ElementName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ElementCode"] + "</th><th>" + mp["ElementName"] + "</th></table>";
                 }
                 else {
                     return mp["ElementName"];
@@ -397,7 +418,7 @@ FAOSTATOLAP2.optionsTM = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["ItemCode"] + "</th><th>" + mp["ItemName"] + "</th></table>";
                 }
                 else {
                     return mp["ItemName"];
@@ -460,7 +481,7 @@ FAOSTATOLAP2.optionsFA = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["Country Code"] + "</th><th>" + mp["Country_"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["Country Code"] + "</th><th>" + mp["Country_"] + "</th></table>";
                 }
                 else {
                     return mp["Country_"];
@@ -470,7 +491,7 @@ FAOSTATOLAP2.optionsFA = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"] + "</th></table>";
                 }
                 else {
                     return mp["Element_"];
@@ -480,7 +501,7 @@ FAOSTATOLAP2.optionsFA = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["Item Code"] + "</th><th>" + mp["Item_"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["Item Code"] + "</th><th>" + mp["Item_"] + "</th></table>";
                 }
                 else {
                     return mp["Item_"];
@@ -499,7 +520,7 @@ FAOSTATOLAP2.optionsFA = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["Country Code"] + "</th><th>" + mp["Country_"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["Country Code"] + "</th><th>" + mp["Country_"] + "</th></table>";
                 }
                 else {
                     return mp["Country_"];
@@ -509,7 +530,7 @@ FAOSTATOLAP2.optionsFA = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"] + "</th></table>";
                 }
                 else {
                     return mp["Element_"];
@@ -519,7 +540,7 @@ FAOSTATOLAP2.optionsFA = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["Item Code"] + "</th><th>" + mp["Item_"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["Item Code"] + "</th><th>" + mp["Item_"] + "</th></table>";
                 }
                 else {
                     return mp["Item_"];
@@ -539,7 +560,7 @@ FAOSTATOLAP2.optionsFA = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["Country Code"] + "</th><th>" + mp["Country_"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["Country Code"] + "</th><th>" + mp["Country_"] + "</th></table>";
                 }
                 else {
                     return mp["Country_"];
@@ -549,17 +570,15 @@ FAOSTATOLAP2.optionsFA = {
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"] + "</th></table>";
                 }
-                else {
-                    return mp["Element_"];
-                }
+                else { return mp["Element_"]; }
             },
             "Item": function(mp)
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
                 {
-                    return "<table class=\"innerCol\"><th>" + mp["Item Code"] + "</th><th>" + mp["Item_"] + "</th></table>";
+                    return "<span class=\"ordre\">1</span><table class=\"innerCol\"><th>" + mp["Item Code"] + "</th><th>" + mp["Item_"] + "</th></table>";
                 }
                 else {
                     return mp["Item_"];

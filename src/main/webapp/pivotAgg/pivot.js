@@ -723,7 +723,7 @@ function decolrowspanNEW(){//csv
     for (var j = 0; j < FAOSTATNEWOLAP.internalData.rowKeys[0].length; j++) {
         if (F3DWLD.CONFIG.wdsPayload.showCodes && FAOSTATNEWOLAP.internalData.rowAttrs[j].replace("_", "")!="Year" 
                 && FAOSTATNEWOLAP.internalData.rowAttrs[j].replace("_", "")!= "Annees" ) 
-        { ret += FAOSTATNEWOLAP.internalData.rowAttrs[j]+" Code,";  }
+        { ret += "\""+FAOSTATNEWOLAP.internalData.rowAttrs[j]+"_Code\",";  }
         ret += '"'+FAOSTATNEWOLAP.internalData.rowAttrs[j].replace("_", "") + "\",";
         
     }

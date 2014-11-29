@@ -114,7 +114,7 @@ if (!window.FAOSTATDownloadSelectorsClassic) {
                     $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribute("colspan", 2);
                     $.get("/faostat.olap.ws/rest/GetFlags/" + F3DWLD.CONFIG.lang + "/" + newFlag, function(data) {
                         data = data.replace("localhost:8080/", "faostat3.fao.org/");
-                        $("#testinline").append(data);
+                        $("#myGrid1_div").append(data);
                         // my_exportNew();
                     });
         }

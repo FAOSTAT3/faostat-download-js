@@ -338,7 +338,7 @@ selectFinal = "EXECUTE Warehouse.dbo.usp_GetData " +
             var newFlag = "";
             for (var i in FAOSTATNEWOLAP.flags) {if (newFlag != "") {  newFlag += ":";} newFlag += "'" + i + "'"; }
             if (newFlag == "") {newFlag = "''";}
-           try{ $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribute("colspan", 2);} catch(e){console.log("erreur"+e)}
+//           try{ $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribute("colspan", 2);} catch(e){console.log("erreur"+e)}
          /*   var header=$(".pvtAxisLabel");
              for(var i=0;i<header.length;i++){header[i].innerHTML=header[i].innerHTML.replace("_","");}
               var header=$("#rows li nobr");
@@ -348,7 +348,9 @@ selectFinal = "EXECUTE Warehouse.dbo.usp_GetData " +
            */
             $.get("http://faostat3.fao.org/faostat.olap.ws/rest/GetFlags/" + F3DWLD.CONFIG.lang + "/" + newFlag, function(data) {
                 data = data.replace("localhost:8080/", "faostat3.fao.org/");
-                $("#testinline").append(data);
+               // alert("ok5")
+                $("#mesFlags").append(data);
+            //    $("#myGrid1_div").height(500);
                  if(excel){decolrowspanNEW();}
             });
         }
@@ -1260,7 +1262,9 @@ var internalTest;
    renderers2 = {
        "NewOLAP":function(pvtData, opts){
            
-           newGrid(pvtData);
+          newGrid(pvtData);
+       //   return pivotTableRenderer(pvtData, opts)
+           // return pivotTableRenderer(pvtData, opts);
        },
     "Table": function(pvtData, opts) {
       return pivotTableRenderer(pvtData, opts);
@@ -1815,12 +1819,15 @@ var internalTest;
     result = null;
     //try 
     {
-      pivotData = new PivotData(input, opts);
+        FAOSTATNEWOLAP.internalData = new PivotData(input, opts);
+    //  pivotData = new PivotData(input, opts);
   
   //    try
       {
          
-        result = opts.renderer(pivotData, opts.rendererOptions);
+       // result = opts.renderer(pivotData, opts.rendererOptions);
+       result = opts.renderer(FAOSTATNEWOLAP.internalData, opts.rendererOptions);
+    
       } 
       /*catch (_error) {
         e = _error;
@@ -2032,19 +2039,23 @@ var internalTest;
         };
         $("<p>").appendTo(valueList).append($("<button>").text("OK").bind("click", updateFilter));
         showFilterList = function(e) {
+          console.log(valueList);
           valueList.css({
-            left: e.pageX,
+            left: 50,//e.pageX,
             top: e.pageY
           }).toggle();
           $('.pvtSearch').val('');
           return $('label').show();
         };
+      
         triangleLink = $("<span class='pvtTriangle'>").html(" &#x25BE;").bind("click", showFilterList);
         attrElem = $("<li class='axis_" + i + "'>").append($("<span class='pvtAttr'>").html(c).data("attrName", c).append(triangleLink));
         if (hasExcludedItem) {
           attrElem.addClass('pvtFilteredAttribute');
         }
         colList.append(attrElem).append(valueList);
+       // $("body").append(attrElem).append(valueList);
+        
         return attrElem.bind("dblclick", showFilterList);
       };
       for (i in shownAttributes) {
@@ -2066,7 +2077,7 @@ var internalTest;
       
      // tr2.append($("<td id='rows' valign='top' class='pvtAxisContainer pvtRows pvtHorizList'>"));
      
- //tr2.append($("<td>"));
+  tr2.append($("<td id=pretd1>"));
       
       
       
@@ -2076,11 +2087,9 @@ var internalTest;
         uiTable.find('tr:nth-child(2)').prepend(colList);
         
       } else {
-            uiTable.prepend($("<tr>").append($("<td id='rows' valign='top' class='pvtAxisContainer pvtRows pvtHorizList'>")).prepend($("<td>&nbsp;</td>")));
-        uiTable.prepend($("<tr>").append(rendererControl).append(colList));
-      
-      
-      }
+          uiTable.prepend($("<tr>").append($("<td id='rows' valign='top' class='pvtAxisContainer pvtRows pvtHorizList'>")).prepend($("<td id='pretd'>&nbsp;</td>")));
+          uiTable.prepend($("<tr>").append(rendererControl).append(colList));
+    }
       this.html(uiTable);
       _ref3 = opts.cols;
       for (_k = 0, _len2 = _ref3.length; _k < _len2; _k++) {
