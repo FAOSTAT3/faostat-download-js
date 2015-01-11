@@ -143,7 +143,7 @@ var t=retConfig(mesOptionsPivotSend.domain,mesOptionsPivotSend.lang);
                             if (opt.fileFormat == "csv"){decolrowspanNEW(); }
                             else {  my_exportNew()}
                             
-                     setTimeout(function(){window.close()}, 15000);
+                    // setTimeout(function(){window.close()}, 15000);
                         });
 
 

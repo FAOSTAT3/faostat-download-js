@@ -1,5 +1,6 @@
 var test;
-console.log('test 1.3')
+
+
 FAOSTATNEWOLAP = {};
 FAOSTATNEWOLAP.pivotlimit = 10000;
 FAOSTATNEWOLAP.pivotlimitExcel = 200000;
@@ -314,9 +315,7 @@ selectFinal = "EXECUTE Warehouse.dbo.usp_GetData " +
     var test2 = {
         datasource: F3DWLD.CONFIG.datasource,thousandSeparator: ',',decimalSeparator: '.',decimalNumbers: '2',
         json: JSON.stringify({"limit": null,   "query": selectFinal, "frequency": "NONE"}),cssFilename: '',valueIndex: 5};
-    //$("#fx-olap-ui").html("<center><img src=\"/faostat-download-js/pivotAgg/Preload.gif\" /></center>");
     $("#testinline").html("<center><img src=\"/faostat-download-js/pivotAgg/Preload.gif\" /></center>");
-    
     FAOSTATNEWOLAP.flags = {};
     $.ajax({
         type: 'POST', url: F3DWLD.CONFIG.data_url + "/table/json", data: test2,
@@ -334,9 +333,7 @@ selectFinal = "EXECUTE Warehouse.dbo.usp_GetData " +
             if (F3DWLD.CONFIG.wdsPayload.showUnits) {mesOptionsPivot.vals.push("Unit");}
             if (F3DWLD.CONFIG.wdsPayload.showFlags){mesOptionsPivot.vals.push("Flag"); }
             FAOSTATNEWOLAP.originalData = response_1;
-            //$("#fx-olap-ui").pivotUI(response_1, mesOptionsPivot, true);
             $("#testinline").pivotUI(response_1, mesOptionsPivot, true);
-            
             $("#options_menu_box").css("display", "block");
             var newFlag = "";
             for (var i in FAOSTATNEWOLAP.flags) {if (newFlag != "") {  newFlag += ":";} newFlag += "'" + i + "'"; }
@@ -364,10 +361,9 @@ selectFinal = "EXECUTE Warehouse.dbo.usp_GetData " +
 
 function newFunctions() {
     FAOSTATNEWOLAP.viewVals = 1;
-    $("#vals").css("display", "block");
+    $("#mesVals").css("display", "block");
     $("#unused").css("display", "block");
-	$("#unused li").css("display", "inline");
-    $(".pvtRenderer").css("display", "block");
+    $("#renderer").css("display", "block");
     $("#aggregator").css("display", "block");
     $("#unused").css("background-color", "#ececec");
     $("#unused li nobr").css("color", "#666");
@@ -661,15 +657,11 @@ function my_exportNew() {
           mycols.push(FAOSTATNEWOLAP.internalData.rowAttrs[c]+"Name");
          
   }
-  flatColKeyst=[];
-tt=FAOSTATNEWOLAP.internalData.getColKeys();
-for(tti in tt){flatColKeyst.push(tt[tti].join("||"))}
 //console.log(FAOSTATNEWOLAP.internalData.tree);
  document.getElementById("myJson").value=stringify( {data:FAOSTATNEWOLAP.internalData.tree,
-     header:flatColKeyst,cols:mycols,swUnit:FAOSTATNEWOLAP.showUnits,swFlag:FAOSTATNEWOLAP.showFlags
+     header:FAOSTATNEWOLAP.internalData.flatColKeys,cols:mycols,swUnit:FAOSTATNEWOLAP.showUnits,swFlag:FAOSTATNEWOLAP.showFlags
  
     });
-	
    //document.getElementById("myJson").value=JSON.stringify({data:FAOSTATNEWOLAP.originalData,header:FAOSTATNEWOLAP.internalData.flatColKeys});
     document.getElementById("xlsDataForm").submit();
   }
@@ -682,11 +674,7 @@ function decolrowspanNEW(){
     var reg3 = new RegExp("<span class=\"ordre\"></span>", "g");
     var reg2 = new RegExp("<table class=\"innerCol\"><th>([0-9]+)</th><th>([^>]*)</th></table>", "g"); 
     var row = FAOSTATNEWOLAP.internalData.tree;
-  //  var col = FAOSTATNEWOLAP.internalData.flatColKeys.sort();
-		flatColKeyst=[];
-tt=FAOSTATNEWOLAP.internalData.getColKeys();
-for(tti in tt){flatColKeyst.push(tt[tti].join("||"))}
-    var col = flatColKeyst.sort();
+    var col = FAOSTATNEWOLAP.internalData.flatColKeys.sort();
     var ret = "";
     for (var j = 0; j < FAOSTATNEWOLAP.internalData.rowKeys[0].length; j++) {
         
@@ -713,14 +701,12 @@ for(tti in tt){flatColKeyst.push(tt[tti].join("||"))}
                     if (FAOSTATNEWOLAP.showFlags) { ret += ","; }
                 }
                 else {
-				 ret += '"' + addCommas(row[i][col[j]].value()) + '",';
-				 /*
                     ret += '"' + addCommas(row[i][col[j]].value()[0]) + '",';
                      if (FAOSTATNEWOLAP.showUnits) {   ret += '"' + row[i][col[j]].value()[1].replace(/&nbsp;/g, " ") + '",';  }
                         if (FAOSTATNEWOLAP.showFlags) {
                             if(FAOSTATNEWOLAP.showUnits){ ret += '"' + row[i][col[j]].value()[2].replace(/&nbsp;/g, " ") + '",';}
                             else{ret += '"' + row[i][col[j]].value()[1].replace(/&nbsp;/g, " ") + '",';}
-                        }*/
+                        }
                     }
                 }  catch (ER) {}
         }
@@ -987,45 +973,6 @@ var internalTest;
     return x1 + x2;
   };
 
-
-arrayFormat = function(opts) {
-    
-        { sigfig = 3;  }
-         { scaler = 1;  }
-    
-       return function(x) {
-      var result;
-      if (isNaN(x) || !isFinite(x)) {
-        return "";
-      }
-      if (x === 0 && !opts.showZero) {
-        return "";
-      }
-      result = addSeparators((opts.scaler * x).toFixed(opts.digitsAfterDecimal), opts.thousandsSep, opts.decimalSep);
-      return "" + opts.prefix + result + opts.suffix;
-    };
-     /*
-     **
-        return function(x1) {
-          var ret = "<table class=\"tableVCell\" style=\"width:100%\"><tr>";
-        //     var ret = "<table><tr>";
-            for (k in x1) {
-                var x = x1[k];
-                if (x != "_") {
-                    if (!isNaN(k)) {
-                        if(k==0 && isNaN(x)   ){ret += "<td></td>";}
-                        else if (k > 0 || x === 0 ||isNaN(x)|| !isFinite(x)) {ret += "<td>" + x + "</td>";}
-                        else { ret += "<td>" + addCommas((scaler * x).toFixed(FAOSTATNEWOLAP.decimal)) + "</td>"; }
-                        // else {ret+= "<td>"+ x.toFixed(FAOSTATNEWOLAP.decimal).toLocaleString()+"</td>"; }
-                    }
-                }
-            }
-            ret += "</tr></table>";
-            return ret;
-        };*/
-    };
-
-
   numberFormat = function(opts) {
     var defaults;
     defaults = {
@@ -1052,7 +999,6 @@ arrayFormat = function(opts) {
   };
 
   usFmt = numberFormat();
-    arrFmt = arrayFormat();
 
   usFmtInt = numberFormat({
     digitsAfterDecimal: 0
@@ -1134,12 +1080,10 @@ arrayFormat = function(opts) {
       };
     },
     sum: function(formatter) {
-
       if (formatter == null) {
         formatter = usFmt;
       }
       return function(_arg) {
-         
         var attr;
         attr = _arg[0];
         return function(data, rowKey, colKey) {
@@ -1159,59 +1103,7 @@ arrayFormat = function(opts) {
         };
       };
     },
-     sum2: function(formatter) {
-	
-          { sigfig = 3;}
-           { scaler = 1; }
-         
-            return function(_arg) {
-                var attr;//function(){var ret=[];for(var i=0;i<_arg;i++){ret.push(0);};return ret}
-                attr = _arg[0];
-                var emptyInitTab = [0, "", ""];
-                //for(var i in _arg){emptyInitTab.push(0);}
-                /*function(){t=[0];
-                 if(FAOSTATOLAP2.displayOption.showFlag==1){t.push("");}
-                 if(FAOSTATOLAP2.displayOption.showUnit==1){t.push("");}
-                 return t;
-                 }*/
-                return function() {
-                    return {
-                        sum: [0, "_", "_"],
-                        push: function(record) {
-                            //if (!isNaN(parseFloat(record[_arg[j]]))) {
-                            for (var j = 0; j < _arg.length; j++)  {
-                               // _arg[j] = _arg[j];
-                                if (_arg[j] == "Flag" ) {
-                                    if (this.sum[j] == "_") {//|| this.sum[j]==record[_arg[j]]){
-                                        if (record[_arg[j]] != "") { this.sum[j] =  record[_arg[j]]; }
-                                        else {this.sum[j] = "&nbsp;";}
-                                        FAOSTATNEWOLAP.flags[record[_arg[j]]] = 1;
-                                    }
-                                    else {this.sum[j] = "Agg";}
-                                }
-                                else if (_arg[j] == "Value" ) { this.sum[j] =parseFloat(record[_arg[j]]);   }
-                                else if (_arg[j] == "Unit" ) {
-                                    if (this.sum[j] == "_" || this.sum[j] == record[_arg[j]] ) {
-                                        // this.sum[j]="("+record[_arg[j]]+")";
-                                        if (record[_arg[j]] != "") {  this.sum[j] =  record[_arg[j]] ;}
-                                        else {this.sum[j] = "&nbsp;";}
-                                    }
-                                    else { this.sum[0] = NaN;this.sum[j] = "nan"; }
-                                }
-                            }
-                            
-                            return this.sum;
-                        },
-                        value: function() {   return this.sum;  },
-                        format: arrFmt,
-                        label: "Sum of " + attr
-                    };
-                };
-            };
-        },
-    
     average: function(formatter) {
-	
       if (formatter == null) {
         formatter = usFmt;
       }
@@ -1331,8 +1223,7 @@ arrayFormat = function(opts) {
   };
 
   aggregators = (function(tpl) {
-    return {    //"Sum": tpl.sum2(arrayFormat),
-         "Sum": tpl.sum(),
+    return {    "Sum": tpl.sum(usFmt),
       "Count": tpl.count(usFmtInt),
       "Count Unique Values": tpl.countUnique(usFmtInt),
       "List Unique Values": tpl.listUnique(", "),
@@ -1348,14 +1239,6 @@ arrayFormat = function(opts) {
       "Count as Fraction of Total": tpl.fractionOf(tpl.count(), "total", usFmtPct),
       "Count as Fraction of Rows": tpl.fractionOf(tpl.count(), "row", usFmtPct),
       "Count as Fraction of Columns": tpl.fractionOf(tpl.count(), "col", usFmtPct)
-    };
-  })(aggregatorTemplates);
-  aggregators2 = (function(tpl) {
-    return {    //"Sum": tpl.sum2(arrayFormat),
-         "Sum": tpl.sum(usFmtInt),
-      //"Count": tpl.count(usFmtInt),
-     // "Integer Sum": tpl.sum(usFmtInt),
-      "Average": tpl.average(usFmt)
     };
   })(aggregatorTemplates);
 
@@ -1377,27 +1260,17 @@ arrayFormat = function(opts) {
     }
   };
    renderers2 = {
-       "Table":function(pvtData, opts){
-             console.log("pvtData");
-           /*console.log(pvtData);
-          newGrid(pvtData);*/
-          return pivotTableRenderer(pvtData, opts)
+       "NewOLAP":function(pvtData, opts){
+           
+          newGrid(pvtData);
+       //   return pivotTableRenderer(pvtData, opts)
            // return pivotTableRenderer(pvtData, opts);
-       }/*,
+       },
     "Table": function(pvtData, opts) {
       return pivotTableRenderer(pvtData, opts);
-    }*/,
+    },
     "Table Barchart": function(pvtData, opts) {
       return $(pivotTableRenderer(pvtData, opts)).barchart();
-    },
-    "Heatmap": function(pvtData, opts) {
-      return $(pivotTableRenderer(pvtData, opts)).heatmap();
-    },
-    "Row Heatmap": function(pvtData, opts) {
-      return $(pivotTableRenderer(pvtData, opts)).heatmap("rowheatmap");
-    },
-    "Col Heatmap": function(pvtData, opts) {
-      return $(pivotTableRenderer(pvtData, opts)).heatmap("colheatmap");
     }
   };
   
@@ -1420,7 +1293,7 @@ arrayFormat = function(opts) {
       }
     },
                en: {
-      aggregators: aggregators2,
+      aggregators: aggregators,
       renderers: renderers2,
       localeStrings: {
         renderError: "An error occurred rendering the PivotTable results.",
@@ -1816,10 +1689,8 @@ arrayFormat = function(opts) {
         if (x !== -1) {
           th = document.createElement("th");
           th.className = "pvtColLabel";
-          //FIG th.textContent = colKey[j];
-          th.innerHTML = colKey[j];
-          
-		  th.setAttribute("colspan", x);
+          th.textContent = colKey[j];
+          th.setAttribute("colspan", x);
           if (parseInt(j) === colAttrs.length - 1 && rowAttrs.length !== 0) {
             th.setAttribute("rowspan", 2);
           }
@@ -1974,9 +1845,7 @@ arrayFormat = function(opts) {
       }
       result = $("<span>").html(opts.localeStrings.computeError);
     }*/
-  console.log(this  )
     x = this[0];
-    console.log(x);
     while (x.hasChildNodes()) {
       x.removeChild(x.lastChild);
     }
@@ -1989,7 +1858,6 @@ arrayFormat = function(opts) {
    */
 
   $.fn.pivotUI = function(input, inputOpts, overwrite, locale) {
-    console.log(input)
     var a, aggregator, attrLength, axisValues, c, colList, defaults, e, existingOpts, i, initialRender, k, opts, pivotTable, refresh, refreshDelayed, renderer, rendererControl, shownAttributes, tblCols, tr1, tr2, uiTable, unusedAttrsVerticalAutoOverride, x, _fn, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1, _ref2, _ref3, _ref4;
     if (overwrite == null) {
       overwrite = false;
@@ -2002,7 +1870,7 @@ arrayFormat = function(opts) {
       aggregators: locales[locale].aggregators,
       renderers: locales[locale].renderers,
       hiddenAttributes: [],
-      menuLimit: 500,
+      menuLimit: 200,
       cols: [],
       rows: [],
       vals: [],
@@ -2070,7 +1938,7 @@ arrayFormat = function(opts) {
         return _results;
       });
       uiTable = $("<table cellpadding='5'>");
-      rendererControl = $("<td id='vals' class='pvtAxisContainer pvtUnused'>");
+      rendererControl = $("<td id='vals'>");
       renderer = $("<select class='pvtRenderer'>").appendTo(rendererControl).bind("change", function() {
         return refresh();
       });
@@ -2171,7 +2039,7 @@ arrayFormat = function(opts) {
         };
         $("<p>").appendTo(valueList).append($("<button>").text("OK").bind("click", updateFilter));
         showFilterList = function(e) {
-         
+          console.log(valueList);
           valueList.css({
             left: 50,//e.pageX,
             top: e.pageY
@@ -2181,7 +2049,7 @@ arrayFormat = function(opts) {
         };
       
         triangleLink = $("<span class='pvtTriangle'>").html(" &#x25BE;").bind("click", showFilterList);
-        attrElem = $("<li class='axis_" + i + "' id='filtre_"+c+"'>").append($("<span class='pvtAttr'>").html(c).data("attrName", c).append(triangleLink));
+        attrElem = $("<li class='axis_" + i + "'>").append($("<span class='pvtAttr'>").html(c).data("attrName", c).append(triangleLink));
         if (hasExcludedItem) {
           attrElem.addClass('pvtFilteredAttribute');
         }
@@ -2203,10 +2071,8 @@ arrayFormat = function(opts) {
         if (!__hasProp.call(_ref2, x)) continue;
         aggregator.append($("<option>").val(x).html(x));
       }
-	 
-     $("<td class='pvtAxisContainer pvtHorizList pvtCols'>").appendTo(tr1);
-	   
       $("<td class='pvtVals'>").appendTo(tr1).append(aggregator).append($("<br>"));
+      $("<td class='pvtAxisContainer pvtHorizList pvtCols'>").appendTo(tr1);
      tr2 = $("<tr>").appendTo(uiTable);
       
      // tr2.append($("<td id='rows' valign='top' class='pvtAxisContainer pvtRows pvtHorizList'>"));
@@ -2215,17 +2081,14 @@ arrayFormat = function(opts) {
       
       
       
-  //   pivotTable = $("<td valign='top' id='pvtRendererArea' class='pvtRendererArea'>").append("<div  id='pivot_table'>").appendTo(tr2);
-   
-   pivotTable = $("<td valign='top' id='pvtRendererArea' class='pvtRendererArea'>").append("<div  id='pivot_table'>").appendTo($("#fx-olap-holder-div"));
+     pivotTable = $("<td valign='top' id='pvtRendererArea' class='pvtRendererArea'>").append("<div  id='pivot_table'>").appendTo(tr2);
       if (opts.unusedAttrsVertical === true || unusedAttrsVerticalAutoOverride) {
-	 
         uiTable.find('tr:nth-child(1)').prepend(rendererControl);
         uiTable.find('tr:nth-child(2)').prepend(colList);
         
       } else {
           uiTable.prepend($("<tr>").append($("<td id='rows' valign='top' class='pvtAxisContainer pvtRows pvtHorizList'>")).prepend($("<td id='pretd'>&nbsp;</td>")));
-          uiTable.prepend($("<tr>").append(colList).append(rendererControl));
+          uiTable.prepend($("<tr>").append(rendererControl).append(colList));
     }
       this.html(uiTable);
       _ref3 = opts.cols;
@@ -2296,7 +2159,6 @@ arrayFormat = function(opts) {
             initialRender = false;
           }
           subopts.aggregatorName = aggregator.val();
-        
           subopts.vals = vals;
           subopts.aggregator = opts.aggregators[aggregator.val()](vals);
           subopts.renderer = opts.renderers[renderer.val()];

@@ -25,7 +25,7 @@ var F3DWLD = (function() {
         outputLimit: 50,
         widthTable: '100%',
         baseurl: null,
-        datasource: "faostat2",
+        datasource: "faostatdb",
         tablelimit: null,
         groupCode: null,
         domainCode: null,
@@ -1298,7 +1298,7 @@ var F3DWLD = (function() {
         s += '</div>';
         s += '<div id="bulk-downloads-menu" style="position: absolute; right: 0; top: 0;">';
         s += '</div>';
-        <!-- s += '<hr class="standard-hr">'; -->
+        //<!-- s += '<hr class="standard-hr">'; -->
         s += '<div id="reporting-tables-menu" ></div>';
 
         s += '</div>';

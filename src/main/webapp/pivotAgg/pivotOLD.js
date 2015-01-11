@@ -2844,9 +2844,7 @@ var internalTest;
         return this;
     };
    
-
-
-     $.fn.pivotCSV = function(input, opts) {
+ $.fn.pivotCSV = function(input, opts) {
     
         var defaults;
         defaults = {
