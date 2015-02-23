@@ -126,7 +126,7 @@ define(['jquery',
 
     };
 
-    F3DWLD.prototype.init = function collectAndQueryWDSPivot(refresh, isEx, outputFormat) {
+    F3DWLD.prototype.collectAndQueryWDSPivot = function(refresh, isEx, outputFormat) {
 
         this.getTabSelection();
 
@@ -204,7 +204,7 @@ define(['jquery',
 
     };
 
-    F3DWLD.prototype.init = function retFunction(a, b, c) {
+    F3DWLD.prototype.retFunction = function(a, b, c) {
         return function(mp) {
             if (this.CONFIG.wdsPayload.showCodes) {
                 if (mp[a] !== mp[b]) {
@@ -221,7 +221,7 @@ define(['jquery',
         };
     };
 
-    F3DWLD.prototype.init = function insideFalseClick(refresh, isEx, outputFormat) {
+    F3DWLD.prototype.insideFalseClick = function(refresh, isEx, outputFormat) {
 
         FAOSTATNEWOLAP.PP = {PP1: [], PP2: [], PP3: []};
         $('#OLAP_IFRAME').css('display', 'inline');
@@ -230,7 +230,6 @@ define(['jquery',
         $("#testinline").html("<center><img src=\"/faostat-download-js/pivotAgg/Preload.gif\" /></center>");
         FAOSTATNEWOLAP.flags = {};
         var mesOptionsPivot = {
-            "cols": [],
             "hiddenAttributes": [],
             "linkedAttributes": [],
             "cols": [],
@@ -590,7 +589,7 @@ define(['jquery',
         });
     };
 
-    F3DWLD.prototype.init = function collectListCodesPIVOT() {
+    F3DWLD.prototype.collectListCodesPIVOT = function() {
         var doTheCall = this.callListCodesREST();
         if (doTheCall) {
 
@@ -683,7 +682,7 @@ define(['jquery',
 
     };
 
-    F3DWLD.prototype.init = function callListCodesREST() {
+    F3DWLD.prototype.callListCodesREST = function() {
 
         for (var i = 0; i < this.CONFIG.selectedValues[0].length; i++)
             if (this.CONFIG.selectedValues[0][i].type == '>')
@@ -704,7 +703,7 @@ define(['jquery',
      *                      but it will use the previously buffered data
      * @param streamExcel  true to create the Excel file, false to show the preview
      */
-    F3DWLD.prototype.init = function createTable(queryDB, streamExcel, outputFormat) {
+    F3DWLD.prototype.createTable = function(queryDB, streamExcel, outputFormat) {
 
         var _this = this;
 
@@ -956,7 +955,7 @@ define(['jquery',
 
     };
 
-    F3DWLD.prototype.init = function renderTable() {
+    F3DWLD.prototype.renderTable = function() {
         var s = '<table class="dataTable">';
         s += '<thead>';
         s += '<tr>';
@@ -1014,23 +1013,25 @@ define(['jquery',
         $('#output_area').append('<div style="overflow: auto; padding-top:10px; width:' + this.CONFIG.widthTable + '">' + s + '</div>');
     };
 
-    F3DWLD.prototype.init = function getCPINotesByProcedures() {
+    F3DWLD.prototype.getCPINotesByProcedures = function() {
 
         var s = '<H1>CPI Notes</H1>';
         s += '<br>';
 
         var data = {};
         var p = {};
-        p.datasource = F3DWLD.CONFIG.datasource;
-        p.lang = F3DWLD.CONFIG.lang;
-        p.areaCodes = collectCountries();
-        p.yearCodes = collectYears();
-        p.itemCodes = collectItems();
+        p.datasource = this.CONFIG.datasource;
+        p.lang = this.CONFIG.lang;
+        p.areaCodes = this.collectCountries();
+        p.yearCodes = this.collectYears();
+        p.itemCodes = this.collectItems();
         data.payload = JSON.stringify(p);
+
+        var _this = this;
 
         $.ajax({
             type: 'POST',
-            url: F3DWLD.CONFIG.CPINotes_url,
+            url: this.CONFIG.CPINotes_url,
             data: data,
             success: function(response) {
 
@@ -1067,39 +1068,39 @@ define(['jquery',
         return s;
     };
 
-    F3DWLD.prototype.init = function showCPINotes() {
+    F3DWLD.prototype.showCPINotes = function() {
 
-        if (F3DWLD.CONFIG.domainCode == 'CP') {
+        if (this.CONFIG.domainCode == 'CP') {
 
             var data = {};
-            data.datasource = F3DWLD.CONFIG.datasource;
-            data.lang = F3DWLD.CONFIG.lang;
+            data.datasource = this.CONFIG.datasource;
+            data.lang = this.CONFIG.lang;
 
             var json = {};
-            json.lang = F3DWLD.CONFIG.lang;
+            json.lang = this.CONFIG.lang;
 
             var countries = '@areaList=N\'';
-            for (var i = 0; i < F3DWLD.CONFIG.selectedValues[0].length; i++) {
-                countries += F3DWLD.CONFIG.selectedValues[0][i].code;
-                if (i < F3DWLD.CONFIG.selectedValues[0].length - 1)
+            for (var i = 0; i < this.CONFIG.selectedValues[0].length; i++) {
+                countries += this.CONFIG.selectedValues[0][i].code;
+                if (i < this.CONFIG.selectedValues[0].length - 1)
                     countries += ',';
             }
             countries += '\'';
             json.countries = countries;
 
             var items = '@item=N\'';
-            for (var i = 0; i < F3DWLD.CONFIG.selectedValues[1].length; i++) {
-                items += F3DWLD.CONFIG.selectedValues[1][i].code;
-                if (i < F3DWLD.CONFIG.selectedValues[1].length - 1)
+            for (var i = 0; i < this.CONFIG.selectedValues[1].length; i++) {
+                items += this.CONFIG.selectedValues[1][i].code;
+                if (i < this.CONFIG.selectedValues[1].length - 1)
                     items += ',';
             }
             items += '\'';
             json.items = items;
 
             var years = '@yearList=N\'';
-            for (var i = 0; i < F3DWLD.CONFIG.selectedValues[3].length; i++) {
-                years += F3DWLD.CONFIG.selectedValues[3][i].code;
-                if (i < F3DWLD.CONFIG.selectedValues[3].length - 1)
+            for (var i = 0; i < this.CONFIG.selectedValues[3].length; i++) {
+                years += this.CONFIG.selectedValues[3][i].code;
+                if (i < this.CONFIG.selectedValues[3].length - 1)
                     years += ',';
             }
             years += '\'';
@@ -1107,9 +1108,11 @@ define(['jquery',
 
             data.json = JSON.stringify(json);
 
+            var _this = this;
+
             $.ajax({
                 type: 'POST',
-                url: F3DWLD.CONFIG.data_url + '/notes/cpinotes',
+                url: this.CONFIG.data_url + '/notes/cpinotes',
                 data: data,
                 success: function(response) {
 
@@ -1125,7 +1128,7 @@ define(['jquery',
 
                     $("#cpi_notes_button").jqxButton({
                         width: '150',
-                        theme: F3DWLD.CONFIG.theme
+                        theme: _this.CONFIG.theme
                     });
 
                 },
@@ -1139,59 +1142,59 @@ define(['jquery',
 
     };
 
-    F3DWLD.prototype.init = function collectItems() {
+    F3DWLD.prototype.collectItems = function() {
         var ins = new Array();
-        for (var i = 0; i < F3DWLD.CONFIG.selectedValues[1].length; i++) {
-            if (F3DWLD.CONFIG.selectedValues[1][i].code == 'all') {
+        for (var i = 0; i < this.CONFIG.selectedValues[1].length; i++) {
+            if (this.CONFIG.selectedValues[1][i].code == 'all') {
                 return null;
             } else {
-                ins.push(F3DWLD.CONFIG.selectedValues[1][i].code);
+                ins.push(this.CONFIG.selectedValues[1][i].code);
             }
         }
         return ins;
     };
 
-    F3DWLD.prototype.init = function collectElements() {
+    F3DWLD.prototype.collectElements = function() {
         var ins = new Array();
-        for (var i = 0; i < F3DWLD.CONFIG.selectedValues[2].length; i++) {
-            if (F3DWLD.CONFIG.selectedValues[2][i].code == 'all') {
+        for (var i = 0; i < this.CONFIG.selectedValues[2].length; i++) {
+            if (this.CONFIG.selectedValues[2][i].code == 'all') {
                 return null;
             } else {
-                ins.push(F3DWLD.CONFIG.selectedValues[2][i].code);
+                ins.push(this.CONFIG.selectedValues[2][i].code);
             }
         }
         return ins;
     };
 
-    F3DWLD.prototype.init = function collectCountries() {
+    F3DWLD.prototype.collectCountries = function() {
         var ins = new Array();
-        for (var i = 0; i < F3DWLD.CONFIG.selectedValues[0].length; i++) {
-            if (F3DWLD.CONFIG.selectedValues[0][i].code == 'all') {
+        for (var i = 0; i < this.CONFIG.selectedValues[0].length; i++) {
+            if (this.CONFIG.selectedValues[0][i].code == 'all') {
                 return null;
             } else {
-                ins.push(F3DWLD.CONFIG.selectedValues[0][i].code);
+                ins.push(this.CONFIG.selectedValues[0][i].code);
             }
         }
         return ins;
     };
 
-    F3DWLD.prototype.init = function collectYears() {
+    F3DWLD.prototype.collectYears = function() {
         var ins = new Array();
-        for (var i = 0; i < F3DWLD.CONFIG.selectedValues[3].length; i++) {
-            if (F3DWLD.CONFIG.selectedValues[3][i].code == 'all') {
+        for (var i = 0; i < this.CONFIG.selectedValues[3].length; i++) {
+            if (this.CONFIG.selectedValues[3][i].code == 'all') {
                 return null;
             } else {
-                ins.push(F3DWLD.CONFIG.selectedValues[3][i].code);
+                ins.push(this.CONFIG.selectedValues[3][i].code);
             }
         }
         return ins;
     };
 
-    F3DWLD.prototype.init = function getGridsValues() {
+    F3DWLD.prototype.getGridsValues = function() {
         var countryGridName = null;
         var countryGridName_dst = null;
         var itemsGridName = null;
-        switch (F3DWLD.CONFIG.tabsSelection.countries) {
+        switch (this.CONFIG.tabsSelection.countries) {
             case 0 :
                 countryGridName = 'grid_usp_GetAreaList1';
                 break;
@@ -1202,9 +1205,9 @@ define(['jquery',
                 countryGridName = 'grid_usp_GetAreaList3';
                 break;
         }
-        if ($.inArray(F3DWLD.CONFIG.domainCode, F3DWLD.CONFIG.tradeMatrices) > -1)
+        if ($.inArray(this.CONFIG.domainCode, this.CONFIG.tradeMatrices) > -1)
             countryGridName_dst = 'grid_usp_GetAreaList2';
-        switch (F3DWLD.CONFIG.tabsSelection.items) {
+        switch (this.CONFIG.tabsSelection.items) {
             case 0 :
                 itemsGridName = 'grid_usp_GetItemList1';
                 break;
@@ -1212,28 +1215,30 @@ define(['jquery',
                 itemsGridName = 'grid_usp_GetItemList2';
                 break;
         }
-        getGridValues(countryGridName, F3DWLD.CONFIG.selectedValues[0]);
-        getGridValues('grid_usp_GetElementList', F3DWLD.CONFIG.selectedValues[2]);
-        getGridValues(itemsGridName, F3DWLD.CONFIG.selectedValues[1]);
-        getGridValues('grid_usp_GetYearList', F3DWLD.CONFIG.selectedValues[3]);
-        if ($.inArray(F3DWLD.CONFIG.domainCode, F3DWLD.CONFIG.tradeMatrices) > -1)
-            getGridValues(countryGridName_dst, F3DWLD.CONFIG.selectedValues.countries_dst);
+        this.getGridValues(countryGridName, this.CONFIG.selectedValues[0]);
+        this.getGridValues('grid_usp_GetElementList', this.CONFIG.selectedValues[2]);
+        this.getGridValues(itemsGridName, this.CONFIG.selectedValues[1]);
+        this.getGridValues('grid_usp_GetYearList', this.CONFIG.selectedValues[3]);
+        if ($.inArray(F3DWLD.CONFIG.domainCode, this.CONFIG.tradeMatrices) > -1)
+            this.getGridValues(countryGridName_dst, this.CONFIG.selectedValues.countries_dst);
     };
 
-    F3DWLD.prototype.init = function getTabSelection() {
-        F3DWLD.CONFIG.tabsSelection.countries = $('#tab_ListBox1').jqxTabs('selectedItem');
-        F3DWLD.CONFIG.tabsSelection.elements = $('#tab_ListBox3').jqxTabs('selectedItem');
-        F3DWLD.CONFIG.tabsSelection.items = $('#tab_ListBox2').jqxTabs('selectedItem');
-        if (F3DWLD.CONFIG.domainCode == 'GY')
-            F3DWLD.CONFIG.tabsSelection.items = 1;
-        F3DWLD.CONFIG.tabsSelection.years = $('#tab_ListBox4').jqxTabs('selectedItem');
+    F3DWLD.prototype.getTabSelection = function() {
+        this.CONFIG.tabsSelection.countries = $('#tab_ListBox1').jqxTabs('selectedItem');
+        this.CONFIG.tabsSelection.elements = $('#tab_ListBox3').jqxTabs('selectedItem');
+        this.CONFIG.tabsSelection.items = $('#tab_ListBox2').jqxTabs('selectedItem');
+        if (this.CONFIG.domainCode == 'GY')
+            this.CONFIG.tabsSelection.items = 1;
+        this.CONFIG.tabsSelection.years = $('#tab_ListBox4').jqxTabs('selectedItem');
     };
 
-    F3DWLD.prototype.init = function loadDSD() {
+    F3DWLD.prototype.loadDSD = function() {
+
+        var _this = this;
 
         $.ajax({
             type: 'GET',
-            url: F3DWLD.CONFIG.dsdURL + '/' + FAOSTATDownload.datasource + '/' + F3DWLD.CONFIG.domainCode + '/' + F3DWLD.CONFIG.lang,
+            url: _this.CONFIG.dsdURL + '/' + FAOSTATDownload.datasource + '/' + _this.CONFIG.domainCode + '/' + _this.CONFIG.lang,
             dataType: 'json',
             /* Load data from the DB */
             success: function(response) {
@@ -1242,40 +1247,40 @@ define(['jquery',
                 var json = response;
                 if (typeof json == 'string')
                     json = $.parseJSON(response);
-                F3DWLD.CONFIG.dsd = arrayToObject(json);
+                _this.CONFIG.dsd = _this.arrayToObject(json);
 
                 /* Initiate arrays for selected values */
-                for (var key in Object.keys(F3DWLD.CONFIG.dsd))
-                    F3DWLD.CONFIG.selectedValues[key] = [];
+                for (var key in Object.keys(_this.CONFIG.dsd))
+                    _this.CONFIG.selectedValues[key] = [];
 
                 /* Build UI structure. */
                 $('#testinline').empty();
-                if (F3DWLD.CONFIG.domainCode === 'FBS') {
+                if (_this.CONFIG.domainCode === 'FBS') {
                     document.getElementById('trWizardMode').className = 'visi2';
                     document.getElementById('OLAPTD').className = 'invi';
                     document.getElementById('mainTD').className = 'visi2';
                     document.getElementById('testinline').className = 'invi';
-                    buildUIStructure();
+                    _this.buildUIStructure();
                     FAOSTATDownload.showFB("");
                 }
                 else {
                     document.getElementById('OLAPTD').className = 'visi2';
                     document.getElementById('mainTD').className = 'invi';
-                    buildUIStructure();
+                    _this.buildUIStructure();
                     //  FAOSTATDownload.showFB();
                 }
 
             },
             /* Error */
             error: function(err, b, c) {
-                alert('Domain code ' + F3DWLD.CONFIG.domainCode + ' has no DSD.');
+                sweetAlert('Domain code ' + F3DWLD.CONFIG.domainCode + ' has no DSD.');
             }
 
         });
 
     };
 
-    F3DWLD.prototype.init = function arrayToObject(a) {
+    F3DWLD.prototype.arrayToObject = function(a) {
         var tmp = {};
         var names = [];
         var counters = [];
@@ -1296,14 +1301,14 @@ define(['jquery',
         return tmp;
     };
 
-    F3DWLD.prototype.init = function buildUIStructure() {
+    F3DWLD.prototype.buildUIStructure = function() {
         FAOSTATNEWOLAP.firstCall = 1;
         $('#mainTD').hide();
         $('#OLAPTD').show();
         $('#nested_by').hide();
         var item = $('#jqxTree').jqxTree('getSelectedItem');
         var parent = $('#jqxTree').jqxTree('getItem', $('#' + item.parentId)[0]).label;
-        var metadataURL = 'http://' + F3DWLD.CONFIG.baseurl + '/faostat-gateway/go/to/download/' + F3DWLD.CONFIG.groupCode + '/*/' + F3DWLD.CONFIG.lang;
+        var metadataURL = 'http://' + this.CONFIG.baseurl + '/faostat-gateway/go/to/download/' + this.CONFIG.groupCode + '/*/' + this.CONFIG.lang;
         var s = '';
         s += '<div>';
         s += '<div class="standard-title">' + $.i18n.prop('_filters') + ' / <a href="' + metadataURL + '">' + parent + ' </a> / <a>' + item.label + '</a>';
@@ -1318,7 +1323,7 @@ define(['jquery',
         s += '<hr class="standard-hr">';
         document.getElementById('listArea0').innerHTML = s;
         var s = '';
-        if (F3DWLD.CONFIG.domainCode === "FBS")
+        if (this.CONFIG.domainCode === "FBS")
         {
             s += ' <div class="search-categories">' +
             ' <span class="search-categories-label" ' +
@@ -1333,27 +1338,27 @@ define(['jquery',
 
         }
         var columns = [];
-        for (var i = 0; i < Object.keys(F3DWLD.CONFIG.dsd).length; i++) {
-            columns.push(F3DWLD.CONFIG.dsd[Object.keys(F3DWLD.CONFIG.dsd)[i]]);
+        for (var i = 0; i < Object.keys(this.CONFIG.dsd).length; i++) {
+            columns.push(this.CONFIG.dsd[Object.keys(this.CONFIG.dsd)[i]]);
             if (columns.length % 2 === 0) {
-                s += buildSelectorsRow(columns);
+                s += this.buildSelectorsRow(columns);
                 columns = [];
             }
         }
-        s += buildSelectorsRow(columns);
-        s += buildSummary();
-        s += buildButtons();
-        s += buildOLAP();
-        s += buildOptionsMenu();
-        s += buildOutputArea();
+        s += this.buildSelectorsRow(columns);
+        s += this.buildSummary();
+        s += this.buildButtons();
+        s += this.buildOLAP();
+        s += this.buildOptionsMenu();
+        s += this.buildOutputArea();
         document.getElementById('listArea').innerHTML = s;
         // document.getElementById('listArea2').innerHTML = s;
 
-        enhanceUIStructure();
+        this.enhanceUIStructure();
 
     };
 
-    F3DWLD.prototype.init = function buildOptionsMenu() {
+    F3DWLD.prototype.buildOptionsMenu = function() {
 
         var s = '';
 
@@ -1397,16 +1402,16 @@ define(['jquery',
         return s;
     };
 
-    F3DWLD.prototype.init = function buildSelectorsRow(columns) {
+    F3DWLD.prototype.buildSelectorsRow = function(columns) {
         var s = '';
         s += '<div class="download-selector">';
         for (var i = 0; i < columns.length; i++)
-            s += buildSelector(columns[i]);
+            s += this.buildSelector(columns[i]);
         s += '</div>';
         return s;
     };
 
-    F3DWLD.prototype.init = function buildSelector(column) {
+    F3DWLD.prototype.buildSelector = function(column) {
 
         var s = '';
 
@@ -1449,11 +1454,11 @@ define(['jquery',
 
     };
 
-    F3DWLD.prototype.init = function buildOutputArea() {
+    F3DWLD.prototype.buildOutputArea = function() {
         return '<div id="output_area"></div>';
     };
 
-    F3DWLD.prototype.init = function buildButtons() {
+    F3DWLD.prototype.buildButtons = function() {
         var s = '<br>';
         s += '<div id="output_buttons">';
         s += '<span class="standard-title table-selection-title">' +
@@ -1507,18 +1512,18 @@ define(['jquery',
         return s;
     };
 
-    F3DWLD.prototype.init = function preview(queryDB, refresh) {
+    F3DWLD.prototype.preview = function(queryDB, refresh) {
         try {
-            forecast_output_size();
+            this.forecast_output_size();
             if ($('#radio_table').val()) {
                 document.getElementById('preview_label').innerHTML = $.i18n.prop('_output_preview_50');
                 $('#output_area').css("min-height", "350px");
                 $('#testinline').css("display", "none");
                 $("#btnFS").hide();
                 $("#nested_by").hide();
-                validateSelection('preview table');
-                createTable(queryDB, false);
-                STATS.showTableDownloadStandard(F3DWLD.CONFIG.domainCode);
+                this.validateSelection('preview table');
+                this.createTable(queryDB, false);
+                STATS.showTableDownloadStandard(this.CONFIG.domainCode);
             } else {
                 document.getElementById('preview_label').innerHTML = $.i18n.prop('_output_preview_50');
                 $("#btnFS").show();
@@ -1526,11 +1531,11 @@ define(['jquery',
                 FAOSTATNEWOLAP.firstCall = 0;
                 $('#output_area').css("min-height", "0px");
                 $('#testinline').css("display", "block");
-                validateSelection('preview pivot');
-                buildOptionsMenu();//just UI option menu
+                this.validateSelection('preview pivot');
+                this.buildOptionsMenu();//just UI option menu
 
-                collectAndQueryWDSPivot(refresh, false, 'json');
-                STATS.showPivotDownloadStandard(F3DWLD.CONFIG.domainCode);
+                this.collectAndQueryWDSPivot(refresh, false, 'json');
+                STATS.showPivotDownloadStandard(this.CONFIG.domainCode);
             }
         } catch (lines) {
             $('.fs-warning-wrapper').css('display', 'block');
@@ -1540,24 +1545,24 @@ define(['jquery',
         }
     };
 
-    F3DWLD.prototype.init = function forecast_output_size() {
+    F3DWLD.prototype.forecast_output_size = function() {
         if ($('#radio_pivot').val()) {
             var lines = 1;
-            for (var key in F3DWLD.CONFIG.selectedValues) {
-                var factor = F3DWLD.CONFIG.selectedValues[key].length;
-                for (var i = 0; i < F3DWLD.CONFIG.selectedValues[key].length; i++) {
-                    if (F3DWLD.CONFIG.selectedValues[key][i].type == '>') {
-                        switch (F3DWLD.CONFIG.selectedValues[key][i].listbox) {
+            for (var key in this.CONFIG.selectedValues) {
+                var factor = this.CONFIG.selectedValues[key].length;
+                for (var i = 0; i < this.CONFIG.selectedValues[key].length; i++) {
+                    if (this.CONFIG.selectedValues[key][i].type == '>') {
+                        switch (this.CONFIG.selectedValues[key][i].listbox) {
                             case 1:
-                                factor += F3DWLD.CONFIG.list_weight_countries;
+                                factor += this.CONFIG.list_weight_countries;
                                 break;
                             case 3:
-                                factor += F3DWLD.CONFIG.list_weight_items;
+                                factor += this.CONFIG.list_weight_items;
                                 break;
                         }
                     }
-                    if (F3DWLD.CONFIG.selectedValues[key][i].code == '-1') {
-                        switch (F3DWLD.CONFIG.selectedValues[key][i].listbox) {
+                    if (this.CONFIG.selectedValues[key][i].code == '-1') {
+                        switch (this.CONFIG.selectedValues[key][i].listbox) {
                             case 1:
                                 factor += 250;
                                 break;
@@ -1575,24 +1580,24 @@ define(['jquery',
                 }
                 lines *= factor;
             }
-            if (lines > F3DWLD.CONFIG.preview_limit)
+            if (lines > this.CONFIG.preview_limit)
                 throw lines;
         }
     };
 
-    F3DWLD.prototype.init = function download(queryDB, outputFormat) {
+    F3DWLD.prototype.download = function(queryDB, outputFormat) {
         if ($('#radio_table').val()) {
             try {
-                validateSelection('download');
-                createTable(queryDB, true, outputFormat);
-                STATS.exportTableDownloadStandard(F3DWLD.CONFIG.domainCode);
+                this.validateSelection('download');
+                this.createTable(queryDB, true, outputFormat);
+                STATS.exportTableDownloadStandard(this.CONFIG.domainCode);
             } catch (e) { alert(e);           }
         } else {
 
             try {
                 // forecast_output_size();
                 //  F3DWLD.preview(true,false);
-                STATS.exportPivotDownloadStandard(F3DWLD.CONFIG.domainCode);
+                STATS.exportPivotDownloadStandard(this.CONFIG.domainCode);
                 /*  validateSelection('preview pivot');
                  buildOptionsMenu();//just UI option menu
                  collectAndQueryWDSPivot(false);*/
@@ -1602,11 +1607,11 @@ define(['jquery',
 
                 if(outputFormat==="csv") {
 
-                    oldSchoolCSV("csv");
+                    this.oldSchoolCSV("csv");
                     // ExcelComplete("json");
                 } else {
                     //ExcelComplete("html");
-                    oldSchoolCSV("xls");
+                    this.oldSchoolCSV("xls");
                 }
 
             } catch (lines) {
@@ -1641,14 +1646,14 @@ define(['jquery',
         }
     };
 
-    F3DWLD.prototype.init = function validateSelection(caller) {
-        for (var key in Object.keys(F3DWLD.CONFIG.dsd)) {
-            if (F3DWLD.CONFIG.selectedValues[key].length < 1) {
-                var tabNames = Object.keys(F3DWLD.CONFIG.dsd[1 + parseInt(key)]);
+    F3DWLD.prototype.validateSelection = function(caller) {
+        for (var key in Object.keys(this.CONFIG.dsd)) {
+            if (this.CONFIG.selectedValues[key].length < 1) {
+                var tabNames = Object.keys(this.CONFIG.dsd[1 + parseInt(key)]);
                 var count = 0;
                 var s = '';
                 for (var tabName in tabNames) {
-                    s += Object.keys(F3DWLD.CONFIG.dsd[1 + parseInt(key)])[tabName];
+                    s += Object.keys(this.CONFIG.dsd[1 + parseInt(key)])[tabName];
                     count++;
                     if (count == tabNames.length - 1)
                         s += ' or ';
@@ -1660,7 +1665,7 @@ define(['jquery',
         }
     };
 
-    F3DWLD.prototype.init = function showHideSummary() {
+    F3DWLD.prototype.showHideSummary = function() {
         if ($('#collapsible-summary-box').css('display') == 'none') {
             $('#collapsible-summary-box').css('display', 'block');
             $('#collapsible-summary-box').animate({opacity: 1});
@@ -1674,7 +1679,7 @@ define(['jquery',
         }
     };
 
-    F3DWLD.prototype.init = function findSummaryName(gridName) {
+    F3DWLD.prototype.findSummaryName = function(gridName) {
         var id = gridName.substring(1 + gridName.indexOf('_'));
         id = id.replace('_2', '_1');
         id = id.replace('_3', '_1');
@@ -1683,7 +1688,7 @@ define(['jquery',
         return id + '-summary';
     };
 
-    F3DWLD.prototype.init = function buildSummary() {
+    F3DWLD.prototype.buildSummary = function() {
 
         var s = '';
 
@@ -1693,11 +1698,11 @@ define(['jquery',
 
         s += '<div id="summary_tip" style="color:#666"><i>';
         s += $.i18n.prop('_summary_help');
-        s += '</i></div>'
+        s += '</i></div>';
 
-        for (var i = 0; i < Object.keys(F3DWLD.CONFIG.dsd).length; i++) {
+        for (var i = 0; i < Object.keys(this.CONFIG.dsd).length; i++) {
 
-            var column = F3DWLD.CONFIG.dsd[Object.keys(F3DWLD.CONFIG.dsd)[i]];
+            var column = this.CONFIG.dsd[Object.keys(this.CONFIG.dsd)[i]];
             var id = column[Object.keys(column)[0]].tabGroup + '_' + column[Object.keys(column)[0]].tabIndex;
             s += '<div class="compare-summary">';
             s += '<div class="summary-box" id="summary-' + id + '-box" style="display: none;">';
@@ -1717,7 +1722,7 @@ define(['jquery',
 
     };
 
-    F3DWLD.prototype.init = function enhanceUIStructure() {
+    F3DWLD.prototype.enhanceUIStructure = function() {
 
         $('#download_button_menu').jqxMenu({
             autoOpen: true,
@@ -1726,8 +1731,8 @@ define(['jquery',
             clickToOpen: false
         });
 
-        showBulkDownloads();
-        showReportingTables();
+        this.showBulkDownloads();
+        this.showReportingTables();
 
         $('#options-menu').jqxMenu({
             autoOpen: false,
@@ -1763,56 +1768,56 @@ define(['jquery',
         $('#enable_menu').jqxRadioButton({width: 120, height: 25, groupName: 'decimals'});
         $('#disable_menu').jqxRadioButton({width: 120, height: 25, checked: true, groupName: 'decimals'});
         $('#increment').jqxNumberInput({width: '100%', height: '25px', inputMode: 'simple', spinButtons: true, spinButtonsStep: 1, decimalDigits: 0, decimal: 2});
-        F3DWLD.CONFIG.wdsPayload.decimalSeparator = '.';
-        F3DWLD.CONFIG.wdsPayload.thousandSeparator = '';
+        this.CONFIG.wdsPayload.decimalSeparator = '.';
+        this.CONFIG.wdsPayload.thousandSeparator = '';
 
         $('#dot_menu').bind('change', function(event) {
             if (event.args.checked) {
-                F3DWLD.CONFIG.wdsPayload.decimalSeparator = '.';
+                this.CONFIG.wdsPayload.decimalSeparator = '.';
                 FAOSTATNEWOLAP.decimalSeparator = '.';
                 if ($('#enable_menu').jqxRadioButton('checked')) {
                     FAOSTATNEWOLAP.thousandSeparator = ',';
-                    F3DWLD.CONFIG.wdsPayload.thousandSeparator = ',';
+                    this.CONFIG.wdsPayload.thousandSeparator = ',';
                 }
                 else {
                     FAOSTATNEWOLAP.thousandSeparator = ' ';
-                    F3DWLD.CONFIG.wdsPayload.thousandSeparator = '';
+                    this.CONFIG.wdsPayload.thousandSeparator = '';
                 }
 
 
             } else {
                 FAOSTATNEWOLAP.decimalSeparator = ',';
-                F3DWLD.CONFIG.wdsPayload.decimalSeparator = ',';
+                this.CONFIG.wdsPayload.decimalSeparator = ',';
                 if ($('#enable_menu').jqxRadioButton('checked')) {
                     FAOSTATNEWOLAP.thousandSeparator = '.';
-                    F3DWLD.CONFIG.wdsPayload.thousandSeparator = '.';
+                    this.CONFIG.wdsPayload.thousandSeparator = '.';
                 }
                 else {
                     FAOSTATNEWOLAP.thousandSeparator = ' ';
-                    F3DWLD.CONFIG.wdsPayload.thousandSeparator = '';
+                    this.CONFIG.wdsPayload.thousandSeparator = '';
                 }
 
 
 
             }
             if($('#radio_table').val() || FAOSTATNEWOLAP.firstCall==0)
-            {preview(true, true);}
+            {this.preview(true, true);}
 
         });
 
         $('#disable_menu').bind('change', function(event) {
 
             if (event.args.checked) {
-                F3DWLD.CONFIG.wdsPayload.thousandSeparator = '';
+                this.CONFIG.wdsPayload.thousandSeparator = '';
                 FAOSTATNEWOLAP.thousandSeparator = ' ';
             } else {
                 if (FAOSTATNEWOLAP.decimalSeparator == '.')
                 {
-                    F3DWLD.CONFIG.wdsPayload.thousandSeparator = ',';
+                    this.CONFIG.wdsPayload.thousandSeparator = ',';
                     FAOSTATNEWOLAP.thousandSeparator = ",";
                 }
                 else {
-                    F3DWLD.CONFIG.wdsPayload.thousandSeparator = '.';
+                    this.CONFIG.wdsPayload.thousandSeparator = '.';
                     FAOSTATNEWOLAP.thousandSeparator = ".";
                 }
 
@@ -1822,156 +1827,158 @@ define(['jquery',
                  F3DWLD.CONFIG.wdsPayload.decimalSeparator = '.';*/
             }
             if($('#radio_table').val() || FAOSTATNEWOLAP.firstCall==0)
-            {preview(true, true);}
+            {this.preview(true, true);}
         });
-        F3DWLD.CONFIG.wdsPayload.showFlags = true;
-        F3DWLD.CONFIG.wdsPayload.showCodes = false;
-        F3DWLD.CONFIG.wdsPayload.showUnits = false;//changeUnit
-        F3DWLD.CONFIG.wdsPayload.showNullValues = false;
+        this.CONFIG.wdsPayload.showFlags = true;
+        this.CONFIG.wdsPayload.showCodes = false;
+        this.CONFIG.wdsPayload.showUnits = false;//changeUnit
+        this.CONFIG.wdsPayload.showNullValues = false;
         $("#flags_menu").bind('change', function(event) {
             var checked = event.args.checked;
-            F3DWLD.CONFIG.wdsPayload.showFlags = checked;
-            if ($.inArray(FAOSTATDownload.domainCode, F3DWLD.CONFIG.tradeMatrices) > -1) {
-                if (F3DWLD.CONFIG.wdsPayload.showFlags) {
-                    F3DWLD.CONFIG.header_indices_tm.push(16);
-                    F3DWLD.CONFIG.header_indices_tm.push(17);
-                    F3DWLD.CONFIG.data_indices_tm.push(16);
-                    F3DWLD.CONFIG.data_indices_tm.push(17);
+            this.CONFIG.wdsPayload.showFlags = checked;
+            if ($.inArray(FAOSTATDownload.domainCode, this.CONFIG.tradeMatrices) > -1) {
+                if (this.CONFIG.wdsPayload.showFlags) {
+                    this.CONFIG.header_indices_tm.push(16);
+                    this.CONFIG.header_indices_tm.push(17);
+                    this.CONFIG.data_indices_tm.push(16);
+                    this.CONFIG.data_indices_tm.push(17);
                 } else {
-                    F3DWLD.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(16), 1);
-                    F3DWLD.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(17), 1);
-                    F3DWLD.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(16), 1);
-                    F3DWLD.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(17), 1);
+                    this.CONFIG.header_indices_tm.splice(this.CONFIG.header_indices_tm.indexOf(16), 1);
+                    this.CONFIG.header_indices_tm.splice(this.CONFIG.header_indices_tm.indexOf(17), 1);
+                    this.CONFIG.data_indices_tm.splice(this.CONFIG.data_indices_tm.indexOf(16), 1);
+                    this.CONFIG.data_indices_tm.splice(this.CONFIG.data_indices_tm.indexOf(17), 1);
                 }
             } else {
 
 
-                if (F3DWLD.CONFIG.wdsPayload.showFlags) {
-                    F3DWLD.CONFIG.header_indices.push(14);
-                    F3DWLD.CONFIG.header_indices.push(15);
-                    F3DWLD.CONFIG.data_indices.push(11);
-                    F3DWLD.CONFIG.data_indices.push(12);
+                if (this.CONFIG.wdsPayload.showFlags) {
+                    this.CONFIG.header_indices.push(14);
+                    this.CONFIG.header_indices.push(15);
+                    this.CONFIG.data_indices.push(11);
+                    this.CONFIG.data_indices.push(12);
                 } else {
-                    F3DWLD.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(14), 1);
-                    F3DWLD.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(15), 1);
-                    F3DWLD.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(11), 1);
-                    F3DWLD.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(12), 1);
+                    this.CONFIG.header_indices.splice(this.CONFIG.header_indices.indexOf(14), 1);
+                    this.CONFIG.header_indices.splice(this.CONFIG.header_indices.indexOf(15), 1);
+                    this.CONFIG.data_indices.splice(this.CONFIG.data_indices.indexOf(11), 1);
+                    this.CONFIG.data_indices.splice(this.CONFIG.data_indices.indexOf(12), 1);
                 }
             }
             if($('#radio_table').val() || FAOSTATNEWOLAP.firstCall==0)
-            {preview(false, true);}
+            {this.preview(false, true);}
 
         });
         $("#codes_menu").bind('change', function(event) {
             var checked = event.args.checked;
-            F3DWLD.CONFIG.wdsPayload.showCodes = checked;
-            if ($.inArray(FAOSTATDownload.domainCode, F3DWLD.CONFIG.tradeMatrices) > -1) {
-                if (F3DWLD.CONFIG.wdsPayload.showCodes) {
-                    F3DWLD.CONFIG.header_indices_tm.push(2);
-                    F3DWLD.CONFIG.header_indices_tm.push(4);
-                    F3DWLD.CONFIG.header_indices_tm.push(6);
-                    F3DWLD.CONFIG.header_indices_tm.push(8);
-                    F3DWLD.CONFIG.header_indices_tm.push(10);
-                    F3DWLD.CONFIG.data_indices_tm.push(2);
-                    F3DWLD.CONFIG.data_indices_tm.push(4);
-                    F3DWLD.CONFIG.data_indices_tm.push(6);
-                    F3DWLD.CONFIG.data_indices_tm.push(8);
-                    F3DWLD.CONFIG.data_indices_tm.push(10);
+            this.CONFIG.wdsPayload.showCodes = checked;
+            if ($.inArray(FAOSTATDownload.domainCode, this.CONFIG.tradeMatrices) > -1) {
+                if (this.CONFIG.wdsPayload.showCodes) {
+                    this.CONFIG.header_indices_tm.push(2);
+                    this.CONFIG.header_indices_tm.push(4);
+                    this.CONFIG.header_indices_tm.push(6);
+                    this.CONFIG.header_indices_tm.push(8);
+                    this.CONFIG.header_indices_tm.push(10);
+                    this.CONFIG.data_indices_tm.push(2);
+                    this.CONFIG.data_indices_tm.push(4);
+                    this.CONFIG.data_indices_tm.push(6);
+                    this.CONFIG.data_indices_tm.push(8);
+                    this.CONFIG.data_indices_tm.push(10);
                 } else {
-                    F3DWLD.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(2), 1);
-                    F3DWLD.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(4), 1);
-                    F3DWLD.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(6), 1);
-                    F3DWLD.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(8), 1);
-                    F3DWLD.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(10), 1);
-                    F3DWLD.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(2), 1);
-                    F3DWLD.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(4), 1);
-                    F3DWLD.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(6), 1);
-                    F3DWLD.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(8), 1);
-                    F3DWLD.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(10), 1);
+                    this.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(2), 1);
+                    this.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(4), 1);
+                    this.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(6), 1);
+                    this.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(8), 1);
+                    this.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(10), 1);
+                    this.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(2), 1);
+                    this.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(4), 1);
+                    this.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(6), 1);
+                    this.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(8), 1);
+                    this.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(10), 1);
                 }
             } else {
-                if (F3DWLD.CONFIG.wdsPayload.showCodes) {
-                    F3DWLD.CONFIG.header_indices.push(2);
-                    F3DWLD.CONFIG.header_indices.push(4);
-                    F3DWLD.CONFIG.header_indices.push(6);
-                    F3DWLD.CONFIG.header_indices.push(8);
-                    F3DWLD.CONFIG.data_indices.push(0);
-                    F3DWLD.CONFIG.data_indices.push(2);
-                    F3DWLD.CONFIG.data_indices.push(4);
-                    F3DWLD.CONFIG.data_indices.push(6);
-                    F3DWLD.CONFIG.data_indices.push(8);
+                if (this.CONFIG.wdsPayload.showCodes) {
+                    this.CONFIG.header_indices.push(2);
+                    this.CONFIG.header_indices.push(4);
+                    this.CONFIG.header_indices.push(6);
+                    this.CONFIG.header_indices.push(8);
+                    this.CONFIG.data_indices.push(0);
+                    this.CONFIG.data_indices.push(2);
+                    this.CONFIG.data_indices.push(4);
+                    this.CONFIG.data_indices.push(6);
+                    this.CONFIG.data_indices.push(8);
                 } else {
-                    F3DWLD.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(2), 1);
-                    F3DWLD.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(4), 1);
-                    F3DWLD.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(6), 1);
-                    F3DWLD.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(8), 1);
-                    F3DWLD.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(0), 1);
-                    F3DWLD.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(2), 1);
-                    F3DWLD.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(4), 1);
-                    F3DWLD.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(6), 1);
-                    F3DWLD.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(8), 1);
+                    this.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(2), 1);
+                    this.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(4), 1);
+                    this.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(6), 1);
+                    this.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(8), 1);
+                    this.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(0), 1);
+                    this.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(2), 1);
+                    this.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(4), 1);
+                    this.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(6), 1);
+                    this.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(8), 1);
                 }
             }
             if($('#radio_table').val() || FAOSTATNEWOLAP.firstCall==0)
-            {preview(false, true);}
+            {this.preview(false, true);}
         });
         $("#units_menu").bind('change', function(event) {
             var checked = event.args.checked;
-            F3DWLD.CONFIG.wdsPayload.showUnits = checked;
-            if ($.inArray(FAOSTATDownload.domainCode, F3DWLD.CONFIG.tradeMatrices) > -1) {
-                if (F3DWLD.CONFIG.wdsPayload.showUnits) {
-                    F3DWLD.CONFIG.header_indices_tm.push(14);
-                    F3DWLD.CONFIG.data_indices_tm.push(14);
+            this.CONFIG.wdsPayload.showUnits = checked;
+            if ($.inArray(FAOSTATDownload.domainCode, this.CONFIG.tradeMatrices) > -1) {
+                if (this.CONFIG.wdsPayload.showUnits) {
+                    this.CONFIG.header_indices_tm.push(14);
+                    this.CONFIG.data_indices_tm.push(14);
                 } else {
-                    F3DWLD.CONFIG.header_indices_tm.splice(F3DWLD.CONFIG.header_indices_tm.indexOf(14), 1);
-                    F3DWLD.CONFIG.data_indices_tm.splice(F3DWLD.CONFIG.data_indices_tm.indexOf(14), 1);
+                    this.CONFIG.header_indices_tm.splice(this.CONFIG.header_indices_tm.indexOf(14), 1);
+                    this.CONFIG.data_indices_tm.splice(this.CONFIG.data_indices_tm.indexOf(14), 1);
                 }
             } else {
-                if (F3DWLD.CONFIG.wdsPayload.showUnits) {
-                    F3DWLD.CONFIG.header_indices.push(12);
-                    F3DWLD.CONFIG.data_indices.push(9);
+                if (this.CONFIG.wdsPayload.showUnits) {
+                    this.CONFIG.header_indices.push(12);
+                    this.CONFIG.data_indices.push(9);
                 } else {
-                    F3DWLD.CONFIG.header_indices.splice(F3DWLD.CONFIG.header_indices.indexOf(12), 1);
-                    F3DWLD.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(9), 1);
+                    this.CONFIG.header_indices.splice(this.CONFIG.header_indices.indexOf(12), 1);
+                    this.CONFIG.data_indices.splice(this.CONFIG.data_indices.indexOf(9), 1);
                 }
             }
             if($('#radio_table').val() || FAOSTATNEWOLAP.firstCall==0)
-            {preview(false, true);}
+            {this.preview(false, true);}
         });
         $("#nested_by").bind('change', function(event) {
             var checked = event.args.checked;
             FAOSTATNEWOLAP.nestedby = checked;
-            preview(false, true);
+            this.preview(false, true);
         });
         $("#null_values_menu").bind('change', function(event) {
             var checked = event.args.checked;
-            F3DWLD.CONFIG.wdsPayload.showNullValues = checked;
+            this.CONFIG.wdsPayload.showNullValues = checked;
             if($('#radio_table').val() || FAOSTATNEWOLAP.firstCall==0)
-            {preview(false, false);}
+            {this.preview(false, false);}
         });
-        F3DWLD.CONFIG.wdsPayload.decimalNumbers = 2;
+        this.CONFIG.wdsPayload.decimalNumbers = 2;
         $('#increment').on('valuechanged', function(event) {
 
             var value = event.args.value;
-            F3DWLD.CONFIG.wdsPayload.decimalNumbers = parseInt(value);
-            FAOSTATNEWOLAP.decimal = F3DWLD.CONFIG.wdsPayload.decimalNumbers;
-            if($('#radio_table').val()){preview(true, true);}
+            this.CONFIG.wdsPayload.decimalNumbers = parseInt(value);
+            FAOSTATNEWOLAP.decimal = this.CONFIG.wdsPayload.decimalNumbers;
+            if($('#radio_table').val()){this.preview(true, true);}
             else if( FAOSTATNEWOLAP.firstCall==0)
-            {preview(false, true);}
+            {this.preview(false, true);}
         });
 
-        enhanceUITabs();
-        enhanceUIOptions();
-        enhanceUIButtons();
-        enhanceUIGrids();
+        this.enhanceUITabs();
+        this.enhanceUIOptions();
+        this.enhanceUIButtons();
+        this.enhanceUIGrids();
 
     };
 
-    F3DWLD.prototype.init = function showBulkDownloads() {
+    F3DWLD.prototype.showBulkDownloads = function() {
+
+        var _this = this;
 
         $.ajax({
             type: 'GET',
-            url: F3DWLD.CONFIG.bulks_url + '/' + F3DWLD.CONFIG.datasource + '/' + F3DWLD.CONFIG.domainCode + '/' + F3DWLD.CONFIG.lang,
+            url: this.CONFIG.bulks_url + '/' + this.CONFIG.datasource + '/' + this.CONFIG.domainCode + '/' + this.CONFIG.lang,
             dataType: 'json',
             success: function(response) {
 
@@ -2016,16 +2023,16 @@ define(['jquery',
 
     };
 
-    F3DWLD.prototype.init = function recordBulkDownload(filename) {
-        STATS.bulkDownload(filename, F3DWLD.CONFIG.domainCode);
+    F3DWLD.prototype.recordBulkDownload = function(filename) {
+        STATS.bulkDownload(filename, this.CONFIG.domainCode);
     };
 
-    F3DWLD.prototype.init = function enhanceUIGrids() {
-        for (var listbox in F3DWLD.CONFIG.dsd) {
-            for (var tab in F3DWLD.CONFIG.dsd[listbox]) {
+    F3DWLD.prototype.enhanceUIGrids = function() {
+        for (var listbox in this.CONFIG.dsd) {
+            for (var tab in this.CONFIG.dsd[listbox]) {
                 var codelist = tab.toLowerCase().replace(' ', '');
-                var id = F3DWLD.CONFIG.dsd[listbox][tab].tabGroup + '_' + F3DWLD.CONFIG.dsd[listbox][tab].tabIndex;
-                enhanceUIGrid(listbox, F3DWLD.CONFIG.dsd[listbox][tab].tabIndex, 'grid_' + id);
+                var id = this.CONFIG.dsd[listbox][tab].tabGroup + '_' + this.CONFIG.dsd[listbox][tab].tabIndex;
+                this.enhanceUIGrid(listbox, this.CONFIG.dsd[listbox][tab].tabIndex, 'grid_' + id);
             }
         }
     };
@@ -2039,17 +2046,17 @@ define(['jquery',
      * @param gridName
      * @returns {*}
      */
-    F3DWLD.prototype.init = function findBuffer(gridName) {
+    F3DWLD.prototype.findBuffer = function(gridName) {
         var idx = gridName.substring(1 + gridName.indexOf('_'), gridName.lastIndexOf('_'));
-        return F3DWLD.CONFIG.selectedValues[parseInt(idx) - 1];
+        return this.CONFIG.selectedValues[parseInt(idx) - 1];
     };
 
-    F3DWLD.prototype.init = function clearBuffer(gridName) {
+    F3DWLD.prototype.clearBuffer = function(gridName) {
         var idx = gridName.substring(1 + gridName.indexOf('_'), gridName.lastIndexOf('_'));
-        F3DWLD.CONFIG.selectedValues[parseInt(idx) - 1] = [];
+        this.CONFIG.selectedValues[parseInt(idx) - 1] = [];
     };
 
-    F3DWLD.prototype.init = function getGridValues(tableCode, map) {
+    F3DWLD.prototype.getGridValues = function(tableCode, map) {
         $('#' + tableCode).find('option:selected').each(function(k, v) {
             var tmp = {};
             tmp.code = $(v).data('faostat');
@@ -2059,12 +2066,12 @@ define(['jquery',
         });
     };
 
-    F3DWLD.prototype.init = function selectAllForSummary(gridID) {
+    F3DWLD.prototype.selectAllForSummary = function(gridID) {
 
         var values = [];
-        clearAllForSummary(gridID);
+        this.clearAllForSummary(gridID);
 
-        if (F3DWLD.CONFIG.groupCode == "D" || F3DWLD.CONFIG.domainCode == "TM" || F3DWLD.CONFIG.domainCode == "FT")
+        if (this.CONFIG.groupCode == "D" || this.CONFIG.domainCode == "TM" || this.CONFIG.domainCode == "FT")
         {$('#' + gridID + '_select').find('option').each(function(k, v) {
             var tmp = {};
             tmp.code = $(v).data('faostat');
@@ -2099,20 +2106,20 @@ define(['jquery',
          }); */
 
         $('#' + gridID + '_select option').prop('selected', true);
-        addItemToSummary(gridID, values, true);
+        this.addItemToSummary(gridID, values, true);
 
     };
 
-    F3DWLD.prototype.init = function clearAllForSummary(gridID) {
+    F3DWLD.prototype.clearAllForSummary = function(gridID) {
         var summary = findSummaryName(gridID);
         $('#' + summary).empty();
-        clearBuffer(gridID);
+        this.clearBuffer(gridID);
         var tmp = summary.substring(0, summary.indexOf('-'));
         $('#summary-' + tmp + '-box').css('display', 'none');
         $('#' + gridID + '_select option').prop('selected', false);
     };
 
-    F3DWLD.prototype.init = function addToSummary(gridID, summaryID) {
+    F3DWLD.prototype.addToSummary = function(gridID, summaryID) {
 
         $('#output_area').empty();
         $('#testinline').empty();
@@ -2131,13 +2138,13 @@ define(['jquery',
             values.push(tmp);
         });
 
-        addItemToSummary(gridID, values, false);
+        this.addItemToSummary(gridID, values, false);
 
     };
 
-    F3DWLD.prototype.init = function addItemToSummary(gridID, values, selectAll) {
+    F3DWLD.prototype.addItemToSummary = function(gridID, values, selectAll) {
 
-        var summaryID = findSummaryName(gridID);
+        var summaryID = this.findSummaryName(gridID);
 
         if (values.length == null) {
 
@@ -2145,7 +2152,7 @@ define(['jquery',
 
         } else {
 
-            var buffer = findBuffer(gridID);
+            var buffer = this.findBuffer(gridID);
 
             if (selectAll) {
 
@@ -2171,7 +2178,7 @@ define(['jquery',
                     $('#' + e.target.id).remove();
                     $.each(buffer, function (k, v) {
                         if (v != null && v.tab == (1 + parseInt(selectedTab)) && v.listbox == gridIdx)
-                            F3DWLD.CONFIG.selectedValues[parseInt(idx) - 1] = F3DWLD.CONFIG.selectedValues[parseInt(idx) - 1].slice(k, 1);
+                            this.CONFIG.selectedValues[parseInt(idx) - 1] = this.CONFIG.selectedValues[parseInt(idx) - 1].slice(k, 1);
                     });
                 });
 
@@ -2227,7 +2234,7 @@ define(['jquery',
 
     };
 
-    F3DWLD.prototype.init = function extractID(s) {
+    F3DWLD.prototype.extractID = function(s) {
         var id = '';
         var idx_start = null;
         var idx_end = null;
@@ -2245,17 +2252,19 @@ define(['jquery',
         return id;
     };
 
-    F3DWLD.prototype.init = function contains(buffer, obj) {
+    F3DWLD.prototype.contains = function(buffer, obj) {
         for (var i = 0; i < buffer.length; i++)
             if (buffer[i].code == obj.code && buffer[i].type == obj.type)
                 return true;
         return false;
     };
 
-    F3DWLD.prototype.init = function enhanceUIGrid(listBoxNo, tabNo, gridCode) {
+    F3DWLD.prototype.enhanceUIGrid = function(listBoxNo, tabNo, gridCode) {
+
+        var _this = this;
 
         $.ajax({
-            url: F3DWLD.CONFIG.codes_url + '/' + F3DWLD.CONFIG.datasource + '/' + F3DWLD.CONFIG.domainCode + '/' + listBoxNo + '/' + tabNo + '/' + F3DWLD.CONFIG.lang,
+            url: _this.CONFIG.codes_url + '/' + _this.CONFIG.datasource + '/' + _this.CONFIG.domainCode + '/' + listBoxNo + '/' + tabNo + '/' + _this.CONFIG.lang,
             type: 'GET',
             dataType: 'json',
             success: function(response) {
@@ -2288,7 +2297,7 @@ define(['jquery',
                 } else if (listBoxNo == 2 && tabNo == 2) {
                     $('#tabItems').jqxTabs('removeAt', 1);
                 } else if (listBoxNo == 2 && tabNo == 1) {
-                    if (F3DWLD.CONFIG.domainCode != 'FS')
+                    if (_this.CONFIG.domainCode != 'FS')
                         $('#tabItems').jqxTabs('removeAt', 0);
                 }
             }
@@ -2297,7 +2306,7 @@ define(['jquery',
 
     };
 
-    F3DWLD.prototype.init = function enhanceUIButtons() {
+    F3DWLD.prototype.enhanceUIButtons = function() {
 
         $("#radio_table").jqxRadioButton({checked: true});
         $("#radio_pivot").jqxRadioButton({checked: false});
@@ -2322,7 +2331,7 @@ define(['jquery',
         });
 
         /* Select/Deselect all buttons. */
-        for (var i = 1; i <= Object.keys(F3DWLD.CONFIG.dsd).length; i++) {
+        for (var i = 1; i <= Object.keys(this.CONFIG.dsd).length; i++) {
             $('#buttonSelectAll_' + i + '_1').append($.i18n.prop('_selectAll'));
             $('#buttonSelectAll_' + i + '_1-text').addClass('btnText');
             $('#buttonDeSelectAll_' + i + '_1-text').append($.i18n.prop('_clearSelection'));
@@ -2335,7 +2344,7 @@ define(['jquery',
             if (item.value == "pivot") {
                 STATS.exportPivotDownloadStandard();
                 var footNotes = "";
-                if (typeof FAOSTATDownload.MyMetaData[F3DWLD.CONFIG.domainCode] != "undefined") {
+                if (typeof FAOSTATDownload.MyMetaData[this.CONFIG.domainCode] != "undefined") {
                     footNotes = "<table><tr><td>" + FAOSTATDownload.MyMetaData[F3DWLD.CONFIG.domainCode]["E"] + "</td></tr></table>"
                 }
                 var myFFlag = "";
@@ -2344,7 +2353,7 @@ define(['jquery',
                 }
                 FAOSTATOLAP.pivots[0].toExcel("<table><tr><td>FAOSTAT 2013</td></tr></table>", "<table><tr><td>" + myFFlag + "</td></tr></table>" + footNotes);
             } else {
-                createTable(true, false);
+                this.createTable(true, false);
             }
         });
 
@@ -2354,8 +2363,8 @@ define(['jquery',
             $('#testinline').empty();
             var item = $('#options_output_type').jqxDropDownList('getSelectedItem');
             if (item.value == "pivot") {
-                getTabSelection();
-                getGridsValues();
+                this.getTabSelection();
+                this.getGridsValues();
                 try {
                     document.getElementById('testinline').className = "visi2";
                 } catch (err) {
@@ -2363,81 +2372,81 @@ define(['jquery',
                 }
                 window.FAOSTATDownloadSelectorsClassic.falseclick();
             } else {
-                createTable(true, true);
-                STATS.showTableDownloadStandard(F3DWLD.CONFIG.domainCode);
+                this.createTable(true, true);
+                STATS.showTableDownloadStandard(this.CONFIG.domainCode);
             }
         });
 
     };
 
-    F3DWLD.prototype.init = function enhanceUITabs() {
+    F3DWLD.prototype.enhanceUITabs = function() {
         $('.faostat-download-tab').jqxTabs({
             width: '352',
             height: '130',
             position: 'top',
             animationType: 'fade',
             selectionTracker: 'checked',
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
         $('#tab_1').on('tabclick', function(event) {
             var idx = 1 + parseInt(event.args.item);
             $('#buttonSelectAll_usp_GetAreaList1').attr('onclick', '');
             $('#buttonSelectAll_usp_GetAreaList1').unbind('click');
             $('#buttonSelectAll_usp_GetAreaList1').click(function() {
-                selectAllForSummary('grid_usp_GetAreaList' + idx + '_1');
+                this.selectAllForSummary('grid_usp_GetAreaList' + idx + '_1');
             });
             $('#grid_1_1_select option:selected').removeAttr('selected');
             $('#grid_1_2_select option:selected').removeAttr('selected');
             $('#grid_1_3_select option:selected').removeAttr('selected');
-            clearAllForSummary('grid_1_1');
-            clearAllForSummary('grid_1_2');
-            clearAllForSummary('grid_1_3');
+            this.clearAllForSummary('grid_1_1');
+            this.clearAllForSummary('grid_1_2');
+            this.clearAllForSummary('grid_1_3');
         });
         $('#tab_2').on('tabclick', function(event) {
             var idx = 1 + parseInt(event.args.item);
             $('#buttonSelectAll_usp_GetItemList1').attr('onclick', '');
             $('#buttonSelectAll_usp_GetItemList1').unbind('click');
             $('#buttonSelectAll_usp_GetItemList1').click(function() {
-                selectAllForSummary('grid_usp_GetItemList' + idx + '_1');
+                this.selectAllForSummary('grid_usp_GetItemList' + idx + '_1');
             });
             $('#grid_2_1_select option:selected').removeAttr('selected');
             $('#grid_2_2_select option:selected').removeAttr('selected');
             $('#grid_2_3_select option:selected').removeAttr('selected');
-            clearAllForSummary('grid_2_1');
-            clearAllForSummary('grid_2_2');
-            clearAllForSummary('grid_2_3');
+            this.clearAllForSummary('grid_2_1');
+            this.clearAllForSummary('grid_2_2');
+            this.clearAllForSummary('grid_2_3');
         });
         $('#tab_3').on('tabclick', function(event) {
             $('#grid_3_1_select option:selected').removeAttr('selected');
             $('#grid_3_2_select option:selected').removeAttr('selected');
             $('#grid_3_3_select option:selected').removeAttr('selected');
-            clearAllForSummary('grid_3_1');
-            clearAllForSummary('grid_3_2');
-            clearAllForSummary('grid_3_3');
+            this.clearAllForSummary('grid_3_1');
+            this.clearAllForSummary('grid_3_2');
+            this.clearAllForSummary('grid_3_3');
         });
         $('#tab_4').on('tabclick', function(event) {
             $('#grid_4_1_select option:selected').removeAttr('selected');
             $('#grid_4_2_select option:selected').removeAttr('selected');
             $('#grid_4_3_select option:selected').removeAttr('selected');
-            clearAllForSummary('grid_4_1');
-            clearAllForSummary('grid_4_2');
-            clearAllForSummary('grid_4_3');
+            this.clearAllForSummary('grid_4_1');
+            this.clearAllForSummary('grid_4_2');
+            this.clearAllForSummary('grid_4_3');
         });
         $('#tab_5').on('tabclick', function(event) {
             $('#grid_5_1_select option:selected').removeAttr('selected');
             $('#grid_5_2_select option:selected').removeAttr('selected');
             $('#grid_5_3_select option:selected').removeAttr('selected');
-            clearAllForSummary('grid_5_1');
-            clearAllForSummary('grid_5_2');
-            clearAllForSummary('grid_5_3');
+            this.clearAllForSummary('grid_5_1');
+            this.clearAllForSummary('grid_5_2');
+            this.clearAllForSummary('grid_5_3');
         });
     };
 
-    F3DWLD.prototype.init = function enhanceUIOptions() {
+    F3DWLD.prototype.enhanceUIOptions = function() {
         var width = '140';
         $('.output_options').jqxExpander({
             width: '100%',
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
         $('.output_options').jqxExpander('collapse');
         $('#options_output_type').jqxDropDownList({
@@ -2446,7 +2455,7 @@ define(['jquery',
             width: width,
             height: '25',
             selectedIndex: 0,
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
         $('#options_output_type').on('change', function(event) {
             var item = $('#options_output_type').jqxDropDownList('getSelectedItem');
@@ -2464,7 +2473,7 @@ define(['jquery',
             width: width,
             height: '25',
             selectedIndex: 0,
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
         $('#options_thousand_separator').bind('change', function(event) {
             var ts = $('#options_thousand_separator').jqxDropDownList('getSelectedItem').originalItem.olap_value.toString();
@@ -2485,7 +2494,7 @@ define(['jquery',
             width: width,
             height: '25',
             selectedIndex: 1,
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
         $('#options_decimal_separator').bind('change', function(event) {
             var ds = $('#options_decimal_separator').jqxDropDownList('getSelectedItem').originalItem.olap_value.toString();
@@ -2507,7 +2516,7 @@ define(['jquery',
             width: width,
             height: '25',
             selectedIndex: 2,
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
         $('#options_decimal_numbers').bind('change', function(event) {
             var nbDec = $('#options_decimal_numbers').jqxDropDownList('getSelectedItem').label.toString();
@@ -2523,7 +2532,7 @@ define(['jquery',
         });
         $('#options_show_flags').jqxCheckBox({
             checked: false,
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
         $('#options_show_flags').bind('change', function(event) {
             var item = event.args.checked;
@@ -2549,7 +2558,7 @@ define(['jquery',
         });
         $('#options_show_codes').jqxCheckBox({
             checked: false,
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
         $('#options_show_codes').bind('change', function(event) {
             var item = event.args.checked;
@@ -2566,7 +2575,7 @@ define(['jquery',
         });
         $('#options_show_units').jqxCheckBox({
             checked: false,
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
         $('#options_show_units').bind('change', function(event) {
             var item = event.args.checked;
@@ -2590,20 +2599,20 @@ define(['jquery',
         });
         $('#options_show_null_values').jqxCheckBox({
             checked: true,
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
         $('#options_show_flags').jqxCheckBox({
             checked: true,
-            theme: F3DWLD.CONFIG.theme
+            theme: this.CONFIG.theme
         });
-        if (F3DWLD.CONFIG.domainCode == 'FS') {
+        if (this.CONFIG.domainCode == 'FS') {
             $('#options_show_flags').jqxCheckBox('disable');
         } else {
             $('#options_show_flags').jqxCheckBox('enable');
         }
     };
 
-    F3DWLD.prototype.init = function buildOLAP() {
+    F3DWLD.prototype.buildOLAP = function() {
         var s = '';
         s += '<table style="width: 720px; margin-left: 22px;">';
         s += '<tr>';
@@ -2641,14 +2650,14 @@ define(['jquery',
         return s;
     };
 
-    F3DWLD.prototype.init = function continue_with_table() {
+    F3DWLD.prototype.continue_with_table = function() {
         $('#radio_table').val(true);
         $('#radio_pivot').val(false);
         $('.fs-warning-wrapper').css('display', 'none');
-        preview(true, true);
+        this.preview(true, true);
     };
 
-    F3DWLD.prototype.init = function showReportingTables() {
+    F3DWLD.prototype.showReportingTables = function() {
         if ((FAOSTATDownload.groupCode == 'G1' && FAOSTATDownload.domainCode == 'GT') ||
             (FAOSTATDownload.groupCode == 'G2' && FAOSTATDownload.domainCode == 'GL')) {
             var s = '';
@@ -2669,12 +2678,12 @@ define(['jquery',
         }
     };
 
-    F3DWLD.prototype.init = function showIPCC(version) {
+    F3DWLD.prototype.showIPCC = function(version) {
         document.getElementById('output_area').innerHTML = '<i class="fa fa-refresh fa-spin fa-5x"></i>';
         $.ajax({
             type        :   'GET',
             dataType    :   'text',
-            url         :   F3DWLD.CONFIG.prefix + 'crf/' + FAOSTATDownload.groupCode + '_' + version + '.html',
+            url         :   this.CONFIG.prefix + 'crf/' + FAOSTATDownload.groupCode + '_' + version + '.html',
             success : function(response) {
                 document.getElementById('output_area').innerHTML = response;
                 $.ajax({
@@ -2721,7 +2730,7 @@ define(['jquery',
         });
     };
 
-    F3DWLD.prototype.init = function showIPCCButtonListener() {
+    F3DWLD.prototype.showIPCCButtonListener = function() {
         var sql = {};
         sql['query'] = "SELECT D.ItemCode, D.ElementCode, AVG(D.value) " +
         "FROM Data AS D " +
@@ -2804,7 +2813,7 @@ define(['jquery',
         });
     };
 
-    F3DWLD.prototype.init = function html2excel(id) {
+    F3DWLD.prototype.html2excel = function(id) {
         var payload = $('#' + id).html();
         $('#data').val(payload);
         if (id == 'ipcc_download_table_1') {
