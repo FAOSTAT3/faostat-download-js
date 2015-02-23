@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="services:war">
-    <output-path>$PROJECT_DIR$/../TesiFAO/services/target</output-path>
-    <root id="archive" name="services-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="services:war exploded" />
-    </root>
-  </artifact>
-</component>
