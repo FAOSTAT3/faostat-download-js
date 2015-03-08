@@ -1966,7 +1966,7 @@ arrayFormat = function(opts) {
         attrElem = $("<li class='axis_" + i + "' id='filtre_"+c+"'>").append($("<span class='pvtAttr'>").html(c).data("attrName", c).append(triangleLink));
         if (hasExcludedItem) { attrElem.addClass('pvtFilteredAttribute');        }
         colList.append(attrElem).append(valueList);
-       // $("body").append(attrElem).append(valueList);
+       //$("body").append(attrElem).append(valueList);
         
         return attrElem.bind("dblclick", showFilterList);
       };
@@ -1978,7 +1978,7 @@ arrayFormat = function(opts) {
         if (!__hasProp.call(_ref2, x)) continue;
         aggregator.append($("<option>").val(x).html(x));
       }
-     $("<td class='pvtAxisContainer pvtHorizList pvtCols'>").appendTo(tr1);
+     $("<td id='cols' class='pvtAxisContainer pvtHorizList pvtCols'>").appendTo(tr1);
       $("<td class='pvtVals'>").appendTo(tr1).append(aggregator).append($("<br>"));
      tr2 = $("<tr>").appendTo(uiTable);
      // tr2.append($("<td id='rows' valign='top' class='pvtAxisContainer pvtRows pvtHorizList'>"));

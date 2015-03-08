@@ -13,12 +13,10 @@ if (!window.FAOSTATDownloadSelectorsClassic) {
         }
         monXML += "</dimension>";
     }
-    function getNestedBy() {
-        return $('#nestedBy').sortable('toArray').slice(1).join(",");
-    }
+    function getNestedBy() {        return $('#nestedBy').sortable('toArray').slice(1).join(",");    }
+    
     window.FAOSTATDownloadSelectorsClassic = {
-        theme: "energyblue",
-        source: [],
+        theme: "energyblue",source: [],
         /** base URL for WDS, default: fenixapps.fao.org */
         baseurl: "",
         /** datasource for WDS, default: faostat */
@@ -34,12 +32,8 @@ if (!window.FAOSTATDownloadSelectorsClassic) {
         selectAll: function(gridCode, select) {
             var rows = $('#' + gridCode).jqxGrid('getrows');
             for (var i = 0; i < rows.length; i++) {
-                if (select) {
-                    $('#' + gridCode).jqxGrid('selectrow', i);
-                }
-                else {
-                    $('#' + gridCode).jqxGrid('unselectrow', i);
-                }
+                if (select) {    $('#' + gridCode).jqxGrid('selectrow', i);  }
+                else {$('#' + gridCode).jqxGrid('unselectrow', i); }
             }
         },
         falseclick: function() {
@@ -49,8 +43,6 @@ if (!window.FAOSTATDownloadSelectorsClassic) {
 
             $("#testinline").html("<center><img src=\"/test2/pivotAgg/Preload.gif\" /></center>");
             FAOSTATNEWOLAP.flags = {};
-
-
             console.log("falseclick 2 ");
             var p = {};
             p.datasource = F3DWLD.CONFIG.datasource;
@@ -80,7 +72,7 @@ if (!window.FAOSTATDownloadSelectorsClassic) {
                 url: F3DWLD.CONFIG.procedures_data_url,
                 data: data,
                 success: function(response) {
-                    console.log("respobnse");
+                    console.log("response");
                     console.log(response);
                     /* var response2=[["Domain","AreaCode","AreaName","ItemCode","ItemName","ElementCode","ElementName","Year","Unit","Flag","Value"]];
                      var response2TM=[["Domain","ReporterCode","ReporterName","PartnerCode","PartnerName","ItemCode","ItemName","ElementCode","ElementName","Year","Unit","Flag","Value"]];
@@ -103,14 +95,10 @@ if (!window.FAOSTATDownloadSelectorsClassic) {
                     $("#testinline").css("overflow", "auto");
                     var newFlag = "";
                     for (var i in FAOSTATNEWOLAP.flags) {
-                        if (newFlag != "") {
-                            newFlag += ":";
-                        }
+                        if (newFlag != "") { newFlag += ":";}
                         newFlag += "'" + i + "'";
                     }
-                    if (newFlag == "") {
-                        newFlag = "''";
-                    }
+                    if (newFlag == "") { newFlag = "''";    }
                     $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribute("colspan", 2);
                     $.get("/faostat.olap.ws/rest/GetFlags/" + F3DWLD.CONFIG.lang + "/" + newFlag, function(data) {
                         data = data.replace("localhost:8080/", "faostat3.fao.org/");

@@ -28,9 +28,9 @@ table.pvtTable tr td {
 .pvtAggregator { margin-bottom: 5px ;}
 
 .pvtAxisContainer, .pvtVals {
-    border: 1px solid gray;
+  /*  border: 1px solid gray;
     background: #EEE;
-    padding: 5px;
+   */ padding: 5px;
     min-width: 20px;
     min-height: 20px;
 }
@@ -150,3 +150,27 @@ background: #ffffff ;}
 .ordre{display:none !important;}
 .pvtCheckContainer p label span{display:inline}
 
+
+
+
+
+
+ #rows:before {
+        content: 'ROW';
+        position: relative;
+        top: 5px;
+        left: 0;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase; }
+ #rows{padding-left: 65px;}
+ #cols{padding-left: 65px;}
+ 
+ #cols:before {
+        content: 'COLS';
+        position: relative;
+        top: 5px;
+        left: 0;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase; }

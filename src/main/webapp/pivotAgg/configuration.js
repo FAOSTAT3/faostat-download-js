@@ -1,130 +1,95 @@
  FAOSTATOLAPV3={};
 FAOSTATOLAPV3.grouped=true;
 var dataTest2=[];
-function changechkTreeview()
-{
+function changechkTreeview(){
    FAOSTATOLAPV3.grouped=document.getElementById('chkTreeview').checked;
    FAOSTATOLAPV3.mygrid="";
-$("#fx-olap-ui").pivotUI(dataTest2,{"rows":["Area","Item","Year"],"cols":["Element"],"vals":["Value"]},false);}
+$("#fx-olap-ui").pivotUI(FAOSTATNEWOLAP.originalData,FAOSTATOLAP2.options.E,false);}
 
 function newGrid(r){
    var r2d2=[];
-     console.log("r");
-        console.log(r);
+     
     $("#mesFlags").empty();
-for(ligne in r.tree)
-    {
-        //console.log(ligne);
-   var temp=ligne.split('||');
-    for(col in r.colKeys)
-    { 
-        var coldInd=r.colKeys[col].join("||");//.replace(/[^a-zA-Z0-9]/g,"_")
-      // console.log(coldInd);
-        // for(col in r.tree[ligne])
-  /*      console.log("ligne"+ligne+" "+r.tree[ligne]);
-        console.log(col+":"+r.tree[ligne][col].value());*/
-             
-if( r.tree[ligne][coldInd]!=null){
-     temp.push(r.tree[ligne][coldInd].value());
+    for(ligne in r.tree){
 
+        var temp=ligne.split('||');
+        for(col in r.colKeys){
+
+        var coldInd=r.colKeys[col].join("||");//.replace(/[^a-zA-Z0-9 ]/g,"_");
+             if( r.tree[ligne][coldInd]!=null){
+                 temp.push(r.tree[ligne][coldInd].value());
    // temp.push("<table width=\"100%\" ><tr><td width=\"50%\">"+r.tree[ligne][coldInd].value()[0]+"</td><td>"+r.tree[ligne][coldInd].value()[1]+"</td></tr></table>");
 }
 else{temp.push( "");}
                 // r2d2.push([ligne,col,+r.tree[ligne][col].value()]);
       }
-      //console.log(temp);
       r2d2.push(temp);
      }
-      console.log("r2d2");
-        console.log(r2d2);
+      
 var grid_demo_id = "myGrid1" ;
-
-
 var dsOption= {
-
-	fields :[],
-
-	recordType : 'array',
-	data : r2d2
+    fields :[],
+    recordType : 'array',
+    data : r2d2
 };
-
-/*
-		{name : 'Area'  },
-		{name : 'Item'  },
-		{name : 'Element'  },
-                {name : '2007'  },
-		{name : '2008'  },
-		{name : '2009'  },
-                {name : '2010'  }*/
-
-
 var colsOption = [];
- /*
-     {id: 'Area' , header: "Area" , width :60,frozen : true  },
-     
-	   {id: 'Item' , header: "Item" , width :70,frozen : true  },
-	   {id: 'Element' , header: "Element" , width :80 ,frozen : true },
-           {id: '2007' , header: "2007" , width :60  },
-	   {id: '2008' , header: "2008" , width :70  },
-	   {id: '2009' , header: "2009" , width :80  },
-            {id: '2010' , header: "2010" , width :70  }*/
-
-
 for(var i in r.rowAttrs){
 
    dsOption.fields.push({name : r.rowAttrs[i]  });
    colsOption.push({id:  r.rowAttrs[i] , header:  r.rowAttrs[i] , frozen : true ,grouped : FAOSTATOLAPV3.grouped});
    
 }
-
-
- var reg = new RegExp("<span class=\"ordre\">[0-9]*</span>(.*)", "g"); 
-
- var reg2 = new RegExp("<span class=\"ordre\">[0-9]*</span><table class=\"innerCol\"><th>([0-9]+)</th><th>([^>]*)</th></table>", "g"); 
-
+var reg = new RegExp("<span class=\"ordre\">[0-9]*</span>(.*)", "g"); 
+var reg2 = new RegExp("<span class=\"ordre\">[0-9]*</span><table class=\"innerCol\"><th>([0-9]+)</th><th>([^>]*)</th></table>", "g"); 
 for(var i in r.colKeys){
- // console.log(r.colKeys[i].toString());
-   dsOption.fields.push(
-           {name : r.colKeys[i].toString().replace(/[^a-zA-Z0-9]/g,"_")  }
-           );
-               
-               montitle="";
-               for(var ii=0;ii<r.colKeys[i].length;ii++)
-               {
-                   //console.log(r.colKeys[i][ii]);
-                   if(true || F3DWLD.CONFIG.wdsPayload.showCodes){montitle+=" "+r.colKeys[i][ii].replace(reg2, "$2 ($1)")/*.replace(/[^a-zA-Z0-9]/g,"_")*/;}
-                   else{montitle+=" "+r.colKeys[i][ii].replace(reg, "$1")/*.replace(/[^a-zA-Z0-9]/g,"_")*/;}
-                   }
-              // console.log(montitle);
+   dsOption.fields.push({name : r.colKeys[i].toString().replace(/[^a-zA-Z0-9]/g,"_")  } );
+   montitle="";
+   for(var ii=0;ii<r.colKeys[i].length;ii++){
+       if( F3DWLD.CONFIG.wdsPayload.showCodes){
+        
+           montitle+=" "+r.colKeys[i][ii].replace(reg2, " $2 ($1)")/*.replace(/[^a-zA-Z0-9]/g,"")*/;}
+       else{montitle+=" "+r.colKeys[i][ii].replace(reg, "$1")/*.replace(/[^a-zA-Z0-9]/g,"_")*/;}
+   }
    colsOption.push({id:  r.colKeys[i].join("_").replace(/[^a-zA-Z0-9]/g,"_") ,
-       header: montitle, toolTip : true ,toolTipWidth : 150});
-
-   
+       header: montitle, toolTip : true ,toolTipWidth : 150,
+      /*  sortFn :function(r1,r2){
+        t=colsOption.length-1;
+        console.log(r1[t]);
+                return (r1[t]-r2[t]);
+           },*/
+            renderer:my_renderer});
 }
-
-
 Sigma.ToolFactroy.register(
-	'mybutton',  
-	{
-		cls : 'mybutton-cls',  
-		toolTip : 'I am a new button',
-              
-		action : function(event,grid) {  alert( 'The id of this grid is  '+grid.id)  }
+	'mybutton',  {cls : 'mybutton-cls', toolTip : 'I am a new button',
+            action : function(event,grid) {  alert( 'The id of this grid is  '+grid.id)  }
 	}
 );
 
 
 function my_renderer(value ,record,columnObj,grid,colNo,rowNo){
 
-		var no= record[columnObj.fieldIndex] + 0;
-		var color = no<50?"red":(no>70?"green":"blue");
-		return "<span style=\"color:" + color +";\"><strong>" + no + "</strong></span>";
+    /*var no= record[columnObj.fieldIndex] + 0;
+    var color = no<50?"red":(no>70?"green":"blue");
+    return "<span style=\"color:" + color +";\"><strong>" + no.toLocaleString() + "</strong></span>";
+*/
+var no="";
+    if(record[columnObj.fieldIndex].length>1){
+     //   if(!F3DWLD.CONFIG.wdsPayload.showUnits && !F3DWLD.CONFIG.wdsPayload.showFlags){no=record[columnObj.fieldIndex][0].toLocaleString()}
+        
+no= "<table class=tableVCell><tr><td>"+record[columnObj.fieldIndex][0].toLocaleString() +"</td>";
+if(F3DWLD.CONFIG.wdsPayload.showUnits){no+= "<td>"+record[columnObj.fieldIndex][1]+"</td>";}
+   if(F3DWLD.CONFIG.wdsPayload.showFlags){no+= "<td>"+  record[columnObj.fieldIndex][2]+"</td>";}
+           no+="</tr></table>";
+}
+else{no=record[columnObj.fieldIndex].toLocaleString();}
+return no;
+
 }
 
 var gridOption={
 	id : grid_demo_id,
-	width: "100%",  //"100%", // 700,
-	height: "100%",  //"100%", // 330,
+	width: "800",  //"100%", // 700,
+	height: "350",  //"100%", // 330,
 	container :"myGrid1_div",//pvtRendererArea",//testinline2",//'',//myGrid1_div',//pivot_table',// 'gridbox',// $(".pvtRendererArea")[0],//
 	replaceContainer : true, 
 	dataset : dsOption ,
@@ -135,28 +100,14 @@ var gridOption={
         SigmaGridPath : 'grid/',
 	toolbarContent : 'nav | goto | pagesize ',/*| mybutton |*/
 onMouseOver : function(value,  record,  cell,  row,  colNo, rowNo,  columnObj,  grid){
-		
-		
-		if (columnObj && columnObj.toolTip) {
-			grid.showCellToolTip(cell,columnObj.toolTipWidth);
-		}else{
-			grid.hideCellToolTip();
-		}
+    if (columnObj && columnObj.toolTip) { grid.showCellToolTip(cell,columnObj.toolTipWidth);}
+    else{grid.hideCellToolTip();}
 	},
-	onMouseOut : function(value,  record,  cell,  row,  colNo, rowNo,  columnObj,  grid){
-		grid.hideCellToolTip();
-	}
-
+	onMouseOut : function(value,  record,  cell,  row,  colNo, rowNo,  columnObj,  grid){grid.hideCellToolTip();}
 };
 
-
-//console.log(r2d2);
-//console.log(colsOption );
-//console.log(dsOption.fields);
 //Sigma.Msg.Grid.en.PAGE_AFTER='okokk'+gridOption.pageSize;
   FAOSTATOLAPV3.mygrid=new Sigma.Grid( gridOption );
-  
-//console.log( FAOSTATOLAPV3.mygrid);
  Sigma.Grid.render( FAOSTATOLAPV3.mygrid)() ;
  document.getElementById('page_after').innerHTML="/"+FAOSTATOLAPV3.mygrid.getPageInfo().totalPageNum;
   FAOSTATOLAPV3.mygrid.pageSizeSelect.onchange=function()
@@ -166,24 +117,16 @@ onMouseOver : function(value,  record,  cell,  row,  colNo, rowNo,  columnObj,  
 else{$("#mesFlags").append($("<label for=\"chkTreeview\">Treeview/Sorting columns</label><input  onchange=\"changechkTreeview()\" type=\"checkbox\" id=\"chkTreeview\">"));}
 $("#nested_by").hide();
 }
-
-
-
-
 FAOSTATOLAP2 = {};
-FAOSTATOLAP2.displayOption =
-        {
+FAOSTATOLAP2.displayOption = {
             showUnit: 0,
             showCode: 0,
             showFlag: 0,
             overwrite: true
         };
        //  google.load("visualization", "1", {packages:["corechart", "charteditor"]});
-
-
 FAOSTATOLAP2 = {};
-FAOSTATOLAP2.displayOption =
-        {
+FAOSTATOLAP2.displayOption =  {
             showUnit: 0,
             showCode: 0,
             showFlag: 0,
@@ -192,8 +135,7 @@ FAOSTATOLAP2.displayOption =
        //  google.load("visualization", "1", {packages:["corechart", "charteditor"]});
 
 FAOSTATOLAP2.options = {
-    E:{
-        derivedAttributes: {
+    E:{derivedAttributes: {
                     "Area": function(mp)
                     {
                         if (F3DWLD.CONFIG.wdsPayload.showCodes)
@@ -227,11 +169,10 @@ FAOSTATOLAP2.options = {
                 },
                 rows: ["Area", "Item", "Element"],
                 cols: ["Year"],
-                vals: ["Value",  "Flag"],
+                vals: ["Value"  ],
                 linkedAttributes: []
             },
-    F:{
-                derivedAttributes: {
+    F:{ derivedAttributes: {
                     "Pays": function(mp)
                     {
                         if (F3DWLD.CONFIG.wdsPayload.showCodes)
@@ -265,11 +206,10 @@ FAOSTATOLAP2.options = {
                 },
                 rows: ["Pays", "Articles", "Elements"],
                 cols: ["Annees"],
-                vals: ["Value", "Unit", "Flag"],
+                vals: ["Value"],
                 linkedAttributes: []
             }
-    , S:{
-        derivedAttributes: {
+    , S:{ derivedAttributes: {
             "Area": function(mp)
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
@@ -321,8 +261,7 @@ FAOSTATOLAP2.header = {E: [["Country Code", "Country_", "Element Code", "Element
 
 
 FAOSTATOLAP2.optionsTM = {
-    E: {
-        derivedAttributes: {
+    E: { derivedAttributes: {
             "Reporter": function(mp)
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
@@ -369,8 +308,7 @@ FAOSTATOLAP2.optionsTM = {
         vals: ["Value", "Unit", "Flag"],
         linkedAttributes: []
     },
-    F: {
-        derivedAttributes: {
+    F: {derivedAttributes: {
             "Reporteurs": function(mp)
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
@@ -419,8 +357,7 @@ FAOSTATOLAP2.optionsTM = {
         linkedAttributes: []
     }
     ,
-    S: {
-        derivedAttributes: {
+    S: {derivedAttributes: {
             "Reporter": function(mp)
             {
                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
