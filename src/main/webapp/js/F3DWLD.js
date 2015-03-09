@@ -1586,7 +1586,7 @@ var F3DWLD = (function() {
              collectAndQueryWDSPivot(false);*/
 
 
-           
+           /*
 
 if(outputFormat==="csv") {
              
@@ -1595,6 +1595,17 @@ if(outputFormat==="csv") {
              } else { 
              //ExcelComplete("html");
             oldSchoolCSV("xls");
+             }*/
+                
+                if(outputFormat==="csv") {
+             
+             //oldSchoolCSV("csv");
+             // ExcelComplete("json");
+             decolrowspanNEW();
+             } else { 
+             //ExcelComplete("html");
+            //oldSchoolCSV("xls");
+               my_exportNew();
              }
 
  } catch (lines) {
