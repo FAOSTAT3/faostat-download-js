@@ -141,7 +141,7 @@ var F3DWLD = (function() {
                     newFlag += "'" + i + "'";
                 }
                 if (newFlag === "") {newFlag = "''";}
-                $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribute("colspan", 2);
+try{                $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribute("colspan", 2);}catch(er){}
                 $.get("http://faostat3.fao.org/faostat.olap.ws/rest/GetFlags/" + F3DWLD.CONFIG.lang + "/" + newFlag, function(data) {
                     data = data.replace("localhost:8080/", "faostat3.fao.org/");
                     data = data.replace("168.202.28.210/", "faostat3.fao.org/");
@@ -1354,7 +1354,7 @@ var F3DWLD = (function() {
         s += '<li><div id="flags_menu">' + $.i18n.prop('_showFlags') + '</div></li>';
         s += '<li><div id="codes_menu">' + $.i18n.prop('_showCodes') + '</div></li>';
         s += '<li><div id="units_menu">' + $.i18n.prop('_showUnits') + '</div></li>';
-        s += '<li><div id="null_values_menu">' + $.i18n.prop('_showNullValues') + '</div></li>';
+        s += '<li><div id="null_values_menu" style="display:">' + $.i18n.prop('_showNullValues') + '</div></li>';
         s += '</li></ul>';
         s += '<li type="separator"></li>';
         //  s += '<li id="menu_show"><div id="nested_by">'+ $.i18n.prop('_nestedby') +'</div>'; 
@@ -1942,8 +1942,10 @@ if(outputFormat==="csv") {
             F3DWLD.CONFIG.wdsPayload.decimalNumbers = parseInt(value);
             FAOSTATNEWOLAP.decimal = F3DWLD.CONFIG.wdsPayload.decimalNumbers;
             if($('#radio_table').val()){preview(true, true);}
-            else if( FAOSTATNEWOLAP.firstCall==0)
-            {preview(false, true);}
+            else /*if( FAOSTATNEWOLAP.firstCall==0)*/
+            {
+                
+                preview(false, false    );}
         });
        
         enhanceUITabs();
