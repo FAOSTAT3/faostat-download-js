@@ -1354,7 +1354,7 @@ try{                $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribu
         s += '<li><div id="flags_menu">' + $.i18n.prop('_showFlags') + '</div></li>';
         s += '<li><div id="codes_menu">' + $.i18n.prop('_showCodes') + '</div></li>';
         s += '<li><div id="units_menu">' + $.i18n.prop('_showUnits') + '</div></li>';
-        s += '<li><div id="null_values_menu" style="display:">' + $.i18n.prop('_showNullValues') + '</div></li>';
+        s += '<li><div id="null_values_menu" style="display:none">' + $.i18n.prop('_showNullValues') + '</div></li>';
         s += '</li></ul>';
         s += '<li type="separator"></li>';
         //  s += '<li id="menu_show"><div id="nested_by">'+ $.i18n.prop('_nestedby') +'</div>'; 
