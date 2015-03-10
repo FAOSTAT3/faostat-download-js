@@ -150,11 +150,11 @@ var F3DWLD = (function() {
                     $('#preview_hr').css('display', 'block');
                 });
             }
-            else {   alert('norefresh');
+            else {   
                 if (isEx) {
                     oldSchool(FAOSTATNEWOLAP.pivotlimitExcel, true);
                 }
-                else {   alert('ok');
+                else {  
                     oldSchool(FAOSTATNEWOLAP.pivotlimit, false);
                 }
 
@@ -1481,8 +1481,8 @@ var F3DWLD = (function() {
     ;
 
     function preview(queryDB, refresh) {
-        try {
-            forecast_output_size();
+      //  try {
+          if(forecast_output_size())  {
             if ($('#radio_table').val()) {
                 document.getElementById('preview_label').innerHTML = $.i18n.prop('_output_preview_50');
                 $('#output_area').css("min-height", "350px");
@@ -1505,7 +1505,8 @@ var F3DWLD = (function() {
                 collectAndQueryWDSPivot(refresh, false, 'json');
                 STATS.showPivotDownloadStandard(F3DWLD.CONFIG.domainCode);
             }
-        } catch (lines) {
+        } else  {
+           // alert('ok probleme de lines');
             $('.fs-warning-wrapper').css('display', 'block');
             $('#close-fs-warning').bind('click', function () {
                 $('.fs-warning-wrapper').css('display', 'none');
@@ -1549,8 +1550,9 @@ var F3DWLD = (function() {
                 lines *= factor;
             }
             if (lines > F3DWLD.CONFIG.preview_limit)
-                throw lines;
+                return false;
         }
+        return true
     }
 
     function download(queryDB, outputFormat) {

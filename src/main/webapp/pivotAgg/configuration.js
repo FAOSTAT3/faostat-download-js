@@ -75,13 +75,17 @@ function my_renderer(value ,record,columnObj,grid,colNo,rowNo){
 var no="";
     if(record[columnObj.fieldIndex].length>1){
      //   if(!F3DWLD.CONFIG.wdsPayload.showUnits && !F3DWLD.CONFIG.wdsPayload.showFlags){no=record[columnObj.fieldIndex][0].toLocaleString()}
-        
-no= "<table class=tableVCell><tr><td>"+record[columnObj.fieldIndex][0].toLocaleString() +"</td>";
+        //record[columnObj.fieldIndex][0].toLocaleString()
+no= "<table class=tableVCell><tr><td>"+addCommas(record[columnObj.fieldIndex][0])+"</td>";
 if(F3DWLD.CONFIG.wdsPayload.showUnits){no+= "<td>"+record[columnObj.fieldIndex][1]+"</td>";}
    if(F3DWLD.CONFIG.wdsPayload.showFlags){no+= "<td>"+  record[columnObj.fieldIndex][2]+"</td>";}
            no+="</tr></table>";
 }
-else{no=record[columnObj.fieldIndex].toLocaleString();}
+else{
+//    no=record[columnObj.fieldIndex].toLocaleString();
+ no=addCommas(record[columnObj.fieldIndex]);
+
+}
 return no;
 
 }

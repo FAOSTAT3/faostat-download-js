@@ -655,9 +655,9 @@ for(tti in tt){flatColKeyst.push(tt[tti].join("||"))}
                     if (FAOSTATNEWOLAP.showUnits) {    ret += ","; }
                     if (FAOSTATNEWOLAP.showFlags) { ret += ","; }
                 }
-                else {console.log(row[i][col[j]].value());
-				 ret += '"' + addCommas(row[i][col[j]].value()[0]) + '",';
-                                  if (FAOSTATNEWOLAP.showUnits) {    ret +=  '"' + addCommas(row[i][col[j]].value()[1]) + '",'; }
+                else {
+                    ret += '"' + addCommas(row[i][col[j]].value()[0]) + '",';
+                    if (FAOSTATNEWOLAP.showUnits) {    ret +=  '"' + addCommas(row[i][col[j]].value()[1]) + '",'; }
                     if (FAOSTATNEWOLAP.showFlags) { ret +=  '"' + addCommas(row[i][col[j]].value()[2]) + '",'; }
 				 /*
                     ret += '"' + addCommas(row[i][col[j]].value()[0]) + '",';
@@ -1984,7 +1984,7 @@ arrayFormat = function(opts) {
      // tr2.append($("<td id='rows' valign='top' class='pvtAxisContainer pvtRows pvtHorizList'>"));
 tr2.append($("<td id=pretd1>"));
 //   pivotTable = $("<td valign='top' id='pvtRendererArea' class='pvtRendererArea'>").append("<div  id='pivot_table'>").appendTo(tr2);
-   
+   $("#fx-olap-holder-div").empty();
    pivotTable = $("<td valign='top' id='pvtRendererArea' class='pvtRendererArea'>").append("<div  id='pivot_table'>").appendTo($("#fx-olap-holder-div"));
       if (opts.unusedAttrsVertical === true || unusedAttrsVerticalAutoOverride) {
         uiTable.find('tr:nth-child(1)').prepend(rendererControl);
@@ -2101,6 +2101,7 @@ tr2.append($("<td id=pretd1>"));
         };
       })(this);
       refresh = (function(_this) {
+       
         return function() {
           pivotTable.css("opacity", 0.5);
           return setTimeout(refreshDelayed, 10);
