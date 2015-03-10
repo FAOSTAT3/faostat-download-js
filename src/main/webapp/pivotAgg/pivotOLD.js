@@ -692,7 +692,24 @@ function stringify(obj) {
 };
 
 function my_exportNew() {//xls
-  var mycols=[];
+    var mycols=[];
+  for(var c=0;c<FAOSTATNEWOLAP.internalData.rowAttrs.length;c++)
+  {if(F3DWLD.CONFIG.wdsPayload.showCodes){ mycols.push(FAOSTATNEWOLAP.internalData.rowAttrs[c]+"Code");        }
+          mycols.push(FAOSTATNEWOLAP.internalData.rowAttrs[c]+"Name");
+         
+  }
+  flatColKeyst=[];
+tt=FAOSTATNEWOLAP.internalData.getColKeys();
+for(tti in tt){flatColKeyst.push(tt[tti].join("||"))}
+//console.log(FAOSTATNEWOLAP.internalData.tree);
+ document.getElementById("myJson").value=stringify( {data:FAOSTATNEWOLAP.internalData.tree,
+     header:flatColKeyst,cols:mycols,swUnit:"1" ,swFlag:"1"
+ 
+    });
+	
+   //document.getElementById("myJson").value=JSON.stringify({data:FAOSTATNEWOLAP.originalData,header:FAOSTATNEWOLAP.internalData.flatColKeys});
+    document.getElementById("xlsDataForm").submit();
+ /* var mycols=[];
   
       for(var c=0;c<FAOSTATNEWOLAP.internalData.rowAttrs.length;c++){
              if(F3DWLD.CONFIG.wdsPayload.showCodes && FAOSTATNEWOLAP.internalData.rowAttrs[c]!="Year"
@@ -707,7 +724,7 @@ function my_exportNew() {//xls
  
     });
    //document.getElementById("myJson").value=JSON.stringify({data:FAOSTATNEWOLAP.originalData,header:FAOSTATNEWOLAP.internalData.flatColKeys});
-    document.getElementById("xlsDataForm").submit();
+    document.getElementById("xlsDataForm").submit();*/
   }
 
 

@@ -106,18 +106,12 @@ var F3DWLD = (function() {
     };
 
     function collectAndQueryWDSPivot(refresh, isEx, outputFormat) {
-
         getTabSelection();
-
         getGridsValues();
-
-        try {
-            document.getElementById('testinline').className = "visi2";
-        } catch (err) {
-        }
+        try {   document.getElementById('testinline').className = "visi2";        } catch (err) {        }
      
             if (refresh) {
-                
+               
                 var t=retConfig(F3DWLD.CONFIG.domainCode,F3DWLD.CONFIG.lang);
                 response2_2=t[0];
                 mesOptionsPivot=t[1];
@@ -126,17 +120,12 @@ var F3DWLD = (function() {
                 mesOptionsPivot.rows = FAOSTATNEWOLAP.internalData.rowAttrs;
                 mesOptionsPivot.cols = FAOSTATNEWOLAP.internalData.colAttrs;
                 mesOptionsPivot.vals = ["Value"];
-                if (F3DWLD.CONFIG.wdsPayload.showUnits)
-                {
-                    mesOptionsPivot.vals.push("Unit");
-                }
-                if (F3DWLD.CONFIG.wdsPayload.showFlags)
-                {
-                    mesOptionsPivot.vals.push("Flag");
-                }
+                if (F3DWLD.CONFIG.wdsPayload.showUnits) {mesOptionsPivot.vals.push("Unit");}
+                if (F3DWLD.CONFIG.wdsPayload.showFlags)  {mesOptionsPivot.vals.push("Flag");}
    // google.load("visualization", "1", {packages:["corechart", "charteditor"]});
-   
-                $("#testinline").pivotUI(FAOSTATNEWOLAP.originalData, mesOptionsPivot, true);
+
+                //$("#testinline").pivotUI(FAOSTATNEWOLAP.originalData, mesOptionsPivot, true);
+                 $("#fx-olap-ui").pivotUI(FAOSTATNEWOLAP.originalData, mesOptionsPivot, true);
 
                /* for (var iLabel = 0; iLabel < $(".pvtAxisLabel").length; iLabel++)
                 {
@@ -148,28 +137,24 @@ var F3DWLD = (function() {
 
                 var newFlag = "";
                 for (var i in FAOSTATNEWOLAP.flags) {
-                    if (newFlag !== "") {
-                        newFlag += ":";
-                    }
+                    if (newFlag !== "") {newFlag += ":";}
                     newFlag += "'" + i + "'";
                 }
-                if (newFlag === "") {
-                    newFlag = "''";
-                }
+                if (newFlag === "") {newFlag = "''";}
                 $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribute("colspan", 2);
                 $.get("http://faostat3.fao.org/faostat.olap.ws/rest/GetFlags/" + F3DWLD.CONFIG.lang + "/" + newFlag, function(data) {
                     data = data.replace("localhost:8080/", "faostat3.fao.org/");
                     data = data.replace("168.202.28.210/", "faostat3.fao.org/");
-                    alert('ok1')
+                   
                     $("#myGrid1_div").append(data);
                     $('#preview_hr').css('display', 'block');
                 });
             }
-            else {
+            else {   alert('norefresh');
                 if (isEx) {
                     oldSchool(FAOSTATNEWOLAP.pivotlimitExcel, true);
                 }
-                else {
+                else {   alert('ok');
                     oldSchool(FAOSTATNEWOLAP.pivotlimit, false);
                 }
 
