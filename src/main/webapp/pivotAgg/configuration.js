@@ -7,25 +7,33 @@ function changechkTreeview(){
 $("#fx-olap-ui").pivotUI(FAOSTATNEWOLAP.originalData,FAOSTATOLAP2.options.E,false);}
 
 function newGrid(r){
-   var r2d2=[];
-     
+    
+var r2d2=[];
     $("#mesFlags").empty();
+    
+    if(r.colKeys.length>0){
+    
     for(ligne in r.tree){
-
         var temp=ligne.split('||');
         for(col in r.colKeys){
-
         var coldInd=r.colKeys[col].join("||");//.replace(/[^a-zA-Z0-9 ]/g,"_");
-             if( r.tree[ligne][coldInd]!=null){
-                 temp.push(r.tree[ligne][coldInd].value());
-   // temp.push("<table width=\"100%\" ><tr><td width=\"50%\">"+r.tree[ligne][coldInd].value()[0]+"</td><td>"+r.tree[ligne][coldInd].value()[1]+"</td></tr></table>");
-}
-else{temp.push( "");}
+        if( r.tree[ligne][coldInd]!=null){ temp.push(r.tree[ligne][coldInd].value()); }
+        else{temp.push( "");}
+//temp.push(r.rowTotals[ligne].sum);
                 // r2d2.push([ligne,col,+r.tree[ligne][col].value()]);
       }
       r2d2.push(temp);
      }
-      
+}
+else{
+     for(ligne in r.rowTotals){
+          var temp=ligne.split('||');
+          if( r.rowTotals[ligne]!=null){
+              temp.push(r.rowTotals[ligne].value());}
+            else{temp.push( "");}
+      r2d2.push(temp);
+     }
+}
 var grid_demo_id = "myGrid1" ;
 var dsOption= {
     fields :[],
@@ -41,24 +49,26 @@ for(var i in r.rowAttrs){
 }
 var reg = new RegExp("<span class=\"ordre\">[0-9]*</span>(.*)", "g"); 
 var reg2 = new RegExp("<span class=\"ordre\">[0-9]*</span><table class=\"innerCol\"><th>([0-9]+)</th><th>([^>]*)</th></table>", "g"); 
+
+if(r.colKeys.length>0){
 for(var i in r.colKeys){
    dsOption.fields.push({name : r.colKeys[i].toString().replace(/[^a-zA-Z0-9]/g,"_")  } );
    montitle="";
    for(var ii=0;ii<r.colKeys[i].length;ii++){
-       if( F3DWLD.CONFIG.wdsPayload.showCodes){
-        
-           montitle+=" "+r.colKeys[i][ii].replace(reg2, " $2 ($1)")/*.replace(/[^a-zA-Z0-9]/g,"")*/;}
-       else{montitle+=" "+r.colKeys[i][ii].replace(reg, "$1")/*.replace(/[^a-zA-Z0-9]/g,"_")*/;}
+       if( F3DWLD.CONFIG.wdsPayload.showCodes){ montitle+=" "+r.colKeys[i][ii].replace(reg2, " $2 ($1)")/*.replace(/[^a-zA-Z0-9]/g,"")*/;}
+       else{montitle+="<br />"+r.colKeys[i][ii].replace(reg, "$1")/*.replace(/[^a-zA-Z0-9]/g,"_")*/;}
    }
    colsOption.push({id:  r.colKeys[i].join("_").replace(/[^a-zA-Z0-9]/g,"_") ,
        header: montitle, toolTip : true ,toolTipWidth : 150,
-      /*  sortFn :function(r1,r2){
-        t=colsOption.length-1;
-        console.log(r1[t]);
-                return (r1[t]-r2[t]);
-           },*/
-            renderer:my_renderer});
+     renderer:my_renderer});
+    }
 }
+else{ dsOption.fields.push({name : "Value"  } );
+     colsOption.push({id: "Value" ,
+       header: "Value", toolTip : true ,toolTipWidth : 150,
+       renderer:my_renderer});
+    }
+
 Sigma.ToolFactroy.register(
 	'mybutton',  {cls : 'mybutton-cls', toolTip : 'I am a new button',
             action : function(event,grid) {  alert( 'The id of this grid is  '+grid.id)  }
@@ -67,27 +77,18 @@ Sigma.ToolFactroy.register(
 
 
 function my_renderer(value ,record,columnObj,grid,colNo,rowNo){
-
-    /*var no= record[columnObj.fieldIndex] + 0;
-    var color = no<50?"red":(no>70?"green":"blue");
-    return "<span style=\"color:" + color +";\"><strong>" + no.toLocaleString() + "</strong></span>";
-*/
-var no="";
+    var no="";    
     if(record[columnObj.fieldIndex].length>1){
-     //   if(!F3DWLD.CONFIG.wdsPayload.showUnits && !F3DWLD.CONFIG.wdsPayload.showFlags){no=record[columnObj.fieldIndex][0].toLocaleString()}
-        //record[columnObj.fieldIndex][0].toLocaleString()
-no= "<table class=tableVCell><tr><td>"+addCommas(record[columnObj.fieldIndex][0])+"</td>";
-if(F3DWLD.CONFIG.wdsPayload.showUnits){no+= "<td>"+record[columnObj.fieldIndex][1]+"</td>";}
-   if(F3DWLD.CONFIG.wdsPayload.showFlags){no+= "<td>"+  record[columnObj.fieldIndex][2]+"</td>";}
-           no+="</tr></table>";
-}
-else{
-//    no=record[columnObj.fieldIndex].toLocaleString();
- no=addCommas(record[columnObj.fieldIndex]);
-
-}
-return no;
-
+    no= "<table class=tableVCell><tr><td>"+addCommas(record[columnObj.fieldIndex][0])+"</td>";
+    if(F3DWLD.CONFIG.wdsPayload.showUnits){no+= "<td>"+record[columnObj.fieldIndex][1]+"</td>";}
+       if(F3DWLD.CONFIG.wdsPayload.showFlags){no+= "<td>"+  record[columnObj.fieldIndex][2]+"</td>";}
+        no+="</tr></table>";
+    }
+    else{
+        //    no=record[columnObj.fieldIndex].toLocaleString();
+        no=addCommas(record[columnObj.fieldIndex]);
+        }
+    return no;
 }
 
 var gridOption={
@@ -97,20 +98,21 @@ var gridOption={
 	container :"myGrid1_div",//pvtRendererArea",//testinline2",//'',//myGrid1_div',//pivot_table',// 'gridbox',// $(".pvtRendererArea")[0],//
 	replaceContainer : true, 
 	dataset : dsOption ,
-         resizable : false,
+        resizable : false,
 	columns : colsOption,
-	pageSize : 15 ,
-        pageSizeList : [15,25,50,150],
+	pageSize : 50 ,
+        pageSizeList : [50,150,500],
         SigmaGridPath : 'grid/',
-	toolbarContent : 'nav | goto | pagesize ',/*| mybutton |*/
+      
+	toolbarContent : 'nav | goto | pagesize '/*,*//*| mybutton |*/
+        /*
 onMouseOver : function(value,  record,  cell,  row,  colNo, rowNo,  columnObj,  grid){
     if (columnObj && columnObj.toolTip) { grid.showCellToolTip(cell,columnObj.toolTipWidth);}
     else{grid.hideCellToolTip();}
 	},
-	onMouseOut : function(value,  record,  cell,  row,  colNo, rowNo,  columnObj,  grid){grid.hideCellToolTip();}
+	onMouseOut : function(value,  record,  cell,  row,  colNo, rowNo,  columnObj,  grid){grid.hideCellToolTip();}*/
 };
 
-//Sigma.Msg.Grid.en.PAGE_AFTER='okokk'+gridOption.pageSize;
   FAOSTATOLAPV3.mygrid=new Sigma.Grid( gridOption );
  Sigma.Grid.render( FAOSTATOLAPV3.mygrid)() ;
  document.getElementById('page_after').innerHTML="/"+FAOSTATOLAPV3.mygrid.getPageInfo().totalPageNum;
@@ -121,14 +123,7 @@ onMouseOver : function(value,  record,  cell,  row,  colNo, rowNo,  columnObj,  
 else{$("#mesFlags").append($("<label for=\"chkTreeview\">Treeview/Sorting columns</label><input  onchange=\"changechkTreeview()\" type=\"checkbox\" id=\"chkTreeview\">"));}
 $("#nested_by").hide();
 }
-FAOSTATOLAP2 = {};
-FAOSTATOLAP2.displayOption = {
-            showUnit: 0,
-            showCode: 0,
-            showFlag: 0,
-            overwrite: true
-        };
-       //  google.load("visualization", "1", {packages:["corechart", "charteditor"]});
+
 FAOSTATOLAP2 = {};
 FAOSTATOLAP2.displayOption =  {
             showUnit: 0,
@@ -174,7 +169,8 @@ FAOSTATOLAP2.options = {
                 rows: ["Area", "Item", "Element"],
                 cols: ["Year"],
                 vals: ["Value"  ],
-                linkedAttributes: []
+                linkedAttributes: [],
+                 hiddenAttributes: ["Country Code","Country_","Var1Order","Var2Order","Var3Order","Var4Order","Value","Flag","Unit","Item Code","Item_","Element Code","Element_","Flag Description"]
             },
     F:{ derivedAttributes: {
                     "Pays": function(mp)
@@ -211,7 +207,9 @@ FAOSTATOLAP2.options = {
                 rows: ["Pays", "Articles", "Elements"],
                 cols: ["Annees"],
                 vals: ["Value"],
-                linkedAttributes: []
+                linkedAttributes: [],
+                 hiddenAttributes: ["Country Code","Country_","Var1Order","Var2Order","Var3Order","Var4Order","Value","Flag","Unit","Item Code","Item_","Element Code","Element_","Flag Description"]
+        
             }
     , S:{ derivedAttributes: {
             "Area": function(mp)
@@ -248,7 +246,9 @@ FAOSTATOLAP2.options = {
                  rows: ["Area", "Item", "Element"],
                  cols: ["Year"],
                  vals: ["Value", "Unit", "Flag"],
-                 linkedAttributes: []
+                 linkedAttributes: [],
+                  hiddenAttributes: ["Country Code","Country_","Var1Order","Var2Order","Var3Order","Var4Order","Value","Flag","Unit","Item Code","Item_","Element Code","Element_","Flag Description"]
+        
             }
         };
 

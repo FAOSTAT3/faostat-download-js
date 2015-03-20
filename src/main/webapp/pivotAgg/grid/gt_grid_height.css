@@ -31,7 +31,7 @@ div { 	padding: 0px; 	margin: 0px; }
 	text-align:left;
 	width:100%;
 	padding-left:0px;
-	height: 30px;
+	/*height: 30px;*/
         vertical-align: top;
 }
 /*.gt-head-div .gt-inner{*/
@@ -92,7 +92,7 @@ div { 	padding: 0px; 	margin: 0px; }
 .gt-inner {
 	qdisplay: block;
 	padding : 1px 2px 1px 2px;
-	height:55px;
+	height:25px;
         text-align: center;
         overflow: hidden;
 	white-space:nowrap;
@@ -101,6 +101,13 @@ div { 	padding: 0px; 	margin: 0px; }
 	text-overflow: ellipsis;
 	-o-text-overflow: ellipsis;
 }
+
+#myGrid1_headTable .gt-inner {
+	
+	height:100%;
+       
+}
+
 .gt-hd-row td .gt-inner {
 	position: relative;
 	cursor: default;

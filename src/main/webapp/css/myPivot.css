@@ -131,7 +131,7 @@ time, mark, audio, video {
 
 
 
-.invi{display:none}
+.invi{display:none !important;}
 
 .visifb{display:table-row}
 .visi2{display:block;}
@@ -1339,3 +1339,15 @@ div.combo_button_option:hover {
     background-color: #FFFFFF !important;
 }
 #resultTablewrapper{border: 1px solid #FFFFFF !important;}
+
+#fx-olap-graph-div{
+ height:1000px;
+    width:100%;
+    position:relative;
+  overflow: auto;
+}
+
+.pivot tbody{
+    /*height:350px;overflow:auto;
+position: absolute;*/
+}

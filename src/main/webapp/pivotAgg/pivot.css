@@ -153,7 +153,12 @@ table.pvtTable tr td {
         text-transform: uppercase; }
  #rows{padding-left: 65px;}
  #cols{padding-left: 65px;}
- 
+  #unused:before { content: 'AGG'; position: relative;
+        top: 5px;
+        left: 0;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase; }
  #cols:before {
         content: 'COLS';
         position: relative;
@@ -172,10 +177,10 @@ table.pvtTable tr td {
 /*Localconfiguration*/
 #btnFS{display:none !important}
 
-#unused li{display:none}
+/*#unused li{display:none}*/
 #unused {border: 0px solid gray;
 background: #ffffff ;}
 
-.pvtVals{display:none}
-
-#vals{display:none}
+/*.pvtVals{display:none}*/
+.pvtAttrDropdown{display:none}
+#vals{display:block}

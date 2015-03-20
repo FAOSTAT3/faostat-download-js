@@ -11,7 +11,14 @@
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script type="text/javascript" src="gchart_renderers.js"></script>
 		<script type="text/javascript" src="configuration.js"></script>
-			
+		
+                
+                <link rel="stylesheet" type="text/css" href="grid/gt_height.css" />
+
+<script type="text/javascript" src="grid/gt_msg_en.js"></script>
+<!--script type="text/javascript" src="grid/gt_const.js"></script-->
+<script type="text/javascript" src="grid/gt_grid_all.js"></script>
+<script type="text/javascript" src="grid/flashchart/fusioncharts/FusionCharts.js"></script>	
     </head>
     <style>
         * {font-family: Verdana;}
@@ -61,16 +68,16 @@
 	
 	$(function(){
 	var derivers = $.pivotUtilities.derivers;
-var renderers = $.extend($.pivotUtilities.renderers,$.pivotUtilities.gchart_renderers);
+    var renderers = $.extend($.pivotUtilities.renderers,$.pivotUtilities.gchart_renderers);
 	$.post( "datacountry.json", {}).done(function( data ) 
 	{
-	
-	test=data.slice(0,1000);
+	console.log(data);
+	test=JSON.parse(data);
 	//test=data;
 	
 	//data=FAOSTATOLAP2.attrTM.concat(data);
-$("#newOlap").pivotUI(test, FAOSTATOLAP2.optionsCountry);
-montrercacher(0);
+$("#newOlap").pivotUI(test,{});
+//montrercacher(0);
 	});
 });
 	
