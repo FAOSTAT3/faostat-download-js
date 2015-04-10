@@ -19,17 +19,7 @@ FAOSTATNEWOLAP.internalData = {};
 FAOSTATNEWOLAP.originalData = [];
 FAOSTATNEWOLAP.thousandSeparator = " ";
 FAOSTATNEWOLAP.decimalSeparator = ".";
-//FAOSTATNEWOLAP.traduction = {"Var1": "Country","Var2": "Element", "Var3": "Item", "Var4": "Year"};
-
-FAOSTATNEWOLAP.traduction ={
-init:{E:"",F:"",S:""},
-treeview:{E:"Tree view/Flat view ",F:"Vue hierachique / Vue plate",S:"Tree view/Flat view"},
-perPage:{E:"Per Page",F:"Par Page",S:"Por Pagina"}
-,
-Page:{E:"Page",F:"Page",S:"Page"}
-};
-
-
+FAOSTATNEWOLAP.traduction = {"Var1": "Country","Var2": "Element", "Var3": "Item", "Var4": "Year"};
 
 function utf8_encode(argString) {
   //  discuss at: http://phpjs.org/functions/utf8_encode/
@@ -115,7 +105,8 @@ function ExtractCodel(arr)//for aggregate
     return ret;
 }
 
-function checkMemory(){for (var b in window) { if (window.hasOwnProperty(b)){ console.log(b + ' ' + memorySizeOf(eval(b)));}    }}
+function checkMemory()
+{for (var b in window) { if (window.hasOwnProperty(b)){ console.log(b + ' ' + memorySizeOf(eval(b)));}    }}
 
 function memorySizeOf(obj) {
     var bytes = 0;
@@ -276,7 +267,6 @@ selectFinal = "EXECUTE Warehouse.dbo.usp_GetData " +
     //$("#testinline").html("<center><img src=\"/faostat-download-js/pivotAgg/Preload.gif\" /></center>");
     
     FAOSTATNEWOLAP.flags = {};
-	
     $.ajax({
         type: 'POST', url: F3DWLD.CONFIG.data_url + "/table/json", data: test2,
         success: function(response_1) {
@@ -294,13 +284,27 @@ selectFinal = "EXECUTE Warehouse.dbo.usp_GetData " +
             if (FAOSTATNEWOLAP.showFlags){mesOptionsPivot.vals.push("Flag"); }
             FAOSTATNEWOLAP.originalData = response_1;
             $("#fx-olap-ui").pivotUI(response_1, mesOptionsPivot, true);
-			
-			
-			
             //$("#testinline").pivotUI(response_1, mesOptionsPivot, true);
             
             $("#options_menu_box").css("display", "block");
-          
+            var newFlag = "";
+            for (var i in FAOSTATNEWOLAP.flags) {if (newFlag != "") {  newFlag += ":";} newFlag += "'" + i + "'"; }
+            if (newFlag == "") {newFlag = "''";}
+//           try{ $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribute("colspan", 2);} catch(e){console.log("erreur"+e)}
+         /*   var header=$(".pvtAxisLabel");
+             for(var i=0;i<header.length;i++){header[i].innerHTML=header[i].innerHTML.replace("_","");}
+              var header=$("#rows li nobr");
+              for(var i=0;i<header.length;i++){header[i].innerHTML=header[i].innerHTML.replace("_","");}
+                var header=$("#cols li nobr");
+                for(var i=0;i<header.length;i++){header[i].innerHTML=header[i].innerHTML.replace("_","");}
+           */
+            $.get("http://faostat3.fao.org/faostat.olap.ws/rest/GetFlags/" + F3DWLD.CONFIG.lang + "/" + newFlag, function(data) {
+                data = data.replace("localhost:8080/", "faostat3.fao.org/");
+               // alert("ok5")
+                $("#mesFlags").append(data);
+            //    $("#myGrid1_div").height(500);
+                 if(excel){decolrowspanNEW();}
+            });
         }
     });
 //}});
@@ -595,11 +599,10 @@ function stringify(obj) {
 };
 
 function my_exportNew() {
-
+  
   var mycols=[];
   for(var c=0;c<FAOSTATNEWOLAP.internalData.rowAttrs.length;c++)
-  {if(F3DWLD.CONFIG.wdsPayload.showCodes && FAOSTATNEWOLAP.internalData.rowAttrs[c]!="Year" && FAOSTATNEWOLAP.internalData.rowAttrs[c]!="Annees" && FAOSTATNEWOLAP.internalData.rowAttrs[c]!="Anos")
-  { mycols.push(FAOSTATNEWOLAP.internalData.rowAttrs[c]+"Code");        }
+  {if(F3DWLD.CONFIG.wdsPayload.showCodes){ mycols.push(FAOSTATNEWOLAP.internalData.rowAttrs[c]+"Code");        }
           mycols.push(FAOSTATNEWOLAP.internalData.rowAttrs[c]+"Name");
          
   }
@@ -607,32 +610,14 @@ function my_exportNew() {
 tt=FAOSTATNEWOLAP.internalData.getColKeys();
 for(tti in tt){flatColKeyst.push(tt[tti].join("||"))}
 //console.log(FAOSTATNEWOLAP.internalData.tree);
- document.getElementById("myJson").value=stringify( {data:FAOSTATNEWOLAP.internalData.tree,
-     header:flatColKeyst,cols:mycols,swUnit:FAOSTATNEWOLAP.showUnits  ,
-     swFlag:FAOSTATNEWOLAP.showFlags
- 
-    });
+ document.getElementById("myJson").value=stringify( 
+         {data:FAOSTATNEWOLAP.internalData.tree, header:flatColKeyst,cols:mycols,swUnit:FAOSTATNEWOLAP.showUnits  ,
+     swFlag:FAOSTATNEWOLAP.showFlags}
+         );
 	
-	document.getElementById("myFlags").value='{"data":[';
-	/*for(i in FAOSTATNEWOLAP.flags)
-	{document.getElementById("myFlags").value+=',{"title":'+i+',"label":"'+FAOSTATNEWOLAP.flags[i]+'"}'}
-	*/
-	
-	var testtd = document.getElementById("hor-minimalist-b").getElementsByTagName('td');
-    j = 0;
-    for (i = 0; i < testtd.length; i++) {
-	if(i>0){document.getElementById("myFlags").value+=','}
-        if (j == 0) {  document.getElementById("myFlags").value+='{"title":"'+testtd[i].innerHTML+'","label":"';     j = 1;  }
-        else {document.getElementById("myFlags").value+=testtd[i].innerHTML+'"}';  j = 0;   }
-       // ret += testtd[i].innerHTML;
-		}
-	
-	
-	
-	
-	document.getElementById("myFlags").value+=']}';
-	
-  //document.getElementById("myJson").value=JSON.stringify({data:FAOSTATNEWOLAP.originalData,header:FAOSTATNEWOLAP.internalData.flatColKeys});
+   //document.getElementById("myJson").value=JSON.stringify({data:FAOSTATNEWOLAP.originalData,header:FAOSTATNEWOLAP.internalData.flatColKeys});
+   
+  
     document.getElementById("xlsDataForm").submit();
   }
 
@@ -651,12 +636,12 @@ for(tti in tt){flatColKeyst.push(tt[tti].join("||"))}
     var ret = "";
     for (var j = 0; j < FAOSTATNEWOLAP.internalData.rowKeys[0].length; j++) {
         
-        if (F3DWLD.CONFIG.wdsPayload.showCodes && FAOSTATNEWOLAP.internalData.rowAttrs[j]!="Year") { ret += "Code,";  }
+        if (F3DWLD.CONFIG.wdsPayload.showCodes) { ret += "Code,";  }
         ret += '"'+FAOSTATNEWOLAP.internalData.rowAttrs[j].replace("_", "") + "\",";
     }
    
     for (j in col){
-        ret += '"'+col[j].replace(/,/g, "").replace(/\|\|/g, "-").replace(/&nbsp;/g, "").replace(reg2, "$2").replace(reg, "").replace(reg3, "")+'"';
+        ret += '"'+col[j].replace(/,/g, "").replace(/\|\|/g, "-").replace(/&nbsp;/g, "").replace(reg2, "$1").replace(reg, "").replace(reg3, "")+'"';
         if (FAOSTATNEWOLAP.showUnits) { ret += ",unit"; }
         if (FAOSTATNEWOLAP.showFlags) {ret += ",flag"; }
         ret += ",";
@@ -791,7 +776,7 @@ function my_export(t) {
     //var c=window.open('data:application/vnd.ms-excel,'+encodeURIComponent(monclone.html())) ;//t.preventDefault();
     // c.document.write(encodeURIComponent(monclone.html()));
 }
-/*
+
 function myInitOLAP(){
     monXML = "";
     var mesItems = "";
@@ -915,7 +900,7 @@ function myInitOLAP(){
             });
         }
     });
-}*/
+}
 
 var internalTest;
 
@@ -1067,8 +1052,7 @@ arrayFormat = function(opts) {
             push: function(record) {
               if (!isNaN(parseFloat(record[attr]))) {
                   this.sum[0] += parseFloat(record[attr]);
-                 if( this.sum[2]=="_"){this.sum[2]=record["Flag"];
-				 FAOSTATNEWOLAP.flags[record["Flag"]]=1;} 
+                 if( this.sum[2]=="_"){this.sum[2]=record["Flag"];} 
                    if( this.sum[1]=="_"){this.sum[1]=record["Unit"];}
                   return this.sum;}
             },
@@ -1079,7 +1063,56 @@ arrayFormat = function(opts) {
         };
       };
     },
-     
+     sum2OLD: function(formatter) {
+     { sigfig = 3;}
+           { scaler = 1; }
+         
+            return function(_arg) {
+                var attr;//function(){var ret=[];for(var i=0;i<_arg;i++){ret.push(0);};return ret}
+                attr = _arg[0];
+                var emptyInitTab = [0, "", ""];
+                //for(var i in _arg){emptyInitTab.push(0);}
+                /*function(){t=[0];
+                 if(FAOSTATOLAP2.displayOption.showFlag==1){t.push("");}
+                 if(FAOSTATOLAP2.displayOption.showUnit==1){t.push("");}
+                 return t;
+                 }*/
+                return function() {
+                    return {
+                        sum: [0, "_", "_"],
+                        push: function(record) {
+                            //if (!isNaN(parseFloat(record[_arg[j]]))) {
+                            for (var j = 0; j < _arg.length; j++)  {
+                               // _arg[j] = _arg[j];
+                              
+                                if (_arg[j] == "Flag" ) {
+                                    if (this.sum[j] == "_") {//|| this.sum[j]==record[_arg[j]]){
+                                        if (record[_arg[j]] != "") { this.sum[j] =  record[_arg[j]]; }
+                                        else {this.sum[j] = "&nbsp;";}
+                                        FAOSTATNEWOLAP.flags[record[_arg[j]]] = 1;
+                                    }
+                                    else {this.sum[j] = "Agg";}
+                                }
+                                else if (_arg[j] == "Value" ) { this.sum[j] =parseFloat(record[_arg[j]]);   }
+                                else if (_arg[j] == "Unit" ) {
+                                    if (this.sum[j] == "_" || this.sum[j] == record[_arg[j]] ) {
+                                        // this.sum[j]="("+record[_arg[j]]+")";
+                                        if (record[_arg[j]] != "") {  this.sum[j] =  record[_arg[j]] ;}
+                                        else {this.sum[j] = "&nbsp;";}
+                                    }
+                                    else { this.sum[0] = NaN;this.sum[j] = "nan"; }
+                                }
+                            }
+                            
+                            return this.sum;
+                        },
+                        value: function() {   return this.sum;  },
+                        format: arrFmt,
+                        label: "Sum of " + attr
+                    };
+                };
+            };
+        },
     
     average: function(formatter) {
       if (formatter == null) {  formatter = usFmt;  }
@@ -1209,35 +1242,10 @@ arrayFormat = function(opts) {
   };
    renderers2 = {
        "Table":function(pvtData, opts){
-	   if(navigator.appName.indexOf("Internet Explorer")!=-1){    //yeah, he's using IE
-    var badBrowser=(
-        /*navigator.appVersion.indexOf("MSIE 10")==-1 &&*/   //v9 is ok
-        navigator.appVersion.indexOf("MSIE 1")==-1  //v10, 11, 12, etc. is fine too
-    );
-
-    if(badBrowser){
-        // navigate to error page
-		  $("#myGrid1_div").hide();
-          $("#fx-olap-graph-div").hide();
-           $("#fx-olap-holder-div").show();
-		  // $('#aggregator option[value="Sum"]').prop('selected', true);
-		  displayFlags();
-      return pivotTableRenderer(pvtData, opts);
-    }
-	else{
-	
-	$("#myGrid1_div").show();
-           $("#fx-olap-graph-div").hide();
-           $("#fx-olap-holder-div").hide();
-          newGrid(pvtData);}
-}
-else{
-	
            $("#myGrid1_div").show();
            $("#fx-olap-graph-div").hide();
            $("#fx-olap-holder-div").hide();
-          newGrid(pvtData);}
-	   
+          newGrid(pvtData);
          // return pivotTableRenderer(pvtData, opts)
        },
     "Table2": function(pvtData, opts) {
@@ -1682,19 +1690,9 @@ else{
         colKey = colKeys[j];
         aggregator = pivotData.getAggregator(rowKey, colKey);
         val = aggregator.value();
-	//	console.log(aggregator.format(val));
         td = document.createElement("td");
         td.className = "pvtVal row" + i + " col" + j;
-		//valDisplay=val.split(",");
-		
-        var monInnerTemp ="<table width=\"100%\" ><tr><td width=\"34%\">"+val[0]+"</td>";//aggregator.format(val);
-		if(FAOSTATNEWOLAP.showUnits){monInnerTemp +="<td  width=\"33%\">"+val[1]+"</td>";}
-		if(FAOSTATNEWOLAP.showFlags){monInnerTemp +="<td width=\"33%\">"+val[2]+"</td>";}
-		
-		monInnerTemp+="</tr></table>";
-		
-		 td.innerHTML=monInnerTemp;
-		
+        td.innerHTML = val;//aggregator.format(val);
         td.setAttribute("data-value", val);
         tr.appendChild(td);
       }
@@ -1830,7 +1828,8 @@ else{
       uiTable = $("<table cellpadding='5'>");
       rendererControl = $("<td id='vals' >");//class='pvtAxisContainer pvtUnused'
       renderer = $("<select id='renderer' class='pvtRenderer'>").appendTo(rendererControl).bind("change", function() 
-      { if ($("#renderer").val() == "Table" || $("#renderer").val() == "OLAP") { $('#aggregator option[value="SumUnit"]').prop('selected', true); }
+      { if ($("#renderer").val() == "Table" || $("#renderer").val() == "OLAP") 
+          { $('#aggregator option[value="SumUnit"]').prop('selected', true); }
         else { $('#aggregator option[value="Sum"]').prop('selected', true);}
         return refresh(); 
       });

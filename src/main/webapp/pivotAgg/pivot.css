@@ -12,7 +12,7 @@ table.pvtTable tr th, table.pvtTable tr th {
 }
 
 table.pvtTable .pvtColLabel {text-align: center;}
-table.pvtTable .pvtTotalLabel {text-align: right;}
+table.pvtTable .pvtTotalLabel {text-align: right;display:none}
 
 table.pvtTable tr td {
     /*color: #3D3D3D;*/
@@ -23,7 +23,7 @@ table.pvtTable tr td {
     text-align: right;
 }
 
-.pvtTotal, .pvtGrandTotal { font-weight: bold; }
+.pvtTotal, .pvtGrandTotal { font-weight: bold;display:none }
 .pvtVals { text-align: center;}
 .pvtAggregator { margin-bottom: 5px ;}
 
@@ -93,7 +93,7 @@ table.pvtTable tr td {
 .tableVCell {width:100%;border:0px solid #DEDEDE}
 
 #mesFlags{margin: 15px;margin-left: 200px;}
-#fx-olap-holder-div{margin-left: 200px;}
+#fx-olap-holder-div{margin-left: 200px;overflow: auto;float:left}
 
 
 #fx-olap-ui{margin-left:180px}
