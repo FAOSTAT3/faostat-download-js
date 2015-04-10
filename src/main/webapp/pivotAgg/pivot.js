@@ -1687,14 +1687,15 @@ else{
         td.className = "pvtVal row" + i + " col" + j;
 		//valDisplay=val.split(",");
 		
-        var monInnerTemp ="<table width=\"100%\" ><tr><td width=\"34%\">"+val[0]+"</td>";//aggregator.format(val);
+       try{ var monInnerTemp ="<table width=\"100%\" ><tr><td width=\"34%\">"+val[0]+"</td>";//aggregator.format(val);
 		if(FAOSTATNEWOLAP.showUnits){monInnerTemp +="<td  width=\"33%\">"+val[1]+"</td>";}
 		if(FAOSTATNEWOLAP.showFlags){monInnerTemp +="<td width=\"33%\">"+val[2]+"</td>";}
 		
 		monInnerTemp+="</tr></table>";
 		
 		 td.innerHTML=monInnerTemp;
-		
+		}
+                catch(er){monInnerTemp=aggregator.format(val);}
         td.setAttribute("data-value", val);
         tr.appendChild(td);
       }
