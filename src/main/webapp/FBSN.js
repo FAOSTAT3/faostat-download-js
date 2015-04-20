@@ -35,7 +35,7 @@ FAOSTATFBS.traduction={
         domestic:"Suministro Interior/Utilizacion"
 ,presentation:"<p><u>Hojas de balance de alimentos 2013 para 42 paises seleccionados (y agregados regionales actualizados).</u></p><p>\n\
 Son paises clave en el calculo de los indicadores sobre la prevalencia global de desnutricion (PoU) que saran publicados en el proximo 'El estado de la inseguridad alimentaria en el mundo 2015' (SOFI).<p><br>Pays : <i>\n\
-Afganistan, Argelia, Angola, Bangladesh, Belice, Brasil, Burkina Faso, Chad, China (RAE de Hong Kong), China (RAE de Macao), China (Continental), China (Taiwan provincia de), Colombia, Cote d'Ivoire, Republica Popular Democratica de Corea, Republica Dominicana, Etiopia,  Guatemala, Haiti, India, Indonesia, Jamaica, Kenya, Madagascar, Mexico, Mozambique, Myanmar, Nepal, Nigeria, Oman, Pakistan, Panama,  Paraguay, Peru, Filipinas, Sri Lanka, Tailandia, Republica Unida de Tanzania, Viet Nam, Yemen, Zambia, Zimbabwe</i></p>"
+Afganistan, Angola,  Argelia, Bangladesh, Belice, Brasil, Burkina Faso, Chad, China (Continental), China (RAE de Hong Kong), China (RAE de Macao), China (Taiwan provincia de), Colombia, Cote d'Ivoire, Etiopia, Filipinas, Guatemala, Haiti, India, Indonesia, Jamaica, Kenya, Madagascar, Mexico, Mozambique, Myanmar, Nepal, Nigeria, Oman, Pakistan, Panama,  Paraguay, Peru, Republica Dominicana, Republica Popular Democratica de Corea, Republica Unida de Tanzania, Sri Lanka, Tailandia, Viet Nam, Yemen, Zambia, Zimbabwe</i></p>"
     },
 
     F:{
@@ -71,7 +71,7 @@ Afganistan, Argelia, Angola, Bangladesh, Belice, Brasil, Burkina Faso, Chad, Chi
         domestic:"Disponibilité intérieure /Utilisation"
 ,presentation:"<p><u>Bilans alimentaires 2013 pour 42 pays s&eacute;lectionn&eacute;s (et mise &agrave; jour des agr&eacute;gats r&eacute;gionaux).</u></p>\n\
 <p>Ce sont les pays cl&eacute;s rentrant dans le calcul de la pr&eacute;valence globale des indicateurs de la sous-alimentation (PoU) qui seront publi&eacute;s dans ''L'&eacute;tat de l'ins&eacute;curit&eacute; alimentaire dans le monde 2015'' (SOFI).</p><p><br>Pays : \n\
-<i>Afghanistan, Algerie, Angola, Bangladesh, Belize, Bresil, Burkina Faso, Tchad, Chine - RAS de Hong-Kong, Chine - RAS de Macao, Chine (  continentale), Chine (Taiwan Province de), Colombie, Cote d'Ivoire, Republique populaire democratique de Coree, Republique dominicaine, Ethiopie, Guatemala, Haiti, Inde, Indonesie, Jamaique, Kenya, Madagascar, Mexique, Mozambique, Myanmar, Nepal, Nigeria, Oman, Pakistan, Panama, Paraguay, Perou, Philippines, Sri Lanka, Thailande, Republique-Unie de Tanzanie, Viet Nam, Yemen, Zambie, Zimbabwe</i></p>"
+<i>Afghanistan, Algerie, Angola, Bangladesh, Belize, Bresil, Burkina Faso, Chine - RAS de Hong-Kong, Chine - RAS de Macao, Chine (continentale), Chine (Taiwan Province de), Colombie, Cote d'Ivoire, Ethiopie, Guatemala, Haiti, Inde, Indonesie, Jamaique, Kenya, Madagascar, Mexique, Mozambique, Myanmar, Nepal, Nigeria, Oman, Pakistan, Panama, Paraguay, Perou, Philippines, Republique dominicaine, Republique populaire democratique de Coree, Republique-Unie de Tanzanie, Sri Lanka, Tchad, Thailande, Viet Nam, Yemen, Zambie, Zimbabwe</i></p>"
     },
 
     E:{
@@ -111,6 +111,8 @@ Afganistan, Argelia, Angola, Bangladesh, Belice, Brasil, Burkina Faso, Chad, Chi
     }
 
 };
+
+
 
 
 //FAOSTATFBS.root="/home/faostat-download-js";
