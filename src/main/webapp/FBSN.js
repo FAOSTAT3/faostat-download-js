@@ -33,6 +33,8 @@ FAOSTATFBS.traduction={
         utilisation:"Utilisation",
         showcode:"Mostrar Codigo",
         domestic:"Suministro Interior/Utilizacion"
+,presentation:"<p><u>Hojas de balance de alimentos 2013 para 42 paises seleccionados (y agregados regionales actualizados).</u></p><p>\n\
+Son paises clave en el calculo de los indicadores sobre la prevalencia global de desnutricion (PoU) que saran publicados en el proximo 'El estado de la inseguridad alimentaria en el mundo 2015' (SOFI)."
     },
 
     F:{
@@ -65,7 +67,9 @@ FAOSTATFBS.traduction={
         supply:"Disponibilite",
         utilisation:"Utilisation",
         showcode:"Voir Code",
-        domestic:"DisponibilitÃ© intÃ©rieure /Utilisation"
+        domestic:"Disponibilité intérieure /Utilisation"
+,presentation:"<p><u>Bilans alimentaires 2013 pour 44 pays s&eacute;lectionn&eacute;s (et mise &agrave; jour des agr&eacute;gats r&eacute;gionaux).</u></p>\n\
+<p>Ce sont les pays cl&eacute;s rentrant dans le calcul de la pr&eacute;valence globale des indicateurs de la sous-alimentation (PoU) qui seront publi&eacute;s dans ''L'&eacute;tat de l'ins&eacute;curit&eacute; alimentaire dans le monde 2015'' (SOFI).</p>"
     },
 
     E:{
@@ -99,6 +103,8 @@ FAOSTATFBS.traduction={
         utilisation:"Utilisation",
         showcode:"Show Code",
         domestic:"Balance as Domestic Supply/Utilization"
+,presentation:"<p><u>2013 Food Balance Sheets for 44 selected countries (and updated regional aggregates)</u></p>\n\
+<p>These are key countries in the calculation of the global prevalence of undernourishment (PoU) indicators that will be published in the upcoming ''The State of Food Insecurity in the World 2015'' (SOFI)</p>"
     }
 
 };
@@ -343,6 +349,7 @@ else {
 
 FAOSTATFBS.init=function ()
 {
+      document.getElementById("presentation").innerHTML=FAOSTATFBS.traduction[FAOSTATDownload.language].presentation;
     FAOSTATFBS.Year();
     FAOSTATFBS.Country();
     FAOSTATFBS.Items();
