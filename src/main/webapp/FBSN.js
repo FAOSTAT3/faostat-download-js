@@ -4,7 +4,7 @@ FAOSTATFBS.lang="E";
 FAOSTATFBS.traduction={
     S:{
         filterOff:"Filtro",
-        filterOn:"Filtro ",
+        filterOn:"Filtro",
         countries:"Pais",
         regions:"Regiones",
         both:"Ambos",
@@ -35,7 +35,7 @@ FAOSTATFBS.traduction={
         domestic:"Suministro Interior/Utilizacion"
 ,presentation:"<p><u>Hojas de balance de alimentos 2013 para 42 paises seleccionados (y agregados regionales actualizados).</u></p><p>\n\
 Son paises clave en el calculo de los indicadores sobre la prevalencia global de desnutricion (PoU) que saran publicados en el proximo 'El estado de la inseguridad alimentaria en el mundo 2015' (SOFI).<p><br>Pays : <i>\n\
-Afganistan,Argelia,Angola,Bangladesh,Belice,Brasil,Burkina Faso,Chad,China( RAE de Hong Kong),China( RAE de Macao),China( Continental),China( Taiwan provincia de),Colombia,Cote d'Ivoire,Republica Popular Democratica de Corea,Republica Dominicana,Etiopia,Guatemala,Haiti,India,Indonesia,Jamaica,Kenya,Madagascar,Mexico,Mozambique,Myanmar,Nepal,Nigeria,Oman,Pakistan,Panama,Paraguay,Peru,Filipinas,Sri Lanka,Tailandia,Republica Unida de Tanzania,Viet Nam,Yemen,Zambia,Zimbabwe</i></p>"
+Afganistan, Argelia, Angola, Bangladesh, Belice, Brasil, Burkina Faso, Chad, China (RAE de Hong Kong), China (RAE de Macao), China (Continental), China (Taiwan provincia de), Colombia, Cote d'Ivoire, Republica Popular Democratica de Corea, Republica Dominicana, Etiopia,  Guatemala, Haiti, India, Indonesia, Jamaica, Kenya, Madagascar, Mexico, Mozambique, Myanmar, Nepal, Nigeria, Oman, Pakistan, Panama,  Paraguay, Peru, Filipinas, Sri Lanka, Tailandia, Republica Unida de Tanzania, Viet Nam, Yemen, Zambia, Zimbabwe</i></p>"
     },
 
     F:{
@@ -71,7 +71,7 @@ Afganistan,Argelia,Angola,Bangladesh,Belice,Brasil,Burkina Faso,Chad,China( RAE 
         domestic:"Disponibilité intérieure /Utilisation"
 ,presentation:"<p><u>Bilans alimentaires 2013 pour 42 pays s&eacute;lectionn&eacute;s (et mise &agrave; jour des agr&eacute;gats r&eacute;gionaux).</u></p>\n\
 <p>Ce sont les pays cl&eacute;s rentrant dans le calcul de la pr&eacute;valence globale des indicateurs de la sous-alimentation (PoU) qui seront publi&eacute;s dans ''L'&eacute;tat de l'ins&eacute;curit&eacute; alimentaire dans le monde 2015'' (SOFI).</p><p><br>Pays : \n\
-<i>Afghanistan, Algerie, Angola, Bangladesh, Belize, Bresil, Burkina Faso, Tchad, Chine - RAS de Hong-Kong, Chine - RAS de Macao, Chine( continentale), Chine( Taiwan Province de), Colombie, Cote d'Ivoire, Republique populaire democratique de Coree, Republique dominicaine, Ethiopie, Guatemala, Haiti, Inde, Indonesie, Jamaique, Kenya, Madagascar, Mexique, Mozambique, Myanmar, Nepal, Nigeria, Oman, Pakistan, Panama, Paraguay, Perou, Philippines, Sri Lanka, Thailande, Republique-Unie de Tanzanie, Viet Nam, Yemen, Zambie, Zimbabwe</i></p>"
+<i>Afghanistan, Algerie, Angola, Bangladesh, Belize, Bresil, Burkina Faso, Tchad, Chine - RAS de Hong-Kong, Chine - RAS de Macao, Chine (  continentale), Chine (Taiwan Province de), Colombie, Cote d'Ivoire, Republique populaire democratique de Coree, Republique dominicaine, Ethiopie, Guatemala, Haiti, Inde, Indonesie, Jamaique, Kenya, Madagascar, Mexique, Mozambique, Myanmar, Nepal, Nigeria, Oman, Pakistan, Panama, Paraguay, Perou, Philippines, Sri Lanka, Thailande, Republique-Unie de Tanzanie, Viet Nam, Yemen, Zambie, Zimbabwe</i></p>"
     },
 
     E:{
@@ -107,10 +107,12 @@ Afganistan,Argelia,Angola,Bangladesh,Belice,Brasil,Burkina Faso,Chad,China( RAE 
         domestic:"Balance as Domestic Supply/Utilization"
 ,presentation:"<p><u>2013 Food Balance Sheets for 42 selected countries (and updated regional aggregates)</u></p>\n\
 <p>These are key countries in the calculation of the global prevalence of undernourishment (PoU) indicators that will be published in the upcoming ''The State of Food Insecurity in the World 2015'' (SOFI)</p>\n\
-<p><br>Countries: <i>Afghanistan,Algeria,Angola,Bangladesh,Belize,Brazil,Burkina Faso,Chad,China( Hong Kong SAR),China( Macao SAR),China( mainland),China( Taiwan Province of),Colombia,Cote d'Ivoire,Democratic People's Republic of Korea,Dominican Republic,Ethiopia,Guatemala,Haiti,India,Indonesia,Jamaica,Kenya,Madagascar,Mexico,Mozambique,Myanmar,Nepal,Nigeria,Oman,Pakistan,Panama,Paraguay,<br>Peru,Philippines,Sri Lanka,Thailand,United Republic of Tanzania,Viet Nam,Yemen,Zambia,Zimbabwe</i></p>"
+<p><br>Countries: <i>Afghanistan, Algeria, Angola, Bangladesh, Belize, Brazil, Burkina Faso, Chad,China (Hong Kong SAR), China (Macao SAR), China (mainland), China (Taiwan Province of), Colombia, Cote d'Ivoire, Democratic People's Republic of Korea, Dominican Republic, Ethiopia, Guatemala, Haiti, India, Indonesia, Jamaica, Kenya, Madagascar, Mexico, Mozambique, Myanmar, Nepal, Nigeria, Oman, Pakistan, Panama, Paraguay,<br>Peru, Philippines, Sri Lanka, Thailand, United Republic of Tanzania, Viet Nam, Yemen, Zambia, Zimbabwe</i></p>"
     }
 
 };
+
+
 //FAOSTATFBS.root="/home/faostat-download-js";
 FAOSTATFBS.myIndex={
     5511:1,
