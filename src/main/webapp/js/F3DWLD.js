@@ -338,6 +338,7 @@ try{                $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribu
                     }
                 }
                 F3DWLD.CONFIG.tableIndices = tableIndices;
+                console.log(F3DWLD.CONFIG.tableIndices);
 
                 if (queryDB) {
 
@@ -1524,6 +1525,9 @@ if(outputFormat==="csv") {
                     F3DWLD.CONFIG.data_indices.splice(F3DWLD.CONFIG.data_indices.indexOf(8), 1);
                 }
             }
+
+            console.log(F3DWLD.CONFIG.data_indices);
+
             if($('#radio_table').val() || FAOSTATNEWOLAP.firstCall==0)
             {preview(false, true);}
         });
