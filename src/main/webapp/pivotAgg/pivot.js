@@ -613,12 +613,15 @@ for(tti in tt){flatColKeyst.push(tt[tti].join("||"))}
  
     });
 	
-	document.getElementById("myFlags").value='{"data":[';
+	
 	/*for(i in FAOSTATNEWOLAP.flags)
 	{document.getElementById("myFlags").value+=',{"title":'+i+',"label":"'+FAOSTATNEWOLAP.flags[i]+'"}'}
 	*/
 	
-	var testtd = document.getElementById("hor-minimalist-b").getElementsByTagName('td');
+	try{
+            console.log('oki');
+            document.getElementById("myFlags").value='{"data":[';
+            var testtd = document.getElementById("hor-minimalist-b").getElementsByTagName('td');
     j = 0;
     for (i = 0; i < testtd.length; i++) {
 	if(i>0){document.getElementById("myFlags").value+=','}
@@ -631,7 +634,12 @@ for(tti in tt){flatColKeyst.push(tt[tti].join("||"))}
 	
 	
 	document.getElementById("myFlags").value+=']}';
-	
+        }catch(er){
+            console.log('probleme');
+    document.getElementById("myFlags").value='{"data":[{"title":"","label":"Official data"}]}';    
+    
+    
+    }
   //document.getElementById("myJson").value=JSON.stringify({data:FAOSTATNEWOLAP.originalData,header:FAOSTATNEWOLAP.internalData.flatColKeys});
     document.getElementById("xlsDataForm").submit();
   }

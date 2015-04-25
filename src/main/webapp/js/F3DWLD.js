@@ -24,7 +24,7 @@ var F3DWLD = (function() {
         outputLimit: 50,
         widthTable: '100%',
         baseurl: null,
-        datasource: "faostatdb",
+        datasource: "faostat",
         tablelimit: null,
         groupCode: null,
         domainCode: null,
@@ -1181,14 +1181,16 @@ try{                $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribu
 
     function download(queryDB, outputFormat) {
         if ($('#radio_table').val()) {
-            try {
+            try 
+            {
                 validateSelection('download');
                 createTable(queryDB, true, outputFormat);
                 STATS.exportTableDownloadStandard(F3DWLD.CONFIG.domainCode);
             } catch (e) { alert(e);           }
         } else {
             
-             try {
+             //try
+             {
         // forecast_output_size();
             //  F3DWLD.preview(true,false); 
             STATS.exportPivotDownloadStandard(F3DWLD.CONFIG.domainCode);
@@ -1219,12 +1221,13 @@ if(outputFormat==="csv") {
                my_exportNew();
              }
 
- } catch (lines) {
+ }
+ /*catch (lines) {
          $('.fs-warning-wrapper').css('display', 'block');
          $('#close-fs-warning').bind('click', function () {
          $('.fs-warning-wrapper').css('display', 'none');
          });
-         }
+         }*/
 
 
             /* 
