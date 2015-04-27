@@ -103,9 +103,8 @@ div { 	padding: 0px; 	margin: 0px; }
 }
 
 #myGrid1_headTable .gt-inner {
-	
-	height:100%;
-       
+	/*height:100%;*/
+        height: auto;
 }
 
 .gt-hd-row td .gt-inner {
