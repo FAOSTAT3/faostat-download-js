@@ -1025,13 +1025,13 @@ try{                $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribu
         /** Select All */
         var id = column[Object.keys(column)[0]].tabGroup + '_' + column[Object.keys(column)[0]].tabIndex;
         s += '<div class="download-selection-buttons">';
-        s += '<a onclick="F3DWLD.selectAllForSummary(\'grid_' + id + '\');" id="buttonSelectAll_' + id + '" class="btn dwld">';
+        s += '<a onclick="F3DWLD.selectAllForSummary(\'grid_' + id + '\');" id="buttonSelectAll_' + id + '" class="fs-btn dwld">';
         s += '<i class="fa fa-check-circle-o"></i>';
         s += '<div id="buttonSelectAll_' + id + '-text"></div>';
         s += '</a>';
 
         /** De-select All */
-        s += '<a onclick="F3DWLD.clearAllForSummary(\'grid_' + id + '\', \'' + false + '\');" id="buttonDeSelectAll_' + id + '" class="btn dwld">';
+        s += '<a onclick="F3DWLD.clearAllForSummary(\'grid_' + id + '\', \'' + false + '\');" id="buttonDeSelectAll_' + id + '" class="fs-btn dwld">';
         s += '<i class="fa fa-times-circle-o"></i>';
         s += '<div id="buttonDeSelectAll_' + id + '-text"></div>';
         s += '</a>';
@@ -2279,24 +2279,24 @@ else{ var tmp = {};
     }
 
     function showReportingTables() {
-        if ((FAOSTATDownload.groupCode == 'G1' && FAOSTATDownload.domainCode == 'GT') ||
-            (FAOSTATDownload.groupCode == 'G2' && FAOSTATDownload.domainCode == 'GL')) {
-            var s = '';
-            s += '<ul><li id="reporting-tables-root" class="reporting-tables-mainbtn"><i class="fa fa-table"></i> ' + $.i18n.prop('_reporting_tables_label') + ' <i class="fa fa-caret-down"></i><ul>';
-            s += '<li><a onclick="F3DWLD.showIPCC(\'1996\');">IPCC 1996 + GPG</a></li>';
-            s += '<li><a onclick="F3DWLD.showIPCC(\'2006\');">IPCC 2006</a></li>';
-            s += '</ul></li></ul>';
-            document.getElementById('reporting-tables-menu').innerHTML = s;
-            $('#reporting-tables-menu').jqxMenu({
-                autoOpen: false,
-                showTopLevelArrows: true,
-                width: '350',
-                height: '30px',
-                autoCloseOnClick: false,
-                autoSizeMainItems: true
-            });
-            $('#reporting-tables-menu').jqxMenu('setItemOpenDirection', 'reporting-tables-root', 'left', 'down');
-        }
+        //if ((FAOSTATDownload.groupCode == 'G1' && FAOSTATDownload.domainCode == 'GT') ||
+        //    (FAOSTATDownload.groupCode == 'G2' && FAOSTATDownload.domainCode == 'GL')) {
+        //    var s = '';
+        //    s += '<ul><li id="reporting-tables-root" class="reporting-tables-mainbtn"><i class="fa fa-table"></i> ' + $.i18n.prop('_reporting_tables_label') + ' <i class="fa fa-caret-down"></i><ul>';
+        //    s += '<li><a onclick="F3DWLD.showIPCC(\'1996\');">IPCC 1996 + GPG</a></li>';
+        //    s += '<li><a onclick="F3DWLD.showIPCC(\'2006\');">IPCC 2006</a></li>';
+        //    s += '</ul></li></ul>';
+        //    document.getElementById('reporting-tables-menu').innerHTML = s;
+        //    $('#reporting-tables-menu').jqxMenu({
+        //        autoOpen: false,
+        //        showTopLevelArrows: true,
+        //        width: '350',
+        //        height: '30px',
+        //        autoCloseOnClick: false,
+        //        autoSizeMainItems: true
+        //    });
+        //    $('#reporting-tables-menu').jqxMenu('setItemOpenDirection', 'reporting-tables-root', 'left', 'down');
+        //}
     }
 
     function showIPCC(version) {
