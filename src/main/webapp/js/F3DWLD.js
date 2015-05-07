@@ -1292,9 +1292,12 @@ if(outputFormat==="csv") {
         var id = gridName.substring(1 + gridName.indexOf('_'));
         id = id.replace('_2', '_1');
         id = id.replace('_3', '_1');
+        id = id.replace('_4', '_1');
+        id = id.replace('_5', '_1');
         $('#summary-' + id + '-box').css('display', 'block');
         $('#summary_tip').remove();
         return id + '-summary';
+    }
     }
 
     function buildSummary() {
