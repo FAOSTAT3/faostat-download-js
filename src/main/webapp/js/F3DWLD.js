@@ -338,7 +338,6 @@ try{                $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribu
                     }
                 }
                 F3DWLD.CONFIG.tableIndices = tableIndices;
-                console.log(F3DWLD.CONFIG.tableIndices);
 
                 if (queryDB) {
 
@@ -441,8 +440,8 @@ try{                $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribu
                                 " @List1Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[0], "''") + ")', " +
                                 "  @List2Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[1], "''") + ")',  " +
                                 " @List3Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[2], "''") + ")', " +
-                                "  @List4Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[3], "") + ")', " +
-                                "   @List5Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[4], "") + ")',  " +
+                                "  @List4Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[3], "''") + ")', " +
+                                "   @List5Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[4], "''") + ")',  " +
                                 "   @List6Codes = '',  " +
                                 "   @List7Codes = '',  " +
                                 "   @NullValues = 0,  " +
@@ -457,7 +456,7 @@ try{                $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribu
                                 " @List1Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[0], "''") + ")', " +
                                 "  @List2Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[1], "''") + ")',  " +
                                 " @List3Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[2], "''") + ")', " +
-                                "  @List4Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[3], "") + ")', " +
+                                "  @List4Codes = '(" + ExtractCode(F3DWLD.CONFIG.selectedValues[3], "''") + ")', " +
                                 "  @List5Codes = '', " +
                                 "   @List6Codes = '',  " +
                                 "   @List7Codes = '',  " +
@@ -467,6 +466,9 @@ try{                $(".pvtAxisLabel")[$(".pvtAxisLabel").length - 1].setAttribu
                                 "   @DecPlaces = " + F3DWLD.CONFIG.wdsPayload.decimalNumbers + " , " +
                                 "  @Limit =" + 50;
                         }
+                        console.log(selectFinal);
+
+
                         var myPayload = {
                             datasource: F3DWLD.CONFIG.datasource,
                             thousandSeparator: ',',
@@ -1297,7 +1299,6 @@ if(outputFormat==="csv") {
         $('#summary-' + id + '-box').css('display', 'block');
         $('#summary_tip').remove();
         return id + '-summary';
-    }
     }
 
     function buildSummary() {
