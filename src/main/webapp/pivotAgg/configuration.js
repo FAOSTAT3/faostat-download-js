@@ -18,9 +18,10 @@ var r2d2=[];
         for(col in r.colKeys){
         var coldInd=r.colKeys[col].join("||");//.replace(/[^a-zA-Z0-9 ]/g,"_");
         if( r.tree[ligne][coldInd]!=null){ temp.push(r.tree[ligne][coldInd].value()); }
-        else{temp.push( "");}
-//temp.push(r.rowTotals[ligne].sum);
-                // r2d2.push([ligne,col,+r.tree[ligne][col].value()]);
+        else{temp.push( "");
+        }
+        //temp.push(r.rowTotals[ligne].sum);
+        // r2d2.push([ligne,col,+r.tree[ligne][col].value()]);
       }
       r2d2.push(temp);
      }
@@ -147,12 +148,14 @@ FAOSTATOLAP2.options = {
                     },
                     "Element": function(mp)
                     {
+                       		var myFU="";
+					if(mp["Unit"].length==0){myFU="";}else{myFU=" ("+mp["Unit"]+")";}
                         if (F3DWLD.CONFIG.wdsPayload.showCodes)
                         {
-                            return "<span class=\"ordre\">" + mp["Var2Order"] + "</span><table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"]+" ("+mp["Unit"]+")" + "</th></table>";
+                            return "<span class=\"ordre\">" + mp["Var2Order"] + "</span><table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"]+myFU + "</th></table>";
                         }
                         else {
-                            return "<span class=\"ordre\">" + mp["Var2Order"] + "</span>" + mp["Element_"]+" ("+mp["Unit"]+")";
+                            return "<span class=\"ordre\">" + mp["Var2Order"] + "</span>" + mp["Element_"]+myFU;
                         }
                     },
                     "Item": function(mp)
@@ -185,12 +188,14 @@ FAOSTATOLAP2.options = {
                     },
                     "Elements": function(mp)
                     {
+                      		var myFU="";
+					if(mp["Unit"].length==0){myFU="";}else{myFU=" ("+mp["Unit"]+")";}
                         if (F3DWLD.CONFIG.wdsPayload.showCodes)
                         {
-                            return "<span class=\"ordre\">" + mp["Var2Order"] + "</span><table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"] + "</th></table>";
+                            return "<span class=\"ordre\">" + mp["Var2Order"] + "</span><table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"]+myFU + "</th></table>";
                         }
                         else {
-                            return "<span class=\"ordre\">" + mp["Var2Order"] + "</span>" + mp["Element_"];
+                            return "<span class=\"ordre\">" + mp["Var2Order"] + "</span>" + mp["Element_"]+myFU;
                         }
                     },
                     "Articles": function(mp)
@@ -224,13 +229,15 @@ FAOSTATOLAP2.options = {
              },
             "Element": function(mp)
              {
-                 if (F3DWLD.CONFIG.wdsPayload.showCodes)
-                 {
-                     return "<span class=\"ordre\">" + mp["Var2Order"] + "</span><table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"] + "</th></table>";
-                 }
-                 else {
-                     return "<span class=\"ordre\">" + mp["Var2Order"] + "</span>" + mp["Element_"];
-                 }
+                		var myFU="";
+					if(mp["Unit"].length==0){myFU="";}else{myFU=" ("+mp["Unit"]+")";}
+                        if (F3DWLD.CONFIG.wdsPayload.showCodes)
+                        {
+                            return "<span class=\"ordre\">" + mp["Var2Order"] + "</span><table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"]+myFU + "</th></table>";
+                        }
+                        else {
+                            return "<span class=\"ordre\">" + mp["Var2Order"] + "</span>" + mp["Element_"]+myFU;
+                        }
              },
             "Item": function(mp)
              {
