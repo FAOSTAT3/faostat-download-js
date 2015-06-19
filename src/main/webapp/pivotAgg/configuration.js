@@ -141,26 +141,7 @@ FAOSTATOLAP2.options = {
                   return "<span class=\"ordre\">" + mp["Var1Order"] + "</span>" + mp["Country_"];
               }
           },
-          "Element": function(mp) {
-              if (F3DWLD.CONFIG.wdsPayload.showCodes)
-              {
-                  return "<span class=\"ordre\">" + mp["Var2Order"] + "</span><table class=\"innerCol\"><th>" + mp["Element Code"] + "</th><th>" + mp["Element_"]+" ("+mp["Unit"]+")" + "</th></table>";
-              }
-              else {
-                  return "<span class=\"ordre\">" + mp["Var2Order"] + "</span>" + mp["Element_"]+" ("+mp["Unit"]+")";
-                    }
-                },
-                "Item": function(mp) {
-                    if (F3DWLD.CONFIG.wdsPayload.showCodes)
-                    {
-                        if (F3DWLD.CONFIG.wdsPayload.showCodes)
-                        {
-                            return "<span class=\"ordre\">" + mp["Var1Order"] + "</span><table class=\"innerCol\"><th>" + mp["Country Code"] + "</th><th>" + mp["Country_"] + "</th></table>";
-                        }
-                        else {
-                            return "<span class=\"ordre\">" + mp["Var1Order"] + "</span>" + mp["Country_"];
-                        }
-                    },
+         
                     "Element": function(mp)
                     {
                        		var myFU="";
