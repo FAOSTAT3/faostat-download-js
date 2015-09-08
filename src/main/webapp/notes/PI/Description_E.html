@@ -5,13 +5,82 @@ $('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/P.png');
 </script>
 <div class="backBtn"><p class='goto' id='P_notes'> < Back </p></div>
 <br>
-The FAO indices of agricultural producer prices measure the average annual change over time in the selling prices received by farmers (prices at the farm-gate or at the first point of sale. The indices are constructed using price data in Standardised Local Currency (SLC). 
+
+<p><strong>Agricultural Producer Price Indices</strong></p><br/>
+<p>The FAO Agricultural Producer Price Indices measure annual changes in the selling prices received by farmers (prices at the farm-gate or at the first point of sale). The indices are constructed using price data in Standardised Local Currency (SLC).</p><br/>
 
 
-<br /><br />
-There are two categories of producer price indices available in FAOSTAT:
+<p>There are two categories of producer price indices available for each country in FAOSTAT:</p><br/>
 
+<ol style="padding-left:20px">
+<li><strong>Aggregated Producer Price Indices:</strong></li><br/>
+Price indices are compiled at the level of commodity groups (<i>Commodity group indices</i> e.g. for cereals, fruits and vegetables, etc.) as well as for all primary crops and livestock products that are produced in a given country (<i>Agriculture Producer Price Index</i> - PIN); <br/><br/>
+<li><strong>Single item indices:</strong></li><br/>
+Price indices are also available for individual commodities, subject to data availability. Examples of these include:<br/><br/>
+<ol style="padding-left:20px", type="i">
+<li>Wheat Producer Price Index</li>
+<li>Rice, paddy Producer Price Index</li>
+<li>Maize Producer Price Index</li>
+</ol>
+</ol>
 
+<br/>
+<p><strong>Data source</strong>: The main source of data for producer prices and production is the data reported by countries to FAO. In some cases, in-house estimations are needed to fill in data gaps. This data is available in FAOSTAT in the Prices and Production data domains.</p><br/>
+<p><strong>Coverage of countries</strong>: The indices are available for all countries for which both price and production data are disseminated in FAOSTAT.</p><br/>
+<p><strong>Reference year</strong>: The base period of the indices are 2004-2006. The weight used for the aggregate indices (<i>Agriculture Producer Price Index</i> and <i>Commodity group indices</i>) is the average production value for the years 2004, 2005 and 2006.</p><br/>
+<p><strong>Time period</strong>: The indices are available from 1991 to the latest year of data availability.</p><br/>
+<p><strong>Methodology</strong>: The <i>Agriculture Producer Price Index</i> and the <i>Commodity group indices</i> are calculated using the Laspeyres. The index for a given commodity group and year is therefore equal to the value of production at current year prices of the items belonging to the same commodity group, divided by the value at base period prices of the same commodity basket. Formally:</p><br/>
+<p>
+<table>
+<tr>
+<td>Index<sub>t,A</sub> = </td>
+<td>100.</td>
+<td style="border-bottom: solid black 1px">Σ<sub>iϵA</sub>p<sub>it</sub>q<sub>i0</sub></td>
+<td>= Σ<sub>iϵA</sub></td>
+<td style="border-bottom: solid black 1px">p<sub>i0</sub>q<sub>i0</sub></td>
+<td style="border-bottom: solid black 1px">p<sub>it</sub></td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Σ<sub>iϵA</sub>p<sub>i0</sub>q<sub>i0</sub></td>
+<td>&nbsp;</td>
+<td>Σ<sub>iϵA</sub>p<sub>i0</sub>q<sub>i0</sub></td>
+<td>p<sub>i0</sub></td>
+</tr>
+</table>
+</p>
+<br/>
+<p>
+where:<br/>
+A is a group of commodities<br/>
+p<sub>it</sub> is the price of item <i>i</i> in period t<br/>
+p<sub>i0</sub> is the 3-years average price of item <i>i</i> in base period (2004-2006)<br/>
+q<sub>i0</sub> is the 3-years average quantity of item <i>i</i> produced in base period (2004-2006)<br/>
+</p>
+<p>The individual item indices (<i>Simple Price Indices</i>) are calculated by dividing the SLC price in a given year by the SLC price in the base year:</p><br/>
+<p>
+<table>
+<tr><td>Index<sub>t,i</sub> = </td><td>100.</td><td style="border-bottom: solid black 1px">p<sub>it</sub></td><td></td></tr>
+
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>p<sub>i0</sub></td><td>&nbsp;</td></tr>
+</table>
+</p>
+<br/><br/>
+
+<h2>Price Index links</h2><br/>
+
+<p>Monthly commodities prices and indices [The World Bank], <a href="http://data.worldbank.org/data-catalog/commodity-price-data" target="_blank">http://data.worldbank.org/data-catalog/commodity-price-data</a></p><br/>
+
+<p>Statistics on retail prices and indices [International Labour Organization], <a href="http://laborsta.ilo.org/data_topic_E.html" target="_blank">http://laborsta.ilo.org/data_topic_E.html</a></p><br/>
+
+<p>Primary Commodity Prices and Price Indices [IMF], <a href="http://www.imf.org/external/np/res/commod/index.asp" target="_blank">http://www.imf.org/external/np/res/commod/index.asp</a></p><br/>
+
+<p>The Monthly Bulletin of Statistics [United Nations], <a href="http://unstats.un.org/unsd/mbs/app/DataSearchTable.aspx" target="_blank">http://unstats.un.org/unsd/mbs/app/DataSearchTable.aspx</a></p><br/>
+
+<p>FAO Food Price Index [FAO], <a href="http://www.fao.org/worldfoodsituation/foodpricesindex/en/" target="_blank">http://www.fao.org/worldfoodsituation/wfs-home/en/</a></p><br/>
+<!--
 <ul class='bullet-list'>
 <li>Agriculture Producer Price Index This is an aggregate index for all primary crops and livestock products. For a country, the aggregate would include all primary crops and livestock products that are produced in that country, and for which both production and producer price data are available. 
 
@@ -36,5 +105,7 @@ of data availability. Methodology: The Agriculture Producer Price Index is calcu
 calculated by summing the SLC price for a given year multiplied by production quantity in base year for all items in the
 aggregate and dividing by the sum of the SLC price in the base year multiplied by production quantity for the base year for the
 same items.
-<br /><br />
+
+
+<br /><br />-->
 </div>
