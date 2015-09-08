@@ -7,6 +7,75 @@ $('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/P.png');
 </script>
 <div class="backBtn"><p class='goto' id='P_notes'> < Arriére </p></div>
 <br>
+
+<p>Les indices des prix à la production des produits agricoles rendent compte de l'évolution annuelle des prix de vente appliqués par les agriculteurs (prix à la production ou au premier point de vente). Ces indices sont établis à l'aide de données sur les prix exprimés en monnaie locale standardisée (SLC).</p><br/>
+<p>FAOSTAT comporte deux catégories d'indices de prix à la production pour chaque pays:</p><br/>
+<ol style="padding-left:20px">
+<li><strong>Les indices agrégés des prix à la production des produits agricoles :</strong></li><br/>
+Il s'agit là des indices agrégés recouvrant des groupes de produits agricoles (<i>Indices des groupes de produits agricoles</i>, par exemple pour les céréales, les fruits et les légumes, etc.) soit l'ensemble des produits agricoles de base et des produits d'élevage produits dans un certain pays (<i>Indices des prix à la production des produits agricoles</i> – Indice Pr).
+<br/><br/>
+<li><strong>Les indices des prix des produits individuels :</strong></li>
+Selon la disponibilité des données, on établit également des indices de prix pour tel ou tel produit de base, comme par exemple:<br/><br/>
+<ol style="padding-left:20px", type="i">
+<li>l'indice des prix à la production du blé</li>
+<li> l'indice des prix à la production du riz</li>
+<li> l'indice des prix à la production du maïs</li>
+</ol>
+</ol><br/>
+<p><strong>Source des données</strong>: Les données relatives à la production et aux prix à la production proviennent principalement des informations communiquées par les pays à la FAO. Lorsque cela est nécessaire, les données manquantes sont estimées par la FAO. Ces données sont disponibles dans les bases de données Prix et Production de FAOSTAT.</p><br/>
+<p><strong>Pays couverts</strong>: Les indices sont disponibles pour tous les pays dont les données de prix et de production sont publiées dans FAOSTAT.</p><br/>
+<p><strong>Année de référence</strong>: La période de base des indices est 2004-2006. Le coefficient de pondération utilisé pour les indices agrégés (l'<i>Indice des prix à la production des produits agricoles</i> et les <i>Indices des groupes de produits agricoles</i>) est la valeur de la production moyenne de la période 2004-2006.</p><br/>
+<p><strong>Période couverte</strong>: Les indices couvrent une période allant de 1991 à la dernière année pour laquelle les données de prix et de production sont disponibles.</p><br/>
+<p><strong>Méthode</strong>: L'indice des prix à la production des produits agricoles et les indices des groupes de produits agricoles sont calculés à l'aide de la formule de Laspeyres. L’indice pour un certain groupe de produits et pour une année donnée est par conséquent calculé comme la valeur à prix courants des produits appartenant au groupe, divisé par la valeur au prix de la période de base du même panier de produits.</p><br/>
+<p>
+<table>
+<tr>
+<td>Index<sub>t,A</sub> = </td>
+<td>100.</td>
+<td style="border-bottom: solid black 1px">Σ<sub>iϵA</sub>p<sub>it</sub>q<sub>i0</sub></td>
+<td>= Σ<sub> iϵA </sub></td>
+<td style="border-bottom: solid black 1px">p<sub>i0</sub>q<sub>i0</sub></td>
+<td style="border-bottom: solid black 1px">p<sub>it</sub></td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Σ<sub>iϵA</sub>p<sub>i0</sub>q<sub>i0</sub></td>
+<td>&nbsp;</td>
+<td> Σ<sub>iϵA</sub>p<sub>i0</sub>q<sub>i0</sub></td>
+<td> p<sub>i0</sub></td>
+</tr>
+</table>
+</p><br/>
+<p> où:<br/>
+
+A est un groupe de produits<br/>
+p<sub>it</sub> est le prix du produit <i>i</i> à la période t<br/>
+p<sub>i0</sub> est le prix du produit <i>i</i> pour la période de base (2004-2006)<br/>
+q<sub>i0</sub> est la quantité produite de produit <i>i</i> au cours du période de base (2004-2006)<br/>
+</p>
+<p>Les <i>Indices des prix des produits individuels</i> sont calculés en divisant les prix en SLC au cours d'une année donnée par les prix en SLC au cours de la période de base.</p><br/>
+<p>
+<table>
+<tr><td>Index<sub>t,i</sub> = </td><td>100.</td><td style="border-bottom: solid black 1px">p<sub>it</sub></td><td></td></tr>
+
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>p<sub>i0</sub></td><td>&nbsp;</td></tr>
+</table>
+</p><br/>
+
+<h2>Price Indices Links</h2><br/>
+<p>Prix et indices mensuels des prix des produits de base [Banque mondiale], <a href="http://data.worldbank.org/data-catalog/commodity-price-data" target="_blank">http://data.worldbank.org/data-catalog/commodity-price-data</a></p><br/>
+
+<p>Statistiques sur les prix à la consommation et les indices [Organisation internationale du travail], <a href="http://laborsta.ilo.org/data_topic_F.html" target="_blank">http://laborsta.ilo.org/data_topic_F.html</a></p><br/>
+
+<p>Prix et indices des prix des produits de base [Fonds monétaire international], <a href="http://www.imf.org/external/np/res/commod/index.asp" target="_blank">http://www.imf.org/external/np/res/commod/index.asp</a></p><br/>
+
+<p>Bulletin mensuel de statistique [Organisation des Nations Unies], <a href="http://unstats.un.org/unsd/mbs/app/DataSearchTable.aspx" target="_blank">http://unstats.un.org/unsd/mbs/app/DataSearchTable.aspx</a></p><br/>
+
+<p>Indice FAO des prix des produits alimentaires [FAO], <a href="http://www.fao.org/worldfoodsituation/foodpricesindex/fr/" target="_blank">http://www.fao.org/worldfoodsituation/foodpricesindex/fr/</a></p><br/>
+
+<!--
 Les indices des prix &agrave; la production des produits agricoles rendent compte de l'&eacute;volution annuelle moyenne des prix de vente appliqu&eacute;s par les agriculteurs (prix &agrave; la production ou au premier point de vente). Ces indices sont &eacute;tablis &agrave; l'aide de donn&eacute;es sur les prix exprim&eacute;s en monnaie locale standard (SLC).
 
 
@@ -39,5 +108,5 @@ Ann&eacute;e de r&eacute;f&eacute;rence: Les indices sont calcul&eacute;s en se 
 P&eacute;riode couverte: Il existe des indices pour la p&eacute;riode allant de 1999 &agrave; la dernière ann&eacute;e pour laquelle on dispose de donn&eacute;es.
 
 M&eacute;thode: L'indice des prix &agrave; la production des produits agricoles est calcul&eacute; &agrave; l'aide de la formule de Laspeyres. Il est &eacute;tabli en divisant la somme des prix en SLC au cours d'une ann&eacute;e donn&eacute;e, multipli&eacute;e par la quantit&eacute; de tous les produits vis&eacute;s par l'indice agr&eacute;g&eacute; produite au cours de l'ann&eacute;e de base, par la somme des prix en SLC au cours de l'ann&eacute;e de base, multipli&eacute;e par la quantit&eacute; produite au cours de l'ann&eacute;e de base se rapportant &agrave; ces mêmes produits.
-<br /><br />
+<br /><br />-->
 </div>
