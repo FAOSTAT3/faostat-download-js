@@ -5,6 +5,76 @@ $('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/P.png');
 </script>
 <div class="backBtn"><p class='goto' id='P_notes'> < Detrás </p></div>
 <br>
+
+<p>Los índices de la FAO de precios agrícolas al productor miden los cambios anuales de los precios de venta obtenidos por los agricultores (precios a la salida de la explotación agrícola o en el primer punto de venta). Los índices se elaboran usando los precios en moneda local estandarizada (MLE). </p><br/>
+<p>La base de datos FAOSTAT comprende dos categorías de índices de precios agrícolas al productor, por cada país:</p><br/>
+<ol style="padding-left:20px">
+<li><strong>El índice agregativo de precios agrícolas al productor:</strong></li><br/>
+Los índices de precios están calculados para grupos de productos agrícolas (<i>Índice de grupos de productos agrícolas </i>por ejemplo por cereales, frutas y verdura, etc.) y para el conjunto de cultivos primarios y productos pecuarios producidos en el país (<i>Índice de precios agrícolas al productor</i> – Índice Pr) 
+<br/><br/>
+<li><strong>Índices de productos específicos:</strong></li><br/>
+Asimismo existen índices de precios de productos específicos, siempre que haya datos disponibles. Ejemplos de estos indices incluyen: <br/><br/>
+<ol style="padding-left:20px", type="i">
+<li>Índice de precios al productor del trigo</li>
+<li>Índice de precios al productor del arroz cáscara</li>
+<li>Índice de precios al productor del maíz</li>
+</ol>
+</ol><br/>
+<p><strong>Fuente de los datos</strong>: La fuente principal de información sobre los precios al productor y la producción son los datos proporcionados directamente por los países a la FAO. Cuando es necesario, la FAO estima los datos que faltan. Estos datos están disponibles en la base de datos de Precios y Producción de FAOSTAT.</p><br/>
+<p><strong>Cobertura geográfica</strong>: Existen índices relativos a todos los países para los cuales datos de precio y de producción están publicados en FAOSTAT.</p><br/>
+<p><strong>Año de referencia</strong>: El periodo de base de los índices es 2004-2006. El factor de ponderación empleado para los índices agregativos (Índice de precios agrícolas al productor y los <i>Índices de grupos de productos agrícolas</i>) es el promedio del valor de la producción del periodo 2004-2006.</p><br/>
+<p><strong>Período abarcado</strong>: Los índices abarcan desde 1991 hasta el último año para el cual datos estén disponibles.</p><br/>
+<p><strong>Metodología</strong>: El <i>Índice de precios agrícolas al productor</i> y los <i>Índices de grupos de productos agrícolas</i> se calculan aplicando la fórmula de Laspeyres. El índice por un grupo de productos y un año dado se calcula por lo tanto dividiendo el valor a precios corrientes de la producción de los productos que pertenecen al grupo por el valor a precios del periodo de base de la mismo cesta de productos.</p><br/>
+<p>
+<table>
+<tr>
+<td>Index<sub>t,A</sub> = </td>
+<td>100.</td>
+<td style="border-bottom: solid black 1px">Σ<sub>iϵA</sub>p<sub>it</sub>q<sub>i0</sub></td>
+<td>= Σ<sub> iϵA </sub></td>
+<td style="border-bottom: solid black 1px">p<sub>i0</sub>q<sub>i0</sub></td>
+<td style="border-bottom: solid black 1px">p<sub>it</sub></td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Σ<sub>iϵA</sub>p<sub>i0</sub>q<sub>i0</sub></td>
+<td>&nbsp;</td>
+<td> Σ<sub>iϵA</sub>p<sub>i0</sub>q<sub>i0</sub></td>
+<td> p<sub>i0</sub></td>
+</tr>
+</table>
+</p>
+<p><br/>
+donde:<br/>
+A representa el grupo de productos<br/>
+p<sub>it</sub> es el precio del producto <i>i</i> en el período t<br/>
+p<sub>i0</sub> es el precio del producto <i>i</i> en el periodo de base (2004-2006)<br/>
+q<sub>i0</sub> es la cantidad del producto <i>i</i> producida en el periodo de base (2004-2006)<br/>
+</p>
+<p>Los índices de productos específicos se calculan dividiendo el precio en MLE en un año dado por el precio en MLE en el periodo de base.</p>
+<p><br/>
+<table>
+<tr><td>Index<sub>t,i</sub> = </td><td>100.</td><td style="border-bottom: solid black 1px">p<sub>it</sub></td><td></td></tr>
+
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>p<sub>i0</sub></td><td>&nbsp;</td></tr>
+</table>
+</p><br/>
+
+<h2>Enlaces a otros índices de precios</h2><br/>
+<p>Precios e índices mensuales de productos básicos [Banco Mundial], <a href="http://data.worldbank.org/data-catalog/commodity-price-data" target="_blank">http://data.worldbank.org/data-catalog/commodity-price-data</a></p><br/>
+
+<p>Estadísticas sobre precios al por menor e índices correspondientes [Organización Internacional del Trabajo], <a href="http://laborsta.ilo.org/data_topic_S.html" target="_blank">http://laborsta.ilo.org/data_topic_S.html</a></p><br/>
+
+<p>Precios e índices de precios de productos primarios [Fondo Monetario Internacional], <a href="http://www.imf.org/external/np/res/commod/index.asp" target="_blank">http://www.imf.org/external/np/res/commod/index.asp</a></p><br/>
+
+<p>Boletín mensual de estadísticas [Naciones Unidas], <a href="http://unstats.un.org/unsd/mbs/app/DataSearchTable.aspx" target="_blank">http://unstats.un.org/unsd/mbs/app/DataSearchTable.aspx</a></p><br/>
+
+<p>Índice de la FAO para los precios de los alimentos [FAO], <a href="http://www.fao.org/worldfoodsituation/foodpricesindex/es/" target="_blank">http://www.fao.org/worldfoodsituation/foodpricesindex/es/</a></p><br/>
+
+</div>
+<!--
 Los Índices de la FAO de precios agrícolas al productor miden los cambios medios anuales a lo largo del tiempo de los precios de venta obtenidos por los agricultores (precios a la salida de la explotación agrícola o en el punto de primera venta). Los índices se elaboran usando los precios en moneda local estandarizada (MLE). 
 
 
@@ -37,6 +107,5 @@ Período abarcado: Los índices abarcan desde 1999 hasta el último año sobre e
 
 Metodología: El índice de precios agrícolas al productor se calcula aplicando la fórmula de Laspeyres. El índice se calcula sumando los precios en MLE en un año dado multiplicados por la cantidad producida en el año base respecto de todos los productos incluidos en el índice agregativo y dividiendo por la suma de los precios en MLE en el año base divididos por la cantidad de los mismos productos producida en el año base.
 
+<br /><br />-->
 
-<br /><br />
-</div>
