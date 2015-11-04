@@ -1,0 +1,300 @@
+<script type="text/javascript">
+    function showHide() {
+        if ($('#hideCN').css('display') == 'none')
+            $('#hideCN').css('display', 'inline');  
+        else
+            $('#hideCN').css('display', 'none');
+    }
+</script>
+<div class="download-notes">
+<div class="noteHead"> <h2>Investment</h2> <img id='DOMAIN_IMG' src="images/I.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/I.png');
+</script>
+
+<br/>
+<ul class='bullet-list-links'>
+    <h2>INDEX</h2>
+    <li class='goto' id='IC_notes'>Capital stock</li>
+    <li class='goto' id='IE_notes'>External assistance to agriculture</li>
+    <li class='goto' id='IM_notes'>Machinery</li>
+    <li class='goto' id='IG_notes'>Government Expenditure</li>
+</ul>
+<br>
+<!--
+<br/>
+The Investment Domain in FAOSTAT includes: 
+<ul class='bullet-list'>
+<li>Capital stock</li>
+<li>External assistance to agriculture</li>
+<li>Machinery</li>
+</ul>
+-->
+
+
+<br></br>
+Additional investment domains on Government Expenditures in Agriculture and Foreign Direct Investment in Agriculture are planned for the near future.
+<br/> <br/>
+<!--
+<p>Data presented on government expenditure refers to <strong>Core Areas of Government Functions Relevant to the Agriculture Sector</strong> based on the Classification of Functions of Government (COFOG) as outlined in the IMF’s <i>Government Finance Statistics Manual, 2001 (GFSM 2001)</i>. </p><br />
+<p>COFOG is essential for making international comparisons of the extent to which governments are involved in economic and social functions because it avoids problems associated with organizational changes in a single government, and problems of organizational differences among countries. </p><br />
+<p>Statistics on expenditures in agriculture, forestry and fisheries and on environmental protection can be used to study the effectiveness of government programs that support an enabling environment for essential public goods with high economic and social returns. COFOG provides key aggregates that could be used as indicators or measures of results / outcomes. The composition of the FAOSTAT disseminated aggregates is further outlined below: </p><br />
+<p><strong>Agriculture, Forestry Fishing and Hunting</strong>, which is comprised of: </p><br />
+<p> <a onclick="javascript:document.getElementById('Agriculture').style.display='block';" href="javascript:void(0)"><strong>Agriculture</strong> (Includes Crops and Livestock): </a></p><br />
+<div id="Agriculture" style="DISPLAY: none"><br />
+<ul>
+<li>Administration of agricultural affairs and services; conservation, reclamation or expansion of arable land; agrarian reform and land settlement; supervision and regulation of the agricultural industry;</li>
+<li>Construction or operation of flood control, irrigation and drainage systems, including grants, loans or subsidies for such works; </li>
+<li>Operation or support of programmes or schemes to stabilize or improve farm prices and farm incomes; operation or support of extension services or veterinary services to farmers, pest control services, crop inspection services and crop grading services; </li>
+<li>Production and dissemination of general information, technical documentation and statistics on agricultural affairs and services; </li>
+<li>Compensation, grants, loans or subsidies to farmers in connection with agricultural activities, including payments for restricting or encouraging output of a particular crop or for allowing land to remain uncultivated;</li>
+<li>Administration and operation of government agencies engaged in applied research and experimental development related to agriculture; </li>
+<li>Grants, loans or subsidies to support applied research and experimental development related to agriculture by research institutes and universities. </li>
+</ul>
+<a onclick="document.getElementById('Agriculture').style.display='none';" href="javascript:void(0)">Close</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('Forestry').style.display='block';" href="javascript:void(0)"><strong>Forestry</strong> (Includes Forest crops in addition to timber): </a></p><br />
+<div id="Forestry" style="DISPLAY: none"><br />
+<ul>
+<li>Administration of forestry affairs and services; conservation, extension and rationalised exploitation of forest reserves; supervision and regulation of forest operations and issuance of tree-felling licenses; </li>
+<li>Operation or support of reforestation work, pest and disease control, forest fire-fighting and fire prevention services and extension services to forest operators; </li>
+<li>Production and dissemination of general information, technical documentation and statistics on forestry affairs and services; </li>
+<li>Grants, loans, or subsidies to support commercial forest activities; </li>
+<li>Administration and operation of government agencies engaged in applied research and experimental development related  to forestry; </li>
+<li>Grants, loans or subsidies to support applied research and experimental development related to forestry and undertaken by research institutes and universities. </li>
+</ul>
+<a onclick="document.getElementById('Forestry').style.display='none';" href="javascript:void(0)">Close</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('Fishing').style.display='block';" href="javascript:void(0)"><strong>Fishing and Hunting</strong> (Includes commercial fishing and hunting, and fishing and hunting for sport that takes place outside of natural parks and reserves): </a></p><br />
+<div id="Fishing" style="DISPLAY: none"><br />
+<ul>
+<li>Administration of fishing affairs and services; protection, propagation and rationalised exploitation of fish stocks; supervision and regulation of freshwater fishing, coastal fishing, ocean fishing, fish farming and issuance of fishing licenses; </li>
+<li>Operation or support of fish hatcheries, extension services, or stocking activities, etc.; </li>
+<li>Production and dissemination of general information, technical documentation and statistics on fishing affairs and services; </li>
+<li>Grants, loans or subsidies to support commercial fishing and hunting activities, including the construction or operation of fish hatcheries. </li>
+</ul>
+<a onclick="document.getElementById('Fishing').style.display='none';" href="javascript:void(0)">Close</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('EnvProt').style.display='block';" href="javascript:void(0)"><strong>Environmental Protection</strong>: </a></p><br />
+<div id="EnvProt" style="DISPLAY: none">
+The COFOG breakdown of these expenditures is based upon the Classification of Environmental Protection Activities (CEPA) as elaborated in the European System for the Collection of Economic Information on the Environment (SERIEE) of the Statistical Office of the European Communities (Eurostat). The main groups are: <br /><br />
+<ul>
+<li>Waste management, covering the collection, treatment and disposal of waste; </li>
+<li>Waste water management, covering sewage system operation and waste water treatment; </li>
+<li>Pollution abatement, covering activities relating to ambient air and climate protection, soil and groundwater protection, noise and vibration abatement and protection against radiation;</li>
+<li>Protection of biodiversity and landscape, covering activities relating to the protection of fauna and flora species(including the reintroduction of extinct species and the recovery of species menaced by extinction), the protection of habitats (including the management of natural parks and reserves), and the protection of landscapes for aesthetic values (including the reshaping of damaged landscapes for the purpose of strengthening their aesthetic value and the rehabilitation of abandoned mines and quarries);</li>
+<li>R&D Environmental Protection, covering basic research, applied research and experimental development related to environmental protection; </li>
+<li>Environmental protection, not elsewhere classified (n.e.c.), covering affairs and services that cannot be assigned to any of the five previously described groups. </li>
+</ul>
+<a onclick="document.getElementById('EnvProt').style.display='none';" href="javascript:void(0)">Close</a> </center></div><br />
+
+<p><strong>General Government Sector and its Subsectors</strong></p><br />
+
+<p>FAOSTAT government expenditure statistics pertain to the <i><strong>consolidated general government</strong></i>, the <i><strong>central government subsector</strong></i> and the <i><strong>budgetary central government</strong></i>. Not all countries have all three levels, which can be further described as follows:</p><br />
+<ul style="padding-left:20px"><li>
+<p>The <i><strong>general government sector consists of resident institutional units that fulfill the functions of government as their primary activity</strong></i>. This sector includes all government units and all nonmarket NPIs that are controlled by government units. For analytic purposes, it is often necessary or desirable to disaggregate the general government sector into subsectors, including:</p> 
+</li>
+</ul>
+<ol style="padding-left:20px">
+<li>
+<p>The <i><strong>central government subsector consists of the institutional unit(s) of the central government plus those nonmarket NPIs that are controlled by the central government</strong></i>. The political authority of central government extends over the entire territory of the country. It is generally composed of a budgetary central government, extrabudgetary units, and social security funds (unless a separate subsector is used for social security funds).</p>
+</li>
+<li>
+<p>The <i><strong>budgetary central government is often a single unit of the central government that encompasses the fundamental activities of the national executive, legislative, and judiciary powers</strong></i>. This component of general government is usually covered by the main (or general) budget. This budgetary central government’s revenue, as well as its expense, are normally regulated and controlled by a Ministry of Finance, or its functional equivalent, by means of a budget approved by the legislature.</p><br />
+</li>
+</ol>
+<p>Depending on the administrative and legal arrangements, there may be more than one level of government within a country, and statistics should be compiled for each level (also referred to as subsectors). Moreover, because of these different arrangements, international comparison of data reported for a subsector of general government should be undertaken with some caution. The majority of countries are presenting data for the budgetary central government.</p><br />
+
+<p><strong>"Cash" and "Noncash" Data Distinction</strong></p><br />
+
+<p>Broadly, in IMF GFS the time of recording could be described as four bases or recording: the accrual basis, the commitments basis, the due-for-payment basis, and the cash basis. In practice though, many variations on these bases of recording may exist. Often accounting systems may use a mixed basis of recording, for example, tax revenue may be recorded on a cash basis while other transactions are recorded on an accrual basis. In principle, the IMF GFS framework records economic flows on an accrual basis. <i><strong>In the accrual basis of recording, flows are recorded at the time economic value is created, transformed, exchanged, transferred, or extinguished</strong></i>. In other words, the effects of economic events are recorded in the period in which they occur, irrespective of whether cash was received or paid or was due to be received or paid. However, the framework also encompasses the traditional cash based reporting. <i><strong>In the cash basis of recording, flows are recorded when cash is received or disbursed</strong></i>. The data presented in FAOSTAT reflect this characteristic in that series are presented as "cash" or "noncash", depending on the recording basis used in the country. The majority of countries are presenting “cash” based fiscal data.</p><br />
+
+
+</div>
+<br></br>-->
+<!--<p><a onclick="showHide();" style='cursor: pointer;'><strong>Show more / Hide</strong></a></p>
+<div style="DISPLAY: none" id="hideCN"><br></br>
+<p><strong><font color="#993366" size="2">Concepts and Definitions</font>&nbsp;</strong><br />
+<br>    
+<strong>Capital stock in agriculture: </strong> The concept of agriculture refers to the activity of crop and animal husbandry (i.e. the estimates do not include forestry and fishery sub-sectors or greenhouse production structures). The physical assets include assets used in the production process covering land development, irrigation works, structures, machinery and livestock. The capital stock items are listed in the table below.</p><br>
+<table style="MARGIN: auto auto auto 45.65pt; WIDTH: 351.9pt; BORDER-COLLAPSE: collapse" border="0" cellspacing="0" cellpadding="0" width="469">
+    <tbody>
+        <tr style="HEIGHT: 33pt">
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 33pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="250">
+            <p><strong>Land Development</strong></p>
+            </td>
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 63.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 33pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="350">
+            <p><strong>Livestock</strong> (Fixed assets and inventory)</p>
+            </td>
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 99pt; PADDING-RIGHT: 5.4pt; HEIGHT: 33pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="350">
+            <p><strong>Machinery and equipment</strong></p>
+            </td>
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 33pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="250">
+            <p><strong>Structures for livestock</strong></p>
+            </td>
+        </tr>
+        <tr style="HEIGHT: 19.5pt">
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 19.5pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="144">
+            <p>Arable land</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 63.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 19.5pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="85">
+            <p>Cattle and buffalo</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 99pt; PADDING-RIGHT: 5.4pt; HEIGHT: 19.5pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="132">
+            <p>Tractors</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 19.5pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="108">
+            <p>Animals</p>
+            </td>
+        </tr>
+        <tr style="HEIGHT: 15.75pt">
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="144">
+            <p>Permanent crop land </p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 63.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="85">
+            <p>Sheep</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 99pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="132">
+            <p>Harvesters</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="108">
+            <p>Poultry (birds)</p>
+            </td>
+        </tr>
+        <tr style="HEIGHT: 18pt">
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 18pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="144">
+            <p>Irrigated land</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 63.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 18pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="85">
+            <p>Goats</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 99pt; PADDING-RIGHT: 5.4pt; HEIGHT: 18pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="132" nowrap="nowrap">
+            <p>Milking machines</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 18pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="108" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+        </tr>
+        <tr style="HEIGHT: 15.75pt">
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="144" nowrap="nowrap">
+            <div>Plantation crops</div>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 63.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="85">
+            <p>Pigs</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 99pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="132">
+            <p>Hand tools</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="108" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+        </tr>
+        <tr style="HEIGHT: 15.75pt">
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="144" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 63.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="85">
+            <p>Horse</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 99pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="132" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="108" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+        </tr>
+        <tr style="HEIGHT: 15.75pt">
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="144" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 63.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="85">
+            <p>Camels</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 99pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="132" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="108" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+        </tr>
+        <tr style="HEIGHT: 15.75pt">
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="144" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 63.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="85">
+            <p>Mules</p>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 99pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="132" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+            <td style="BORDER-BOTTOM: #f0f0f0; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="108" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+        </tr>
+        <tr style="HEIGHT: 15.75pt">
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="144" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 63.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="top" width="85">
+            <p>Poultry</p>
+            </td>
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 99pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="132" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0cm; BACKGROUND-COLOR: transparent; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 15.75pt; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0cm" valign="bottom" width="108" nowrap="nowrap">
+            <div>&nbsp;</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<p><strong>Gross fixed capital stock: </strong> The gross fixed capital stock is the value, at a point of time, of assets held by the farmer with each asset valued at “as new” prices, at the prices for new assets of the same type, regardless of the age and actual condition of the assets. The gross capital stock dataset in agriculture is the sum of the individual physical assets (Land development + Livestock (fixed assets and inventory, see livestock definition) + Machinery and equipment + Structures for Livestock).</p><br>
+<p><strong>Land Development: </strong>Land improvements are the result of actions that lead to major improvements in the quantity, quality or productivity of land, or prevent its deterioration. Activities such as land clearance, land contouring, creation of wells and watering holes are integral to the land improvement. The concept of land improvement for the database of capital stock in agriculture includes:</p>
+<ul>
+    <li>On field land improvement undertaken by farmers (includes work done on field such as making boundaries, irrigation channels, etc);</li>
+    <li>Other activities such as irrigation works, soil conservation works, and flood control structure, etc., undertaken by government and other local bodies.</li>
+</ul><br>
+<p><strong>Livestock</strong> (fixed asset and inventory): The concept of livestock  fixed asset are the  breeding stock of cattle and buffalo, camels, horses, mules, asses, pigs, goats, sheep and poultry. The concept of inventory are generally young livestock stock and those kept for slaughtering.</p><br>
+<p><strong>Machinery and equipment: </strong>The concept includes tractors (with accessories), harvesters and thrashers, milking machines and hand tools.</p><br>
+<p><strong>Net capital stock: </strong>The net capital stock is the value at a point in time of assets at the prices for new assets of the same type less the cumulative value of consumption of fixed capital accrued up to that point. </p><br>
+<p><strong>Plantation crops: </strong>The concept refers to trees yielding repeated products (including vines and shrubs) cultivated for fruits and nuts, for sap and resin and for bark and leaf products,etc. </p><br>
+<p><strong>Structures for Livestock: </strong>The concept includes sheds constructed for housing cows, buffalo, horses, camels and poultry birds. Structures have been provided for only part of the total stocks which are held by commercial concerns.</p><br>
+
+
+<p><font size="2"><font color="#993366"><strong>Reference period and coverage</strong><br />
+</font></font>The dataset covers the period 1975 to 2007 for approximately 200 countries with more than 5000 hectare of agricultural land.</p><br>
+
+
+<p><strong><font color="#993366" size="2">Data source</font></strong><br />
+Data on quantity of physical assets in use and prices are based on information collected from the member countries and disseminated through FAOSTAT Database. Additional information comes from number of sources such: as country investment project reports received and prepared in FAO; purchase prices of capital such as tractors, harvesters and threshers, milking machines and drought animals; implicit prices from foreign trade data on livestock, tractors, etc. Supplementary data on GDP at current and constant prices have been obtained from the United Nations Statistics Division (UNSD) and were used for preparing price indices for the individual countries. </p><br>
+
+
+<p><font color="#993366"><font size="2"><strong>Estimation of capital stock in agriculture</strong><br />
+</font></font>Estimates of the value of capital stock in agriculture were based on the following sequence of calculations: </p>
+<ul plain="">
+    <li>Land development = &sum; {(arable land) x (unit price) + (irrigated land) x (unit price)} </li>
+    <li>Plantation crops = &sum; (land under permanent crop) x (unit price) </li>
+    <li>Total value of livestock = Livestock as fixed assets used for agriculture + Livestock kept as inventory = &sum; {(number of livestock for i) x (unit price of livestock for i) x (share of total livestock used in agriculture = 0.6245) + (number of livestock for j) x (unit price of livestock for j)} <br />Where i stands for camel, cattle, buffalo, goats, horse, mules and asses and j stands for pig, poultry and sheep. <br />85% of the total value is treated as fixed assets and remaining 15% as value of inventory. </li>
+    <li>Structures for livestock
+    <ol>
+        <li>The number of structures have been estimated for cattle, buffalo, goat, horse, camel, pig and poultry. </li>
+        <li>Value of structures has been estimated as US $1800 for cattle and buffalo, US $180 for goats and US $1.5 for poultry (birds) based on the FAO AT 2010 study. The values were applied to the 1990 and 1995 series after super-imposing price rises as estimated from implicit GDP deflator. </li>
+        <li>Structures have been estimated to reflect for 30% of cattle, buffalo, horse and goat for developed countries and 5% for cattle, buffalo, horse and goat for countries in transition and developing countries. Poultry structures have been estimated for 60% of the birds uniformly across countries. </li>
+    </ol>
+    </li>
+    <li>Machinery and equipment = &sum; {(number of machinery for i) x (unit price of machinery for i) + (economically active population in agriculture) x US $35)} <br />Where i stands for tractor, harvester &amp; threshers and milking machine. <br /> US $ 35 has been taken from 1995 series after adjusting for price rises. </li>
+    <li>Consumption of fixed capital =
+    <ol>
+        <li>Consumption of fixed capital has been estimated for land development, plantation crops, structure for livestock and machinery and equipments. </li>
+        <li>No value has been estimated on livestock. </li>
+        <li>Consumption of fixed capital is estimated as 2% for land development which includes irrigation works, 4.5% for plantation and structures of livestock and 12.5% for machinery and equipment as suggested in the FAO AT 2010 study. This assumption implies a life of 50 years for land development, about 22 years for plantation and structure for livestock and 8 years for machinery and equipment. </li>
+    </ol>
+    </li>
+</ul><br>
+<p><strong><font color="#993366" size="2">Data limitations</font></strong><br />
+The estimates cover a long period where composition and structure for some of the countries have undergone revision. For example, from 1992 the USSR has been divided into 15 countries and Yugoslavia SFR into 5 countries. Hence, 2005 prices for USSR, Yugoslavia SFR do not exist. 2005 prices of USSR and Yugoslavia SFR, therefore, have been derived by compiling weighted average prices of respective group of countries, weights being the share of the country in the group in the year 1992. Similar treatment has been given to Ethiopia and Czechoslovakia. In this process it was noted the country group “Transition Economies” did not provide a consistent series of “assets in use” for the entire period of 1975 to 2007 (e.g. USSR by aggregating 15 countries in the year 1992 was not consistent with the USSR as seen in year 1991). The ‘estimates prior to 1991’ and ‘estimates after 1992’ are not compatible due to changes in the data collection systems (including concepts and definitions) adopted in the emerging economies. However, it was decided that no arbitrary adjustments were made in the series to maintain consistency with other databases in the FAOSTAT. This limitation of the series may be kept in mind while making long-term analysis of the estimates.<br /><br />
+In developing the dataset of gross capital stock and net capital stock, it was not possible to make any adjustment for quality change/variation on physical assets particularly regarding the varieties of machinery for countries as: (a) prices for machinery are not available for many countries; (b) price estimates are heavily dependent on implicit import/export data which are average value of different type/make of machinery. Year to year variations in the capital stock dataset are also due to change in the composition of machinery and (c) in national accounts compilation, quality changes have been accounted only in the International Comparison Project (ICP) work while making bridge comparison.The ICP for compiling purchasing power parity is being coordinated by the World Bank). </p><br>
+<p><font size="2"><font color="#993366"><strong>Acknowledgements</strong><br />
+</font></font>The FAO Statistics Division is grateful for the data on quantity of physical assets in use which have been collected from the FAO member countries and would like to express thanks and appreciation to countries for their help in providing data which has greatly contributed to the development of the dataset of capital stock in agriculture. </p>
+
+</div>-->

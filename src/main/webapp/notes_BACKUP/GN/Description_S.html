@@ -1,0 +1,26 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Uso de energía</h2> <img id='DOMAIN_IMG' src="images/G1.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G1.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G1_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+<p>Los datos de la actividad para "Gas&oacute;leo por la pesca" y "Fueloil residuales por la pesca" est&aacute;n registrados como: IEA Statistics 2013 &copy;OECD/IEA, 2013. Las estimaciones de emisiones de GEI para las categor&iacute;as "Gas&oacute;leo por la pesca" y "Fueloil residuales por la pesca" tienen derechos de autor como: Food and Agriculture Organization (FAO) sobre la base de IEA Statistics 2013 &copy; OCDE/AIE, 2013. Los datos de actividad para otros combustibles y electricidad utilizados en la agricultura est&aacute;n tomados de Energy Statistics Database 2010 de UNSD, disponibles a trav&eacute;s del portal UNdata.</p>
+<br>
+<p>Las emisiones de GEI procedentes del uso directo de energ&iacute;a consisten en los gases di&oacute;xido de carbono, metano y &oacute;xido nitroso asociados a la quema de combustible y a la generaci&oacute;n de electricidad en la agricultura (incluyendo las industrias pesqueras). Calculados en el Nivel 1 seg&uacute;n las Directrices para los inventarios nacionales de GEI del Grupo Intergubernamental de Expertos sobre el Cambio Clim&aacute;tico (IPCC) de 2006; disponibles por pa&iacute;s, con cobertura global y relativos al per&iacute;odo 1970-presente, con actualizaciones anuales.</p>
+<br><br>
+<a id='PDF' href='/faostat-download-js/PDF/ES/UsoDeEnergia.pdf' target='_blank'>Show Metadata</a>
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GN.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GN.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GN.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

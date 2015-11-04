@@ -1,0 +1,25 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Combustion - Biomasse</h2> <img id='DOMAIN_IMG' src="images/G2.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G2.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G2_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+    <p>Les &eacute;missions de Gaz &agrave; effet de serre (GES) imputables &agrave; la combustion de la biomasse sont constitu&eacute;es de gaz de m&eacute;thane et d'oxyde nitreux provenant de la combustion de la biomasse des classes de couvertures foresti&egrave;res "for&ecirc;t humide et tropicale" et "autres for&ecirc;ts", et des gaz de m&eacute;thane, d'oxyde nitreux, et de dioxyde de carbone provenant de la combustion des sols organiques. Les &eacute;missions sont calcul&eacute;es selon la m&eacute;thode de niveau 1 des Lignes directrices de 2006 du GIEC pour les inventaires nationaux de GES; elles sont disponibles par pays, d'une couverture mondiale et relatives &agrave; une p&eacute;riode de 1990 &agrave; nos jours, avec des mises &agrave; jour annuelles.</p>
+
+     <br><br>
+<a id='PDF' href='/faostat-download-js/PDF/FR/CombustionBiomasse.pdf' target='_blank'>Show Metadata</a>
+
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GI.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GI.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GI.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

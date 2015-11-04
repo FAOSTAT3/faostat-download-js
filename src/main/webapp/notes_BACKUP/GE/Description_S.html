@@ -1,0 +1,24 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Fermentaci&oacute;n ent&eacute;rica</h2> <img id='DOMAIN_IMG' src="images/G1.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G1.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G1_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+Las emisiones de gases de efecto invernadero (GEI) procedentes de la fermentación entérica consisten en el gas metano producido en los sistemas digestivos de los rumiantes y, en menor medida, de los no rumiantes. Calculados en el Nivel 1 según las Directrices para los inventarios nacionales de GEI del Grupo Intergubernamental de Expertos sobre el Cambio Climático de 2006; disponibles por países, con cobertura global y relativos al período 1961-presente, con actualizaciones anuales y proyecciones para 2030 y 2050.
+<br><br>
+<a id='PDF' href='/faostat-download-js/PDF/ES/FermentacionEnterica.pdf' target='_blank'>Show Metadata</a>
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/EntericFermentation.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/FermentaciónEntérica.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/FermentationEntérique.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

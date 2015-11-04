@@ -1,0 +1,92 @@
+<script type="text/javascript">
+    function showHide() {
+        if ($('#hideCN').css('display') == 'none')
+            $('#hideCN').css('display', 'inline');  
+        else
+            $('#hideCN').css('display', 'none');
+    }
+</script>
+<div class="download-notes">
+<div class="noteHead"> <h2>Government Expenditure</h2> <img id='DOMAIN_IMG' src="images/I.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/I.png');
+</script>
+<div class="backBtn"><p class='goto' id='I_notes'> < Back </p></div>
+<br/>
+
+<p>Data presented on government expenditure refers to <strong>Core Areas of Government Functions Relevant to the Agriculture Sector</strong> based on the Classification of Functions of Government (COFOG) as outlined in the IMF’s <i>Government Finance Statistics Manual, 2001 (GFSM 2001)</i>. </p><br />
+<p>COFOG is essential for making international comparisons of the extent to which governments are involved in economic and social functions because it avoids problems associated with organizational changes in a single government, and problems of organizational differences among countries. </p><br />
+<p>Statistics on expenditures in agriculture, forestry and fisheries and on environmental protection can be used to study the effectiveness of government programs that support an enabling environment for essential public goods with high economic and social returns. COFOG provides key aggregates that could be used as indicators or measures of results / outcomes. The composition of the FAOSTAT disseminated aggregates is further outlined below: </p><br />
+<p><strong>Agriculture, Forestry Fishing and Hunting</strong>, which is comprised of: </p><br />
+<p> <a onclick="javascript:document.getElementById('Agriculture').style.display='block';" href="javascript:void(0)"><strong>Agriculture</strong> (Includes Crops and Livestock): </a></p><br />
+<div id="Agriculture" style="DISPLAY: none"><br />
+<ul style="padding-left:20px">
+<li>Administration of agricultural affairs and services; conservation, reclamation or expansion of arable land; agrarian reform and land settlement; supervision and regulation of the agricultural industry;</li>
+<li>Construction or operation of flood control, irrigation and drainage systems, including grants, loans or subsidies for such works; </li>
+<li>Operation or support of programmes or schemes to stabilize or improve farm prices and farm incomes; operation or support of extension services or veterinary services to farmers, pest control services, crop inspection services and crop grading services; </li>
+<li>Production and dissemination of general information, technical documentation and statistics on agricultural affairs and services; </li>
+<li>Compensation, grants, loans or subsidies to farmers in connection with agricultural activities, including payments for restricting or encouraging output of a particular crop or for allowing land to remain uncultivated;</li>
+<li>Administration and operation of government agencies engaged in applied research and experimental development related to agriculture; </li>
+<li>Grants, loans or subsidies to support applied research and experimental development related to agriculture by research institutes and universities. </li>
+</ul>
+<a onclick="document.getElementById('Agriculture').style.display='none';" href="javascript:void(0)">Close</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('Forestry').style.display='block';" href="javascript:void(0)"><strong>Forestry</strong> (Includes Forest crops in addition to timber): </a></p><br />
+<div id="Forestry" style="DISPLAY: none"><br />
+<ul style="padding-left:20px">
+<li>Administration of forestry affairs and services; conservation, extension and rationalised exploitation of forest reserves; supervision and regulation of forest operations and issuance of tree-felling licenses; </li>
+<li>Operation or support of reforestation work, pest and disease control, forest fire-fighting and fire prevention services and extension services to forest operators; </li>
+<li>Production and dissemination of general information, technical documentation and statistics on forestry affairs and services; </li>
+<li>Grants, loans, or subsidies to support commercial forest activities; </li>
+<li>Administration and operation of government agencies engaged in applied research and experimental development related  to forestry; </li>
+<li>Grants, loans or subsidies to support applied research and experimental development related to forestry and undertaken by research institutes and universities. </li>
+</ul>
+<a onclick="document.getElementById('Forestry').style.display='none';" href="javascript:void(0)">Close</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('Fishing').style.display='block';" href="javascript:void(0)"><strong>Fishing and Hunting</strong> (Includes commercial fishing and hunting, and fishing and hunting for sport that takes place outside of natural parks and reserves): </a></p><br />
+<div id="Fishing" style="DISPLAY: none"><br />
+<ul style="padding-left:20px">
+<li>Administration of fishing affairs and services; protection, propagation and rationalised exploitation of fish stocks; supervision and regulation of freshwater fishing, coastal fishing, ocean fishing, fish farming and issuance of fishing licenses; </li>
+<li>Operation or support of fish hatcheries, extension services, or stocking activities, etc.; </li>
+<li>Production and dissemination of general information, technical documentation and statistics on fishing affairs and services; </li>
+<li>Grants, loans or subsidies to support commercial fishing and hunting activities, including the construction or operation of fish hatcheries. </li>
+</ul>
+<a onclick="document.getElementById('Fishing').style.display='none';" href="javascript:void(0)">Close</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('EnvProt').style.display='block';" href="javascript:void(0)"><strong>Environmental Protection</strong>: </a></p><br />
+<div id="EnvProt" style="DISPLAY: none">
+The COFOG breakdown of these expenditures is based upon the Classification of Environmental Protection Activities (CEPA) as elaborated in the European System for the Collection of Economic Information on the Environment (SERIEE) of the Statistical Office of the European Communities (Eurostat). The main groups are: <br /><br />
+<ul style="padding-left:20px">
+<li>Waste management, covering the collection, treatment and disposal of waste; </li>
+<li>Waste water management, covering sewage system operation and waste water treatment; </li>
+<li>Pollution abatement, covering activities relating to ambient air and climate protection, soil and groundwater protection, noise and vibration abatement and protection against radiation;</li>
+<li>Protection of biodiversity and landscape, covering activities relating to the protection of fauna and flora species(including the reintroduction of extinct species and the recovery of species menaced by extinction), the protection of habitats (including the management of natural parks and reserves), and the protection of landscapes for aesthetic values (including the reshaping of damaged landscapes for the purpose of strengthening their aesthetic value and the rehabilitation of abandoned mines and quarries);</li>
+<li>R&D Environmental Protection, covering basic research, applied research and experimental development related to environmental protection; </li>
+<li>Environmental protection, not elsewhere classified (n.e.c.), covering affairs and services that cannot be assigned to any of the five previously described groups. </li>
+</ul>
+<a onclick="document.getElementById('EnvProt').style.display='none';" href="javascript:void(0)">Close</a> </center></div><br />
+
+<p><strong>General Government Sector and its Subsectors</strong></p><br />
+
+<p>FAOSTAT government expenditure statistics pertain to the <i><strong>consolidated general government</strong></i>, the <i><strong>central government subsector</strong></i> and the <i><strong>budgetary central government</strong></i>. Not all countries have all three levels, which can be further described as follows:</p><br />
+<ul style="padding-left:20px"><li>
+<p>The <i><strong>general government sector consists of resident institutional units that fulfill the functions of government as their primary activity</strong></i>. This sector includes all government units and all nonmarket NPIs that are controlled by government units. For analytic purposes, it is often necessary or desirable to disaggregate the general government sector into subsectors, including:</p> 
+</li>
+</ul><br />
+<ol style="padding-left:40px">
+<li>
+<p>The <i><strong>central government subsector consists of the institutional unit(s) of the central government plus those nonmarket NPIs that are controlled by the central government</strong></i>. The political authority of central government extends over the entire territory of the country. It is generally composed of a budgetary central government, extrabudgetary units, and social security funds (unless a separate subsector is used for social security funds).</p>
+</li>
+<li>
+<p>The <i><strong>budgetary central government is often a single unit of the central government that encompasses the fundamental activities of the national executive, legislative, and judiciary powers</strong></i>. This component of general government is usually covered by the main (or general) budget. This budgetary central government’s revenue, as well as its expense, are normally regulated and controlled by a Ministry of Finance, or its functional equivalent, by means of a budget approved by the legislature.</p><br />
+</li>
+</ol>
+<p>Depending on the administrative and legal arrangements, there may be more than one level of government within a country, and statistics should be compiled for each level (also referred to as subsectors). Moreover, because of these different arrangements, international comparison of data reported for a subsector of general government should be undertaken with some caution. The majority of countries are presenting data for the budgetary central government.</p><br />
+
+<p><strong>"Cash" and "Noncash" Data Distinction</strong></p><br />
+
+<p>Broadly, in IMF GFS the time of recording could be described as four bases or recording: the accrual basis, the commitments basis, the due-for-payment basis, and the cash basis. In practice though, many variations on these bases of recording may exist. Often accounting systems may use a mixed basis of recording, for example, tax revenue may be recorded on a cash basis while other transactions are recorded on an accrual basis. In principle, the IMF GFS framework records economic flows on an accrual basis. <i><strong>In the accrual basis of recording, flows are recorded at the time economic value is created, transformed, exchanged, transferred, or extinguished</strong></i>. In other words, the effects of economic events are recorded in the period in which they occur, irrespective of whether cash was received or paid or was due to be received or paid. However, the framework also encompasses the traditional cash based reporting. <i><strong>In the cash basis of recording, flows are recorded when cash is received or disbursed</strong></i>. The data presented in FAOSTAT reflect this characteristic in that series are presented as "cash" or "noncash", depending on the recording basis used in the country. The majority of countries are presenting “cash” based fiscal data.</p><br />
+
+
+</div>
+<br></br>

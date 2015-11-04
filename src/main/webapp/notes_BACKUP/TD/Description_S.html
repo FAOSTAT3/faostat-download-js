@@ -1,0 +1,23 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Matriz detallada del comercio</h2> <img id='DOMAIN_IMG' src="images/T.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/T.png');
+</script><br/>
+
+<div class="backBtn"><p class='goto' id='T_notes'> < Detrás </p></div>
+<br>
+
+<br/>
+<p>Mientras FAO ajusta/modifica algunas cifras oficiales donde hay inconcistencias evidentes (como ser errores de entrada de datos, o variaciones de valores unitarios fuera de la tendencia) los datos de la matriz de comercio son inconsistentes. Esto significa, un usuario puede encontrar que lo que un país A oficialmente declara como importaciones provenientes del país B no van a corresponder con lo que el país B oficialmente, y recíprocamente, declara como sus exportaciones al país A, para un producto dado en un año dado (en términos de cantidad y/o valor). 
+Hay un número de razones que parcialmente explican ésto:</p><br><br />
+<p>-lapso de tiempo: Una exportación reportada en diciembre para un año dado puede llegar a destinación en enero del año siguiente (y podría entonces ser reportado únicamente como una importación).<br/>
+-algunos países proveen datos sobre Comercio General (todas las importaciones y exportaciones + re exportaciones) mientras otros sobre Comercio Especial (importaciones para consumo doméstico).
+-para productos individuales podría haber una desclasificación del producto entre el importador y el exportador.
+-cantidades exportadas pueden ser destruídas o perdidas en el camino debido a accidentes, condiciones climáticas, etc.
+-simples errores de mecanografía/cálculos del país que reporta (nosotros, sin embargo, intentamos rectificar éstos cuando son evidentes).
+-confidencialidad de los datos por parte de una de las partes
+-inconcistencias del lugar de origen/destino (ej. el país A informa que el país de destino final para una exportación dada es C; los bienes llegan al país C a través de otro país (B); el país C informa que el país de origen de los bienes es el país B).
+-Tasas de aduana eludidas por distorsionar un producto en la importación o no reportar el transporto. En particulares casos: exportaciones no están declaradas para sortear un embargo.</p><br><br />
+<p>En cuanto a las discrepancias en valores reportados de comercio (asumiendo que las correspondientes cantidades reportadas son idénticas):
+La mayoría de los países reporta valores de exportación libre a bordo (FOB. ej: los costos de seguro/transporte no están incluídos), mientras que los valores de importación son mayoritariamente reportados como costo seguro y flete (CIF. ej: los costos de seguro/transporte están incluídos). Por lo tanto, para un producto agrícola dado, los valores de exportación reportados deben ser inferiores que los correspondientes valores de importación reportados. El factor de ajuste varía de acuerdo con el producto, la distancia, el empaquetado, etc. (Para los índices númericos de comercio de FAOSTAT un factor de incremento del 12% es aplicado a todos los valores de exportación - pero análisis de datos individuales/específicos muestran que el rango puede estar entre 10% y 35% si no más). </p><br><br />
+<p>Aquí los datos de comercio están redondeados a la tonelada métrica más cercana.</p>

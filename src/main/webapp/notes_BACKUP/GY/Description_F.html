@@ -1,0 +1,26 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Engrais synth&eacutetique</h2> <img id='DOMAIN_IMG' src="images/G1.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G1.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G1_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+<p>Le module concernant les engrais contient des donn&eacute;es sommaires &agrave; compter de l’ann&eacute;e 2002. Il est &eacute;tabli depuis 2006 &agrave; l’aide d’une m&eacute;thodologie r&eacute;vis&eacute;e et de nouveaux formats de diffusion. On peut acc&eacute;der &agrave; la pr&eacute;c&eacute;dente s&eacute;rie de donn&eacute;es concernant les engrais (donn&eacute;es de 1961 &agrave; 2002) dans les « Archives des engrais » du site web FAOSTAT. Les deux modules doivent &ecirc;tre utilis&eacute;s s&eacute;par&eacute;ment. On ne peut pas les r&eacute;unir pour cr&eacute;er une s&eacute;rie chronologique plus longue &agrave; cause des changements suivants, adopt&eacute;s depuis 2002: nouvelle m&eacute;thodologie d’&eacute;laboration des donn&eacute;es concernant les engrais, passage &agrave; la seule ann&eacute;e civile et abandon de l’utilisation &agrave; la fois de l’ann&eacute;e civile et des campagnes engrais, classification r&eacute;vis&eacute;e des diff&eacute;rents engrais, ajout du param&egrave;tre relatif &agrave; la non-utilisation d’engrais dans le bilan engrais et utilisation de nouvelles sources pour certaines donn&eacute;es (par exemple UN COMTRADE, la base de donn&eacute;es statistiques sur le commerce des marchandises de l’ONU). </p>
+<br>
+Les émissions de gaz à effet de serre (GES) imputables aux engrais synthétiques sont constituées de gaz d'oxyde nitreux provenant d'ajouts azotés synthétiques dans les sols gérés. Ces émissions sont calculées selon la méthode de niveau 1 conformément aux Lignes directrices de 2006 du GIEC pour les inventaires nationaux de gaz à effet de serre; disponibles par pays, avec une couverture mondiale et relatives à la période de 1961 à nos jours, avec des mises à jour annuelles, et des projections à l'horizon 2030 et 2050.
+<br><br>
+<a id='PDF' href='/faostat-download-js/PDF/FR/EngraisSynthetique.pdf' target='_blank'>Show Metadata</a>
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GY.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GY.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GY.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

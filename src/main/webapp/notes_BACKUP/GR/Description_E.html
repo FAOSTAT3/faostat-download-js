@@ -1,0 +1,24 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Rice Cultivation</h2> <img id='DOMAIN_IMG' src="images/G1.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G1.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G1_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+Greenhouse gas (GHG) emissions from rice cultivation consist of methane gas from the anaerobic decomposition of organic matter in paddy fields. Computed at Tier 1 following the Revised 1996 IPCC Guidelines for National GHG Inventories and the IPCC 2000 Good Practice Guidance and Uncertainty Management in National GHG Inventories; available by country, with global coverage and relative to the period 1961 to present, with annual updates, and projections for 2030 and 2050.
+<br><br>
+<a id='PDF' href='/faostat-download-js/PDF/EN/RiceCultivation.pdf' target='_blank'>Show Metadata</a>
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GR.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GR.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GR.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

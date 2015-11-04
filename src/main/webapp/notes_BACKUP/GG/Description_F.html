@@ -1,0 +1,24 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Prairie</h2> <img id='DOMAIN_IMG' src="images/G2.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G2.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G2_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+    <p>Les donn&eacute;es sur les gaz &agrave; effet de serre (GES) imputables aux prairies sont actuellement limit&eacute;es aux &eacute;missions provenant des sols organiques des prairies. Celles-ci sont associ&eacute;es aux pertes de carbone provenant des histosols drain&eacute;s sous prairies. Ces donn&eacute;es sont calcul&eacute;es selon la m&eacute;thode de niveau 1 et compl&eacute;t&eacute;es par l'utilisation de donn&eacute;es g&eacute;ospatiales, selon les Lignes directrices de 2006 du GIEC pour les inventaires nationaux de GES. Elles sont disponibles par pays, d'une couverture mondiale et couvrent une p&eacute;riode de 1990 &agrave; nos jours.</p>
+    <br><br>
+    <a id='PDF' href='/faostat-download-js/PDF/FR/Prairie.pdf' target='_blank'>Show Metadata</a>
+
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GG.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GG.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GG.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

@@ -1,0 +1,29 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Enteric Fermentation</h2> <img id='DOMAIN_IMG' src="images/G1.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G1.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G1_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+Greenhouse gas (GHG) emissions from enteric fermentation consist of methane gas 
+produced in digestive systems of ruminants and to a lesser extent of non-ruminants. 
+Computed at Tier 1 following the 2006 IPCC Guidelines for National GHG Inventories (IPCC, 
+2006); available by country, with global coverage and relative to the period 1961 to 
+present, with annual updates, and projections for 2030 and 2050. 
+
+<br><br>
+<a id='PDF' href='/faostat-download-js/PDF/EN/EntericFermentation.pdf' target='_blank'>Show Metadata</a>
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GE.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GE.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GE.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

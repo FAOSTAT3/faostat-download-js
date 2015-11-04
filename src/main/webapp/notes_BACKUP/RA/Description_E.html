@@ -1,0 +1,2613 @@
+
+<script>
+    function toggleDiv(element){
+
+        if(document.getElementById(element).style.display=="none"){document.getElementById(element).style.display="block"}
+        else{document.getElementById(element).style.display="none"}
+    }
+</script>
+
+<div class="download-notes">
+<div class="noteHead"> <h2>Fertilizers Archive</h2> <img id='DOMAIN_IMG' src="images/R.png" width="50" height="50" /></div>
+<script>
+    $('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/R.png');
+</script>
+<div class="backBtn"><p class='goto' id='R_notes'> < Back </p></div>
+<br>
+Fertilizer prices paid by farmers are shown in local currency per metric tonne of plant nutrients (N, P2O5 and K2O) for straight fertilizers and per metric tonne of product for mixed and complex fertilizers. They generally refer to bagged fertilizers. Prices are shown with subsidies deducted wherever possible. Caution should be exercised in intercountry comparisons since pricing points, price policies, credit arrangements, etc. are not uniform.
+<br/><br/>
+<i>Element References</i>
+<br/><br/>
+51 Production MT
+Quantity, in metric tonnes, of plant nutrient for domestic use in agriculture.
+<br/><br/>
+61 Imports MT
+Quantity of Fertilizers in metric tons of plant nutrient imported by a country.
+<br/><br/>
+91 Exports MT
+Quantity of Fertilizers equivalent in metric tons of plant nutrient exported by a country.
+<br/><br/>
+151 Consumption MT
+Quantity of Fertilizer in metric tons of plant nutrient consumed in agriculture by a country.
+<br/><br/>
+171 Farmer Price LC/MT
+Fertilizer prices paid by farmers are shown in local currency per metric ton (LC/MT) of plant nutrients (N, P2O5 and K2O); wherever possible prices are shown with subsidies deducted. <br><br />
+
+The following specifications relate to price data.<br><br />
+
+<p><a onclick="toggleDiv('List');" href="javascript:void(0)"><strong>List of National Currencies</strong></a></p><br />
+<div style="DISPLAY: none" id="List"><br><br />
+
+<!--<br/><br/><b>List of National Currencies</b><br/>-->
+<!--
+<table class='hor-minimalist-b'>
+	<thead>
+		<tr>
+			<th scope='col'>FAO Code</th>
+			<th>Country</th>
+			<th>Currency unit (*)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td>003</td><td>Albania</td><td>Lek</td></tr>
+		<tr><td>004</td><td>Algeria</td><td>Dinar</td></tr>
+		<tr><td>009</td><td>Argentina</td><td>Peso</td></tr>
+		<tr><td>010</td><td>Australia</td><td>Australian dollar</td></tr>
+		<tr><td>011</td><td>Austria</td><td>Euro</td></tr>
+		<tr><td>013</td><td>Bahrain</td><td>Dinar</td></tr>
+		<tr><td>016</td><td>Bangladesh</td><td>Taka</td></tr>
+		<tr><td>015</td><td>Belgium</td><td>Euro</td></tr>
+		<tr><td>053</td><td>Benin</td><td>CFA franc</td></tr>
+		<tr><td>019</td><td>Bolivia</td><td>Boliviano</td></tr>
+		<tr><td>020</td><td>Botswana</td><td>Pula</td></tr>
+		<tr><td>021</td><td>Brazil</td><td>Real</td></tr>
+		<tr><td>027</td><td>Bulgaria</td><td>Lev</td></tr>
+		<tr><td>233</td><td>Burkina Faso</td><td>CFA franc</td></tr>
+		<tr><td>029</td><td>Burundi</td><td>Franc</td></tr>
+		<tr><td>115</td><td>Cambodia</td><td>Riel</td></tr>
+		<tr><td>032</td><td>Cameroon</td><td>CFA franc</td></tr>
+		<tr><td>033</td><td>Canada</td><td>Dollar</td></tr>
+		<tr><td>035</td><td>Cape Verde</td><td>Escudo</td></tr>
+		<tr><td>040</td><td>Chile</td><td>Peso</td></tr>
+		<tr><td>041</td><td>China</td><td>Yuan renmimbi</td></tr>
+		<tr><td>044</td><td>Colombia</td><td>Peso</td></tr>
+		<tr><td>251</td><td>Congo, Dem. Republic of</td><td>Franc</td></tr>
+		<tr><td>046</td><td>Congo, Republic of</td><td>CFA franc</td></tr>
+		<tr><td>107</td><td>Cote D'Ivoire</td><td>CFA franc</td></tr>
+		<tr><td>050</td><td>Cyprus</td><td>Pound</td></tr>
+		<tr><td>167</td><td>Czeck Republic</td><td>Koruna</td></tr>
+		<tr><td>054</td><td>Denmark</td><td>Krone</td></tr>
+		<tr><td>056</td><td>Dominican Republic</td><td>Peso</td></tr>
+		<tr><td>058</td><td>Ecuador</td><td>Sucre</td></tr>
+		<tr><td>059</td><td>Egypt</td><td>Pound</td></tr>
+		<tr><td>060</td><td>El Salvador</td><td>Colón</td></tr>
+		<tr><td>178</td><td>Eritrea</td><td>Nafka</td></tr>
+		<tr><td>063</td><td>Estonia</td><td>Kroon</td></tr>
+		<tr><td>238</td><td>Ethiopia</td><td>Birr</td></tr>
+		<tr><td>066</td><td>Fiji</td><td>Dollar</td></tr>
+		<tr><td>067</td><td>Finland</td><td>Euro</td></tr>
+		<tr><td>068</td><td>France</td><td>Euro</td></tr>
+		<tr><td>075</td><td>Gambia</td><td>Dalasi</td></tr>
+		<tr><td>079</td><td>Germany</td><td>Euro</td></tr>
+		<tr><td>081</td><td>Ghana</td><td>Cedi</td></tr>
+		<tr><td>084</td><td>Greece</td><td>Euro</td></tr>
+		<tr><td>090</td><td>Guinea</td><td>Franc</td></tr>
+		<tr><td>089</td><td>Guatemala</td><td>Quetzal</td></tr>
+		<tr><td>093</td><td>Haiti</td><td>Gourde</td></tr>
+		<tr><td>095</td><td>Honduras</td><td>Lempira</td></tr>
+		<tr><td>097</td><td>Hungary</td><td>Forint</td></tr>
+		<tr><td>099</td><td>Iceland</td><td>Króna</td></tr>
+		<tr><td>100</td><td>India</td><td>Rupee</td></tr>
+		<tr><td>101</td><td>Indonesia</td><td>Rupiah</td></tr>
+		<tr><td>102</td><td>Iran</td><td>Rial</td></tr>
+		<tr><td>104</td><td>Ireland</td><td>Euro</td></tr>
+		<tr><td>105</td><td>Israel</td><td>New shekel</td></tr>
+		<tr><td>106</td><td>Italy</td><td>Euro</td></tr>
+		<tr><td>109</td><td>Jamaica</td><td>Dollar</td></tr>
+		<tr><td>110</td><td>Japan</td><td>Yen</td></tr>
+		<tr><td>112</td><td>Jordan</td><td>Dinar</td></tr>
+		<tr><td>114</td><td>Kenya</td><td>Shilling</td></tr>
+		<tr><td>117</td><td>Korea Rep</td><td>Won</td></tr>
+		<tr><td>113</td><td>Kyrgyztan</td><td>Som</td></tr>
+		<tr><td>120</td><td>Laos</td><td>Kip</td></tr>
+		<tr><td>122</td><td>Lesotho</td><td>Loti</td></tr>
+		<tr><td>124</td><td>Libya</td><td>Dinar</td></tr>
+		<tr><td>129</td><td>Madagascar</td><td>Franc</td></tr>
+		<tr><td>130</td><td>Malawi</td><td>Kwacha</td></tr>
+		<tr><td>131</td><td>Malaysia</td><td>Ringgit</td></tr>
+		<tr><td>134</td><td>Malta</td><td>Lira</td></tr>
+		<tr><td>136</td><td>Mauritania</td><td>Ouguiya</td></tr>
+		<tr><td>137</td><td>Mauritius</td><td>Rupee</td></tr>
+		<tr><td>138</td><td>Mexico</td><td>New peso</td></tr>
+		<tr><td>146</td><td>Moldova</td><td>Leu</td></tr>
+		<tr><td>143</td><td>Morocco</td><td>Dirham</td></tr>
+		<tr><td>028</td><td>Myanmar</td><td>Kyat</td></tr>
+		<tr><td>149</td><td>Nepal</td><td>Rupee</td></tr>
+		<tr><td>150</td><td>Netherlands</td><td>Euro</td></tr>
+		<tr><td>156</td><td>New Zealand</td><td>Dollar</td></tr>
+		<tr><td>157</td><td>Nicaragua</td><td>Córdoba oro</td></tr>
+		<tr><td>158</td><td>Niger</td><td>CFA franc</td></tr>
+		<tr><td>159</td><td>Nigeria</td><td>Naira</td></tr>
+		<tr><td>162</td><td>Norway</td><td>Krone</td></tr>
+		<tr><td>165</td><td>Pakistan</td><td>Rupee</td></tr>
+		<tr><td>166</td><td>Panama</td><td>Balboa</td></tr>
+		<tr><td>169</td><td>Paraguay</td><td>Guaraní</td></tr>
+		<tr><td>170</td><td>Peru</td><td>New sol</td></tr>
+		<tr><td>171</td><td>Philippines</td><td>Peso</td></tr>
+		<tr><td>173</td><td>Poland</td><td>Zloty</td></tr>
+		<tr><td>174</td><td>Portugal</td><td>Euro</td></tr>
+		<tr><td>179</td><td>Qatar</td><td>Riyal</td></tr>
+		<tr><td>182</td><td>Réunion</td><td>Franc</td></tr>
+		<tr><td>183</td><td>Romania</td><td>Leu</td></tr>
+		<tr><td>185</td><td>Russian Federation</td><td>Ruble</td></tr>
+		<tr><td>184</td><td>Rwanda</td><td>Franc</td></tr>
+		<tr><td>188</td><td>Saint Kitts & Nevis</td><td>EC dollar</td></tr>
+		<tr><td>189</td><td>Saint Lucia</td><td>EC dollar</td></tr>
+		<tr><td>196</td><td>Seychelles</td><td>Rupee</td></tr>
+		<tr><td>197</td><td>Sierra Leone</td><td>Leone</td></tr>
+		<tr><td>200</td><td>Singapore</td><td>Dollar</td></tr>
+		<tr><td>199</td><td>Slovakia</td><td>Koruna</td></tr>
+		<tr><td>198</td><td>Slovenia</td><td>Tolar</td></tr>
+		<tr><td>202</td><td>South Africa</td><td>Rand</td></tr>
+		<tr><td>203</td><td>Spain</td><td>Euro</td></tr>
+		<tr><td>038</td><td>Sri Lanka</td><td>Rupee</td></tr>
+		<tr><td>206</td><td>Sudan</td><td>Dinar</td></tr>
+		<tr><td>209</td><td>Swaziland</td><td>Lilangeni</td></tr>
+		<tr><td>210</td><td>Sweden</td><td>Krona</td></tr>
+		<tr><td>211</td><td>Switzerland</td><td>Franc</td></tr>
+		<tr><td>212</td><td>Syria</td><td>Pound</td></tr>
+		<tr><td>215</td><td>Tanzania</td><td>Shilling</td></tr>
+		<tr><td>216</td><td>Thailand</td><td>Baht</td></tr>
+		<tr><td>217</td><td>Togo</td><td>CFA franc</td></tr>
+		<tr><td>220</td><td>Trinidad and Tobago</td><td>Dollar</td></tr>
+		<tr><td>222</td><td>Tunisia</td><td>Dinar</td></tr>
+		<tr><td>223</td><td>Turkey</td><td>Lira</td></tr>
+		<tr><td>226</td><td>Uganda</td><td>Shilling</td></tr>
+		<tr><td>229</td><td>UK</td><td>Pound Sterling</td></tr>
+		<tr><td>230</td><td>Ukraine</td><td>Karbovanets</td></tr>
+		<tr><td>234</td><td>Uruguay</td><td>New peso</td></tr>
+		<tr><td>231</td><td>USA</td><td>US Dollar</td></tr>
+		<tr><td>236</td><td>Venezuela</td><td>Bolivar</td></tr>
+		<tr><td>237</td><td>Viet Nam</td><td>Dong</td></tr>
+		<tr><td>249</td><td>Yemen</td><td>Rial</td></tr>
+		<tr><td>251</td><td>Zambia</td><td>Kwacha</td></tr>
+		<tr><td>181</td><td>Zimbabwe</td><td>Dollar</td></tr>
+	</tbody>
+</table>
+<i>(*) Please note that the currency reported in the list is the one used in the country during the last year of data available. For previous currency changes please see the specific country notes.</i>
+<br/><br/>-->
+<table style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; MARGIN: auto auto auto 36pt; BORDER-LEFT: windowtext 1pt solid; WIDTH: 378.75pt; BORDER-BOTTOM: windowtext 1pt 
+
+solid" cellspacing="0" cellpadding="0" width="505" border="1">
+<tbody>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        <strong>FAO Code</strong>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        <strong>Country</strong>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        <strong>Currency unit (*)</strong>
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        003
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Albania
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Lek
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        004
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Algeria
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dinar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        009
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Argentina
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Peso
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        010
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Australia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Australian dollar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        011
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Austria
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        013
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Bahrain
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dinar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        016
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Bangladesh
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Taka
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        015
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Belgium
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        053
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Benin
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        CFA franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        019
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Bolivia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Boliviano
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        020
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Botswana
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Pula
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        021
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Brazil
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Real
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        027
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Bulgaria
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Lev
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        233
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Burkina Faso
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        CFA franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        029
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Burundi
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        115
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Cambodia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Riel
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        032
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Cameroon
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        CFA franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        033
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Canada
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dollar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        035
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Cape Verde
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Escudo
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        040
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Chile
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Peso
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        041
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        China
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Yuan renmimbi
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        044
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Colombia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Peso
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        251
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Congo, Dem. Republic of
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        046
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Congo, Republic of
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        CFA franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        107
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Cote D'Ivoire
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        CFA franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        050
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Cyprus
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Pound
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        167
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Czeck Republic
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Koruna
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        054
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Denmark
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Krone
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        056
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Dominican Republic
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Peso
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        058
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Ecuador
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Sucre
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        059
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Egypt
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Pound
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        060
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        El Salvador
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Col&oacute;n
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        178
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Eritrea
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Nafka
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        063
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Estonia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Kroon
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        238
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Ethiopia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Birr
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        066
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Fiji
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dollar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        067
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Finland
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        068
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        France
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        075
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Gambia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dalasi
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        079
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Germany
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        081
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Ghana
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Cedi
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        084
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Greece
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        090
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Guinea
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        089
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Guatemala
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Quetzal
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        093
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Haiti
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Gourde
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        095
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Honduras
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Lempira
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        097
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Hungary
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Forint
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        099
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Iceland
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Kr&oacute;na
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        100
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        India
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Rupee
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        101
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Indonesia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Rupiah
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        102
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Iran
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Rial
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        104
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Ireland
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        105
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Israel
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        New shekel
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        106
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Italy
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        109
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Jamaica
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dollar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        110
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Japan
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Yen
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        112
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Jordan
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dinar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        114
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Kenya
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Shilling
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        117
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Korea Rep
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Won
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        113
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Kyrgyztan
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Som
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        120
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Laos
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Kip
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        122
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Lesotho
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Loti
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        124
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Libya
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dinar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        129
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Madagascar
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        130
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Malawi
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Kwacha
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        131
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Malaysia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Ringgit
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        134
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Malta
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Lira
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        136
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Mauritania
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Ouguiya
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        137
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Mauritius
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Rupee
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        138
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Mexico
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        New peso
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        146
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Moldova
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Leu
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        143
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Morocco
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dirham
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        028
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Myanmar
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Kyat
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        149
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Nepal
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Rupee
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        150
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Netherlands
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        156
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        New Zealand
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dollar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        157
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Nicaragua
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        C&oacute;rdoba oro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        158
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Niger
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        CFA franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        159
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Nigeria
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Naira
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        162
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Norway
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Krone
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        165
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Pakistan
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Rupee
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        166
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Panama
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Balboa
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        169
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Paraguay
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Guaran&iacute;
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        170
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Peru
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        New sol
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        171
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Philippines
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Peso
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        173
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Poland
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Zloty
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        174
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Portugal
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        179
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Qatar
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Riyal
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        182
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        R&eacute;union
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        183
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Romania
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Leu
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        185
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Russian Federation
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Ruble
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        184
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Rwanda
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        188
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Saint Kitts &amp; Nevis
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        EC dollar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        189
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Saint Lucia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        EC dollar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        196
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Seychelles
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Rupee
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        197
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Sierra Leone
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Leone
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        200
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Singapore
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dollar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        199
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Slovakia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Koruna
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        198
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Slovenia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Tolar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        202
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        South Africa
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Rand
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        203
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Spain
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Euro
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        038
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Sri Lanka
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Rupee
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        206
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Sudan
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dinar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        209
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Swaziland
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Lilangeni
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        210
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Sweden
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Krona
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        211
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Switzerland
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        212
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Syria
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Pound
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        215
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Tanzania
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Shilling
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        216
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Thailand
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Baht
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        217
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Togo
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        CFA franc
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        220
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Trinidad and Tobago
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dollar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        222
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Tunisia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dinar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        223
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Turkey
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Lira
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        226
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Uganda
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Shilling
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        229
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        UK
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Pound Sterling
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        230
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Ukraine
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Karbovanets
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        234
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Uruguay
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        New peso
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        231
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        USA
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        US Dollar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        236
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Venezuela
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Bolivar
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        237
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Viet Nam
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dong
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        249
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Yemen
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Rial
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        251
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Zambia
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Kwacha
+    </td>
+</tr>
+<tr>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 28%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="28%">
+        181
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 41%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="41%">
+        Zimbabwe
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; BORDER-LEFT: windowtext 1pt solid;
+
+WIDTH: 31%; PADDING-TOP: 0.75pt; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent" valign="top" width="31%">
+        Dollar
+    </td>
+</tr>
+</tbody>
+</table>
+<p>(*) Please note that the currency reported in the list is the one used in the country during the last year of data available. For previous currency changes please see the specific country notes.</p>
+</div>
+<br />
+
+
+<p><a onclick="toggleDiv('texthid1');" href="javascript:void(0)"><p><strong>Country Notes</strong></a></p>
+<div id="texthid1" style="DISPLAY: none">
+<div id="addText1">
+<br />
+<p><span class="link_arrows"></span><a onclick="toggleDiv('texthidAfrica');" href="javascript:void(0)"><strong>Africa</strong></a></p>
+<div id="texthidAfrica" style="DISPLAY: none">
+    <div id="addText">
+        <p>Prices fixed by government. Subsidy programme ended in 1987. </p><br />
+        <p><strong>Botswana:</strong><br />
+            Subsidy programme started in October 1985; subsidies (not deducted) paid to agricultural marketing board distribution agent. </p><br />
+        <p><strong>Burkina Faso:</strong><br />
+            Retail prices. Subsidy programme ended in 1988. Prices are fixed by SOFITEX. </p><br />
+        <p><strong>Burundi:</strong><br />
+            Prices at retail store. Government subsidy on taxes and rights for the public and parapublic enterprises. The price is fixed on the base of value CIF charges of distribution. </p><br />
+        <p><strong>Cameroon:</strong><br />
+            TVA suppressed from 1999.</p><br />
+        <p><strong>Cape Verde:</strong><br />
+            Retail prices fixed by government. Subsidy programme started in October 1981. Subsidies directly paid to farmers. </p><br />
+        <p><strong>Egypt:</strong><br />
+            Retail prices fixed by government. Subsidies paid to manufacturers, cooperatives, farmers' organizations or special agricultural suppliers. From 1998 free market.</p><br />
+        <p><strong>Ethiopia:</strong><br />
+            Retail prices fixed by government. Subsidy programme ended in 1997. Prices deregulated. After 2001 free market.</p><br />
+        <p><strong>Ghana:</strong><br />
+            Prices fixed by government. Subsidy programme ended in 1997.</p><br />
+        <p><strong>Kenya:</strong><br />
+            Retail prices fixed by government. Prices agreed upon by government treasury and suppliers. </p><br />
+        <p><strong>Madagascar:</strong><br />
+            Retail prices. Subsidy programme ended in 1986. </p><br />
+        <p><strong>Malawi:</strong><br />
+            Prices at farmers' nearest market fixed by government. Subsidies of 25% for ammonium sulphate, calcium ammonium nitrate, urea and 20-20-0.</p><br />
+        <p><strong>Mauritania:</strong><br />
+            prices fixed by government. </p><br />
+        <p><strong>Mauritius:</strong><br />
+            Ex-factory prices. Subsidy programme ended in February 1986. </p><br />
+        <p><strong>Morocco:</strong><br />
+            Prices fixed by government until 1989. Subsidy programme from 1974 to 1990, with subsidies paid to fertilizer manufacturers and importers. After July 1991 liberalized sector.</p><br />
+        <p><strong>Niger:</strong><br />
+            Prices fixed by government. Subsidies paid to farmers and government agencies for distribution of fertilizers. </p><br />
+        <p><strong>Nigeria:</strong><br />
+            Prices fixed by government for subsidized fertilizers. Subsidy programme started in 1991 and ended in 1997. </p><br />
+        <p><strong>Rwanda:</strong><br />
+            Prices fixed by government. </p><br />
+        <p><strong>Seychelles:</strong><br />
+            Prices fixed by government. </p><br />
+        <p><strong>Sierra Leone:</strong><br />
+            Subsidy programme ended in 1994. Prices are determined by demand and supply and by the security situation in the country at the time.</p><br />
+        <p><strong>South Africa:</strong><br />
+            Farmgate prices. Subsidy programme ended in 1984. Prices from 1997 are based on company price lists. </p><br />
+        <p><strong>Sudan:</strong><br />
+            The Ministry of Agriculture is responsible for supplying the government schemes concerning inputs; farmers receive these inputs (including fertilizers) at the actual costs.</p><br />
+        <p><strong>Swaziland:</strong><br />
+            Retail prices. </p><br />
+        <p><strong>Tanzania, United Republic of:</strong><br />
+            Retail prices. Subsidy programme ended in 1994.</p><br />
+        <p><strong>Togo:</strong> <br />
+            Prices fixed by government. Subsidy programme started in August 1986. Subsidies paid to transport agencies, cooperatives, farmers' organizations or special agricultural suppliers. </p><br />
+        <p><strong>Uganda:</strong><br />
+            From 1998 prices determined by market forces in a liberalized economy.</p><br />
+        <p><strong>Zimbabwe:</strong><br />
+            Ex factory prices fixed by government.</p><br />
+
+    </div>
+</div><br />
+<!--<p><a onclick="toggleDiv('Country');" href="javascript:void(0)"><strong>Country Notes</strong></a></p><br />
+<div style="DISPLAY: none" id="Country"><br><br />-->
+
+
+<!--
+<ul class='bullet-list'>
+	<li><b>Botswana:</b> Subsidy programme started in October 1985; subsidies (not deducted) paid to agricultural marketing board distribution agent.</li>
+	<li><b>Burkina Faso:</b> Retail prices. Subsidy programme ended in 1988. Prices are fixed by SOFITEX.</li>
+	<li><b>Burundi:</b> Prices at retail store. Government subsidy on taxes and rights for the public and parapublic enterprises. The price is fixed on the base of value CIF charges of distribution.</li>
+	<li><b>Cameroon:</b> TVA suppressed from 1999.</li>
+	<li><b>Cape Verde:</b> Retail prices fixed by government. Subsidy programme started in October 1981. Subsidies directly paid to farmers.</li>
+	<li><b>Egypt:</b> Retail prices fixed by government. Subsidies paid to manufacturers, cooperatives, farmers' organizations or special agricultural suppliers. From 1998 free market.</li>
+	<li><b>Ethiopia:</b> Retail prices fixed by government. Subsidy programme ended in 1997. Prices deregulated. After 2001 free market.</li>
+	<li><b>Ghana:</b> Prices fixed by government. Subsidy programme ended in 1997.</li>
+	<li><b>Kenya:</b> Retail prices fixed by government. Prices agreed upon by government treasury and suppliers.</li>
+	<li><b>Madagascar:</b> Retail prices. Subsidy programme ended in 1986.</li>
+	<li><b>Malawi:</b> Prices at farmers' nearest market fixed by government. Subsidies of 25% for ammonium sulphate, calcium ammonium nitrate, urea and 20-20-0.</li>
+	<li><b>Mauritania:</b> prices fixed by government.</li>
+	<li><b>Mauritius:</b> Ex-factory prices. Subsidy programme ended in February 1986.</li>
+	<li><b>Morocco:</b> Prices fixed by government until 1989. Subsidy programme from 1974 to 1990, with subsidies paid to fertilizer manufacturers and importers. After July 1991 liberalized sector.</li>
+	<li><b>Niger:</b> Prices fixed by government. Subsidies paid to farmers and government agencies for distribution of fertilizers.</li>
+	<li><b>Nigeria:</b> Prices fixed by government for subsidized fertilizers. Subsidy programme started in 1991 and ended in 1997.</li>
+	<li><b>Rwanda:</b> Prices fixed by government.</li>
+	<li><b>Seychelles:</b> Prices fixed by government.</li>
+	<li><b>Sierra Leone:</b> Subsidy programme ended in 1994. Prices are determined by demand and supply and by the security situation in the country at the time.</li>
+	<li><b>South Africa:</b> Farmgate prices. Subsidy programme ended in 1984. Prices from 1997 are based on company price lists.</li>
+	<li><b>Sudan:</b> The Ministry of Agriculture is responsible for supplying the government schemes concerning inputs; farmers receive these inputs (including fertilizers) at the actual costs.</li>
+	<li><b>Swaziland:</b> Retail prices.</li>
+	<li><b>Tanzania, United Republic of:</b> Retail prices. Subsidy programme ended in 1994.</li>
+	<li><b>Togo:</b> Prices fixed by government. Subsidy programme started in August 1986. Subsidies paid to transport agencies, cooperatives, farmers' organizations or special agricultural suppliers.</li>
+	<li><b>Uganda:</b> From 1998 prices determined by market forces in a liberalized economy.</li>
+	<li><b>Zimbabwe:</b> Ex factory prices fixed by government.</li>
+	<li><b>Dominican Republic:</b> Store prices.</li>
+	<li><b>El Salvador:</b> Retail prices.</li>
+	<li><b>Haiti:</b> Prices fixed by government. Subsidy programme started in 1997. Subsidies paid to farmers.</li>
+	<li><b>Nicaragua:</b> Retail prices.</li>
+	<li><b>St. Lucia:</b> Prices fixed by fertilizers agencies. From 1998 subsidies paid to fertilizers manufacturers.</li>
+	<li><b>Trinidad and Tobago:</b> From 1993 prices for urea are f.o.b. Subsidy programme started in 1998.</li>
+	<li><b>Bolivia:</b> Prices fixed by government. Subsidy programme ended in 1985. Prices in pesos up to 1985, in bolivianos from 1986 onwards.</li>
+	<li><b>Brazil:</b> F.O.B. Factory prices. Prices in cruzeiros up to 1985, from 1986 to 1989 in cruzados, from 1990 to 1992 in cruzeiros, for 1993 in cruzeiros reais and from 1994 onward in reais. From 1997 for mixed fertilizers f.o.b. factory prices.</li>
+	<li><b>Paraguay:</b> Retail prices fixed by government.</li>
+	<li><b>Peru:</b> Retail store prices. Subsidy programme ended in January 1979. Prices are in soles up to 1978, from 1979 to 1989 in intis, in new soles from 1990 onward.</li>
+	<li><b>Uruguay:</b> Factory prices. Up to 1970 prices are in pesos, from 1974 to 1991 new pesos, from 1993 onward in uruguayan pesos.</li>
+	<li><b>Venezuela:</b> Prices fixed by government. Subsidies paid to fertilizer manufacturers. From 1990 to 1994 prices include subsidies. Subsidy programme ended in 1994.</li>
+	<li><b>Bahrain:</b> Retail prices.</li>
+	<li><b>Bangladesh:</b> Ex factory prices fixed by government. Subsidy paid to fertilizer manufacturers.</li>
+	<li><b>Cambodia:</b> Prices fixed by government. Subsidies paid to farmers. From 1996 prices are the averages of the monthly prices during the year in the city of Phnom Penh.</li>
+	<li><b>China:</b> Retail prices.</li>
+	<li><b>Cyprus:</b> prices controlled by the price control committee of the Ministry of Commerce. Weighted averages of selling prices of several village cooperatives.</li>
+	<li><b>India:</b> Retail prices.</li>
+	<li><b>Indonesia:</b> Retail prices. Subsidy programme stopped since December 1998. Government still gives subsidies to the urea manufacturers.</li>
+	<li><b>Iran, Islamic Republic of:</b> Prices fixed by government. Subsidies paid to transport agencies.</li>
+	<li><b>Israel:</b> Ex factory prices. Urea: price at port. Muriate: price at retail store.</li>
+	<li><b>Jordan:</b> Retail prices. Muriate over 45%: from 1997 wholesale prices in bulk.</li>
+	<li><b>Korea, Republic of:</b> Prices fixed by government. Subsidies paid to farmers.</li>
+	<li><b>Malaysia:</b> Retail prices.</li>
+	<li><b>Myanmar:</b> Retail prices fixed by government. Subsidies paid to farmers.</li>
+	<li><b>Nepal:</b> Retail prices. Subsidy programme ended in 1998.</li>
+	<li><b>Pakistan:</b> Subsidies paid to fertilizer manufacturers.</li>
+	<li><b>Philippines:</b> Retail prices. Subsidy programme ended in 1997.</li>
+	<li><b>Qatar:</b> F.O.B. Factory prices. Since 1984 prices fixed by government for local sales.</li>
+	<li><b>Singapore:</b> Wholesale price.</li>
+	<li><b>Sri Lanka:</b> Retail prices fixed by government. Subsidies paid to importers. From 1997 subsidy programme only for urea.</li>
+	<li><b>Syrian Arab Republic:</b> Retail prices fixed by government.</li>
+	<li><b>Thailand:</b> Retail prices.</li>
+	<li><b>Turkey:</b> Subsidy programme ended in 2001.</li>
+	<li><b>Yemen:</b> Subsidies not deducted.</li>
+	<li><b>Austria:</b> Prices in bulk. 20% of VAT excluded. Since 2002 prices are in euro.</li>
+	<li><b>Belgium:</b> Prices exclude VAT. Since 2002 prices are in euro.</li>
+	<li><b>Bulgaria:</b> Bagged factory prices</li>
+	<li><b>Finland:</b> Prices include excise tax up to 1996. Subsidy programme ended in June 1976. Since 2002 prices are in euro.</li>
+	<li><b>France:</b> Since 2002 prices are in euro.</li>
+	<li><b>Germany:</b> Since 2002 prices are in euro.</li>
+	<li><b>Greece:</b> Prices fixed by government. Since 2002 prices are in euro.</li>
+	<li><b>Hungary:</b> Prices in bulk. Free market.</li>
+	<li><b>Iceland:</b> Prices fixedt at port. Subsidies paid to fertilizer manufacturers during 1990-91 were stopped.</li>
+	<li><b>Ireland:</b> retail prices. Subsidies on phosphate abolished beginning 1978. New price series introduced in March 1979. Prices may not be strictly comparable. Since 2002 prices are in euro.</li>
+	<li><b>Italy:</b> Since 2002 prices are in euro. VAT excluded</li>
+	<li><b>Netherlands:</b> Since 2002 prices are in euro.</li>
+	<li><b>Portugal:</b> Since 2002 prices are in euro.</li>
+	<li><b>Poland:</b> Zloty up to 1988. New zloty from 1989 onward.</li>
+	<li><b>Russian Federation:</b> Prices fixed by government.</li>
+	<li><b>Slovakia:</b> Subsidies are under government programme from 1997 to 1999.</li>
+	<li><b>Spain:</b> Subsidy programme ended in December 1987. Since 2002 prices are in euro.</li>
+	<li><b>Sweden:</b> From 1999 there is an environmental tax on nitrate.</li>
+	<li><b>Switzerland:</b> Prices excluded VAT.</li>
+	<li><b>Ukraine:</b> Factory prices.</li>
+	<li><b>Fiji:</b> Subsidy programme ended in 1987.</li>
+	<li><b>New Zealand:</b> Retail prices.</li>
+</ul>
+</div>-->
+<p><span class="link_arrows"></span><a onclick="toggleDiv('texthidNCA');" href="javascript:void(0)"><strong>North and Central America</strong></a></p>
+<div id="texthidNCA" style="DISPLAY: none">
+    <div id="addText">
+
+        <p><strong>Dominican Republic</strong>:<br />
+            Store prices.</p><br />
+        <p><strong>El Salvador</strong>:<br />
+            Retail prices. </p><br />
+        <p><strong>Haiti</strong>:<br />
+            Prices fixed by government. Subsidy programme started in 1997. Subsidies paid to farmers.</p><br />
+        <p><strong>Nicaragua</strong>:<br />
+            Retail prices.</p><br />
+        <p><strong>St. Lucia</strong>:<br />
+            Prices fixed by fertilizers agencies. From 1998 subsidies paid to fertilizers manufacturers.</p><br />
+        <p><strong>Trinidad and Tobago</strong>:<br />
+            From 1993 prices for urea are f.o.b. Subsidy programme started in 1998.</p><br />
+
+        <p><a onclick="toggleDiv('texthidNCA');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+    </div>
+</div><br />
+
+<p><span class="link_arrows"></span><a onclick="toggleDiv('texthidSA');" href="javascript:void(0)"><strong>South America</strong></a></p>
+<div id="texthidSA" style="DISPLAY: none">
+    <div id="addText">
+
+        <p><strong>Bolivia: </strong><br />
+            Prices fixed by government. Subsidy programme ended in 1985. Prices in pesos up to 1985, in bolivianos from 1986 onwards.</p><br />
+        <p><strong>Brazil: </strong><br />
+            F.O.B. Factory prices. Prices in cruzeiros up to 1985, from 1986 to 1989 in cruzados, from 1990 to 1992 in cruzeiros, for 1993 in cruzeiros reais and from 1994 onward in reais. From 1997 for mixed fertilizers f.o.b. factory prices. </p><br />
+        <p><strong>Paraguay: </strong><br />
+            Retail prices fixed by government. </p><br />
+        <p><strong>Peru: </strong><br />
+            Retail store prices. Subsidy programme ended in January 1979. Prices are in soles up to 1978, from 1979 to 1989 in intis, in new soles from 1990 onward. </p><br />
+        <p><strong>Uruguay: </strong><br />
+            Factory prices. Up to 1970 prices are in pesos, from 1974 to 1991 new pesos, from 1993 onward in uruguayan pesos. </p><br />
+        <p><strong>Venezuela: </strong><br />
+            Prices fixed by government. Subsidies paid to fertilizer manufacturers. From 1990 to 1994 prices include subsidies. Subsidy programme ended in 1994.</p><br />
+
+        <p><a onclick="toggleDiv('texthidSA');" href="javascript:void(0)"><strong>close</strong></a></p>
+    </div>
+</div><br />
+
+<p><span class="link_arrows"></span><a onclick="toggleDiv('texthidAsia');" href="javascript:void(0)"><strong>Asia</strong></a></p>
+<div id="texthidAsia" style="DISPLAY: none">
+    <div id="addText">
+
+        <p><strong>Bahrain: </strong><br />
+            Retail prices.</p><br />
+        <p><strong>Bangladesh: </strong><br />
+            Ex factory prices fixed by government. Subsidy paid to fertilizer manufacturers.</p><br />
+        <p><strong>Cambodia: </strong><br />
+            Prices fixed by government. Subsidies paid to farmers. From 1996 prices are the averages of the monthly prices during the year in the city of Phnom Penh.</p><br />
+        <p><strong>China: </strong><br />
+            Retail prices.</p><br />
+        <p><strong>Cyprus: </strong><br />
+            prices controlled by the price control committee of the Ministry of Commerce. Weighted averages of selling prices of several village cooperatives.</p><br />
+        <p><strong>India: </strong><br />
+            Retail prices. </p><br />
+        <p><strong>Indonesia:</strong><br />
+            Retail prices. Subsidy programme stopped since December 1998. Government still gives subsidies to the urea manufacturers. </p><br />
+        <p><strong>Iran, Islamic Republic of:</strong><br />
+            Prices fixed by government. Subsidies paid to transport agencies. </p><br />
+        <p><strong>Israel:</strong><br />
+            Ex factory prices. Urea: price at port. Muriate: price at retail store. </p><br />
+        <p><strong>Jordan:</strong><br />
+            Retail prices. Muriate over 45%: from 1997 wholesale prices in bulk. </p><br />
+        <p><strong>Korea, Republic of:</strong> <br />
+            Prices fixed by government. Subsidies paid to farmers. </p><br />
+        <p><strong>Malaysia: </strong><br />
+            Retail prices. </p><br />
+        <p><strong>Myanmar: </strong><br />
+            Retail prices fixed by government. Subsidies paid to farmers.</p><br />
+        <p><strong>Nepal: </strong><br />
+            Retail prices. Subsidy programme ended in 1998.</p><br />
+        <p><strong>Pakistan: </strong><br />
+            Subsidies paid to fertilizer manufacturers.</p><br />
+        <p><strong>Philippines: </strong><br />
+            Retail prices. Subsidy programme ended in 1997.</p><br />
+        <p><strong>Qatar: </strong><br />
+            F.O.B. Factory prices. Since 1984 prices fixed by government for local sales.</p><br />
+        <p><strong>Singapore: </strong><br />
+            Wholesale price.</p><br />
+        <p><strong>Sri Lanka: </strong><br />
+            Retail prices fixed by government. Subsidies paid to importers. From 1997 subsidy programme only for urea. </p><br />
+        <p><strong>Syrian Arab Republic: </strong><br />
+            Retail prices fixed by government.</p><br />
+        <p><strong>Thailand: </strong><br />
+            Retail prices. </p><br />
+        <p><strong>Turkey: </strong><br />
+            Subsidy programme ended in 2001.</p><br />
+        <p><strong>Yemen: </strong><br />
+            Subsidies not deducted.</p><br />
+
+        <p><a onclick="toggleDiv('texthidAsia');" href="javascript:void(0)"><strong>close</strong></a></p>
+    </div>
+</div><br />
+
+<p><span class="link_arrows"></span><a onclick="toggleDiv('texthidEurope');" href="javascript:void(0)"><strong>Europe</strong></a></p>
+<div id="texthidEurope" style="DISPLAY: none">
+    <div id="addText">
+
+        <p><strong>Austria: </strong><br />
+            Prices in bulk. 20% of VAT excluded. Since 2002 prices are in euro.</p><br />
+        <p><strong>Belgium: </strong><br />
+            Prices exclude VAT. Since 2002 prices are in euro.</p><br />
+        <p><strong>Bulgaria: </strong><br />
+            Bagged factory prices</p><br />
+        <p><strong>Finland: </strong><br />
+            Prices include excise tax up to 1996. Subsidy programme ended in June 1976. Since 2002 prices are in euro.</p><br />
+        <p><strong>France: </strong><br />
+            Since 2002 prices are in euro.</p><br />
+        <p><strong>Germany: </strong><br />
+            Since 2002 prices are in euro.</p><br />
+        <p><strong>Greece: </strong><br />
+            Prices fixed by government. Since 2002 prices are in euro.</p><br />
+        <p><strong>Hungary: </strong><br />
+            Prices in bulk. Free market.</p><br />
+        <p><strong>Iceland: </strong><br />
+            Prices fixedt at port. Subsidies paid to fertilizer manufacturers during 1990-91 were stopped. </p><br />
+        <p><strong>Ireland: </strong><br />
+            retail prices. Subsidies on phosphate abolished beginning 1978. New price series introduced in March 1979. Prices may not be strictly comparable. Since 2002 prices are in euro.</p><br />
+        <p><strong>Italy: </strong><br />
+            Since 2002 prices are in euro. VAT excluded</p><br />
+        <p><strong>Netherlands: </strong><br />
+            Since 2002 prices are in euro.</p><br />
+        <p><strong>Portugal: </strong><br />
+            Since 2002 prices are in euro.</p><br />
+        <p><strong>Poland: </strong><br />
+            Zloty up to 1988. New zloty from 1989 onward. </p><br />
+        <p><strong>Russian Federation: </strong><br />
+            Prices fixed by government. </p><br />
+        <p><strong>Slovakia: </strong><br />
+            Subsidies are under government programme from 1997 to 1999. </p><br />
+        <p><strong>Spain: </strong><br />
+            Subsidy programme ended in December 1987. Since 2002 prices are in euro.</p><br />
+        <p><strong>Sweden: </strong><br />
+            From 1999 there is an environmental tax on nitrate. </p><br />
+        <p><strong>Switzerland: </strong><br />
+            Prices excluded VAT.</p><br />
+        <p><strong>Ukraine: </strong><br />
+            Factory prices.</p><br />
+
+        <p><a onclick="toggleDiv('texthidEurope');" href="javascript:void(0)"><strong>close</strong></a></p>
+    </div>
+</div><br />
+
+<p><span class="link_arrows"></span><a onclick="toggleDiv('texthidOceania');" href="javascript:void(0)"><strong>Oceania</strong></a></p>
+<div id="texthidOceania" style="DISPLAY: none">
+    <div id="addText">
+
+        <p><strong>Fiji:</strong><br />
+            Subsidy programme ended in 1987.</p> <br />
+        <p><strong>New Zealand:<br />
+        </strong>Retail prices. </p><br />
+
+        <p></span><a onclick="toggleDiv('texthidOceania');" href="javascript:void(0)"><strong>close</strong></a></p>
+    </div>
+</div><br />
+
+</div>
+<br />
+</div>

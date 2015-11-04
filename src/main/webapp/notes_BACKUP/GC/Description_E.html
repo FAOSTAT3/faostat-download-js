@@ -1,0 +1,55 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Cropland</h2> <img id='DOMAIN_IMG' src="images/G2.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G1.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G2_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+<p>Greenhouse gas (GHG) emissions data from cropland are currently limited to emissions from cropland organic soils. They are those associated with carbon losses from drained histosols under cropland. Data is computed at Tier 1 and complemented by use of geo-spatial data, following the 2006 IPCC Guidelines for National GHG Inventories. Available by country, with global coverage and relative to the period 1990 to present. </p>
+<br><br>
+<!--The mapping between IPCC and FAOSTAT definition of cropland is reported below:
+<br><br>
+<table style='width: 100%; border-collapse: collapse; border: 1px solid #399BCC;' cellspacing='10px' cellpadding='10px'>
+	<thead>
+		<tr style='background-color: #399BCC; color: #FFFFFF; height: 16px;'>
+			<th align='center' valign='top'>
+				IPCC
+			</th>
+			<th align='center' width='55%'>
+				FAOSTAT
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<br>
+				Cropland includes arable and tillable land, rice fields, and agroforestry systems where the vegetation structure falls below the thresholds used for the Forest Land category, and is not expected to exceed those thresholds at a later time. Cropland includes all annual and perennial crops as well as temporary fallow land (i.e., land set at rest for one or several years before being cultivated again). Annual crops include cereals, oils seeds, vegetables, root crops and forages. Perennial crops include trees and shrubs, in combination with herbaceous crops (e.g., agroforestry) or as orchards, vineyards and plantations such as cocoa, coffee, tea, oil palm, coconut, rubber trees, and bananas, except where these lands meet the criteria for categorisation as Forest Land. Arable land which is normally used for cultivation of annual crops but which is temporarily used for forage crops or grazing as part of an annual crop-pasture rotation (mixed system) is included under cropland.
+			</td>
+			<td valign='top'>
+				<br>
+				In FAOSTAT the item Arable land and Permanent Crops corresponds to the IPCC Cropland definition.
+				<br><br>
+				Arable land is the land under temporary agricultural crops (multiple-cropped areas are counted only once), temporary meadows for mowing or pasture, land under market and kitchen gardens and land temporarily fallow (less than five years). The abandoned land resulting from shifting cultivation is not included in this category.
+				<br><br>
+				Permanent crops is the land cultivated with long-term crops which do not have to be replanted for several years; land under trees and shrubs producing flowers, such as roses and jasmine; and nurseries (except those for forest trees, which should be classified under "forest"). Permanent meadows and pastures are excluded from land under permanent crops.
+			</td>
+		</tr>
+	</tbody>
+</table>-->
+<br><br>
+<a id='PDF' href='/faostat-download-js/PDF/EN/Cropland.pdf' target='_blank'>Show Metadata</a>
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GC.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GC.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GC.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

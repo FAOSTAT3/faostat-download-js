@@ -1,0 +1,24 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Combustion des r&eacute;sidus de r&eacute;coltes</h2> <img id='DOMAIN_IMG' src="images/G2.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G1.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G1_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+<p>Les &eacute;missions de gaz &agrave; effet de serre (GES) imputables &agrave; la combustion des r&eacute;sidus de cultures sont constitu&eacute;es de gaz m&eacute;thane et oxyde nitreux produits par la combustion d'un pourcentage de r&eacute;sidus de cultures br&ucirc;l&eacute;s sur place. Ces donn&eacute;es sont calcul&eacute;es selon le niveau 1 des Lignes directrices de 2006 du GIEC pour les inventaires nationaux de GES; disponibles par pays, avec une couverture mondiale et relatives &agrave; une p&eacute;riode  partant de 1961 &agrave; nos jours, avec des mises &agrave; jour annuelles, et des projections &agrave; l'horizon 2030 et 2050. </p>
+<br><br>
+<a id='PDF' href='/faostat-download-js/PDF/FR/CombustionResidusDeRecoltes.pdf' target='_blank'>Show Metadata</a>
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GB.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GB.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GB.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

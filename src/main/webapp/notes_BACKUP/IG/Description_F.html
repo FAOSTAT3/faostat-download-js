@@ -1,0 +1,103 @@
+<script type="text/javascript">
+    function showHide() {
+        if ($('#hideCN').css('display') == 'none')
+            $('#hideCN').css('display', 'inline');  
+        else
+            $('#hideCN').css('display', 'none');
+    }
+</script>
+<div class="download-notes">
+<div class="noteHead"> <h2>Dépenses publiques</h2> <img id='DOMAIN_IMG' src="images/I.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/I.png');
+</script>
+<div class="backBtn"><p class='goto' id='I_notes'> < Arriére </p></div>
+<br/>
+
+<p>Les données sur les dépenses publiques renvoient aux <strong>principaux groupes de fonctions gouvernementales en rapport avec le secteur agricole</strong>, définis par la Classification des Fonctions Gouvernementales (COFOG), telle qu'exposée dans le <i>Manuel de statistiques de finances publiques, 2001 (GFSM 2001) du Fonds monétaire international (FMI)</i>. </p><br />
+
+<p>Outil essentiel, la COFOG permet de comparer au niveau international l'importance relative accordée par les gouvernements aux différentes fonctions économiques et sociales, tout en évitant les difficultés liées aux remaniements au sein d'un gouvernement et les problèmes dus aux différences caractérisant les institutions d'un pays à l'autre. </p><br />
+
+<p>Les statistiques relatives aux dépenses réalisées dans l'agriculture, la sylviculture, la pêche et la protection environnementale peuvent être utilisées pour étudier l'efficacité des programmes publics visant à créer les conditions propices à la production de biens publics essentiels ayant d'importantes retombées économiques et sociales. La COFOG fournit des données globales capitales qui peuvent servir d'indicateurs ou de mesures des résultats/réalisations. La composition des agrégats publiés dans FAOSTAT est précisée ci-après: </p><br />
+
+<p><strong>Agriculture, sylviculture, pêche et chasse</strong>, groupe subdivisé en les classes suivantes: </p><br />
+<p> <a onclick="javascript:document.getElementById('Agriculture').style.display='block';" href="javascript:void(0)"><strong>Agriculture</strong> (cultures et élevage): </a></p><br />
+<div id="Agriculture" style="DISPLAY: none"><br />
+<ul style="padding-left:20px">
+
+<li>Administration des affaires et des services agricoles: protection, remise en état ou expansion des terres arables; réforme agraire et colonisation rurale; contrôle et réglementation du secteur agricole;</li>
+<li>Construction ou fonctionnement de systèmes de maîtrise des eaux, d'irrigation et de drainage, y compris les dons, prêts et subventions destinés à ces travaux;</li>
+<li>Mise en œuvre de programmes ou plans de stabilisation ou d'amélioration des prix agricoles et du revenu des exploitants ou soutien à ces activités; fonctionnement de services agronomiques ou vétérinaires, de services de lutte phytosanitaire, d'inspection et de classement des produits agricoles ou soutien à ces services;</li>
+<li>Élaboration et diffusion d'informations générales, de documentation technique et de statistiques sur les affaires et services agricoles;</li>
+<li>Indemnités, dons, prêts ou subventions aux exploitants concernant des activités agricoles, y compris paiements visant à restreindre ou encourager la production d'une culture particulière, ou la mise en jachère de certaines terres;</li>
+<li>Administration et fonctionnement des organismes publics s'occupant de recherche appliquée et de développement expérimental concernant l'agriculture;</li>
+<li>Bourses, prêts et subventions de soutien à la recherche appliquée et au développement expérimental visant l'agriculture, réalisés par des instituts de recherche et universités.</li>
+</ul>
+<a onclick="document.getElementById('Agriculture').style.display='none';" href="javascript:void(0)">Cacher</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('Forestry').style.display='block';" href="javascript:void(0)"><strong>Sylviculture</strong> (y compris les cultures forestières en plus du bois): </a></p><br />
+<div id="Forestry" style="DISPLAY: none"><br />
+<ul style="padding-left:20px">
+
+<li>Administration des affaires et services sylvicoles: protection, développement et exploitation rationnelle des réserves forestières; contrôle et réglementation des opérations sylvicoles et délivrance de permis d'abattage;</li>
+<li>Tutelle des activités de reboisement, de lutte phytosanitaire, de lutte contre les incendies de forêts et de prévention de ces incendies ou soutien à ces activités, et services de formation des exploitants;</li>
+<li>Élaboration et diffusion d'informations générales, de documentation technique et de statistiques sur les affaires et les services sylvicoles;</li>
+<li>Dons, prêts ou subventions de soutien aux activités commerciales de sylviculture;</li>
+<li>Administration et fonctionnement des organismes publics s'occupant de recherche appliquée et de développement expérimental concernant la sylviculture;</li>
+<li>Bourses, prêts et subventions de soutien à la recherche appliquée et au développement expérimental visant la sylviculture, réalisés par des instituts de recherche et universités. </li>
+
+</ul>
+<a onclick="document.getElementById('Forestry').style.display='none';" href="javascript:void(0)">Cacher</a> </center></div><br />
+
+
+<p> <a onclick="javascript:document.getElementById('Fishing').style.display='block';" href="javascript:void(0)"><strong>Pêche et chasse</strong> (y compris les activités de pêche et de chasse commerciales et sportives menées en dehors des parcs et réserves naturels): </a></p><br />
+<div id="Fishing" style="DISPLAY: none"><br />
+<ul style="padding-left:20px">
+
+<li>Administration des affaires et des services de la pêche; protection, propagation et exploitation rationnelle des stocks de poisson; contrôle et réglementation de la pêche en eau douce, de la pêche côtière et marine, et de la pisciculture, et délivrance des permis de pêche;</li>
+<li>Tutelle des écloseries, services de formation, de repeuplement, etc., ou soutien à ces activités;</li>
+<li>Élaboration et diffusion d'informations générales, de documentation technique et de statistiques sur les affaires et services de la pêche;</li>
+<li>Dons, prêts ou subventions de soutien aux activités commerciales de pêche et de chasse, y compris construction ou fonctionnement d'écloseries.</li>
+
+</ul>
+<a onclick="document.getElementById('Fishing').style.display='none';" href="javascript:void(0)">Cacher</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('EnvProt').style.display='block';" href="javascript:void(0)"><strong>Protection de l'environnement:</strong>: </a></p><br />
+<div id="EnvProt" style="DISPLAY: none">
+La ventilation de ces dépenses dans la COFOG est organisée en référence à la Classification des activités de protection de l'environnement élaborée dans le cadre du Système européen pour le rassemblement d'informations économiques sur l'environnement (SERIEE) de l'Office statistique des Communautés européennes (EUROSTAT). Les principaux groupes sont: <br /><br />
+<ul style="padding-left:20px">
+
+<li>Gestion des déchets: ce groupe concerne la collecte, le traitement et l'élimination des déchets;</li>
+<li>Gestion des eaux usées: ce groupe couvre l'exploitation des réseaux d'évacuation des eaux usées et le traitement des eaux usées;</li> 
+<li>Lutte contre la pollution: ce groupe concerne les activités relatives à la lutte contre la pollution atmosphérique et les changements climatiques, à la protection des sols et des eaux souterraines, à la lutte contre le bruit et les vibrations et à la radioprotection;</li>
+<li>Préservation de la diversité biologique et protection de la nature: ce groupe concerne les activités liées à la protection de la faune et de la flore (y compris la réintroduction d'espèces disparues et la reconstitution de peuplements d'espèces menacées d'extinction), la protection des habitats (y compris la gestion des parcs et réserves naturels) et la protection des sites (y compris la restauration des sites endommagés en vue d'en rétablir la valeur esthétique et le réaménagement de carrières et de sites miniers abandonnés);</li>
+<li>Recherche-développement dans le domaine de la protection de l'environnement: ce groupe couvre la recherche fondamentale, la recherche appliquée et le développement expérimental dans le domaine de la protection de l'environnement;</li>
+<li>Protection de l'environnement, non classés ailleurs (n.c.a.): sont inclus dans ce groupe les affaires et services relatifs à la protection de l'environnement qui ne peuvent être classés dans aucun des cinq groupes précédemment décrits.</li>
+</ul>
+<a onclick="document.getElementById('EnvProt').style.display='none';" href="javascript:void(0)">Cacher</a> </center></div><br />
+
+<p><strong>Secteur des administrations publiques et sous-secteurs</strong></p><br />
+
+<p>Les statistiques sur les dépenses publiques fournies par FAOSTAT se rapportent au <strong><i>secteur consolidé des administrations publiques</i></strong>, au <strong><i>sous-secteur de l'administration centrale</i></strong> et à l'<strong><i>administration centrale budgétaire</i></strong>. Tous les pays ne présentent pas de données associées à ces trois niveaux, que l'on peut préciser comme suit:</p><br />
+<ul style="padding-left:20px"><li>
+
+<p><i><strong>Le secteur des administrations publiques se compose des unités institutionnelles résidentes dont la principale activité consiste à remplir les fonctions des administrations publiques</strong></i>. Ce secteur comprend l'ensemble des unités d'administration publique et des institutions sans but lucratif (ISBL) non marchandes contrôlées par des unités d'administration publique. Aux fins d'analyse, il est souvent nécessaire ou souhaitable de ventiler le secteur des administrations publiques en sous-secteurs, comme suit:</p> 
+</li>
+</ul><br />
+<ol style="padding-left:40px">
+<li>
+<p><i><strong>Le sous-secteur de l'administration centrale se compose des unités institutionnelles de l'administration centrale et des ISBL non marchandes contrôlées par cette dernière</strong></i>. L'autorité politique de l'administration centrale s'étend à l'ensemble du territoire du pays. Ce sous-secteur est généralement composé d'une administration centrale budgétaire, d'unités extrabudgétaires et de caisses de sécurité sociale (à moins qu'un sous-secteur séparé soit utilisé pour ces dernières).</p>
+</li>
+<li>
+<p><i><strong>L'administration centrale budgétaire est souvent une entité unique de l'administration centrale qui exerce les activités fondamentales des pouvoirs exécutif, législatif et judiciaire</strong></i>. LCette composante des administrations publiques est généralement prise en charge dans le cadre du budget général de l'État. Les recettes de l'administration centrale budgétaire, ainsi que ses dépenses, sont normalement réglementées et contrôlées par le ministère des finances ou son équivalent fonctionnel, au moyen d'un budget approuvé par le pouvoir législatif.</p><br />
+</li>
+</ol>
+<p>En fonction des dispositifs administratifs et légaux, il peut y avoir plus d’un niveau d’administration publique dans un pays, et des statistiques doivent être établies pour chaque niveau (également appelé «sous-secteur»). En outre, du fait de la multiplicité de ces dispositifs, il convient de faire preuve d'une certaine prudence lorsqu'on entreprend une comparaison internationale des données communiquées pour un sous-secteur des administrations publiques. La majorité des pays présentent des données relatives à l'administration centrale budgétaire.</p><br />
+
+<p><strong>Distinction entre les données établies sur la base d'une comptabilité de caisse et sur une autre base</strong></p><br />
+
+<p>Généralement, dans les statistiques de finances publiques (SFP) du FMI, la date d'enregistrement peut être déterminée de quatre manières: sur la base des droits constatés ou du fait générateur (comptabilité d'exercice), des engagements, de la date d’exigibilité ou des encaissements/décaissements (comptabilité de caisse). En pratique, toutefois, il peut exister de nombreuses variantes de ces bases d'enregistrement. Souvent, les systèmes de comptabilité sont susceptibles d'utiliser des bases mixtes: les recettes fiscales, par exemple, peuvent être enregistrées sur la base des encaissements/décaissements («en base caisse»), tandis que d'autres transactions le sont sur la base des droits constatés. En principe, dans le cadre des SFP du FMI, les flux économiques sont enregistrés sur la base des droits constatés. <strong><i>L’enregistrement sur la base des droits constatés saisit les flux au moment où la valeur économique est créée, transformée, échangée, transférée, ou éteinte.</i></strong> En d'autres termes, les effets des événements économiques sont comptabilisés durant la période où ils se produisent, qu’il y ait eu règlement ou non, ou que ce règlement ait été exigible ou non. Toutefois, le cadre des SFP englobe également l'établissement de rapports traditionnels en base caisse. <strong><i>L'enregistrement en base caisse saisit les flux au moment des encaissements et décaissements.</i></strong> Les données présentées dans FAOSTAT tiennent compte de cette caractéristique en présentant les séries de données sur une base de caisse ou sur une base d'exercice, selon la méthode utilisée par le pays. La majorité des pays présentent des données budgétaires issues d'une comptabilité de caisse.</p><br />
+
+
+</div>
+<br></br>

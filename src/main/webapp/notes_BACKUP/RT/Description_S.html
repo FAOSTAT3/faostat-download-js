@@ -1,0 +1,695 @@
+<script>
+
+
+function toggleDiv(element){
+       
+     if(document.getElementById(element).style.display=="none"){document.getElementById(element).style.display="block"}
+        else{document.getElementById(element).style.display="none"}
+} 
+</script>
+
+<div class="download-notes">
+<div class="noteHead"> <h2>Plaguicidas (comercio)</h2> <img id='DOMAIN_IMG' src="images/R.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/R.png');
+</script>
+<div class="backBtn"><p class='goto' id='R_notes'> < Detrás </p></div>
+<br>
+se refiere al comercio de insecticidas, fungicidas, herbicidas, desinfectantes y otros tal como se describe en el Sistema Armónico (SA) código: 3808. Los datos se refieren al valor de las importaciones y exportaciones expresado en miles de dólares de los Estados Unidos y a la cantidad de importaciones y exportaciones en peso neto expresada en kilogramos. Los datos están disponibles de 1961 a 2011. Algunos países proporcionaron también las cifras relativas a 2012, sin embargo la información no está completa. Por lo tanto los totales regionales, continentales y el mundo no se han calculados para 2012.
+
+<br/><br/>
+<p><strong><b>Fuente </b></strong>- la fuente primaria es la base de datos COMTRADE de las Naciones Unidas complementada con datos proporcionados por las oficinas nacionales de estadística. Los datos sobre el total de los Plaguicidas que falten se estiman utilizando las estadísticas de comercio de los socios comerciales o el promedio de los tres años anteriores.</p><br/>
+
+<div class='modulePadding moduleScrollBars' id='modcont_ctl03_DesktopThreePanes1_ThreePanes_ctl03'  style='POSITION: static; '>
+<p><strong><b>Claves y Descripción de los Elementos </b></strong></p>
+<p><ul class='bullet-list'>
+    <li>
+        Elemento 61 Importaciones cantidad (peso neto) Cantidad en peso neto en kilogramos de plaguicidas importados en el país.
+
+    <li>Elemento 62 Importaciones valor (1000$) Valor, en miles de dólares de Estados Unidos, de plaguicidas importados en el país.
+    <li>Elemento 91 Exportaciones cantidad (peso neto) Cantidad en peso neto en kilogramos de plaguicidas exportados por el país.
+    </li>
+    <li>Elemento 92 Exportaciones valor (1000$) Valor, en miles de dólares de Estados Unidos, de plaguicidas exportados por el país.
+</ul></p><br/>
+<p>Las diferencias entre los datos sobre el total de las exportaciones y el total de las importaciones de cualquier producto pueden deberse a diversos factores, por ejemplo, al tiempo transcurrido entre el envío de mercancías del país exportador y su llegada al importador; al empleo de una clasificación diferente para el mismo producto en diversos países; o al hecho de que algunos países suministran datos sobre el comercio general, mientras que otros lo hacen sobre el comercio especial.<br />
+
+</p>
+<p><strong><b>Comercio de plaguicidas regulados por el Convenio de Róterdam
+
+</b></strong></p><br />
+
+<p><strong><b>Convenio de Rótterdam sobre </b> </strong>el Procedimiento de Consentimiento Fundamentado Previo (PCF). <strong><b>Aplicable a Ciertos Plaguicidas y Productos Químicos Peligrosos Objeto de Comercio Internacional:</b></strong>: el Convenio fue iniciado por la Organización de las Naciones Unidas para la Agricultura y la Alimentación (FAO) y el Programa de las Naciones Unidas para el Medio Ambiente (PNUMA) en 1989 y entró en vigor el 24 de febrero de 2004. En él se establece una obligación jurídicamente vinculante para permitir a los países decidir qué productos químicos potencialmente peligrosos desean importar o exportar, por una parte, y excluir los que no puedan gestionar de forma segura, por otra. Al 23 de diciembre de 2013, el números de Partes Contratantes el Convenio de Róterdam es 154. <br />
+</p>
+<p>En el contexto del Convenio de Rótterdam, la División de Estadística de la FAO está comenzando a seguir e identificar en la Base de datos estadísticos de la Organización (FAOSTAT), a partir del año 2007, el comercio de plaguicidas (excluidos los productos químicos para usos industriales) que han sido prohibidos o severamente limitados por razones sanitarias o ambientales. La base de datos contiene información de dos tipos: a) Mezclas o preparaciones que contienen la sustancia, en valor (miles de dólares de EE.UU.); b) Sustancia pura, en cantidad (peso neto en kg) y en valor (miles de dólares de EE.UU.).
+    <strong><b>Se hace notar que la extracción efectuada en “Sustancia pura” no coincidirá con el total de mezclas o preparaciones de “Plaguicidas peligrosos”. Los datos disponibles son los que han proporcionado los países.<br />
+    </b> </strong></p>
+<p>El Anexo III del Convenio de Rótterdam contiene en la actualidad 40 productos químicos (plaguicidas y productos químicos para usos industriales, incluidas todas las formas de amianto excepto el crisotilo). El Anexo III y los documentos de orientación de las decisiones sobre todos los productos químicos sometidos al procedimiento de consentimiento fundamentado previo pueden consultarse en: <a href="http://www.pic.int/home.php?type=t&amp;id=29&amp;sid=30">http://www.pic.int/home.php?type=t&amp;id=29&amp;sid=30</a> <br><br />
+    Si desea más información, visite el sitio:<a href="http://www.pic.int/">http://www.pic.int</a></p><br />
+<!--
+<table class='hor-minimalist-b'>
+    <thead>
+    	<tr>
+			<th colspan='5'>PURETABLA DE CORRESPONDENCIA</th>
+        </tr>
+        <tr>
+            <th>C�digo
+FAOSTAT </th>
+            <th>FAOSTAT</th>
+            <th>C�digo
+SA</th>
+            <th>SA</th>
+            <th>Procedimiento de Consentimiento Fundamentado Previo (CFP)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="HEIGHT: 40.8pt">
+            <td>1422
+            </td>
+            <td>Compuestos de mercurio excl. las amalgamas
+            </td>
+            <td>2852
+            </td>
+            <td>Compuestos inorganicos u organicos, de mercurio, excluyendo las amalgamas 
+            </td>
+            <td>Compuestos de mercurio (incluyendo compuestos de mercurio inorg�nicos , compuestos de mercurio alkilo y compuestos de mercurio alkiloxialkilo y arilo)
+            </td>
+        </tr>
+        <tr style="HEIGHT: 21pt">
+            <td>1423
+            </td>
+            <td>Dicloruro de etileno 
+            </td>
+            <td>2903.15
+            </td>
+            <td>Dicloruro de etileno (ISO) (1,2-dicloroetano)
+            </td>
+            <td>Dicloruro de etileno 
+            </td>
+        </tr>
+        <tr style="HEIGHT: 26.25pt">
+            <td>1424
+            </td>
+            <td>Dibromuro de etileno (EDB) (1,2-dibromoetano)
+            </td>
+            <td>2903.31
+            </td>
+            <td>Ethylene dibromide (ISO) (1,2-dibromoethane)
+            </td>
+            <td>1,2-dibromoethane (EDB)
+            </td>
+        </tr>
+        <tr style="HEIGHT: 22.2pt">
+            <td>1425
+            </td>
+            <td>HCH (mezcla de is�meros)/ Lindano 
+            </td>
+            <td>2903.51
+            </td>
+            <td>1,2,3,4,5,6-Hexaclorociclohexano (HCH (ISO)), incluido el lindano (ISO, DCI)
+            </td>
+            <td>HCH (mezcla de is�meros)/ Lindano 
+            </td>
+        </tr>
+        <tr>
+            <td>1426
+            </td>
+            <td>Aldrina, Clordano, Heptacloro 
+            </td>
+            <td>2903.52
+            </td>
+            <td>Aldrina (ISO), clordano (ISO) y heptacloro (ISO)
+            </td>
+            <td>Aldrina, Clordano, Heptacloro 
+            </td>
+        </tr>
+        <tr>
+            <td>1427
+            </td>
+            <td>DDT, Hexaclorobenceno 
+            </td>
+            <td>2903.62
+            </td>
+            <td>Hexaclorobenceno (ISO) y DDT (ISO) (clofenotano (DCI), 1,1,1-tricloro-2,2-bis(p- clorofenil)etano)
+            </td>
+            <td>DDT, Hexaclorobenceno 
+            </td>
+        </tr>
+        <tr>
+            <td>1428
+            </td>
+            <td>Pentaclorofenol 
+            </td>
+            <td>2908.11
+            </td>
+            <td>Pentaclorofenol (ISO)
+            </td>
+            <td>Pentaclorofenol (ISO)
+            </td>
+        </tr>
+        <tr>
+            <td>1429
+            </td>
+            <td>Pentaclorofenol y sus sales (excl. 280811)
+            </td>
+            <td>2908.19
+            </td>
+            <td>Derivados halogenados, sulfonados, nitrados o nitrosados, de los fenoles o de los fenoles-alcoholes que contienen s�lo halogenados y sus sales (excluyendo 2908.11)
+            </td>
+            <td>Pentaclorofenol y sus sales (excluyendo 280811)
+            </td>
+        </tr>
+        <tr style="HEIGHT: 21pt">
+            <td>1430
+            </td>
+            <td>Dinoseb y sus sales 
+            </td>
+            <td>2908.91
+            </td>
+            <td>Los dem�s Dinoseb (ISO) y sus sales 
+            </td>
+            <td>Dinoseb y sales de dinoseb 
+            </td>
+        </tr>
+        <tr>
+        	<td>
+        	1431
+            </td>
+            <td>DNOC y sus sales (excl. 290811-290891)
+            </td>
+            <td>2908.99
+            </td>
+            <td>Derivados halogenados, sulfonados, nitrados o nitrosados, de los fenoles o de los fenoles-alcoholes (excluyendo 2908.11-2908.91)
+            </td>
+            <td>DNOC (BSI, E-ISO) (DNOC y sus sales, tales como sales de amoniaco, potasio y sodio)
+            </td>
+        </tr>
+        <tr>
+            <td>1432
+            </td>
+            <td>Oxirano (�xido de etileno)
+            </td>
+            <td>2910.10
+            </td>
+            <td>Oxirano (�xido de etileno)
+            </td>
+            <td>�xido de etileno 
+            </td>
+        </tr>
+        <tr>
+            <td>1433
+            </td>
+            <td>Dieldrina
+            </td>
+            <td>2910.40
+            </td>
+            <td>1-Cloro-2,3-epoxipropano (epiclorhidrina) Dieldrina (ISO, DCI)
+            </td>
+            <td>Dieldrina
+            </td>
+        </tr>
+        <tr>
+            <td>1434
+            </td>
+            <td>Acetato de dinoseb 
+            </td>
+            <td>2915.36
+            </td>
+            <td>�steres del �cido ac�tico: Acetato de dinoseb (ISO)
+            </td>
+            <td>Dinoseb acetato (BSI, ISO)
+            </td>
+        </tr>
+        <tr>
+            <td>1435
+            </td>
+            <td>Binapacril 
+            </td>
+            <td>2916.36
+            </td>
+            <td>Binapacryl (ISO)
+            </td>
+            <td>Binapacril
+            </td>
+        </tr>
+        <tr>
+            <td>1436
+            </td>
+            <td>Clorobencilato
+            </td>
+            <td>2918.18
+            </td>
+            <td>Clorobencilato (ISO)
+            </td>
+            <td>Clorobencilato 
+            </td>
+        </tr>
+        <tr>
+            <td>1437
+            </td>
+            <td>2,4,5-T, sus sales y sus �steres 
+            </td>
+            <td>2918.91
+            </td>
+            <td>Los dem�s: 2,4,5-T (ISO) (�cido 2,4,5-triclorofenoxiac�tico), sus sales y sus �steres 
+            </td>
+            <td>2,4,5-T (con dioxina (TCDD) contaminante)
+            </td>
+        </tr>
+        <tr>
+            <td>1438
+            </td>
+            <td>Parati�n / Parati�n-metilo 
+            </td>
+            <td>2920.11
+            </td>
+            <td>�steres tiofosf�ricos (fosforotioatos) y sus sales; sus derivados halogenados, sulfonados, nitrados o nitrosados: Parati�n (ISO) y parati�n-metilo (ISO) (metil parati�n)
+            </td>
+            <td>Parati�n / Parati�n-metilo 
+            </td>
+        </tr>
+        <tr>
+            <td>1439
+            </td>
+            <td>Fluoroacetamida / Monocrotofos / Fosfamid�n 
+            </td>
+            <td>2924.12
+            </td>
+            <td>Amidas ac�clicas (incluidos los carbamatos) y sus derivados; sales de estos productos: Fluoroacetamida (ISO), fosfamid�n (ISO) y monocrotof�s (ISO)
+            </td>
+            <td>Fluoroacetamida / Monocrotofos / Fosfamid�n 
+            </td>
+        </tr>
+        <tr>
+            <td>1440
+            </td>
+            <td>Clordimeformo 
+            </td>
+            <td>2925.21
+            </td>
+            <td>Imidas y sus derivados; sales de estos productos: Clordimeformo (ISO)
+            </td>
+            <td>Clordimeformo 
+            </td>
+        </tr>
+        <tr>
+            <td>1441
+            </td>
+            <td>Captafol / Metamidofos 
+            </td>
+            <td>2930.50
+            </td>
+            <td>Metionina Captafol (ISO) y metamidofos (ISO)
+            </td>
+            <td>Captafol / Metamidofos  
+
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+</div>-->
+
+<p><a onclick="toggleDiv('Pesthid');" href="javascript:void(0)"><strong>Para saber más sobre eso / esconder</strong></a></p><br />
+<div id="Pesthid" style="DISPLAY: none">
+<div id="addTextPest">
+
+
+<p>
+<table style="MARGIN: auto auto auto 4.8pt; WIDTH: 498pt; BORDER-COLLAPSE: collapse" cellspacing="0" cellpadding="0" width="664" border="0">
+<tbody>
+<tr style="HEIGHT: 24.75pt">
+    <td style="BORDER-RIGHT: black 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 498pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24.75pt" nowrap="nowrap" width="664" colspan="5">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">PURE</span></strong><strong><span style="FONT-SIZE: 7pt">TABLA DE CORRESPONDENCIA</span></strong></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 37.5pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 37.5pt" width="59">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">Código</span></strong><strong><span style="FONT-SIZE: 7pt"><br />
+            FAOSTAT </span></strong></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 37.5pt" nowrap="nowrap" width="176">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">FAOSTAT</span></strong></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 37.5pt" width="57">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">Código<br />
+            SA</span></strong></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 37.5pt" nowrap="nowrap" width="185">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">SA</span></strong></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 37.5pt" nowrap="nowrap" width="187">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt"> Procedimiento de Consentimiento Fundamentado Previo (</span></strong><strong><span style="FONT-SIZE: 7pt">CFP</span></strong><strong><span style="FONT-SIZE: 7pt">)</span></strong></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 40.8pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 40.8pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1422</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 40.8pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Compuestos de mercurio excl. las amalgamas</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 40.8pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2852</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 40.8pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Compuestos inorganicos u organicos, de mercurio, excluyendo las amalgamas </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 40.8pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Compuestos de mercurio (incluyendo compuestos de mercurio inorgánicos , compuestos de mercurio alkilo y compuestos de mercurio alkiloxialkilo y arilo)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1423</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Dicloruro de etileno </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2903.15</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Dicloruro de etileno (ISO) (1,2-dicloroetano)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Dicloruro de etileno </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 26.25pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 26.25pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1424</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 26.25pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Dibromuro de etileno (EDB)  (1,2-dibromoetano)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 26.25pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2903.31</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 26.25pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Dibromuro de etileno (ISO) (1,2-dibromoetano) </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 26.25pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Dibromuro de etileno (EDB)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 22.2pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.2pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1425</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.2pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> HCH (mezcla de isómeros)/ Lindano </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.2pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2903.51</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.2pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">1,2,3,4,5,6-Hexaclorociclohexano (HCH (ISO)), incluido el lindano (ISO, DCI)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.2pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> HCH (mezcla de isómeros)/ Lindano </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 24pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1426</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Aldrina, Clordano, Heptacloro </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2903.52</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Aldrina (ISO), clordano (ISO) y heptacloro (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Aldrina, Clordano, Heptacloro </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 27pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 27pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1427</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 27pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> DDT, Hexaclorobenceno </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 27pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2903.62</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 27pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Hexaclorobenceno (ISO) y DDT (ISO) (clofenotano (DCI), 1,1,1-tricloro-2,2-bis(p- clorofenil)etano)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 27pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> DDT, Hexaclorobenceno </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 23.4pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 23.4pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1428</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 23.4pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Pentaclorofenol </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 23.4pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2908.11</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 23.4pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Pentaclorofenol (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 23.4pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Pentaclorofenol (ISO)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 36.6pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.6pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1429</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.6pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Pentaclorofenol y sus sales (excl. 280811)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.6pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2908.19</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.6pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Derivados halogenados, sulfonados, nitrados o nitrosados, de los fenoles o de los fenoles-alcoholes que contienen sólo halogenados y sus sales (excluyendo 2908.11)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.6pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Pentaclorofenol y sus sales (excluyendo 280811)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1430</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Dinoseb y sus sales </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2908.91</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Los demás Dinoseb (ISO) y sus sales </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Dinoseb y sales de dinoseb </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 33.6pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1431</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> DNOC y sus sales (excl. 290811-290891)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2908.99</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Derivados halogenados, sulfonados, nitrados o nitrosados, de los fenoles o de los fenoles-alcoholes (excluyendo 2908.11-2908.91)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> DNOC (BSI, E-ISO) (DNOC y sus sales, tales como sales de amoniaco, potasio y sodio)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1432</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Oxirano (óxido de etileno)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2910.10</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Oxirano (óxido de etileno)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Óxido de etileno </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1433</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Dieldrina </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2910.40</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">1-Cloro-2,3-epoxipropano (epiclorhidrina) Dieldrina (ISO, DCI)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Dieldrina</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1434</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Acetato de dinoseb </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2915.36</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Ésteres del ácido acético: Acetato de dinoseb (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Dinoseb acetato (BSI, ISO)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1435</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Binapacril </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2916.36</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Binapacril (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Binapacril (ISO)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1436</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Clorobencilato </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2918.18</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Clorobencilato (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Clorobencilato </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 22.8pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.8pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1437</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.8pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">2,4,5-T, sus sales y sus ésteres </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.8pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2918.91</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.8pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Los demás: 2,4,5-T (ISO) (ácido 2,4,5-triclorofenoxiacético), sus sales y sus ésteres </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.8pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">2,4,5-T (con dioxina (TCDD) contaminante)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 43.8pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 43.8pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1438</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 43.8pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Paratión / Paratión-metilo </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 43.8pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2920.11</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 43.8pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Ésteres tiofosfóricos (fosforotioatos) y sus sales; sus derivados halogenados, sulfonados, nitrados o nitrosados: Paratión (ISO) y paratión-metilo (ISO) (metil paratión)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 43.8pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Paratión / Paratión-metilo </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 42pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 42pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1439</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 42pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Fluoroacetamida / Monocrotofos / Fosfamidón </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 42pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2924.12</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 42pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Amidas acíclicas (incluidos los carbamatos) y sus derivados; sales de estos productos: Fluoroacetamida (ISO), fosfamidón (ISO) y monocrotofós (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 42pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Fluoroacetamida / Monocrotofos / Fosfamidón </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1440</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Clordimeformo </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2925.21</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Imidas y sus derivados; sales de estos productos: Clordimeformo (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Clordimeformo </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 33.6pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1441</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt"> Captafol / Metamidofos </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2930.50</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt"> Metionina Captafol (ISO) y metamidofos (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt"> Captafol / Metamidofos </span></div>
+    </td>
+</tr>
+</tbody>
+</table>
+</p>
+<div>&nbsp;</div>
+<p>&nbsp;</p>
+<br />
+
+
+</div>
+<br /><br /><br />
+</div>

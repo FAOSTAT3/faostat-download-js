@@ -1,0 +1,70 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Consumer Price Indices</h2> <img id='DOMAIN_IMG' src="images/B.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/P.png');
+</script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		CPI.init();
+	});
+</script>
+<div class="backBtn"><p class='goto' id='P_notes'> < Back </p></div>
+<br/>
+Consumer price indices (CPIs) measure changes over time in the general level of prices of consumer goods and services that households acquire, use or pay for consumption. This is done by measuring the cost of purchasing a fixed basket of consumer goods and services of constant quality and similar characteristics, with the products in the basket being selected to be representative of households’ expenditure during a year or other specified period
+<br/><br/>
+<div id='show_more' onclick='CPI.showMore();' style='cursor: pointer; color: #399BCC; text-decoration: underline;'>Show more / Hide</div>
+<div id='more_info' style='display: none;'>
+	<br>
+	There are two categories of monthly (or in some instances, quarterly) CPIs available in FAOSTAT:
+	<br>
+	<ul class='bullet-list'>
+		<li>All items CPI (also referred to as “Total CPI” or “General CPI”) cover all goods and services included for price measurement in the CPI.</li>
+		<li>Food and non-alcoholic beverages CPI (also referred to as “Food CPI”) which is a sub-index of the All items CPI.</li>
+	</ul>
+	<br>
+	<b>Data source:</b> The main source for the two CPI series published in FAOSTAT is data reported by individual countries to the International Labor Organization (ILO) which is disseminated by the ILO on their LABORSTA database.
+	<br><br>
+	<b>Coverage of countries:</b> The indices are available for all countries for which production data are disseminated in FAOSTAT and are also available from ILO/LABORSTA.
+	<br><br>
+	<b>Uses:</b> Consumer price indices are used to measure either the rate of price inflation as perceived by households, or changes in their cost of living (that is, changes in the amounts that the households need to spend in order to maintain their standard of living). CPIs are used by government agencies (such as the central bank) and non-government organisations for a wide variety of purposes, including to: provide an average measure of price inflation for the household sector as a whole, for use as a macro-economic indicator; adjust wages as well as social security and other benefits to compensate, partly or completely, for changes in the cost of living or in consumer prices; and deflate components of household final consumption expenditure in the national accounts and the value of retail sales to obtain estimates of changes in their volume.
+	<br><br>
+	Food CPIs can be used by the FAO and other agencies in conjunction with other price indices (such as producer price indices, import / export price indices) for value chain analyses, estimation of food expenditure shares, and the monitoring of prices and food security.
+	<br><br>
+	<b>Methodologies for compiling CPIs:</b> Current international guidelines and recommendations on concepts, and methodologies for the collection, compilation and dissemination of CPIs are available in Consumer Price Index Manual: Theory and Practice, published in 2004 by the ILO.
+	<br><br>
+	Most national CPIs are consistent with international statistical standards. However, national practices do depart from these guidelines, and these departures may impact on international comparability between countries, as well as on the quality of the indices. For these reasons, the CPI series published in FAOSTAT are accompanied by summary methodological information for individual countries covering key issues, comprising:
+	<br><br>
+	<ul class='bullet-list'>
+	    <li>Classifications used: CPI item coverage is usually defined under the international Classification of Individual Consumption According to Purpose (COICOP), published by the United Nations in 2000. Most national classifications used for the collection and compilation of CPIs are consistent with COICOP, at least at higher levels of aggregation;</li>
+	    <li>Statistical concepts and definitions, including types of prices collected;</li>
+	    <li>Coverage: institutional; item and geographic;</li>
+	    <li>Aggregation and consolidation;</li>
+	    <li>Reference period: CPI and weights;</li>
+	    <li>Weight sources, frequency of revising weights.</li>
+	</ul>
+	<br>
+	Sources for the CPI methodological information published in FAOSTAT were primarily the International Monetary Fund’s (IMF) General Data Dissemination Standard (GDDS) and the Special Data Dissemination Standard (SDDS). Where necessary, this was supplemented from information provided by the ILO, the Organisation for Economic Cooperation and Development (OECD) and in some instances from national statistical sources.
+	<br><br>
+	<b>Consumer price index links</b>
+	<br><br>
+	<ul class='bullet-list'>
+		<li><a target='_blank' href='http://dsbb.imf.org/Default.aspx'>International Monetary Fund General Data Dissemination Standard (GDDS) and the Special Data Dissemination Standard (SDDS)</a></li>
+		<li><a target='_blank' href='http://www.ilo.org/global/publications/ilo-bookstore/order-online/books/WCMS_090721/lang--en/index.htm'>International Labour Organisation, Consumer Price Index Manual: Theory and Practice</a></li>
+		<li><a target='_blank' href='http://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=5&Lg=1'>Classification of Individual Consumption According to Purpose (COICOP), published by the United Nations</a></li>
+		<li><a target='_blank' href='http://unstats.un.org/unsd/methods/inter-natlinks/sd_natstat.asp'>Country Profiles of Statistical Systems, United Nations Statistics Division</a></li>
+		<li><a target='_blank' href='http://stats.oecd.org/mei/default.asp?lang=e&subject=8'>Main Economic Indicators, OECD</a></li>
+		<li><a target='_blank' href='http://ec.europa.eu/eurostat/web/hicp/overview'>Harmonized System of Consumer Prices, Eurostat</a></li>
+	</ul>
+	<br>
+</div>
+<br>
+<b>Faostat - CPI Country notes</b>
+<br><br>
+<table style='width: 100%;'>
+	<tr>
+		<td style='width: 85%;'><div id='cpi_dropdown'></div></td>
+		<td><div id='show_more' onclick='CPI.showMetadata();' style='margin-left: 16px; cursor: pointer; color: #399BCC; text-decoration: underline;'>Show metadata</div></td>
+	</tr>
+</table>
+<div id='metadata'></div>
+</div>

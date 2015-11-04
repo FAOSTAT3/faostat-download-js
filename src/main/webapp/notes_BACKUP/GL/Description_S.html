@@ -1,0 +1,26 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Uso de la tierra total</h2> <img id='DOMAIN_IMG' src="images/G2.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G2.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G2_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+    <p>Uso de la tierra total contiene todas las emisiones y absorciones de GEI producidas en los diferentes subdominios de Uso de la tierra, que representan las seis categor&iacute;as de Uso de la tierra del IPCC: tierra de cultivo, tierras forestales, pastizales, humedales, asentamientos y otras tierras, tambi&eacute;n llamadas de manera colectiva como emisiones/absorciones del sector de las Silvicultura y Otros Usos de la Tierra (FOLU). Las emisiones FOLU consisten en CO2 (di&oacute;xido de carbono), CH4 (metano) y N2O (&oacute;xido nitroso) asociados con actividades de gesti&oacute;n de la tierra. Las emisiones/absorciones de CO2 derivan de los cambios en las existencias netas estimadas de carbono de los dep&oacute;sitos de biomasa a&eacute;rea y subterr&aacute;nea en las tierras forestales, incluyendo la tierra forestal que se ha convertido para otros usos de la tierra. Las emisiones de CH4 y N2O, y de CO2 adicional se calculan para incendios y drenaje de suelos org&aacute;nicos. Basado en datos de la actividad de FAOSTAT y FRA as&iacute; como en an&aacute;lisis de informaci&oacute;n geoespacial, se calculan en el Nivel 1 y Enfoque 1 de las Directrices del IPCC de 2006 para los Inventarios Nacionales de GEI. Los c&aacute;lculos est&aacute;n disponibles por pa&iacute;s, con cobertura global y relativos al per&iacute;odo  1990-presente, con actualizaciones anuales.</p>
+
+    <br><br>
+<a id='PDF' href='/faostat-download-js/PDF/ES/UsoDeLaTierraTotal.pdf' target='_blank'>Show Metadata</a>
+
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GL.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GL.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GL.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

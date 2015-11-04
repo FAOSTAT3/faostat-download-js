@@ -1,0 +1,2592 @@
+<script type="text/javascript">
+	function toggleDiv(element){
+ if(document.getElementById(element).style.display=="none"){document.getElementById(element).style.display="block"}
+     	else{document.getElementById(element).style.display="none"}
+} 
+</script>
+
+<div class="download-notes">
+<!-- LIST OF AVAILABLE DOMAINS - START -->
+<div id="page_start"></div>
+<script>
+    F3DWLDNotes.addHeader();
+</script>
+<!-- LIST OF AVAILABLE DOMAINS - END -->
+<ul class='bullet-list-links'>
+	<h2>INDEX</h2>
+	<li class='goto' id='CP_notes'>Consumer Price Indices</li>
+	<li class='goto' id='PI_notes'>Annual Producer Price Indices</li>
+	<li class='goto' id='PA_notes'>Producer Price Archive</li>
+	<li class='goto' id='PP_notes'>Annual Producer Prices</li>
+	<li class='goto' id='PM_notes'>Monthly Producer Prices</li>
+</ul>
+<br>
+<p>The Prices domain of FAOSTAT contains:<br><br />
+
+<ul style="padding-left:20px"> 
+<li><strong>Annual Producer Prices</strong> or prices received by farmers for primary crops, live animals and livestock primary products as collected at the farm-gate or at the first point of sale. Data are provided through annual questionnaires for over 130 countries and for some 200 commodities, representing over 97 percent of the world’s value of gross agricultural production (at 2004-2006 International Dollar Prices). For some EU countries producer prices are sourced directly from EUROSTAT.</li>
+
+<br /><br />Producer Prices are provided in three units: i) Local Currency Units (LCU); ii) Standard Local Currency (SLC); and, iii) US Dollars. Although, both LCU and SLC denote prices in the local currency of a country, there is an important distinction between the two units. Prices in LCU refer to the currency prevailing in a country in the year of data reporting. Thus, if there is (are) currency change(s) in a country during the years for which data is available, the data series will refer to more than one currency. Please see the <a class='goto' id='PCU_notes'>Country Currency Table 2015</a> in the Producer Prices webpage for information on currencies. Prices in SLC are standardised to reflect data in one currency only, normally the currency in the most recent year of data reporting. Having price data series in the same currency helps in obtaining consistent data series and is needed for analysing time series data or constructing price indices.
+
+<br /><br />Producer Prices contains data from 1991 onwards, whilst the <a class='goto' id='PA_notes'>Price Archive</a> contains historical data from 1966 to 1990. However, these two data sets may not always be comparable. Please see the <a class='goto' id='PA_notes'>Price Archive</a> page for more information.
+
+<br /><br />Whilst countries are requested by FAO to provide prices received by farmers, it is possible that some countries do not collect such prices and may report an alternative set of data, mainly, wholesale prices or unit values compiled for national accounts. Please visit the <a class='goto' id='PP_notes'>Country Notes</a> in the Producer Prices webpage for country-specific information.
+
+<br /><br />When countries do not provide data for certain commodities and years, these prices are estimated, so that it is possible to compile regional aggregates and derived indicators. When no official figures can be used as a reference point on which to base the estimation, i.e. when the estimations are in fact extrapolations, these data series are not disseminated externally. However, extrapolated prices and their corresponding estimation methodology can be provided upon request (by contacting <a href="mailto:Price-Statistics@fao.org?Subject=Price%20estimations">
+Price-Statistics@fao.org)</a>.<br /><br />
+
+<li><strong>Monthly producer prices</strong>, collected from 2010 onwards. The availability of infra-annual data on prices allows a better understanding of price responses to short term shocks, which are a major feature of agricultural markets. They also enable a more timely and accurate monitoring of prices received by farmers and how these are transmitted along the value chain. These prices are provided in Local Currency Units (LCU) only. They are based on the same definitions and concepts than Annual Producer Prices and are provided according to the same classification of commodities. Monthly prices are collected in conjunction with annual prices and updated yearly.
+</li>
+<br /><br />
+<li><strong>Annual Producer Price Indices</strong> that measure the average annual change in the prices received by farmers. Annual data are provided for over 130 countries. Producer price indices available in FAOSTAT comprise the Agriculture Producer Price Index, Commodity group indices and Single item indices.
+</li>
+
+<br /><br /><li><strong>Consumer price indices</strong>, annual and monthly (or quarterly) of all items, covering all goods and services, and for the food and non-alcoholic beverages group. These indices measure changes over time in the prices of food that households acquire for consumption. The country-level indices are originally compiled and disseminated by the International Labour Organisation (ILO). The sub-regional, regional and global indices are calculated using an aggregation procedure based on the use of population as the weighting variable.
+</li>
+</ul></p>
+<br />
+<br />
+<!--
+<p><strong><a class='goto' id='PCU_notes'>Country Currency Table 2015</a></strong></p><br />
+
+<p><strong>Countries:</strong> <a onclick="toggleDiv('texthidA');" href="javascript:void(0)"><strong>A</strong></a> | <a onclick="toggleDiv('texthidB');" href="javascript:void(0)"><strong>B</strong></a> | <a onclick="toggleDiv('texthidC');" href="javascript:void(0)">
+<strong>C</strong></a> | <a onclick="toggleDiv('texthidD');" href="javascript:void(0)">
+<strong>D</strong></a> |  <a onclick="toggleDiv('texthidE');" href="javascript:void(0)"><strong>E</strong></a> | 	 <a onclick="toggleDiv('texthidF');" href="javascript:void(0)"><strong>F</strong></a> | <a onclick="toggleDiv('texthidG');" href="javascript:void(0)"><strong>G</strong></a> |  <a onclick="toggleDiv('texthidH');" href="javascript:void(0)"><strong>H</strong></a> | <a onclick="toggleDiv('texthidI');" href="javascript:void(0)"><strong>I</strong></a> |  <a onclick="toggleDiv('texthidJ');" href="javascript:void(0)"><strong>J</strong></a> | <a onclick="toggleDiv('texthidK');" href="javascript:void(0)"><strong>K</strong></a> |  <a onclick="toggleDiv('texthidL');" href="javascript:void(0)"><strong>L</strong></a> | <a onclick="toggleDiv('texthidM');" href="javascript:void(0)"><strong>M</strong></a> |  <a onclick="toggleDiv('texthidN');" href="javascript:void(0)"><strong>N</strong></a> | <a onclick="toggleDiv('texthidP');" href="javascript:void(0)"><strong>P</strong></a> |  <a onclick="toggleDiv('texthidQ');" href="javascript:void(0)"><strong>Q</strong></a> | <a onclick="toggleDiv('texthidR');" href="javascript:void(0)"><strong>R</strong></a> |  <a onclick="toggleDiv('texthidS');" href="javascript:void(0)"><strong>S</strong></a> | <a onclick="toggleDiv('texthidT');" href="javascript:void(0)"><strong>T</strong></a> |  <a onclick="toggleDiv('texthidU');" href="javascript:void(0)"><strong>U</strong></a> |  <a onclick="toggleDiv('texthidZ');" href="javascript:void(0)"><strong>Z</strong></a> </p><br />
+<p><a onclick="toggleDiv('texthid');" href="javascript:void(0)"><strong>Show/Hide All Notes</strong></a></p><br />
+<div id="texthid" style="display: none;"> <br />
+<strong>All Notes</strong><br /><br />
+<div id="addText">
+
+<p><strong>Afghanistan</strong>:<br />
+All prices are consumer prices.</p>
+<br />
+<p><strong>Albania</strong>:<br />
+Figs, oranges, tangerines, mandarines, clementines, satsumas, lemons and limes, grapes, apples, pears, apricots, cherries, peaches and nectarines, plums are mixed wholesale and producer prices.<br />
+Chestnuts, soybeans, sunflower seed, olives, tomatoes, onions and shallots, onions, garlic, carrots, leeks and other alliac.veg, cauliflower, cabbages, lettuce, cucumbers and gherkins, peas, beans, eggplants, chillies and peppers, spinach, pumpkin, squash, gourds, watermelons, cantaloupes and other melons are wholesale prices.</p>
+<br/>
+<p><strong>Algeria</strong>:<br />
+Wheat prices are hard wheat administered prices.<br />
+Barley and Oats prices are administered prices.<br />
+Dates: refers to dried dates, <i>nour</i> variety.<br />
+Sheep meat: refers to lambs.<br />
+Wholesale prices for most of the commodities.</p>
+<br />
+<p><strong>Argentina</strong>:<br />
+Prices of sweet potatoes, cassava, asparagus, pumpkins, squash, gourds, chillies and peppers, bananas, grapefruit, peaches, plums, strawberries, watermelons, cantaloupes, cattle live weight and pigs live weight are wholesale prices.</p>
+<br />
+<p><strong>Armenia</strong>:<br />
+Prices of wine, table wine, quality wine are consumer prices.</p>
+<br />
+<p><strong>Australia</strong>:<br />
+The annual prices reported are the weighted average gross unit values (GUV) for the financial year (GUV is defined as the total gross value of production of the commodity, at wholesale prices received in the market places, divided by the total reported production quantity).<br />
+Grapes: wine grapes only (major component of total grapes production).<br />
+Animal live weight: values estimated based on the average ratio of conversion of each category of animal to meat produced, as advised by the meat industry.<br />
+Rapeseed: reported edible variant - canola (2010 & 2011).<br />
+Chillies and peppers, green: refers to capsicum prices only, chillies not available in 2011.<br />
+Pears: includes <i>nashi</i>'s for 2011.<br />
+Onions, dry: includes brown, red and white price (2010 & 2011).<br />
+Beans, dry: includes mung beans, other field beans and faba beans for 2011.<br />
+Broad beans, dry: includes faba beans, tick and horse beans as well (2011).<br />
+Nuts nes: includes macadamias, pecans and pistachios for (2011) and just macadamias for 2010.<br />
+Ground nuts in shell: refers to peanuts (in shell) (2011).<br />
+Seed cotton: refers to cotton lint and seed (combined) price (2011).		<br />
+Pumpkins, squash, gourd: refers to pumpkin only (no squash or gourd prices) (2011).<br />
+Tangerines, mandarines, clementines, satsumas: refers to mandarins only (all varieties) (2010 & 2011).<br />
+Grapefruit and pomelos: refers to grapefruit only (2011).<br />
+Grapes: includes grapes for wine production (2010), grapes for wine production, drying grapes and table or other grapes (2011).<br />
+Anise, badian, fennel: refers to fennel only (2011).</p>
+<br />
+<p><strong>Austria</strong>:<br />
+Prices of gooseberries, hops, tobacco, wool and duck meat, geese meat are based on unit values from Economic Accounts of Agriculture.<br />
+Oilseeds nes: refers to pumpkin-seed for Oil.</p>
+<br />
+<p><strong>Azerbaijan</strong>:<br />
+Azerbaijan changed data collection method and revised all time series since 2003. Collected data are consumer prices.</p>
+<br />
+<p><strong>Bangladesh</strong>:<br />
+Prices refer to crop year and not to calendar year. E.g. 1999 prices refer to 1998/1999 crop year.</p>
+<br />
+<p><strong>Barbados</strong>:<br />
+All prices are wholesale prices.</p>
+<br />
+<p><strong>Belarus</strong>:<br />
+Hen eggs: refers to all eggs, including hen eggs.<br />
+Sheep: refers to sheep and goats.<br />
+Goat: refers to sheep and goats.<br />
+Cow milk, whole, fresh: refers to all milk.<br />
+Vegetable Fresh nes: refers to table beet.<br />
+Berries nes: refers to currants.<br />
+Pome fruit nes, Fresh: refers to pome fruit – total.<br />
+Stone fruit nes fresh: refers to stone fruit – total.</p>
+<br />
+<p><strong>Belgium</strong>:<br />
+Tobacco: prices do not include direct subsidies on the product, as per countries’ new methodology.</p>
+<br />
+<p><strong>Belgium-Luxembourg</strong>:<br />
+Tobacco: prices do not include direct subsidies on the product, as per countries’ new methodology.</p>
+<br />
+<p><strong>Bolivia</strong>:<br />
+All prices are consumer prices except for wheat, paddy rice, maize, soya and oilseeds nec that are producer prices.<br />
+Lemons and limes: refers to limes only.</p>
+<br />
+<p><strong>Bosnia and Herzegovina</strong>:<br />
+Price data were collected from 1996 onwards.</p>
+<br />
+<p><strong>Bhutan</strong>:<br />
+All prices are retail prices.<br />
+Meat nes: refers to yak meat.<br />
+Nutmeg, mace, cardamom: refers to cardamom only.</p>
+<br />
+<p><strong>Brazil</strong>:<br />
+Brazil changed currency twice in the period 1991-2001.<br />
+Nuts nes: refers to <i>pinh&atilde;o</i> (pine nut).<br />
+Rapeseed: refers to canola.<br />
+Oranges: from 1993 to 1997 price of oranges is the average of prices from FGV. Since 1998 it is the average of prices from IEA-CEPEA market.<br />
+Coffee green: from 1993 to 1997 price of coffee green is the average of prices from FGV. Since 1998 it is average of prices of <i>caf&eacute; beneficiado</i> from CEPEA-USP.<br />
+Tea: refers to green leaves.<br />
+Mate: refers to green leaves.<br />
+Jute-like fibres: refers to malva.<br />
+Eggs, other than hen eggs: refers to quail eggs.<br />
+Natural rubber: refers to liquid latex.<br />
+Natural gums: refers to sorva.</p>
+<br />
+<p><strong>Bulgaria</strong>:<br />
+A new methodology to conduct survey for collecting agricultural producer prices was introduced in 2007. This methodology focuses on the price of the product intended for direct human consumption and which is sold at considerably higher prices. Hence, producer price data from 2007 onwards could be higher than in the previous years.<br />
+All fruits and vegetable prices are unit values.<br />
+Pimento, all spices: refers to herbs.<br />
+Cattle: refers to beef and buffaloes up to 2000, from 2001 only to cattle.<br />
+Buffalo: beef and buffaloes up to 2000, from 2001 only to buffalo.<br />
+Sheep: refers to sheep and goats up to 1999, from 2000 only to sheep.<br />
+Goat live weight: refers to sheep and goats up to 1999, from 2000 only to goats.</p>
+<br />
+<p><strong>Burkina Faso</strong>:<br />
+Sorghum: in 2004 price of sorghum is the average price of white sorghum and red sorghum.</p>
+<br />
+<p><strong>Burundi</strong>:<br />
+Rice, paddy: price of white rice until 2001, average prices of <i>iron</i> and <i>karund</i>” varieties from 2002 onwards.<br />
+Vegetables fresh nes: refers to <i>irengalenga</i> variety.<br />
+Bananas: prices of ripe bananas until 2001, average prices of <i>ibigurube</i> and <i>utumaramasenge</i> varieties from 2002 onwards.<br />
+Plantains: refers to green bananas.<br />
+Fruit nes: refers to maracudja and prunes de Japon.<br />
+Coffee : refers to <i>robusta</i> variety only.<br />
+Comments: for the year 2012 and for a selection of commodities, producer prices have been made available thanks to the Burundi National Survey of Agriculture (ENAB 2011-2012). For the years prior to 2012, these prices remain unavailable.</p>
+<br />
+<p><strong>Cambodia</strong>:<br />
+All prices are wholesale prices.<br />
+Cambodia provided administered prices for cassava in 2006 and 2007 (100000 and 250000 KHR, respectively).</p>
+<br />
+<p><strong>Cameroon</strong>:<br />
+Prices of maize, millet, sorghum, potatoes, sweet potatoes, cassava, yams, root and tubers, dry beans, soybeans, groundnuts in shell, oil palm fruit, palm kernels, oil of palm, oil of palm kernels, sesame seed are wholesale prices.<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data.<br />
+<a href="http://countrystat.org/home.aspx?c=CMR" target="_blank">http://countrystat.org/home.aspx?c=CMR</a>.</p>
+<br />
+<p><strong>Canada</strong>:<br />
+Buckwheat, canary seeds, broad beans, dry, linseed: prices refer to crop years instead of calendar years.<br />
+Canary seeds: prices prior to 1998 are estimates based on farmers’ cash receipts.<br />
+Honey: prices are unit values.<br />
+Sheep meat and live weight: price of sheep only, excluding lambs.</p>
+<br />
+<p><strong>Chile</strong>:<br />
+Data on fruits, vegetables, tobacco, live animals, eggs and wine are wholesale prices.</p>
+<br />
+<p><strong>China</strong>:<br />
+Crop prices are wholesale prices while livestock prices are either wholesale or retail.<br />
+Jute-like fibres: refers to kenaf fibre</p>
+<br />
+<p><strong>Colombia</strong>:<br />
+Prices are a mix of wholesale and producer prices. <br />
+Green coffee: average domestic price. Source ICO for 2003.</p>
+<br />
+<p><strong>Congo (Republic of)</strong>:<br />
+Semi-official data are unit values derived from the value of agriculture production tables in “L’&eacute;conomie congolaise”, from the “Centre National de la Statistique et des &Eacute;tudes &Eacute;conomiques”.</p>
+<br />
+<p><strong>Cook Islands</strong>:<br />
+Fruit tropical fresh nes: refers to noni (Morinda Citrofolia).</p>
+<br />
+<p><strong>Costa Rica</strong>:<br />
+Tobacco price refers to <i>banda</i> variety.</p>
+<br />
+<p><strong>Cote d’Ivoire</strong>:<br />
+Prices for coffee green, cocoa, seed cotton, kola nuts and natural rubber refer to administered prices.<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=CIV" target="_blank">http://countrystat.org/home.aspx?c=CIV</a>.</p>
+<br />
+<p><strong>Czech Republic</strong>:<br />
+Czechoslovakia split into Czech Republic and Slovakia in January 1993.<br />
+Wheat: average of wheat for human food and for animal feed.<br />
+Barley: average of barley for human food and for animal feed.<br />
+Flax: price refers to flax straw, retted.<br />
+Prices of cattle, pig, duck, turkey, rabbit, chicken meat and live weight are wholesale prices.</p>
+<br />
+<p><strong>Croatia</strong>:<br />
+Croatia declared its independence in 1991. Price data are available from 1994 onwards due to the war that started in 1991 and subsequent hyper-inflation. Data were compiled and made regularly available after the introduction of the new currency, the Kuna, which took place in 1994.<br />
+All data are unit values.<br />
+Mixed grain: includes sorghum, millet, buckwheat and other cereals<br />
+Oranges and mandarins: from 1994 until 1997 oranges and mandarins were collected together.<br />
+Watermelons: includes musk melons.</p>
+<br />
+<p><strong>Cyprus</strong>:<br />
+All figures for 2011 and 2012 are provisional.<br />
+Vegetable fresh nes includes beetroots and celery.<br />
+Production of spinach and lettuce is in 1000 bundles instead of MT.<br />
+Indigenous other poultry: refers to the total value of game meat  and bird meat.</p>
+<br />
+<p><strong>Dominican Rep</strong>:<br />
+As of the year 2007, sorghum prices are provided by the technicians of the Vice-Ministry of production division, Ministry of Agriculture.<br />
+Yautias or malanga: includes the prices of the different types of yautias (white, yellow, purple and coconut).<br />
+Dry beans includes prices of red, black and white beans.<br />
+Tomatoes: includes tomato table (salad) and industrial tomato prices.</p>
+<br />
+<p><strong>Ecuador</strong>:<br />
+Maize: refers to maize for human consumption.</p>
+<br />
+<p><strong>El Salvador</strong>:<br />
+Coffee, green: source used is International Coffee Organization from 1993 onwards.<br />
+Prices may not only refer to producer prices but also to wholesale or retail prices.</p>
+<br />
+<p><strong>Eritrea</strong>:<br />
+In 1993, Ethiopia PDR split into Ethiopia and Eritrea. Prices of 1991 and 1992 of Ethiopia PDR can be found under country code 62.<br />
+All prices are consumer prices.</p>
+<br />
+<p><strong>Estonia</strong>:<br />
+Prices are unit values.<br />
+Cattle live weight: refers to cattle for slaughter.<br />
+Pig live weight: refers to pigs for slaughter.<br />
+Chicken live weight: refers to chicken for slaughter.</p>
+<br />
+<p><strong>Ethiopia</strong>:<br />
+In 1993, Ethiopia PDR split into Ethiopia and Eritrea. Prices of 1991 and 1992 of Ethiopia PDR can be found under country code 62. No price data collection took place in 1993 so all prices are estimated for that year. 1994 prices are averages of four months only.<br />
+Sorghum: refers to yellow sorghum<br />
+Beans, dry: refers to horse beans<br />
+Broad beans, dry: refers to haricot beans</p>
+<br />
+<p><strong>Fiji</strong>:<br />
+Prices are unit values.</p>
+<br />
+<p><strong>France</strong>:<br />
+All prices are based on unit values from Economic Accounts of Agriculture.</p>
+<br />
+<p><strong>Finland</strong>:<br />
+Wheat: includes only bread wheat.<br />
+Barley: includes only feed barley.<br />
+Peas, dry: data collection was discontinued in 2009.<br />
+Cucumbers and gherkins: includes only cucumbers.<br />
+Cow milk, whole, fresh: actual fat and protein content, the yearly co-operative payment is included.</p>
+<br />
+<p><strong>Georgia</strong>:<br />
+Due to the absence of primary data on prices received by farmers, data from 1997 to 2003 are given equalling to 80 percent of corresponding consumer prices. Prices for 2006-2008 are average unit values. The data are obtained from the sample survey of agricultural holdings and are available only from 2006 when the survey started.<br />
+Price data were collected from 1994 onwards.</p>
+<br />
+<p><strong>Germany</strong>:<br />
+Prices of biological cattle meat, wool, biological sheep meat and biological pig meat are unit values from Economic Accounts of Agriculture, Eurostat Database. </p>
+<br />
+<p><strong>Ghana</strong>:<br />
+Prices of maize, millet, sorghum, cassava, taro, yams, oil of palm, tomatoes, onions dry, bananas, plantains and hen eggs are wholesale prices.</p>
+<br />
+<p><strong>Greece</strong>:<br />
+Tobacco: refers to raw tobacco (price series revised till 2007, as mean commercial price without subsidies).<br />
+Sugar beet: price series revised till 2009, as mean price of sugar pol.</p>
+<br />
+<p><strong>Honduras</strong>:<br />
+Green coffee: refers to <i>caf&eacute; verde oro</i> variety.<br />
+Pig meat and chicken meat prices are consumer prices.</p>
+<br />
+<p><strong>Hungary</strong>:<br />
+Producer prices are collected using two main sources: agricultural product procurements (industrial prices) and agricultural market supply and prices (prices for fresh products).<br />
+Apples: refers mainly to apples for industrial use.<br />
+Pimento: refers to Hungarian red spice and paprika.</p>
+<br />
+<p><strong>India</strong>:<br />
+Prices are simple averages of farm harvest prices across states. Prices in 2007 and 2008 refer to minimum support prices.</p>
+<br />
+<p><strong>Iraq</strong>:<br />
+Cereals and potatoes prices are wholesale prices.</p>
+<br />
+<p><strong>Ireland</strong>:<br />
+Official prices for vegetables and potatoes are wholesale prices.</p>
+<br />
+<p><strong>Israel</strong>:<br />
+All prices are unit values.<br />
+Nuts nes: refers to pecan nuts<br />
+Tomatoes: refers to tomatoes for fresh market only.</p>
+<br />
+<p><strong>Italy</strong>:<br />
+All prices from 2002 onwards are unit values from Economic Accounts of Agriculture, Eurostat Database</p>
+<br />
+<p><strong>Jamaica</strong>:<br />
+Coffee, green: the farm gate price for Blue Mountain coffee is used.</p>
+<br />
+<p><strong>Japan</strong>:<br />
+Cattle meat: refers to price of kobe beef.<br />
+The following products are mixed producer and wholesale prices: potatoes; sweet potatoes; yams; taro (cocoyam); chestnuts; tomatoes; onions and shallots, green; onions, dry; garlic; carrots; leeks and other alliaceous vegetables; cabbages; lettuce; cucumbers and gherkins; peas, green; beans, green; string beans; asparagus; eggplants; chillies and peppers, green; spinach; pumpkins, squash, gourds; green corn (maize); watermelons; cantaloupes and other melons; pineapples; oranges; tangerines, mandarines, clementines, satsumas; grapes; apples; pears; apricots; cherries; peaches and nectarines; plums; strawberries; kiwi fruit; persimmons; ginger.<br />
+Cauliflower; broad beans, green; mushrooms; bananas; lemons and limes are wholesale prices.<br />
+Vegetables fresh nes series refers to Japanese radish.</p>
+<br />
+<p><strong>Kenya</strong>:<br />
+Prices of wheat, barley, oats, millet, sorghum, all starchy roots, dry beans and live animals are unit values.<br />
+Coffee and tea prices are auction prices.</p>
+<br />
+<p><strong>Korea, Republic</strong>:<br />
+Pulses nes: refers to bean sprout (soybean).<br />
+Tea nes: refers to fresh ginseng.<br />
+Price of vegetables fresh nes: refers to average prices of young radish and radish.<br />
+Following a change of methodology, data series have been revised for some commodities such as millet, tomatoes, potatoes, leading to significant changes in 2006.<p><strong>
+Latvia</strong>:<br />
+Latvia became independent from the USSR in 1991.<br />
+Prices are available from 1992 onwards.</p>
+<br />
+<p><strong>Lebanon</strong>:<br />
+Price data were collected from 1995 onwards.<br />
+For 2010 onwards data are estimations provided directly by the country. Producer prices are estimated starting from wholesale prices, deducting 10% for transport and 10% of margin.(producer prices = 80% of wholesale prices).</p>
+<br />
+<p><strong>Lithuania</strong>:<br />
+Prices of 1992 are expressed in Talonas; from 1993 onwards prices are expressed in Litai.<br />
+Wheat: refers to food wheat prices, since 2000 according to EU methodology.<br />
+Barley: refers to feed barley prices, since 2000 according to EU methodology.<br />
+Potatoes: refers to main crop food potatoes.<br />
+Sugar beet: prices are unit values.<br />
+Cabbage: refers to white cabbage prices, since 2000 according to EU methodology.<br />
+Currants: refers to black currants.<br />
+Cow milk: 3.4 fat, 3% protein content, since 2000 according to EU methodology.<br />
+Chicken meat and live weight: refers to poultry until 1999, and to chicken only since 2000.</p>
+<br />
+<p><strong>Luxembourg</strong>:<br />
+Prices of horse live weight are unit values from Economic Accounts of Agriculture, Eurostat Database.<br />
+Grapes: refers to grapes for wine.</p>
+<br />
+<p><strong>Macedonia</strong>:<br />
+Macedonia declared its independence in November 1991.<br />
+Price data were collected from 1992 onwards.</p>
+<br />
+<p><strong>Malaysia</strong>:<br />
+Source of rubber prices: Malaysian Rubber Board.<br />
+Natural rubber: domestic price of bulk latex.<br />
+Dry rubber: average price of RSS1, RSS3 and SMR20 FOB prices.</p>
+<br />
+<p><strong>Malawi</strong>:<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=MWI">http://countrystat.org/home.aspx?c=MWI</a>.<br />
+From 2009 all prices are consumer prices.</p><br />
+<!--<a href="http://countrystat.org/home.aspx?c=CIV">FAOSTAT</a>
+<a href="http://countrystat.org/home.aspx?c=MWI" target="_blank">http://countrystat.org/home.aspx?c=MWI</a>.<br />-->
+<!--
+<br />
+<p><strong>Mali</strong>:<br />
+Pulses nes: refers to sugar pea.<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=MLI" target="_blank">http://countrystat.org/home.aspx?c=MLI</a>.</p>
+<br />
+<p><strong>Malta</strong>:<br />
+Prices in local currency units in 2008 show variation from previous years due to a change in national currency.</p>
+<br />
+<p><strong>Mauritius</strong>:<br />
+Sugar cane: prices paid to planters.<br />
+Prices of sweet potatoes, cassava, taro, pineapples and of all vegetables - except onions, and garlic - are wholesale prices.</p>
+<br />
+<p><strong>Mexico</strong>:<br />
+Peas dry corresponds to tare.<br />
+Vetches corresponds to ebo (<i>janamago</i> or vetch).<br />
+Cashew nuts with shell corresponds to cashew (<i>mara&ntilde;on</i>).<br />
+Chestnuts corresponds to walnut (<i>nuez de castilla</i>).<br />
+Rape seed includes rapeseed and canola (<i>colza y canola</i>).<br />
+Seed of mustard corresponds to mustard (<i>mostaza</i>).<br />
+Seed sesame corresponds to sesame (<i>ajonjol&iacute;</i>).<br />
+Tomato is <i>jitomate</i>.<br />
+Other legumes alliaceous corresponds to leek.<br />
+Coles corresponds to cabbage (<i>col repollo</i>).<br />
+Peas green corresponds to pea (<i>ch&iacute;charo</i>).<br />
+Beans green corresponds to green beans (<i>ejote</i>).<br />
+Peppers fresh corresponds to <i>chile verde bell pepper</i>.<br />
+Pumpkins, all classes corresponds to pumpkins.<br />
+Corn green corresponds to corn.<br />
+Okra corresponds to <i>ocro</i>.<br />
+Bananas corresponds to all varieties of bananas, excluding the plantain (<i>macho</i>).<br />
+Plantain: refers to <i>pl&aacute;tano macho</i>.<br />
+Tangerines, mandarines, clementines, satsumas: fits series by inclusion of the mandarin.<br />
+Lemons and limes are adjusted series by inclusion of limes.<br />
+Peaches and nectarines corresponds to peach.<br />
+Blueberry: correspons to <i>ar&aacute;ndano azul</i>.<br />
+Persimmons: corresponds to <i>macheix</i>.<br />
+Green coffee is <i>caf&eacute; cereza</i>.<br />
+Tea is lemon tea (<i>t&eacute; lim&oacute;n</i>).<br />
+Anise seeds, Bad, fennel corresponds only to anise.<br />
+Rye grass and ryegrass includes rye grass green and grass ryegrass (<i>rye grass en verde y zacate ballico</i>).<br />
+Natural rubber, latex is rubber <i>hevea</i> (<i>hule hevea</i>).</p>
+<br />
+<p><strong>Morocco</strong>:<br />
+Onions and shallots, green; onions, dry; carrots; cauliflower, cabbages; cucumbers and gherkins; peas, green; string beans; broad beans, green; artichokes; eggplants (aubergines); chillies and peppers, green; pumpkins, squash, gourds; watermelons, cantaloupes and other melons; bananas; figs; avocadoes; lemons and limes; grapes; apples; pears; quinces; apricots are wholesale prices.</p>
+<br />
+<p><strong>Nepal</strong>:<br />
+Prices are a mix of wholesale and consumer prices.<br />
+Prices refer to crop year and not to calendar year. E.g. 1998 prices refer to the 1997/1998 crop year.<br />
+Livestock prices: price data collected in local markets.<br />
+Sheep live weight: refer to ram only.<br />
+Prices of lemons and limes: refers to lemons only.</p>
+<br />
+<p><strong>Netherlands</strong>:<br />
+Prices of maize and goat live weight are unit values from Economic Accounts of Agriculture, while prices of the other commodities are selling prices at the farm-gate, all from Eurostat database.</p>
+<br />
+<p><strong>New Zealand</strong>:<br />
+Reference period is year ending June for the following commodities: cereals; potatoes; onions, dry; peas, green; asparagus; squash; avocadoes; tangerines, mandarins, clementines, satsumas; lemons & limes; grapes; apricots; cherries; strawberries; currants; persimmons.</p>
+<br />
+<p><strong>Nicaragua</strong>:<br />
+Prices of cattle meat, pig meat and hen eggs are wholesale prices.<br />
+Coffee, green: used source is International Coffee Organization database.</p>
+<br />
+<p><strong>Niger</strong>:<br />
+Spices nes: refers to souchet (cyperus esculentus) - local name for chufa, tiger nut, earth of almond or yellow nutsedge.</p>
+<br />
+<p><strong>Nigeria</strong>:<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=NGA" target="_blank">http://countrystat.org/home.aspx?c=NGA</a>.</p>
+<br />
+<p><strong>Norway</strong>:<br />
+Vegetables, fresh nes refers to price of kohlrabi.<br />
+Currants: refers to black currant.<br />
+Meat nes: refers to reindeer meat (tame reindeer).</p>
+<br />
+<p><strong>Pakistan</strong>:<br />
+All prices are wholesale prices.<br />
+Pulses nes: refers to mash pulse.<br />
+Dry beans: refers to mung pulse.<br />
+Chick peas: refers to gram.<br />
+Cattle and buffalo: refers to adult (dry) for slaughter.<br />
+Sheep and goat: refers to males for slaughter.<br />
+Poultry: refers to broiler for slaughter.</p>
+<br />
+<p><strong>Paraguay</strong>:<br />
+Geese: refers to guinea fowl.</p>
+<br />
+<p><strong>Peru</strong>:<br />
+Maize: average price of <i>maiz amarillo duro</i> and <i>maiz amilaceo.</i><br />
+Tangerines, mandarines, clementines, satsumas reflects prices of mandarins only.<br />
+Other camelids (meat and live weight): alpaca.<br />
+Limes and lemons reflects prices of limes only.<br />
+Peaches and nectarines reflects prices of peaches only.<br />
+Cucumbers and gherkins: simple average of the two price series.<br />
+Cantaloupes and other melons reflects price of melons only. <br />
+Grapefruit and pomelo reflects prices of grapefruit only.<br />
+Chillies and peppers (green): simple average of several price series (<i>Pimientos </i>, <i>Páprika </i>, <i>Ají Piquillo</i>, <i>Rocoto</i> and <i>Ají </i>).<br />
+Plums: simple average of two price series (<i>Ciruela Spondia</i> and <i>Cirolero Prunus</i>).</p>
+<br />
+<p><strong>Philippines</strong>:<br />
+Yams: refers to ube (purple yams).<br />
+Beans, dry: refers to <i>mungo</i>, green.<br />
+Cow peas, dry: refers to bush sitao (<i>paayap</i>).<br />
+Pigeon peas: refers to <i>kadios</i>, dry.<br />
+Nuts, nes: refers to <i>pili</i> nuts without shell.<br />
+Chillies & peppers, green: refers to <i>panigang</i> (green finger pepper).<br />
+Melons: refers to muskmelon.<br />
+Vegetables, nes: average price of <i>pechay baguio</i>, <i>pechay</i> native, raddish and turnips.<br />
+Grapefruits and pomelos: refers to pomelos only.<br />
+Citrus fruit nes: refers to <i>calamondin</i> or <i>calamansi</i>.<br />
+Natural rubber: refers to coagulated rubber, <i>cuplump</i>.<br />
+Price of coffee green is the average of arabica, robusta and excelsa coffee prices - dry beans.</p>
+<br />
+<p><strong>Portugal</strong>:<br />
+Wheat: refers to soft wheat.<br />
+Cattle live weight: refers to calves live weight.<br />
+Sheep live weight: refers to fattening lambs live weight.</p>
+<br />
+<p><strong>Qatar</strong>:<br />
+All data are unit values.</p>
+<br />
+<p><strong>Romania</strong>:<br />
+Barley; oats; maize; potatoes; tomatoes; cucumbers and gherkins; peas, green; beans, green; grapes; hen eggs with shell; natural honey are a mix of producer and wholesale prices.<br />
+Beans, dry; peas, dry; walnuts; onions, dry; garlic; carrots; leeks and other alliaceous vegetables; cauliflower; cabbages; lettuce; eggplants; mushrooms; chillies and peppers, green; spinach; pumpkins, squash, gourds; chicory roots; watermelons; cantaloupes and other melons; apples; pears; apricots; cherries; sour cherries; peaches and nectarines; plums; strawberries are wholesale prices.</p>
+<br />
+<p><strong>Russian Federation</strong>:<br />
+Vegetables nec: refers to table beet.<br />
+Apples, pears, quinces: refer to seed fruit.<br />
+Apricots, sour cherries, cherries, peaches, plums: refer to stone fruit.<br />
+Strawberries, raspberries, gooseberries, currants: refer to berries.<br />
+Indigenous sheep meat, indigenous goat meat: refer to sheep and goat.</p>
+<br />
+<p><strong>Rwanda</strong>:<br />
+Prices are unit values. <br />
+Prices of 1994 are entirely estimated.</p>
+<br />
+<p><strong>Saudi Arabia</strong>:<br />
+All prices are consumer prices.<br />
+Prices are from 1999 onwards.<br />
+Wheat prices are procurement prices.</p>
+<br />
+<p><strong>Saint Lucia</strong>:<br />
+Prices of all products are wholesales prices.<br />
+Yautia (cocoyam): refers to <i>tannia</i> variety.<br />
+Taro (coco yam): refers to <i>dasheen</i> variety.<br />
+Coconuts: refers to dry coconuts.</p>
+<br />
+<p><strong>Saint Vincent and Grenadines</strong>:<br />
+All prices are wholesales and consumer prices.</p>
+<br />
+<p><strong>Serbia Montenegro</strong>:<br />
+Price data are available from 1994 onwards. Data were compiled and made regularly available after the introduction of the new currency, the Serbian Dinar.<p><strong>
+Slovakia</strong>:<br />
+Czechoslovakia split into Czech Republic and Slovakia in January 1993. Prices are available from 1993 onwards.<br />
+Cabbages: refers to white cabbage.<br />
+Grapes: refers to wine grapes.<br />
+Pimento, All spice: refers to red pepper.<br />
+Melons: refers to <i>roth</i> melon.<br />
+Cattle meat: refers to bulls for slaughter.<br />
+Sheep meat: refers to fattened lambs for slaughter.<br />
+Pig meat: refers to pigs for slaughter.</p>
+<br />
+<p><strong>Slovenia</strong>:<br />
+Slovenia became independent from Yugoslavia in 1991. Prices are available from 1991 onwards.<br />
+From 2008 onwards data for indigenous meat are estimations  provided directly by the country.</p>
+<br />
+<p><strong>South Africa</strong>:<br />
+Monthly prices for fruit and vegetables are for sales on domestic fresh produce markets only and exclude purchases for processing and exports. <br />
+Monthly prices for live animals are derived from the prices paid for animals slaughtered.</p>
+<br />
+<p><strong>Sri Lanka</strong>:<br />
+Tea prices from 1991 to 1998 are Colombo City prices and from 1999 onwards are average green leaf prices.</p>
+<br />
+<p><strong>Sudan</strong>:<br />
+Price data are wholesale prices.<br />
+Tea nes: refers to <i>kerkadih</i> or <i>karkad&eacute;</i> variety.<br />
+Cotton Lint: ICCO prices of <i>barakat</i> variety of cotton. <br />
+2013 annual prices are the result of official monthly prices average.</p>
+
+<br />
+<p><strong>Suriname</strong>:<br />
+Prices are all consumer prices except  for livestock. <br />
+Price of raw milk: price received by the farmer when the milk is delivered to the processing plant.</p>
+<br />
+<p><strong>Sweden</strong>:<br />
+Prices of honey and wool are Unit Values from Economic Accounts of Agriculture.</p>
+<br />
+<p><strong>Syria</strong>:<br />
+Wheat, barley, maize, sugar beets prices are producer prices<br />
+All other price data are consumer prices.<br />
+Cotton lint: ICCO prices from 1997 onwards.</p>
+<br />
+<p><strong>Thailand</strong>:<br />
+Dry beans: refers to mung beans.<br />
+Tobacco: refers to <i>virginia</i> variety, cured.</p>
+<br />
+<p><strong>Togo</strong>:<br />
+Bambara peas: refers to voandzou (local name).<br />
+Prices are for agricultural marketing year.<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=TGO" target="_blank">http://countrystat.org/home.aspx?c=TGO</a>.</p>
+<br />
+<p><strong>Trinidad and Tobago</strong>:<br />
+Yautia (cocoyam or tannia): refers to <i>eddoe</i> variety.<br />
+Taro (coco yam): refers to <i>dasheen</i> variety.<br />
+Green beans: refers to <i>bodi</i> variety.<br />
+Coffee, green: source International Coffee Organization database.<br />
+Cow milk: price paid by major purchasers.</p>
+<br />
+<p><strong>Tunisia</strong>:<br />
+Grape: refers to grape for wine production.</p>
+<br />
+<p><strong>Turkmenistan</strong>:<br />
+Price data are available only from 1997 onwards.</p>
+<br />
+<p><strong>United Kingdom</strong>:<br />
+Barley: refers to barley for feed<br />
+Prices of triticale, gooseberries, duck meat, turkey meat, chicken meat, horse meat and honey are basic prices.<br />
+Prices of cabbages, asparagus, lettuce, tomatoes, cauliflower, cucumbers, onions, onions dry, leeks, beans green, peas green, broad beans green, carrots, mushrooms, vegetables fresh nes, apples, pears, cherries, plums, strawberries, currants, berries nes, are wholesale prices. <br />
+Prices of hops are unit values from Economic Accounts of Agriculture.</p>
+<br />
+<p><strong>United Republic of Tanzania</strong>:<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=TZA" target="_blank">http://countrystat.org/home.aspx?c=TZA</a>.</p>
+<br />
+<p><strong>Uruguay</strong>:<br />
+Potatoes; sweet potatoes; tomatoes; onions, dry; garlic; carrots; chillies and peppers, green; pumpkins, squash, gourds; green corn (maize); watermelons; cantaloupes and other melons; oranges; tangerines, mandarines, clementines, satsumas; grapefruit and pomelos; lemons and limes; grapes; apples; pears; quinces; peaches and nectarines; plums; wool, not carded, greasy; hen eggs, with shell; beeswax are wholesale prices.</p>
+<br />
+<p><strong>USA</strong>:<br />
+Nuts nes: refers to pecan nuts.<br />
+Areca nuts (Betel): refers to macadamia.<br />
+Peas, dry: refers to field peas.<br />
+Green beans: refers to <i>lima</i> beans.<br />
+String beans: refers to snap beans.<br />
+Onion and leeks and okra prices refer to California only.<br />
+Price of pumpkins from 1996 to 1999 refers to California only.<br />
+Lettuce and chicory price refers to lettuce only.<br />
+Vegetable nec refers to celery only.<br />
+Grapefruit (inc. pomelos): refers to grapefruit only.<br />
+Cherries: refers to sweet cherries.<br />
+Tobacco unmanufactured: refers to crop year prices.<br />
+Lemons and limes: refers to price of lemons only.<br />
+Sour cherries: refers to tart cherries.<br />
+Chicken live weight: refers to broilers.<br />
+Berries nes: refers to blackberries.<br />
+Stone fruit nes: refers to nectarines.</p>
+<br />
+<p><strong>Zambia</strong>:<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=ZMB" target="_blank">http://countrystat.org/home.aspx?c=ZMB</a>.</p>
+<br />
+<p><strong>Zimbabwe</strong>:<br />
+Given a two years period of hyper-inflation in 2008-2009, producer prices are not disseminated for these two years. From 2010 onwards prices are published only in USD, as this is the main currency effectively used in the country.</p>
+<br />
+
+
+
+<p><a onclick="toggleDiv('texthid');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidA" style="DISPLAY: none"><strong>A</strong>
+<div id="addText">
+<p><strong>Afghanistan</strong>:<br />
+All prices are consumer prices.</p>
+<br />
+<p><strong>Albania</strong>:<br />
+Figs, oranges, tangerines, mandarines, clementines, satsumas, lemons and limes, grapes, apples, pears, apricots, cherries, peaches and nectarines, plums are mixed wholesale and producer prices.<br />
+Chestnuts, soybeans, sunflower seed, olives, tomatoes, onions and shallots, onions, garlic, carrots, leeks and other alliac.veg, cauliflower, cabbages, lettuce, cucumbers and gherkins, peas, beans, eggplants, chillies and peppers, spinach, pumpkin, squash, gourds, watermelons, cantaloupes and other melons are wholesale prices.</p>
+<br />
+<p><strong>Algeria</strong>:<br />
+Wheat prices are hard wheat administered prices.<br />
+Barley and Oats prices are administered prices.<br />
+Dates: refers to dried dates, <i>nour</i> variety.<br />
+Sheep meat: refers to lambs.<br />
+Wholesale prices for most of the commodities.</p>
+<br />
+<p><strong>Argentina</strong>:<br />
+Prices of sweet potatoes, cassava, asparagus, pumpkins, squash, gourds, chillies and peppers, bananas, grapefruit, peaches, plums, strawberries, watermelons, cantaloupes, cattle live weight and pigs live weight are wholesale prices.</p>
+<br />
+<p><strong>Armenia</strong>:<br />
+Prices of wine, table wine, quality wine are consumer prices.</p>
+<br />
+<p><strong>Australia</strong>:<br />
+The annual prices reported are the weighted average gross unit values (GUV) for the financial year (GUV is defined as the total gross value of production of the commodity, at wholesale prices received in the market places, divided by the total reported production quantity).<br />
+Grapes: wine grapes only (major component of total grapes production).<br />
+Animal live weight: values estimated based on the average ratio of conversion of each category of animal to meat produced, as advised by the meat industry.<br />
+Rapeseed: reported edible variant - canola (2010 & 2011).<br />
+Chillies and peppers, green: refers to capsicum prices only, chillies not available in 2011.<br />
+Pears: includes <i>nashi</i>'s for 2011.<br />
+Onions, dry: includes brown, red and white price (2010 & 2011).<br />
+Beans, dry: includes mung beans, other field beans and faba beans for 2011.<br />
+Broad beans, dry: includes faba beans, tick and horse beans as well (2011).<br />
+Nuts nes: includes macadamias, pecans and pistachios for (2011) and just macadamias for 2010.<br />
+Ground nuts in shell: refers to peanuts (in shell) (2011).<br />
+Seed cotton: refers to cotton lint and seed (combined) price (2011).		<br />
+Pumpkins, squash, gourd: refers to pumpkin only (no squash or gourd prices) (2011).<br />
+Tangerines, mandarines, clementines, satsumas: refers to mandarins only (all varieties) (2010 & 2011).<br />
+Grapefruit and pomelos: refers to grapefruit only (2011).<br />
+Grapes: includes grapes for wine production (2010), grapes for wine production, drying grapes and table or other grapes (2011).<br />
+Anise, badian, fennel: refers to fennel only (2011).</p>
+<br />
+<p><strong>Austria</strong>:<br />
+Prices of gooseberries, hops, tobacco, wool and duck meat, geese meat are based on unit values from Economic Accounts of Agriculture.<br />
+Oilseeds nes: refers to pumpkin-seed for Oil.</p>
+<br />
+<p><strong>Azerbaijan</strong>:<br />
+Azerbaijan changed data collection method and revised all time series since 2003. Collected data are consumer prices.</p>
+<br />
+<p><a onclick="toggleDiv('texthidA');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidB" style="DISPLAY: none"><strong>B</strong>
+<div id="addText">
+<p><strong>Bangladesh</strong>:<br />
+Prices refer to crop year and not to calendar year. E.g. 1999 prices refer to 1998/1999 crop year.</p>
+<br />
+<p><strong>Barbados</strong>:<br />
+All prices are wholesale prices.</p>
+<br />
+<p><strong>Belarus</strong>:<br />
+Hen eggs: refers to all eggs, including hen eggs.<br />
+Sheep: refers to sheep and goats.<br />
+Goat: refers to sheep and goats.<br />
+Cow milk, whole, fresh: refers to all milk.<br />
+Vegetable Fresh nes: refers to table beet.<br />
+Berries nes: refers to currants.<br />
+Pome fruit nes, Fresh: refers to pome fruit total.<br />
+Stone fruit nes fresh: refers to stone fruit total.</p>
+<br />
+<p><strong>Belgium</strong>:<br />
+Tobacco: prices do not include direct subsidies on the product, as per countries' new methodology.</p>
+<br />
+<p><strong>Belgium-Luxembourg</strong>:<br />
+Tobacco: prices do not include direct subsidies on the product, as per countries' new methodology.</p>
+<br />
+<p><strong>Bolivia</strong>:<br />
+All prices are consumer prices except for wheat, paddy rice, maize, soya and oilseeds nec that are producer prices.<br />
+Lemons and limes: refers to limes only.</p>
+<br />
+<p><strong>Bosnia and Herzegovina</strong>:<br />
+Price data were collected from 1996 onwards.</p>
+<br />
+<p><strong>Bhutan</strong>:<br />
+All prices are retail prices.<br />
+Meat nes: refers to yak meat.<br />
+Nutmeg, mace, cardamom: refers to cardamom only.</p>
+<br />
+<p><strong>Brazil</strong>:<br />
+Brazil changed currency twice in the period 1991-2001.<br />
+Nuts nes: refers to <i>pinh&atilde;o</i> (pine nut).<br />
+Rapeseed: refers to canola.<br />
+Oranges: from 1993 to 1997 price of oranges is the average of prices from FGV. Since 1998 it is the average of prices from IEA-CEPEA market.<br />
+Coffee green: from 1993 to 1997 price of coffee green is the average of prices from FGV. Since 1998 it is average of prices of <i>caf&eacute; beneficiado</i> from CEPEA-USP.<br />
+Tea: refers to green leaves.<br />
+Mate: refers to green leaves.<br />
+Jute-like fibres: refers to malva.<br />
+Eggs, other than hen eggs: refers to quail eggs.<br />
+Natural rubber: refers to liquid latex.<br />
+Natural gums: refers to sorva.</p>
+<br />
+<p><strong>Bulgaria</strong>:<br />
+A new methodology to conduct survey for collecting agricultural producer prices was introduced in 2007. This methodology focuses on the price of the product intended for direct human consumption and which is sold at considerably higher prices. Hence, producer price data from 2007 onwards could be higher than in the previous years.<br />
+All fruits and vegetable prices are unit values.<br />
+Pimento, all spices: refers to herbs.<br />
+Cattle: refers to beef and buffaloes up to 2000, from 2001 only to cattle.<br />
+Buffalo: beef and buffaloes up to 2000, from 2001 only to buffalo.<br />
+Sheep: refers to sheep and goats up to 1999, from 2000 only to sheep.<br />
+Goat live weight: refers to sheep and goats up to 1999, from 2000 only to goats.</p>
+<br />
+<p><strong>Burkina Faso</strong>:<br />
+Sorghum: in 2004 price of sorghum is the average price of white sorghum and red sorghum.</p>
+<br />
+<p><strong>Burundi</strong>:<br />
+Rice, paddy: price of white rice until 2001, average prices of <i>iron</i> and <i>karund</i>" varieties from 2002 onwards.<br />
+Vegetables fresh nes: refers to <i>irengalenga</i> variety.<br />
+Bananas: prices of ripe bananas until 2001, average prices of <i>ibigurube</i> and <i>utumaramasenge</i> varieties from 2002 onwards.<br />
+Plantains: refers to green bananas.<br />
+Fruit nes: refers to maracudja and prunes de Japon.<br />
+Coffee : refers to <i>robusta</i> variety only.<br />
+Comments: for the year 2012 and for a selection of commodities, producer prices have been made available thanks to the Burundi National Survey of Agriculture (ENAB 2011-2012). For the years prior to 2012, these prices remain unavailable.</p>
+<br />
+<p><a onclick="toggleDiv('texthidB');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidC" style="DISPLAY: none"><strong>C</strong>
+<div id="addText">
+<p><strong>Cambodia</strong>:<br />
+All prices are wholesale prices.<br />
+Cambodia provided administered prices for cassava in 2006 and 2007 (100000 and 250000 KHR, respectively).</p>
+<br />
+<p><strong>Cameroon</strong>:<br />
+Prices of maize, millet, sorghum, potatoes, sweet potatoes, cassava, yams, root and tubers, dry beans, soybeans, groundnuts in shell, oil palm fruit, palm kernels, oil of palm, oil of palm kernels, sesame seed are wholesale prices.<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data.<br />
+<a href="http://countrystat.org/home.aspx?c=CMR" target="_blank">http://countrystat.org/home.aspx?c=CMR</a>.</p>
+<br />
+<p><strong>Canada</strong>:<br />
+Buckwheat, canary seeds, broad beans, dry, linseed: prices refer to crop years instead of calendar years.<br />
+Canary seeds: prices prior to 1998 are estimates based on farmers' cash receipts.<br />
+Honey: prices are unit values.<br />
+Sheep meat and live weight: price of sheep only, excluding lambs.</p>
+<br />
+<p><strong>Chile</strong>:<br />
+Data on fruits, vegetables, tobacco, live animals, eggs and wine are wholesale prices.</p>
+<br />
+<p><strong>China</strong>:<br />
+Crop prices are wholesale prices while livestock prices are either wholesale or retail.<br />
+Jute-like fibres: refers to kenaf fibre</p>
+<br />
+<p><strong>Colombia</strong>:<br />
+Prices are a mix of wholesale and producer prices. <br />
+Green coffee: average domestic price. Source ICO for 2003.</p>
+<br />
+<p><strong>Congo (Republic of)</strong>:<br />
+Semi-official data are unit values derived from the value of agriculture production tables in "L'&eacute;conomie congolaise", from the "Centre National de la Statistique et des &Eacute;tudes &Eacute;conomiques".</p>
+<br />
+<p><strong>Cook Islands</strong>:<br />
+Fruit tropical fresh nes: refers to noni (Morinda Citrofolia).</p>
+<br />
+<p><strong>Costa Rica</strong>:<br />
+Tobacco price refers to <i>banda</i> variety.</p>
+<br />
+<p><strong>Cote d'Ivoire</strong>:<br />
+Prices for coffee green, cocoa, seed cotton, kola nuts and natural rubber refer to administered prices.<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=CIV" target="_blank">http://countrystat.org/home.aspx?c=CIV</a>.</p>
+<br />
+<p><strong>Czech Republic</strong>:<br />
+Czechoslovakia split into Czech Republic and Slovakia in January 1993.<br />
+Wheat: average of wheat for human food and for animal feed.<br />
+Barley: average of barley for human food and for animal feed.<br />
+Flax: price refers to flax straw, retted.<br />
+Prices of cattle, pig, duck, turkey, rabbit, chicken meat and live weight are wholesale prices.</p>
+<br />
+<p><strong>Croatia</strong>:<br />
+Croatia declared its independence in 1991. Price data are available from 1994 onwards due to the war that started in 1991 and subsequent hyper-inflation. Data were compiled and made regularly available after the introduction of the new currency, the Kuna, which took place in 1994.<br />
+All data are unit values.<br />
+Mixed grain: includes sorghum, millet, buckwheat and other cereals<br />
+Oranges and mandarins: from 1994 until 1997 oranges and mandarins were collected together.<br />
+Watermelons: includes musk melons.</p>
+<br />
+<p><strong>Cyprus</strong>:<br />
+All figures for 2011 and 2012 are provisional.<br />
+Vegetable fresh nes includes beetroots and celery.<br />
+Production of spinach and lettuce is in 1000 bundles instead of MT.<br />
+Indigenous other poultry: refers to the total value of game meat  and bird meat.</p>
+<br />
+<p><a onclick="toggleDiv('texthidC');" href="javascript:void(0)"><strong>close</strong></a></p>
+</div>
+</div>
+<div id="texthidD" style="DISPLAY: none"><strong>D</strong>
+<div id="addText">
+<p><strong>Dominican Rep</strong>:<br />
+As of the year 2007, sorghum prices are provided by the technicians of the Vice-Ministry of production division, Ministry of Agriculture.<br />
+Yautias or malanga: includes the prices of the different types of yautias (white, yellow, purple and coconut).<br />
+Dry beans includes prices of red, black and white beans.<br />
+Tomatoes: includes tomato table (salad) and industrial tomato prices.</p>
+<br />
+<p><a onclick="toggleDiv('texthidD');" href="javascript:void(0)"><strong>close</strong></a></p>
+</div>
+</div>
+<div id="texthidE" style="DISPLAY: none"><strong>E</strong>
+<div id="addText">
+<p><strong>Ecuador</strong>:<br />
+Maize: refers to maize for human consumption.</p>
+<br />
+<p><strong>El Salvador</strong>:<br />
+Coffee, green: source used is International Coffee Organization from 1993 onwards.<br />
+Prices may not only refer to producer prices but also to wholesale or retail prices.</p>
+<br />
+<p><strong>Eritrea</strong>:<br />
+In 1993 Ethiopia PDR split into Ethiopia and Eritrea. Prices of 1991 and 1992 of Ethiopia PDR can be found under country code 62.<br />
+All prices are consumer prices.</p>
+<br />
+<p><strong>Estonia</strong>:<br />
+Prices are unit values.<br />
+Cattle live weight: refers to cattle for slaughter.<br />
+Pig live weight: refers to pigs for slaughter.<br />
+Chicken live weight: refers to chicken for slaughter.</p>
+<br />
+<p><strong>Ethiopia</strong>:<br />
+In 1993 Ethiopia PDR split into Ethiopia and Eritrea. Prices of 1991 and 1992 of Ethiopia PDR can be found under country code 62. No price data collection took place in 1993 so all prices are estimated for that year. 1994 prices are averages of four months only.<br />
+Sorghum: refers to yellow sorghum<br />
+Beans, dry: refers to horse beans<br />
+Broad beans, dry: refers to haricot beans</p>
+<br />
+<p><a onclick="toggleDiv('texthidE');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidF" style="DISPLAY: none"><strong>F</strong>
+<div id="addText">
+<p><strong>Fiji</strong>:<br />
+Prices are unit values.</p>
+<br />
+<p><strong>France</strong>:<br />
+All prices are based on unit values from Economic Accounts of Agriculture.</p>
+<br />
+<p><strong>Finland</strong>:<br />
+Wheat: includes only bread wheat.<br />
+Barley: includes only feed barley.<br />
+Peas, dry: data collection was discontinued in 2009.<br />
+Cucumbers and gherkins: includes only cucumbers.<br />
+Cow milk, whole, fresh: actual fat and protein content, the yearly co-operative payment is included.</p>
+<br />
+<p><a onclick="toggleDiv('texthidF');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidG" style="DISPLAY: none"><strong>G</strong>
+<div id="addText">
+<p><strong>Georgia</strong>:<br />
+Due to the absence of primary data on prices received by farmers, data from 1997 to 2003 are given equalling to 80 percent of corresponding consumer prices. Prices for 2006-2008 are average unit values. The data are obtained from the sample survey of agricultural holdings and are available only from 2006 when the survey started.<br />
+Price data were collected from 1994 onwards.</p>
+<br />
+<p><strong>Germany</strong>:<br />
+Prices of biological cattle meat, wool, biological sheep meat and biological pig meat are unit values from Economic Accounts of Agriculture, Eurostat Database. </p>
+<br />
+<p><strong>Ghana</strong>:<br />
+Prices of maize, millet, sorghum, cassava, taro, yams, oil of palm, tomatoes, onions dry, bananas, plantains and hen eggs are wholesale prices.</p>
+<br />
+<p><strong>Greece</strong>:<br />
+Tobacco: refers to raw tobacco (price series revised till 2007, as mean commercial price without subsidies).<br />
+Sugar beet: price series revised till 2009, as mean price of sugar pol.</p>
+<br />
+<p><a onclick="toggleDiv('texthidG');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidH" style="DISPLAY: none"><strong>H</strong>
+<div id="addText">
+<p><strong>Honduras</strong>:<br />
+Green coffee: refers to <i>caf&eacute; verde oro</i> variety.<br />
+Pig meat and chicken meat prices are consumer prices.</p>
+<br />
+<p><strong>Hungary</strong>:<br />
+Producer prices are collected using two main sources: agricultural product procurements (industrial prices) and agricultural market supply and prices (prices for fresh products).<br />
+Apples: refers mainly to apples for industrial use.<br />
+Pimento: refers to Hungarian red spice and paprika.</p>
+<br />
+<p><a onclick="toggleDiv('texthidH');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidI" style="DISPLAY: none"><strong>I</strong>
+<div id="addText">
+<p><strong>India</strong>:<br />
+Prices are simple averages of farm harvest prices across states. Prices in 2007 and 2008 refer to minimum support prices.</p>
+<br />
+<p><strong>Iraq</strong>:<br />
+Cereals and potatoes prices are wholesale prices.</p>
+<br />
+<p><strong>Ireland</strong>:<br />
+Official prices for vegetables and potatoes are wholesale prices.</p>
+<br />
+<p><strong>Israel</strong>:<br />
+All prices are unit values.<br />
+Nuts nes: refers to pecan nuts<br />
+Tomatoes: refers to tomatoes for fresh market only.</p>
+<br />
+<p><strong>Italy</strong>:<br />
+All prices from 2002 onwards are unit values from Economic Accounts of Agriculture, Eurostat Database</p>
+<br />
+<p><a onclick="toggleDiv('texthidI');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidJ" style="DISPLAY: none"><strong>J</strong>
+<div id="addText">
+<p><strong>Jamaica</strong>:<br />
+Coffee, green: the farm gate price for Blue Mountain coffee is used.</p>
+<br />
+<p><strong>Japan</strong>:<br />
+Cattle meat: refers to price of kobe beef.<br />
+The following products are mixed producer and wholesale prices: potatoes; sweet potatoes; yams; taro (cocoyam); chestnuts; tomatoes; onions and shallots, green; onions, dry; garlic; carrots; leeks and other alliaceous vegetables; cabbages; lettuce; cucumbers and gherkins; peas, green; beans, green; string beans; asparagus; eggplants; chillies and peppers, green; spinach; pumpkins, squash, gourds; green corn (maize); watermelons; cantaloupes and other melons; pineapples; oranges; tangerines, mandarines, clementines, satsumas; grapes; apples; pears; apricots; cherries; peaches and nectarines; plums; strawberries; kiwi fruit; persimmons; ginger.<br />
+Cauliflower; broad beans, green; mushrooms; bananas; lemons and limes are wholesale prices.<br />
+Vegetables fresh nes series refers to Japanese radish.</p>
+<br />
+<p><a onclick="toggleDiv('texthidJ');" href="javascript:void(0)"><strong>close</strong></a></p>
+</div>
+</div>
+<div id="texthidK" style="DISPLAY: none"><strong>K</strong>
+<div id="addText">
+<p><strong>Kenya</strong>:<br />
+Prices of wheat, barley, oats, millet, sorghum, all starchy roots, dry beans and live animals are unit values.<br />
+Coffee and tea prices are auction prices.</p>
+<br />
+<p><strong>Korea, Republic</strong>:<br />
+Pulses nes: refers to bean sprout (soybean).<br />
+Tea nes: refers to fresh ginseng.<br />
+Price of vegetables fresh nes: refers to average prices of young radish and radish.<br />
+Following a change of methodology, data series have been revised for some commodities such as millet, tomatoes, potatoes, leading to significant changes in 2006.</p>
+<br />
+<p><a onclick="toggleDiv('texthidK');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidL" style="DISPLAY: none"><strong>L</strong>
+<div id="addText">
+
+<p><strong>Latvia</strong>:<br />
+Latvia became independent from the USSR in 1991.<br />
+Prices are available from 1992 onwards.</p>
+<br />
+<p><strong>Lebanon</strong>:<br />
+Price data were collected from 1995 onwards.<br />
+For 2010 onwards data are estimations provided directly by the country. Producer prices are estimated starting from wholesale prices, deducting 10% for transport and 10% of margin.(producer prices = 80% of wholesale prices).</p>
+<br />
+<p><strong>Lithuania</strong>:<br />
+Prices of 1992 are expressed in Talonas; from 1993 onwards prices are expressed in Litai.<br />
+Wheat: refers to food wheat prices, since 2000 according to EU methodology.<br />
+Barley: refers to feed barley prices, since 2000 according to EU methodology.<br />
+Potatoes: refers to main crop food potatoes.<br />
+Sugar beet: prices are unit values.<br />
+Cabbage: refers to white cabbage prices, since 2000 according to EU methodology.<br />
+Currants: refers to black currants.<br />
+Cow milk: 3.4 fat, 3% protein content, since 2000 according to EU methodology.<br />
+Chicken meat and live weight: refers to poultry until 1999, and to chicken only since 2000.</p>
+<br />
+<p><strong>Luxembourg</strong>:<br />
+Prices of horse live weight are unit values from Economic Accounts of Agriculture, Eurostat Database.<br />
+Grapes: refers to grapes for wine.</p>
+<br />
+<p><a onclick="toggleDiv('texthidL');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidM" style="DISPLAY: none"><strong>M</strong>
+<div id="addText">
+<p><strong>Macedonia</strong>:<br />
+Macedonia declared its independence in November 1991.<br />
+Price data were collected from 1992 onwards.</p>
+<br />
+<p><strong>Malaysia</strong>:<br />
+Source of rubber prices: Malaysian Rubber Board.<br />
+Natural rubber: domestic price of bulk latex.<br />
+Dry rubber: average price of RSS1, RSS3 and SMR20 FOB prices.</p>
+<br />
+<p><strong>Malawi</strong>:<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=MWI">http://countrystat.org/home.aspx?c=MWI</a>.<br />
+<!--<a href="http://countrystat.org/home.aspx?c=MWI" target="_blank">http://countrystat.org/home.aspx?c=MWI</a>.<br />-->
+
+<!--
+From 2009 all prices are consumer prices.</p>
+<br />
+<p><strong>Mali</strong>:<br />
+Pulses nes: refers to sugar pea.<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=MLI" target="_blank">http://countrystat.org/home.aspx?c=MLI</a>.</p>
+<br />
+<p><strong>Malta</strong>:<br />
+Prices in local currency units in 2008 show variation from previous years due to a change in national currency.</p>
+<br />
+<p><strong>Mauritius</strong>:<br />
+Sugar cane: prices paid to planters.<br />
+Prices of sweet potatoes, cassava, taro, pineapples and of all vegetables - except onions, and garlic - are wholesale prices.</p>
+<br />
+<p><strong>Mexico</strong>:<br />
+Peas dry corresponds to tare.<br />
+Vetches corresponds to ebo (<i>janamago</i> or vetch).<br />
+Cashew nuts with shell corresponds to cashew (<i>mara&ntilde;on</i>).<br />
+Chestnuts corresponds to walnut (<i>nuez de castilla</i>).<br />
+Rape seed includes rapeseed and canola (<i>colza y canola</i>).<br />
+Seed of mustard corresponds to mustard (<i>mostaza</i>).<br />
+Seed sesame corresponds to sesame (<i>ajonjol&iacute;</i>).<br />
+Tomato is <i>jitomate</i>.<br />
+Other legumes alliaceous corresponds to leek.<br />
+Coles corresponds to cabbage (<i>col repollo</i>).<br />
+Peas green corresponds to pea (<i>ch&iacute;charo</i>).<br />
+Beans green corresponds to green beans (<i>ejote</i>).<br />
+Peppers fresh corresponds to <i>chile verde bell pepper</i>.<br />
+Pumpkins, all classes corresponds to pumpkins.<br />
+Corn green corresponds to corn.<br />
+Okra corresponds to <i>ocro</i>.<br />
+Bananas corresponds to all varieties of bananas, excluding the plantain (<i>macho</i>).<br />
+Plantain: refers to <i>pl&aacute;tano macho</i>.<br />
+Tangerines, mandarines, clementines, satsumas: fits series by inclusion of the mandarin.<br />
+Lemons and limes are adjusted series by inclusion of limes.<br />
+Peaches and nectarines corresponds to peach.<br />
+Blueberry: correspons to <i>ar&aacute;ndano azul</i>.<br />
+Persimmons: corresponds to <i>macheix</i>.<br />
+Green coffee is <i>caf&eacute; cereza</i>.<br />
+Tea is lemon tea (<i>t&eacute; lim&oacute;n</i>).<br />
+Anise seeds, Bad, fennel corresponds only to anise.<br />
+Rye grass and ryegrass includes rye grass green and grass ryegrass (<i>rye grass en verde y zacate ballico</i>).<br />
+Natural rubber, latex is rubber <i>hevea</i> (<i>hule hevea</i>).</p>
+<br />
+<p><strong>Morocco</strong>:<br />
+Onions and shallots, green; onions, dry; carrots; cauliflower, cabbages; cucumbers and gherkins; peas, green; string beans; broad beans, green; artichokes; eggplants (aubergines); chillies and peppers, green; pumpkins, squash, gourds; watermelons, cantaloupes and other melons; bananas; figs; avocadoes; lemons and limes; grapes; apples; pears; quinces; apricots are wholesale prices.</p>
+<br />
+<p><a onclick="toggleDiv('texthidM');" href="javascript:void(0)"><strong>close</strong></a></p>
+</div>
+</div>
+<div id="texthidN" style="DISPLAY: none"><strong>N</strong>
+<div id="addText">
+<p><strong>Nepal</strong>:<br />
+Prices are a mix of wholesale and consumer prices.<br />
+Prices refer to crop year and not to calendar year. E.g. 1998 prices refer to the 1997/1998 crop year.<br />
+Livestock prices: price data collected in local markets.<br />
+Sheep live weight: refer to ram only.<br />
+Prices of lemons and limes: refers to lemons only.</p>
+<br />
+<p><strong>Netherlands</strong>:<br />
+Prices of maize and goat live weight are unit values from Economic Accounts of Agriculture, while prices of the other commodities are selling prices at the farm-gate, all from Eurostat database.</p>
+<br />
+<p><strong>New Zealand</strong>: <br />
+Reference period is year ending June for the following commodities: cereals; potatoes; onions, dry; peas, green; asparagus; squash; avocadoes; tangerines, mandarins, clementines, satsumas; lemons & limes; grapes; apricots; cherries; strawberries; currants; persimmons.</p>
+<br />
+<p><strong>Nicaragua</strong>:<br />
+Prices of cattle meat, pig meat and hen eggs are wholesale prices.<br />
+Coffee, green: used source is International Coffee Organization database.</p>
+<br />
+<p><strong>Niger</strong>:<br />
+Spices nes: refers to souchet (cyperus esculentus) - local name for chufa, tiger nut, earth of almond or yellow nutsedge.</p>
+<br />
+<p><strong>Nigeria</strong>:<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=NGA" target="_blank">http://countrystat.org/home.aspx?c=NGA</a>.</p>
+<br />
+<p><strong>Norway</strong>:<br />
+Vegetables, fresh nes refers to price of kohlrabi.<br />
+Currants: refers to black currant.<br />
+Meat nes: refers to reindeer meat (tame reindeer).</p>
+<br />
+<p><a onclick="toggleDiv('texthidN');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidP" style="DISPLAY: none"><strong>P</strong>
+<div id="addText">
+<p><strong>Pakistan</strong>:<br />
+All prices are wholesale prices.<br />
+Pulses nes: refers to mash pulse.<br />
+Dry beans: refers to mung pulse.<br />
+Chick peas: refers to gram.<br />
+Cattle and buffalo: refers to adult (dry) for slaughter.<br />
+Sheep and goat: refers to males for slaughter.<br />
+Poultry: refers to broiler for slaughter.</p>
+<br />
+<p><strong>Paraguay</strong>:<br />
+Geese: refers to guinea fowl.</p>
+<br />
+<p><strong>Peru</strong>:<br />
+Maize: average price of <i>maiz amarillo duro</i> and <i>maiz amilaceo.</i><br />
+Tangerines, mandarines, clementines, satsumas reflects prices of mandarins only.<br />
+Other camelids (meat and live weight): alpaca.<br />
+Limes and lemons reflects prices of limes only.<br />
+Peaches and nectarines reflects prices of peaches only.<br />
+Cucumbers and gherkins: simple average of the two price series.<br />
+Cantaloupes and other melons reflects price of melons only. <br />
+Grapefruit and pomelo reflects prices of grapefruit only.<br />
+Chillies and peppers (green): simple average of several price series (<i>Pimientos </i>, <i>Páprika </i>, <i>Ají Piquillo</i>, <i>Rocoto</i> and <i>Ají </i>).<br />
+Plums: simple average of two price series (<i>Ciruela Spondia</i> and <i>Cirolero Prunus</i>).</p>
+<br />
+<p><strong>Philippines</strong>:<br />
+Yams: refers to ube (purple yams).<br />
+Beans, dry: refers to <i>mungo</i>, green.<br />
+Cow peas, dry: refers to bush sitao (<i>paayap</i>).<br />
+Pigeon peas: refers to <i>kadios</i>, dry.<br />
+Nuts, nes: refers to <i>pili</i> nuts without shell.<br />
+Chillies & peppers, green: refers to <i>panigang</i> (green finger pepper).<br />
+Melons: refers to muskmelon.<br />
+Vegetables, nes: average price of <i>pechay baguio</i>, <i>pechay</i> native, raddish and turnips.<br />
+Grapefruits and pomelos: refers to pomelos only.<br />
+Citrus fruit nes: refers to <i>calamondin</i> or <i>calamansi</i>.<br />
+Natural rubber: refers to coagulated rubber, <i>cuplump</i>.<br />
+Price of coffee green is the average of arabica, robusta and excelsa coffee prices - dry beans.</p>
+<br />
+<p><strong>Portugal</strong>:<br />
+Wheat: refers to soft wheat.<br />
+Cattle live weight: refers to calves live weight.<br />
+Sheep live weight: refers to fattening lambs live weight.</p>
+<br />
+<p><a onclick="toggleDiv('texthidP');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidQ" style="DISPLAY: none"><strong>Q</strong>
+<div id="addText">
+<p><strong>Qatar</strong>:<br />
+All data are unit values.</p>
+<br />
+<p><a onclick="toggleDiv('texthidQ');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidR" style="DISPLAY: none"><strong>R</strong>
+<div id="addText">
+<p><strong>Romania</strong>:<br />
+Barley; oats; maize; potatoes; tomatoes; cucumbers and gherkins; peas, green; beans, green; grapes; hen eggs with shell; natural honey are a mix of producer and wholesale prices.<br />
+Beans, dry; peas, dry; walnuts; onions, dry; garlic; carrots; leeks and other alliaceous vegetables; cauliflower; cabbages; lettuce; eggplants; mushrooms; chillies and peppers, green; spinach; pumpkins, squash, gourds; chicory roots; watermelons; cantaloupes and other melons; apples; pears; apricots; cherries; sour cherries; peaches and nectarines; plums; strawberries are wholesale prices.</p>
+<br />
+<p><strong>Russian Federation</strong>:<br />
+Vegetables nec: refers to table beet.<br />
+Apples, pears, quinces: refer to seed fruit.<br />
+Apricots, sour cherries, cherries, peaches, plums: refer to stone fruit.<br />
+Strawberries, raspberries, gooseberries, currants: refer to berries.<br />
+Indigenous sheep meat, indigenous goat meat: refer to sheep and goat.</p>
+<br />
+<p><strong>Rwanda</strong>:<br />
+Prices are unit values. <br />
+Prices of 1994 are entirely estimated.</p>
+<br />
+<p><a onclick="toggleDiv('texthidR');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidS" style="DISPLAY: none"><strong>S</strong>
+<div id="addText">
+<p><strong>Saudi Arabia</strong>:<br />
+All prices are consumer prices.<br />
+Prices are from 1999 onwards.<br />
+Wheat prices are procurement prices.</p>
+<br />
+<p><strong>Saint Lucia</strong>:<br />
+Prices of all products are wholesale prices.<br />
+Yautia (cocoyam): refers to <i>tannia</i> variety.<br />
+Taro (coco yam): refers to <i>dasheen</i> variety.<br />
+Coconuts: refers to dry coconuts.</p>
+<br />
+<p><strong>Saint Vincent and Grenadines</strong>
+All prices are wholesales and consumer prices.</p>
+<br />
+<p><strong>Serbia Montenegro</strong>:<br />
+Price data are available from 1994 onwards. Data were compiled and made regularly available after the introduction of the new currency, the Serbian Dinar.</p>
+<br />
+<p><strong>Slovakia</strong>:<br />
+Czechoslovakia split into Czech Republic and Slovakia in January 1993. Prices are available from 1993 onwards.<br />
+Cabbages: refers to white cabbage.<br />
+Grapes: refers to wine grapes.<br />
+Pimento, All spice: refers to red pepper.<br />
+Melons: refers to <i>roth</i> melon.<br />
+Cattle meat: refers to bulls for slaughter.<br />
+Sheep meat: refers to fattened lambs for slaughter.<br />
+Pig meat: refers to pigs for slaughter.</p>
+<br />
+<p><strong>Slovenia</strong>:<br />
+Slovenia became independent from Yugoslavia in 1991. Prices are available from 1991 onwards.<br />
+From 2008 onwards data for indigenous meat are estimations provided directly by the country.</p>
+<br />
+<p><strong>South Africa</strong>:<br />
+Monthly prices for fruit and vegetables are for sales on domestic fresh produce markets only and exclude purchases for processing and exports. <br />
+Monthly prices for live animals are derived from the prices paid for animals slaughtered.</p>
+<br />
+<p><strong>Sri Lanka</strong>:<br />
+Tea prices from 1991 to 1998 are Colombo City prices and from 1999 onwards are average green leaf prices.</p>
+<br />
+<p><strong>Sudan</strong>:<br />
+Price data are wholesale prices.<br />
+Tea nes: refers to <i>kerkadih</i> or <i>karkad&eacute;</i> variety.<br />
+Cotton Lint: ICCO prices of <i>barakat</i> variety of cotton.<br />
+2013 annual prices are the result of official monthly prices average.</p>
+<br />
+<p><strong>Suriname</strong>:<br />
+Prices are all consumer prices except for livestock. <br />
+Price of raw milk: price received by the farmer when the milk is delivered to the processing plant.</p>
+<br />
+<p><strong>Sweden</strong>:<br />
+Prices of honey and wool are Unit Values from Economic Accounts of Agriculture.</p>
+<br />
+<p><strong>Syria</strong>:<br />
+Wheat, barley, maize, sugar beets prices are producer prices<br />
+All other price data are consumer prices.<br />
+Cotton lint: ICCO prices from 1997 onwards.</p>
+<br />
+<p><a onclick="toggleDiv('texthidS');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidT" style="DISPLAY: none"><strong>T</strong>
+<div id="addText">
+<p><strong>Thailand</strong>:<br />
+Dry beans: refers to mung beans.<br />
+Tobacco: refers to <i>virginia</i> variety, cured.</p>
+<br />
+<p><strong>Togo</strong>:<br />
+Bambara peas: refers to voandzou (local name).<br />
+Prices are for agricultural marketing year.<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=TGO" target="_blank">http://countrystat.org/home.aspx?c=TGO</a>.</p>
+<br />
+<p><strong>Trinidad and Tobago</strong>:<br />
+Yautia (cocoyam or tannia): refers to <i>eddoe</i> variety.<br />
+Taro (coco yam): refers to <i>dasheen</i> variety.<br />
+Green beans: refers to <i>bodi</i> variety.<br />
+Coffee, green: source International Coffee Organization database.<br />
+Cow milk: price paid by major purchasers.</p>
+<br />
+<p><strong>Tunisia</strong>:<br />
+Grape: refers to grape for wine production.</p>
+<br />
+<p><strong>Turkmenistan</strong>:<br />
+Price data are available only from 1997 onwards.</p>
+<br />
+<p><a onclick="toggleDiv('texthidT');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+<div id="texthidU" style="DISPLAY: none"><strong>U</strong>
+<div id="addText">
+<p><strong>United Kingdom</strong>:<br />
+Barley: refers to barley for feed<br />
+Prices of triticale, gooseberries, duck meat, turkey meat, chicken meat, horse meat and honey are basic prices.<br />
+Prices of cabbages, asparagus, lettuce, tomatoes, cauliflower, cucumbers, onions, onions dry, leeks, beans green, peas green, broad beans green, carrots, mushrooms, vegetables fresh nes, apples, pears, cherries, plums, strawberries, currants, berries nes, are wholesale prices. <br />
+Prices of hops are unit values from Economic Accounts of Agriculture.</p>
+<br />
+<p><strong>United Republic of Tanzania</strong>:<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=TZA" target="_blank">http://countrystat.org/home.aspx?c=TZA</a>.</p>
+<br />
+<p><strong>Uruguay</strong>:<br />
+Potatoes; sweet potatoes; tomatoes; onions, dry; garlic; carrots; chillies and peppers, green; pumpkins, squash, gourds; green corn (maize); watermelons; cantaloupes and other melons; oranges; tangerines, mandarines, clementines, satsumas; grapefruit and pomelos; lemons and limes; grapes; apples; pears; quinces; peaches and nectarines; plums; wool, not carded, greasy; hen eggs, with shell; beeswax are wholesale prices.</p>
+<br />
+<p><strong>USA</strong>:<br />
+Nuts nes: refers to pecan nuts.<br />
+Areca nuts (Betel): refers to macadamia.<br />
+Peas, dry: refers to field peas.<br />
+Green beans: refers to <i>lima</i> beans.<br />
+String beans: refers to snap beans.<br />
+Onion and leeks and okra prices refer to California only.<br />
+Price of pumpkins from 1996 to 1999 refers to California only.<br />
+Lettuce and chicory price refers to lettuce only.<br />
+Vegetable nec refers to celery only.<br />
+Grapefruit (inc. pomelos): refers to grapefruit only.<br />
+Cherries: refers to sweet cherries.<br />
+Tobacco unmanufactured: refers to crop year prices.<br />
+Lemons and limes: refers to price of lemons only.<br />
+Sour cherries: refers to tart cherries.<br />
+Chicken live weight: refers to broilers.<br />
+Berries nes: refers to blackberries.<br />
+Stone fruit nes: refers to nectarines.</p>
+<br />
+<p><a onclick="toggleDiv('texthidU');" href="javascript:void(0)"><strong>close</strong></a></p>
+</div>
+</div>
+<div id="texthidZ" style="DISPLAY: none"><strong>Z</strong>
+<div id="addText">
+<p><strong>Zambia</strong>:<br />
+CountrySTAT data has been used when available and consistent with existing FAOSTAT data<br />
+<a href="http://countrystat.org/home.aspx?c=ZMB" target="_blank">http://countrystat.org/home.aspx?c=ZMB</a>.</p>
+<br />
+<p><strong>Zimbabwe</strong>:<br />
+Given a two years period of hyper-inflation in 2008-2009, producer prices are not disseminated for these two years. From 2010 onwards prices are published only in USD, as this is the main currency effectively used in the country.<br />
+<br />
+<p><a onclick="toggleDiv('texthidZ');" href="javascript:void(0)"><strong>close</strong></a></p><br />
+</div>
+</div>
+
+
+<div id="texthidA" style="DISPLAY: none"><strong>A</strong>
+<div id="addText">
+<br />-->
+
+
+<!--
+<p><strong><a href="http://faostat.fao.org/site/564/default.aspx">Country Currency Table 2011</a></strong></p><br />
+
+<p><strong>Countries:</strong> <a onclick="toggleDiv('texthidA');" href="javascript:void(0)"><strong>A</strong></a> | <a onclick="toggleDiv('texthidB');" href="javascript:void(0)"><strong>B</strong></a> | <a onclick="toggleDiv('texthidC');" href="javascript:void(0)">
+<strong>C</strong></a> | <a onclick="toggleDiv('texthidD');" href="javascript:void(0)">
+<strong>D</strong></a> |  <a onclick="toggleDiv('texthidE');" href="javascript:void(0)"><strong>E</strong></a> | 	 <a onclick="toggleDiv('texthidF');" href="javascript:void(0)"><strong>F</strong></a> | <a onclick="toggleDiv('texthidG');" href="javascript:void(0)"><strong>G</strong></a> |  <a onclick="toggleDiv('texthidH');" href="javascript:void(0)"><strong>H</strong></a> | <a onclick="toggleDiv('texthidI');" href="javascript:void(0)"><strong>I</strong></a> |  <a onclick="toggleDiv('texthidJ');" href="javascript:void(0)"><strong>J</strong></a> | <a onclick="toggleDiv('texthidK');" href="javascript:void(0)"><strong>K</strong></a> |  <a onclick="toggleDiv('texthidL');" href="javascript:void(0)"><strong>L</strong></a> | <a onclick="toggleDiv('texthidM');" href="javascript:void(0)"><strong>M</strong></a> |  <a onclick="toggleDiv('texthidN');" href="javascript:void(0)"><strong>N</strong></a> | <a onclick="toggleDiv('texthidP');" href="javascript:void(0)"><strong>P</strong></a> |  <a onclick="toggleDiv('texthidQ');" href="javascript:void(0)"><strong>Q</strong></a> | <a onclick="toggleDiv('texthidR');" href="javascript:void(0)"><strong>R</strong></a> |  <a onclick="toggleDiv('texthidS');" href="javascript:void(0)"><strong>S</strong></a> | <a onclick="toggleDiv('texthidT');" href="javascript:void(0)"><strong>T</strong></a> |  <a onclick="toggleDiv('texthidU');" href="javascript:void(0)"><strong>U</strong></a> |  <a onclick="toggleDiv('texthidZ');" href="javascript:void(0)"><strong>Z</strong></a> </p><br />
+<p><a onclick="toggleDiv('texthid');" href="javascript:void(0)"><strong>Show/Hide All Notes</strong></a></p><br />
+<div id="texthid" style="display: none;"> <br />
+<strong>All Notes</strong><br /><br />
+<div id="addText">
+
+<p><strong>Afghanistan</strong>:<br />
+All prices are consumer prices.</p><br />
+
+<p><strong>Albania</strong>:<br />
+Figs, Oranges, Tangerines, Mandarines, Clementines, Satsma, Lemons and Limes, Grapes, Apples, Pears, Apricots, Cherries, Peaches and Nectarines, Plums are mixed wholesale and producer prices. <br /> 
+Chestnuts, Soybeans, Sunflower seed, Olives, Tomatoes, Onions and Shallots, Onions, Garlic, Carrots, Leeks and other alliac.veg, Cauliflower, Cabbages, Lettuce, Cucumbers and Gherkins, Peas, Beans, Eggplants, Chillies and Peppers, Spinach, Pumpkin, Squash, Gourds, Watermelons, Cantaloupes and other Melons are wholesale prices.</p><br />
+
+<p><strong>Algeria</strong>:<br />
+Wheat: hard wheat administered prices. <br /> 
+Barley, Oats: administered prices. <br /> 
+Dates: dried dates, nour variety. <br /> 
+Sheep meat: Lambs. <br /> 
+Wholesale prices for most of the commodities</p><br />
+
+<p><strong>Argentina</strong>:<br />
+Prices of Sweet Potatoes, Cassava, Asparagus, Pumpkins, Squash, Gourds, Chillies & Peppers, Bananas, Grapefruit, Peaches, Plums, Strawberries, Watermelons, Cantaloupes, Cattle Live Weight and Pigs Live Weight are wholesale prices.</p><br />
+
+<p><strong>Armenia</strong>:<br />
+Prices of wine, table wine, quality wine are consumer prices.</p><br />
+
+<p><strong>Australia</strong>:<br />
+The annual prices reported are the weighted average Gross Unit Values (GUV) for the financial year. (GUV is defined as the total gross value of production of the commodity, at wholesale prices received in the market places, divided by the total reported production quantity). <br /> 
+Grapes: Wine grapes only (major component of total grapes production). <br /> 
+Animal Live Weight: values estimated based on the average ratio of conversion of each category of animal to meat produced, as advised by the meat industry.<br />
+Rapeseed: Reported edible variant - Canola (2010 & 2011)<br />						
+Chillies & Peppers, Green:  Capsicum prices only, Chillies not available in 2011<br />		
+Pears: including Nashi's for 2011<br />				
+Onions, Dry: includes Brown, Red and White price (2010 & 2011)<br />			
+Beans, dry: includes Mung beans, other field beans and Faba beans for 2011<br />
+Broad beans, dry: includes Faba Beans, Tick and Horse beans as well (2011)<br />
+Nuts NES: includes Macadamias, Pecans and Pistachios for (2011)<br />
+& just Macadamias for 2010<br />
+Ground nuts in shell: peanuts (in shell) (2011)<br />			
+Seed Cotton: cotton lint and seed (combined) price (2011)<br />			
+Pumpkins, Squash, Gourd: pumpkin only (no Squash or Gourd prices) (2011)<br />
+Tang. Mand.: mandarins only (all varieties) (2010 & 2011)<br />			
+Grapefruit and Pomelos: grapefruit only (2011)<br />			
+Grapes: includes grapes for wine production (2010), grapes for wine production, drying grapes and table or other grapes (2011)<br />			
+Anise, Badian, Fennel: fennel only (2011)<br />
+</p><br />
+
+<p><strong>Austria</strong>:<br />
+Prices of Gooseberries, Hops, Tobacco, Wool and Duck Meat, Geese Meat are based on Unit Values from the Economic Accounts of Agriculture. <br /> 
+- Oilseeds nes: Pumpkin-seed for Oil.</p><br />
+
+<p><strong>Azerbaijan</strong>:<br />
+Azerbaijan changed data collection method and revised all time series since 2003. Collected data are consumer prices. </p><br />
+
+<p><strong>Bangladesh</strong>:<br />
+Prices refer to crop year and not the calendar year. E.g. 1999 prices refer to the 1998/1999 crop year.</p><br />
+
+<p><strong>Barbados</strong>:<br />
+All prices are wholesale prices.</p><br />
+
+<p><strong>Belarus</strong>:<br />
+Hen Eggs: Prices of all kinds of eggs, including hen eggs. <br /> 
+Sheep: Price of Sheep and Goats. <br /> 
+Goat: Price of Sheep and Goats. <br /> 
+Cow milk, whole, fresh accounts for all milk.<br />
+Vegetable NES: table beet.<br />
+Berries NES: Currants.<br />
+Pome fruit NES fresh: pome fruit - total.<br />	
+Stone fruit NES fresh: stone fruit - total</p><br />
+
+<p><strong>Belgium</strong>:<br />
+Tobacco: prices do not include direct subsidies on the product, as per the countries’ new method. <br /> 
+A change of data source occurred in 2006 for some series: as of that year, prices are taken directly from Eurostat. Before that year, prices were provided to FAO directly by the member country.</p><br />
+
+<p><strong>Belgium-Luxembourg</strong>:<br />
+Tobacco: prices do not include direct subsidies on the product, as per the countries’ new method.</p><br />
+
+<p><strong>Bolivia</strong>:<br />
+All prices are consumer prices except for Wheat, Paddy Rice, Maize, Soya and Oilseeds n.e.c. that are producer prices. <br /> 
+Lemons and Limes: Prices of Limes only.</p><br />
+
+<p><strong>Bosnia and Herzegovina</strong>:<br />
+TPrice data were collected from 1996 onwards.</p><br />
+
+<p><strong>Bhutan</strong>:<br />
+All prices are retail prices. <br /> 
+Meat nes: Yak meat. <br /> 
+Nutmeg, Mace, Cardamom: Cardamom only.</p><br />
+
+<p><strong>Brazil</strong>:<br />
+Brazil changed currency twice in the period 1991-2001. <br /> 
+Nuts nes: Pinhão (Pine Nut) <br /> 
+Rapeseed: Canola<br /> 
+Oranges: from 1993 to 1997 price of Oranges is the average of prices from FGV. Since 1998 it is the average of prices from IEA-CEPEA market. <br /> 
+Coffee green: from 1993 to 1997 price of Coffee green is the average of prices from FGV. Since 1998 it is average of prices of “café beneficiado” from CEPEA-USP. <br /> 
+Tea: green leaves<br /> 
+Mate: green leaves<br /> 
+Jute-Like Fibres: Malva<br /> 
+Eggs, other then Hen eggs: Quail eggs<br /> 
+Natural Rubber: liquid latex<br /> 
+Natural Gums: Sorva</p><br />
+
+<p><strong>Bulgaria</strong>:<br />
+A new methodology to conduct survey for collecting agricultural producer prices was introduced in 2007. This methodology focuses on the price of the produce intended for direct human consumption and which is sold at considerably higher prices. Hence, producer price data from 2007 onwards could be higher than in the previous years.<br />
+All fruits and vegetable prices are unit values.<br />
+Pimento, All spices: Price of Herbs.<br />
+Cattle: Price of Beef and Buffaloes up to 2000, from 2001 only cattle.<br />
+Buffalo: Price of Beef and Buffaloes up to 2000, from 2001 only buffalo.<br />
+Sheep: Price of Sheep and Goats up to 1999, from 2000 only sheep.<br />
+Goat Live Weight: Price of Sheep and Goats up to 1999, from 2000 only goats.</p><br />
+
+<p><strong>Burkina Faso</strong>:<br />
+Sorghum: in 2004 Price of Sorghum is the average price of white sorghum and red sorghum. </p><br />
+
+<p><strong>Burundi</strong>:<br />
+Rice, Paddy: average prices of “Iron” and “Karundi” varieties from 2002 onwards, price of white rice until 2001.<br />
+Vegetables fresh nes: “Irengalenga”<br />
+Bananas: average prices of “Ibigurube” and “Utumaramasenge” varieties from 2002 onwards, prices of ripe bananas until 2001.<br />
+Plantains: green bananas.<br />
+Fruit nes: “Maracudja” and “Prunes de Japon”.<br />
+Coffee : Robusta only.</p><br />
+
+<p><strong>Cambodia</strong>:<br />
+All prices are wholesale prices.<br />
+Cambodia provided administered prices for Cassava in 2006 and 2007 (100000 and 250000 KHR, respectively)</p><br />
+
+<p><strong>Cameroon</strong>:<br />
+Prices of Maize, Millet, Sorghum, Potatoes, Sweet Potatoes, Cassava, Yams, Root and Tubers, Dry Beans, Soybeans, Groundnuts in Shell, Oil Palm Fruit, Palm Kernels, Oil of Palm, Oil of Palm Kernels, Sesame Seed, are wholesale prices.<br />
+Countrystat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=CMR">FAOSTAT</a> data. </p><br />
+
+<p><strong>Canada</strong>:<br />
+Buckwheat: prices refer to crop years instead of calendar years.<br />
+Canary Seeds: prices refer to crop years instead of calendar years; prices prior to 1998 are estimates based on farmers’ cash receipts.<br />
+Honey: prices are unit values.<br />
+Sheep meat and live weight: price of sheep only, excluding lambs.</p><br />
+
+<p><strong>Chile</strong>:<br />
+Data on fruits, vegetables, tobacco, live animals, eggs and wine are wholesale prices.</p><br />
+
+<p><strong>China</strong>:<br />
+Crop prices are wholesale prices while livestock prices are either wholesale or retail.<br />
+Jute-like fibres: Kenaf fibre.</p><br />
+
+<p><strong>Colombia</strong>:<br />
+Price of Wheat, Maize, Barley, Rice, Sorghum, Dry beans, Sesame seed, Soya Beans, Sugar cane, Lentils, Oil Palm Fruit are guaranteed prices.<br />
+Cassava; Potatoes; Yams; Beans, dry; Tomatoes; Onions, dry; Garlic; Carrots; Cauliflower; Cabbages; Lettuce; Cucumbers and Gherkins; Beans, green; Eggplants; Chillies and Peppers, Green; Pumpkins, Squash, Gourds; Watermelons; Bananas; Plantains; Pineapples; Avocados; Mangoes; Oranges; Lemons and Limes; Papayas; Apples, Pears; Peaches and Nectarines; Strawberries are wholesale prices. <br />
+Green coffee: average domestic price. Source ICO for 2003.</p><br />
+
+<p><strong>Congo (Republic of)</strong>:<br />
+Semi-official data are unit values derived from the tables on the values of agriculture production in the “L’Économie congolaise”, from the “Centre National de la Statistique et des Études Économiques”.</p><br />
+
+<p><strong>Cook Islands</strong>:<br />
+Fruit Tropical Fresh NES: Noni (Morinda Citrofolia).</p><br />
+
+<p><strong>Costarica</strong>:<br />
+Tobacco price refers to   “Banda” variety.</p><br />
+
+<p><strong>Cote d’Ivoire</strong>:<br />
+Prices for coffee green, cocoa, seed cotton, kola nuts and natural rubber refer to administered prices.<br />
+Countrystat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=CIV">FAOSTAT</a> data.</p><br />
+
+<p><strong>Czech Republic</strong>:<br />
+Czechoslovakia split into Czech Republic and Slovakia in January 1993.<br />
+Wheat: average of wheat for human food and for animal feed.<br />
+Barley: average of barley for human food and for animal feed.<br />
+Flax: price refers to Flax Straw, retted.<br />
+Prices of Cattle, Pig, Duck, Turkey, Rabbit, Chicken meat and live weight are wholesale prices.</p><br />
+
+<p><strong>Croatia</strong>:<br />
+Croatia declared its independence in 1991. Price data are available from 1994 onwards due to the war that started in 1991 and subsequent hyper-inflation. Data were compiled and made regularly available after the introduction of the new currency, the Kuna, which took place in 1994.<br />
+All data are unit values.<br />
+Mixed grain: including sorghum, millet, buckwheat and other cereals.<br />
+Oranges and mandarins: from 1994 until 1997 oranges and mandarins we collected together. <br />
+Watermelons: including musk melons.</p><br />
+
+<p><strong>Cyprus</strong>:<br />
+All figures for 2009 are provisional.<br />
+Vegetable fresh nes include beetroots and celery.<br />
+Production of spinach and lettuce is in 1000 bundles instead of MT</p><br />
+
+<p><strong>Dominican Rep</strong>:<br />
+As of the year 2007, sorghum prices are provided by the technicians of the Vice-Ministry of production division, Ministry of agriculture.<br />
+Yautias or Malanga: includes the prices of the different types of yautias (white, yellow, purple and coconut)<br />
+Dry beans includes prices of red, black and white beans.<br />
+Tomatoes: includes tomato table (salad) and industrial tomato prices</p><br />
+
+<p><strong>Ecuador</strong>:<br />
+Maize: Maize for human consumption.</p><br />
+
+<p><strong>El Salvador</strong>:<br />
+Coffee, green: source used is International Coffee Organization from 1993 onwards.<br />
+Prices may not only refer to producer prices but also to wholesale or retail prices.</p><br />
+
+<p><strong>Eritrea</strong>:<br />
+In 1993 Ethiopia PDR split into Ethiopia and Eritrea. Prices of 1991 and 1992 of Ethiopia PDR can be found under country code 62. <br />
+All Prices are consumer prices.</p><br />
+
+<p><strong>Estonia</strong>:<br />
+Prices are Unit Value prices<br />
+Cattle Live Weight: Price of Cattle for Slaughter.<br />
+Pig Live Weight:  Price of Pigs for Slaughter.<br />
+Chicken Live Weight:  Price of Chicken for Slaughter.</p><br />
+
+<p><strong>Ethiopia</strong>:<br />
+In 1993 Ethiopia PDR split into Ethiopia and Eritrea. Prices of 1991 and 1992 of Ethiopia PDR can be found under country code 62. No price data collection took place in 1993 so all prices are estimated for that year. 1994 prices are averages of four months only.</p><br />
+
+<p><strong>Fiji</strong>:<br />
+Prices are unit values. </p><br />
+
+<p><strong>France</strong>:<br />
+All prices are based on Unit Values from the Economic Accounts of Agriculture.</p><br />
+
+<p><strong>Finland:</strong>:<br />
+Wheat: includes only bread wheat<br />
+Barley: includes only feed barley<br />						
+Peas, dry: the data collection was discontinued in 2009<br />
+Cucumbers and Gherkins: includes only cucumbers<br />					
+Cow milk, whole, fresh: actual fat and protein content, the yearly co-operative payment is included</p><br />
+
+<p><strong>Georgia</strong>:<br />
+Due to the absence of primary data on prices received by farmers, data from 1997 to 2003 are given equalling to 80 percent of corresponding consumer prices. Prices for 2006-2008 are the average unit prices obtained by dividing total sales of all varieties of the product by total quantity sold. The data are obtained from the sample survey of agricultural holdings and are available only from 2006 when the survey started.
+Price data were collected from 1994 onwards.</p><br />
+
+<p><strong>Germany</strong>:<br />
+Prices of Biological Cattle Meat, Wool, Biological Sheep Meat and Biological Pig Meat are Unit Values from the Economic Accounts of Agriculture, from Eurostat Database. </p><br />
+
+<p><strong>Ghana</strong>:<br />
+Prices of Maize, Millet, Sorghum, Cassava, Taro, Yams, Oil of Palm, Tomatoes, Onions Dry, Bananas, Plantains and Hen Eggs are wholesale prices.</p><br />
+
+<p><strong>Honduras</strong>:<br />
+Green Coffee: Prices of Café Verde “Oro” <br />
+Pig meat and Chicken Meat prices are Consumer Prices</p><br />
+
+<p><strong>Hungary</strong>:<br />
+Producer prices are provided as procurement prices. The source of official producer price data of agricultural products is monthly questionnaires on the procurement activity of enterprises that acquire agricultural products for processing or resale purposes, and the monthly survey of agricultural crop and livestock markets, conducted by the Hungarian Central Statistical Office.<br />
+Apples: mainly apples for industrial use.<br />
+Pimento: Hungarian red spice and paprika.</p><br />
+
+<p><strong>India</strong>:<br />
+Prices are simple averages of farm harvest prices across states. Prices in 2007 and 2008 refer to Minimum Support Prices.</p><br />
+
+<p><strong>Iraq</strong>:<br />
+Cereals and potatoes prices are wholesale prices.</p><br />
+
+<p><strong>Ireland</strong>:<br />
+Official prices for vegetables and potatoes are wholesale prices.</p><br />
+
+<p><strong>Israel</strong>:<br />
+All prices are unit values.<br />
+Nuts nes: Pecan nuts.<br />
+Tomatoes: for fresh market only.</p><br />
+
+<p><strong>Italy</strong>:<br />
+All prices from 2002 onwards are unit values from Economic Accounts of Agriculture, from Eurostat Database</p><br />
+
+<p><strong>Jamaica</strong>:<br />
+Coffee, green: the farm gate price for Blue Mountain coffee is used.</p><br />
+
+<p><strong>Japan</strong>:<br />
+Cattle meat: price of Kobe beef<br />
+Cattle meat: price of Kobe beef
+The following products are mixed producer and wholesale prices: Potatoes; Sweet potatoes; Yams; Taro (cocoyam); Chestnuts; Tomatoes; Onions and Shallots, Green; Onions, Dry; Garlic; Carrots; Leeks and Oth.Alliac.Veg; Cabbages; Lettuce; Cucumbers and Gherkins; Peas, Green; Beans, Green; String Beans; Asparagus; Eggplants; Chillies and Peppers, Green; Spinach; Pumpkins, Squash, Gourds; Green Corn (Maize); Watermelons; Cantaloupes and other Melons; Pineapples; Oranges; Tangerines, Mandarines, Clementines, Satsma; Grapes; Apples; Pears; Apricots; Cherries; Peaches and Nectarines; Plums; Strawberries; Kiwi Fruit; Persimmons; Ginger<br />
+Cauliflower; Broad Beans, green; Mushrooms; Bananas; Lemons and Limes are wholesale prices.<br />
+Vegetables Fresh NES series refers to Japanese radish</p><br />
+
+<p><strong>Kenya</strong>:<br />
+Prices of wheat, barley, oats, millet, sorghum, all starchy roots, dry beans and live animals are unit values.<br />
+Coffee and tea prices are auction prices.</p><br />
+
+<p><strong>Korea, Republic</strong>:<br />
+Pulses nes: Bean sprout (soybean).<br />
+Tea nes: Fresh Ginseng.<br />
+Price of Vegetables fresh nes: average prices of young radish and radish.<br />
+Following a change of methodology, data series have been revised for some commodities such as millet, tomatoes, potatoes, leading to significant changes in 2006.</p><br />
+
+<p><strong>Latvia</strong>:<br />
+Latvia became independent from the USSR in 1991.<br />
+Prices are available from 1992 onwards.</p><br />
+
+<p><strong>Lebanon</strong>:<br />
+Price data were collected from 1995.<br />
+For years 2010 and 2011 all data are estimation provided directly by the country. </p><br />
+
+<p><strong>Lithuania</strong>:<br />
+Prices of 1992 are expressed in Talonas; from 1993 onwards prices are expressed in Litai.<br />
+Wheat: food wheat prices, since 2000 according to EU methodology.<br />
+Barley: feed barley prices, since 2000 according to EU methodology. <br />
+Potatoes: main crop food potatoes<br />
+Sugar beet: prices are unit values<br />
+Cabbage: white cabbage prices, since 2000 according to EU methodology.<br />
+Currants: black currants<br />
+Cow Milk: 3.4 fat, 3% protein content, since 2000 according to EU methodology.<br />
+Chicken meat and live weight: poultry price until 1999, price of chicken only since 2000. </p><br />
+
+<p><strong>Luxembourg</strong>:<br />
+Prices of Horse Live Weight are unit values from Economic Accounts of Agriculture, from Eurostat Database.<br />
+Grapes: Grapes for wine.</p><br />
+
+<p><strong>Macedonia</strong>:<br />
+Macedonia declared its independence in November 1991. <br />
+Price data were collected from 1992 onwards.</p><br />
+
+<p><strong>Malaysia</strong>:<br />
+Source of Rubber prices: Malaysian Rubber Board.<br />
+Natural Rubber: domestic price of « bulk latex ». <br />
+Dry Rubber: average price of RSS1, RSS3 and SMR20 FOB prices.<br />
+Prices of all Indigenous meats are wholesale prices.</p><br />
+
+<p><strong>Malawi</strong>:<br />
+Countrystat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=MWI">FAOSTAT</a> data.</p><br />
+
+<p><strong>Mali</strong>:<br />
+Pulses nes: sugar pea.<br />
+Countrystat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=MLI">FAOSTAT</a> data.</p><br />
+
+<p><strong>Malta</strong>:<br />
+Prices in local currency units in 2008 show variation from previous years due to a change in national currency.</p><br />
+
+<p><strong>Mauritius</strong>:<br />
+Sugar cane: prices paid to planters.<br />
+Prices of Sweet potatoes, Cassava, Taro, pineapples and of all vegetables - except onions, and garlic - are wholesale prices.</p><br />
+
+<p><strong>Mexico</strong>:<br />
+Peas dry corresponds to tare.<br />
+Vetches  corresponds to ebo (janamago or vetch).<br />
+Cashew nuts with shell  corresponds to cashew (marañon).<br />
+Chestnuts corresponds to walnut (nuez de castilla).<br />
+Rape seed includes rapeseed and canola (colza y canola).<br />
+Seed of mustard corresponds to mustard (mostaza).<br />
+Seed Sesame corresponds to Sesame (ajonjolí).<br />
+Tomato is “jitomate”.<br />
+Other legumes alliaceous  corresponds to leek.<br />
+Coles  corresponds to cabbage (col repollo).<br />
+Peas green corresponds  to pea (chícharo).<br />
+Beans green corresponds to green beans (ejote).<br />
+Peppers fresh corresponds to green chile bell pepper.<br />
+Pumpkins, all classes corresponds to pumpkins.<br />
+Corn green corresponds to corn.<br />
+Ocro is okra.<br />
+Bananas corresponds to all varieties of bananas, excluding the plantain (macho).<br />
+Plantain: (plátano macho)<br />
+Tang.Mand.Clement.Satsma fits series by inclusion of the Mandarin.<br />
+Lemons and limes are adjusted series by inclusion of limes.<br />
+Peaches and nectarines corresponds to Peach.<br />
+Aradano blue is blueberry.<br />
+Persimmons  corresponds to macheix.<br />
+Green coffee is “café cereza”.<br />
+Tea is lemon tea (té limón).<br />
+Anise seeds, Bad, fennel corresponds only to anise.<br />
+Rye grass and ryegrass includes rye grass green and grass ryegrass (rye grass en verde y zacate ballico).<br />
+Natural rubber, latex is rubber hevea (a hule hevea).</p><br />
+
+<p><strong>Morocco</strong>:<br />
+Onions and shallots, green; Onions, dry; Carrots; Cauliflower, Cabbages; Cucumbers and Gherkins; Peas, green; String Beans; Broad Beans, green; Artichokes; Eggplants (aubergines); Chillies and Peppers, green; Pumpkins, Squash, Gourds; Watermelons, Cantaloupes and other Melons; Bananas; Figs; Avocadoes; Lemons and Limes; Grapes; Apples; Pears; Quinces; Apricots are wholesale prices. </p><br />
+
+<p><strong>Nepal</strong>:<br />
+Prices are a mix of wholesale and consumer prices. <br />
+Prices refer to crop year and not the calendar year. E.g. 1998 prices refer to the 1997/1998 crop year.<br />
+Livestock prices: price data collected in local markets.<br />
+Sheep live weight: Ram only.</p><br />
+
+<p><strong>Netherlands</strong>:<br />
+Prices of Maize and Goat live weight are Unit Values from the Economic Accounts of Agriculture, while Prices of the other commodities are Selling Prices at the Farmgate, all from Eurostat database</p><br />
+
+<p><strong>New Zealand</strong>:<br />
+Reference period is year ending June for the following commodities: Cereals; Potatoes; Onions, dry; Peas, green; Asparagus; Squash; Avocadoes; Tangerines, Mandarins, Clementines; Lemons & Limes; Grapes; Apricots; Cherries; Strawberries; Currants; Persimmons;</p><br />
+
+<p><strong>Nicaragua</strong>:<br />
+Prices of Cattle Meat, Pig meat and Hen Eggs are wholesale prices.<br />
+Coffee, green: used source is International Coffee Organization database.</p><br />
+
+<p><strong>Niger</strong>:<br />
+Spices NES: Souchet (cyperus esculentus) - local name for chufa, tiger nut, earth of almond or yellow nutsedge.</p><br />
+
+<p><strong>Nigeria</strong>:<br />
+Countrystat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=NGA">FAOSTAT</a> data.</p><br />
+
+<p><strong>Norway</strong>:<br />
+Vegetables, fresh nes refers to price of kohlrabi.<br />
+Currants: Price refers to black currant.<br />
+Meat nes price refers to price of reindeer meat (tame reindeer)</p><br />
+
+<p><strong>Pakistan</strong>:<br />
+All prices are wholesale prices.<br />
+Pulses nes: Mash pulse.<br />
+Dry Beans: Mung pulse.<br />
+Chick Peas: Gram.<br />
+Cattle and Buffalo: Adult (Dry) for Slaughter.<br />
+Sheep and Goat: Males for Slaughter.<br />
+Poultry: Broiler for Slaughter.</p><br />
+
+<p><strong>Paraguay</strong>:<br />
+Geese: guinea fowl.</p><br />
+
+<p><strong>Peru</strong>:<br />
+Maize: average price of “Maiz Amarillo Duro” and “Maiz Amilaceo”.<br />
+Other Camel (meat and live weight): Alpaca.<br />
+Tang.Mand.Clement.Satsma reflects prices of mandarins only<br />
+Limes and lemons reflects prices of limes only<br />
+Peaches and nectarines reflects prices of peaches only</p><br />
+
+<p><strong>Philippines</strong>:<br />
+Yams: Ube (purple yams)<br />
+Beans, dry: Mungo, green.<br />
+Cow peas, dry: Bush Sitao (Paayap)<br />
+Pigeon peas: Kadios, dry<br />
+Nuts, nes: Pili nuts without shellChillies & Peppers, Green: panigang (green finger pepper).<br />
+Melons: muskmelon<br />
+Vegetables, nes: average price of Pechay baguio, Pechay native, Raddish and Turnips.<br />
+Grapefruits and pomelos: pomelos only<br />
+Citrus fruit nes: calamondin or calamansi. <br />
+Natural rubber: coagulated rubber, cuplump.<br />
+Price of Coffee Green: is the prices average of Arabica, Robusta and Excelsa Coffee- Dry Beans. </p><br />
+
+<p><strong>Portugal</strong>:<br />
+Wheat: price of soft wheat.<br />
+Cattle Live Weight: price of Calves Live Weight.<br />
+Sheep Live Weight: Price of Fattening Lambs Live Weight. <br />
+A change of data source occurred in 2006: as of that year, prices are taken directly from Eurostat. Before that year, prices were provided to FAO directly by the member country.</p><br />
+
+<p><strong>Qatar</strong>:<br />
+All data are unit values.</p><br />
+
+<p><strong>Romania</strong>:<br />
+Barley; Oats; Maize; Potatoes; Tomatoes; Cucumbers and Gherkins; Peas, Green; Beans, Green; Grapes; Hen eggs with shell; Natural Honey are a mixture of producer and wholesale prices. Beans, dry; Peas, dry; Walnuts; Onions, Dry; Garlic; Carrots; Leeks and Oth.Alliac.Veg; Cauliflower; Cabbages; Lettuce; Eggplants; Mushrooms; Chillies and Peppers, Green; Spinach; Pumpkins, Squash, Gourds; Chicory Roots; Watermelons; Cantaloupes and other Melons; Apples; Pears; Apricots; Cherries; Sour Cherries; Peaches and Nectarines; Plums; Strawberries are wholesale prices.</p><br />
+
+<p><strong>Russian Federation</strong>:<br />
+Vegetables nec: Table beet<br />
+Apples, Pears, Quinces: Prices of Seed Fruit.<br />
+Apricots, Sour Cherries, Cherries, Peaches, Plums: Prices of Stone Fruit.<br />
+Strawberries, Raspberries, Gooseberries, Currants: Prices of Berries. <br />
+Indigenous Sheep Meat, Indigenous Goat Meat: Price of Sheep and Goat.</p><br />
+
+<p><strong>Rwanda</strong>:<br />
+Prices are unit values. <br />
+Prices of 1994 are entirely estimated.</p><br />
+
+<p><strong>Saudi Arabia</strong>:<br />
+All prices are consumer prices.<br />
+Prices are from 1999.<br />
+Wheat: procurement Price.</p><br />
+
+<p><strong>Saint Lucia</strong>:<br />
+Prices of all products are wholesales prices.<br />
+Yautia (cocoyam): tannia variety<br />
+Taro (coco yam): dasheen variety<br />
+Coconuts: dry coconuts.</p><br />
+
+<p><strong>Serbia Montenegro</strong>:<br />
+Price data are available from 1994 onwards. Data were compiled and made regularly available after the introduction of the new currency, the Serbian Dinar. </p><br />
+
+<p><strong>Slovakia</strong>:<br />
+Czechoslovakia split into Czech Republic and Slovakia in January 1993. Prices are available from 1993 onwards.<br />
+Cabbages: price of White Cabbage, Quality I.<br />
+Grapes: price of Wine Grapes.<br />
+Pimento, All spice: Red Pepper.<br />
+Melons: price of Roth Melon.<br />
+Cattle meat: Price of Bulls for slaughter.<br />
+Sheep meat: price of Fattened lambs for slaughter.<br />
+Pig meat: price of Pigs for slaughter.</p><br />
+
+<p><strong>Slovenia</strong>:<br />
+Slovenia became independent from Yugoslavia in 1991. Prices are available from 1991 onwards.</p><br />
+
+<p><strong>South Africa:</strong>:<br />
+2011 monthly data are the sales from Fresh Products Markets.</p><br />
+
+<p><strong>Sri Lanka</strong>:<br />
+Tea prices from 1991 to 1998 are Colombo City prices and from 1999 onwards are average green leaf prices.</p><br />
+
+<p><strong>Sudan</strong>:<br />
+Price data are wholesale prices.<br />
+Tea nes: Kerkadih or Karkadé.<br />
+Cotton Lint: ICCO prices of Barakat cotton.</p><br />
+
+<p><strong>Suriname</strong>:<br />
+Prices are all consumer prices except Paddy rice that is a harvest price. <br />
+Price of raw milk: price received by the farmer when the milk is delivered to the processing plant. </p><br />
+
+<p><strong>Sweden</strong>:<br />
+Prices of Honey and Wool are Unit Values from the Economic Accounts of Agriculture.</p><br />
+
+<p><strong>Syria</strong>:<br />
+Wheat, Barley, Maize, Sugar Beets: Producer Prices.<br />
+All other price data are consumer prices.<br />
+Cotton lint: ICCO prices from 1997 onwards.</p><br />
+
+<p><strong>Thailand</strong>:<br />
+Dry beans: Mung beans.<br />
+Tobacco: Virginia, cured.</p><br />
+
+<p><strong>Togo</strong>:<br />
+Bambara bean: voandzou (local name)<br />
+Prices are for agricultural marketing year<br />
+Countrystat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=TGO">FAOSTAT</a> data.</p><br />
+
+<p><strong>Trinidad and Tobago</strong>:<br />
+Yautia (Cocoyam or Tannia): Eddoe variety. <br />
+Taro (coco yam): Dasheen variety.<br />
+Green beans: bodi.<br />
+Coffee, green: source International Coffee Organization database.<br />
+Cow milk: price paid by major purchasers.</p><br />
+
+<p><strong>Tunisia</strong>:<br />
+Grape: grape for wine production.</p><br />
+
+<p><strong>Turkmenistan</strong>:<br />
+Price data are available only from 1997 onwards.</p><br />
+
+<p><strong>United Kingdom</strong>:<br />
+Barley: Barley feed.<br />
+Prices of Triticale, Gooseberries, Duck Meat, Turkey Meat, Chicken Meat, Horse Meat and Honey are basic prices.<br />
+Prices of Cabbages, Asparagus, Lettuce, Tomatoes, Cauliflower, Cucumbers, Onions, Onions dry, Leeks, Beans Green, Peas Green, Broad Beans Green, Carrots, Mushrooms, Vegetables Fresh NES, Apples, Pears, Cherries, Plums, Strawberries, Currants, Berries NES, are wholesale prices. <br />
+Prices of Hops are Unit Values from the Economic Accounts of Agriculture.</p><br />
+
+<p><strong>United Republic of Tanzania:</strong>:<br />
+CountryStat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=TZA">FAOSTAT</a> data.</a></p><br />
+
+<p><strong>Uruguay</strong>:<br />
+Potatoes; Sweet Potatoes; Tomatoes; Onions, dry; Garlic; Carrots; Chillies and Peppers, Green; Pumpkins, Squash, Gourds; Green Corn (Maize); Watermelons; Cantaloupes and other Melons; Oranges; Tangerines, Mandarines, Clementines, Satsma; Grapefruit and Pomelos; Lemons and Limes; Grapes; Apples; Pears; Quinces; Peaches and Nectarines; Plums; Wool, not carded, greasy; Hen eggs, with shell; Beeswax are wholesale prices.</p><br />
+
+<p><strong>USA</strong>:<br />
+Nuts NES: Pecan nuts<br />
+Peas, dry: Field peas.<br />
+Green beans: Lima beans.<br />
+String beans: Snap beans.<br />
+Onion and leeks and okra prices refer to California only.<br />
+Price of Pumpkins from 1996to1999 refer to California only.<br />
+Lettuce and chicory price refer to lettuce only.<br />
+Vegetable n.e.c. refers to Celery only.<br />
+Grapefruit (inc.pomelos): Grapefruit only.<br />
+Cherries: Sweet Cherries.<br />
+Tobacco unmanifactured: Crop Year Prices.<br />
+Lemons and Limes: price of lemons only.<br />
+Sour cherries: Tart cherries.<br />
+Chicken Live Weight: Broilers.
+Goat Live Weight monthly prices: Lamb</p><br />
+
+<p><strong>Zambia:</strong>:<br />
+CountryStat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=ZMB">FAOSTAT</a> data.</p><br />
+
+<p><a onclick="toggleDiv('texthid');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidA" style="DISPLAY: none"><strong>A</strong>
+<div id="addText">
+<br />
+<p><strong>Afghanistan</strong>:<br />
+All prices are consumer prices.</p><br />
+
+<p><strong>Albania</strong>:<br />
+Figs, Oranges, Tangerines, Mandarines, Clementines, Satsma, Lemons and Limes, Grapes, Apples, Pears, Apricots, Cherries, Peaches and Nectarines, Plums are mixed wholesale and producer prices. <br /> 
+Chestnuts, Soybeans, Sunflower seed, Olives, Tomatoes, Onions and Shallots, Onions, Garlic, Carrots, Leeks and other alliac.veg, Cauliflower, Cabbages, Lettuce, Cucumbers and Gherkins, Peas, Beans, Eggplants, Chillies and Peppers, Spinach, Pumpkin, Squash, Gourds, Watermelons, Cantaloupes and other Melons are wholesale prices.</p><br />
+
+<p><strong>Algeria</strong>:<br />
+Wheat: hard wheat administered prices. <br /> 
+Barley, Oats: administered prices. <br /> 
+Dates: dried dates, nour variety. <br /> 
+Sheep meat: Lambs. <br /> 
+Wholesale prices for most of the commodities</p><br />
+
+<p><strong>Argentina</strong>:<br />
+Prices of Sweet Potatoes, Cassava, Asparagus, Pumpkins, Squash, Gourds, Chillies & Peppers, Bananas, Grapefruit, Peaches, Plums, Strawberries, Watermelons, Cantaloupes, Cattle Live Weight and Pigs Live Weight  are wholesale prices.</p><br />
+
+<p><strong>Armenia</strong>:<br />
+Prices of wine, table wine, quality wine are consumer prices.</p><br />
+
+<p><strong>Australia</strong>:<br />
+The annual prices reported are the weighted average Gross Unit Values (GUV) for the financial year. (GUV is defined as the total gross value of production of the commodity, at wholesale prices received in the market places, divided by the total reported production quantity). <br /> 
+Grapes: Wine grapes only (major component of total grapes production). <br /> 
+Animal Live Weight: values estimated based on the average ratio of conversion of each category of animal to meat produced, as advised by the meat industry.<br />
+Rapeseed: Reported edible variant - Canola (2010 & 2011)<br />			 			
+Chillies & Peppers, Green:  Capsicum prices only, Chillies not available in 2011<br />		
+Pears: including Nashi's for 2011<br />				
+Onions, Dry: includes Brown, Red and White price (2010 & 2011)<br />			
+Beans, dry: includes Mung beans, other field beans and Faba beans for 2011<br />
+Broad beans, dry: includes Faba Beans, Tick and Horse beans as well (2011)<br />
+Nuts NES: includes Macadamias, Pecans and Pistachios for (2011)<br />
+& just Macadamias for 2010<br />
+Ground nuts in shell: peanuts (in shell) (2011)<br />			
+Seed Cotton: cotton lint and seed (combined) price (2011)<br />			
+Pumpkins, Squash, Gourd: pumpkin only (no Squash or Gourd prices) (2011)<br />
+Tang. Mand.: mandarins only (all varieties) (2010 & 2011)<br />			
+Grapefruit and Pomelos: grapefruit only (2011)<br />			
+Grapes: includes grapes for wine production (2010), grapes for wine production, drying grapes and table or other grapes (2011)<br />			
+Anise, Badian, Fennel: fennel only (2011)<br />
+</p><br />
+
+<p><strong>Austria</strong>:<br />
+Prices of Gooseberries, Hops, Tobacco, Wool and Duck Meat, Geese Meat are based on Unit Values from the Economic Accounts of Agriculture. <br /> 
+- Oilseeds nes: Pumpkin-seed for Oil.</p><br />
+
+<p><strong>Azerbaijan</strong>:<br />
+Azerbaijan changed data collection method and revised all time series since 2003. Collected data are consumer prices. </p><br />
+
+
+<p><a onclick="toggleDiv('texthidA');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidB" style="DISPLAY: none"><br />
+<strong>B</strong>
+<div id="addText">
+<br />
+<p><strong>Bangladesh</strong>:<br />
+Prices refer to crop year and not the calendar year. E.g. 1999 prices refer to the 1998/1999 crop year.</p><br />
+
+<p><strong>Barbados</strong>:<br />
+All prices are wholesale prices.</p><br />
+
+<p><strong>Belarus</strong>:<br />
+Hen Eggs: Prices of all kinds of eggs, including hen eggs. <br /> 
+Sheep: Price of Sheep and Goats. <br /> 
+Goat: Price of Sheep and Goats. <br /> 
+Cow milk, whole, fresh accounts for all milk.<br />
+Vegetable NES: table beet<br />
+Berries NES: Currants<br />
+Pome fruit NES fresh: pome fruit - total<br />	
+Stone fruit NES fresh: stone fruit - total</p><br />
+
+<p><strong>Belgium</strong>:<br />
+Tobacco: prices do not include direct subsidies on the product, as per the countries’ new method. <br /> 
+A change of data source occurred in 2006 for some series: as of that year, prices are taken directly from Eurostat. Before that year, prices were provided to FAO directly by the member country.</p><br />
+
+<p><strong>Belgium-Luxembourg</strong>:<br />
+Tobacco: prices do not include direct subsidies on the product, as per the countries’ new method.</p><br />
+
+<p><strong>Bolivia</strong>:<br />
+All prices are consumer prices except for Wheat, Paddy Rice, Maize, Soya and Oilseeds n.e.c. that are producer prices. <br /> 
+Lemons and Limes: Prices of Limes only.</p><br />
+
+<p><strong>Bosnia and Herzegovina</strong>:<br />
+Price data were collected from 1996 onwards.</p><br />
+
+<p><strong>Bhutan</strong>:<br />
+All prices are retail prices. <br /> 
+Meat nes: Yak meat. <br /> 
+Nutmeg, Mace, Cardamom: Cardamom only.</p><br />
+
+<p><strong>Brazil</strong>:<br />
+Brazil changed currency twice in the period 1991-2001. <br /> 
+Nuts nes: Pinhão (Pine Nut) <br /> 
+Rapeseed: Canola<br /> 
+Oranges: from 1993 to 1997 price of Oranges is the average of prices from FGV. Since 1998 it is the average of prices from IEA-CEPEA market. <br /> 
+Coffee green: from 1993 to 1997 price of Coffee green is the average of prices from FGV. Since 1998 it is average of prices of “café beneficiado” from CEPEA-USP. <br /> 
+Tea: green leaves<br /> 
+Mate: green leaves<br /> 
+Jute-Like Fibres: Malva<br /> 
+Eggs, other then Hen eggs: Quail eggs<br /> 
+Natural Rubber: liquid latex<br /> 
+Natural Gums: Sorva</p><br />
+
+<p><strong>Bulgaria</strong>:<br />
+A new methodology to conduct survey for collecting agricultural producer prices was introduced in 2007. This methodology focuses on the price of the produce intended for direct human consumption and which is sold at considerably higher prices. Hence, producer price data from 2007 onwards could be higher than in the previous years.<br />
+All fruits and vegetable prices are unit values.<br />
+Pimento, All spices: Price of Herbs.<br />
+Cattle: Price of Beef and Buffaloes up to 2000, from 2001 only cattle.<br />
+Buffalo: Price of Beef and Buffaloes up to 2000, from 2001 only buffalo.<br />
+Sheep: Price of Sheep and Goats up to 1999, from 2000 only sheep.<br />
+Goat Live Weight: Price of Sheep and Goats up to 1999, from 2000 only goats.</p><br />
+
+<p><strong>Burkina Faso</strong>:<br />
+Sorghum: in 2004 Price of Sorghum is the average price of white sorghum and red sorghum. </p><br />
+
+<p><strong>Burundi</strong>:<br />
+Rice, Paddy: average prices of “Iron” and “Karundi” varieties from 2002 onwards, price of white rice until 2001.<br />
+Vegetables fresh nes: “Irengalenga”<br />
+Bananas: average prices of “Ibigurube” and “Utumaramasenge” varieties from 2002 onwards, prices of ripe bananas until 2001.<br />
+Plantains: green bananas.<br />
+Fruit nes: “Maracudja” and “Prunes de Japon”.<br />
+Coffee : Robusta only.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidB');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidC" style="DISPLAY: none"><br />
+<strong>C</strong>
+<div id="addText">
+<br />
+<p><strong>Cambodia</strong>:<br />
+All prices are wholesale prices.<br />
+Cambodia provided administered prices for Cassava in 2006 and 2007 (100000 and 250000 KHR, respectively)</p><br />
+
+<p><strong>Cameroon</strong>:<br />
+Prices of Maize, Millet, Sorghum, Potatoes, Sweet Potatoes, Cassava, Yams, Root and Tubers, Dry Beans, Soybeans, Groundnuts in Shell, Oil Palm Fruit, Palm Kernels, Oil of Palm, Oil of Palm Kernels, Sesame Seed, are wholesale prices.<br />
+Countrystat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=CMR">FAOSTAT</a> data.</p><br />
+
+<p><strong>Canada</strong>:<br />
+Buckwheat: prices refer to crop years instead of calendar years.<br />
+Canary Seeds: prices refer to crop years instead of calendar years; prices prior to 1998 are estimates based on farmers’ cash receipts.<br />
+Honey: prices are unit values.<br />
+Sheep meat and live weight: price of sheep only, excluding lambs.</p><br />
+
+<p><strong>Chile</strong>:<br />
+Data on fruits, vegetables, tobacco, live animals, eggs and wine are wholesale prices.</p><br />
+
+<p><strong>China</strong>:<br />
+Crop prices are wholesale prices while livestock prices are either wholesale or retail.<br />
+Jute-like fibres: Kenaf fibre.</p><br />
+
+<p><strong>Colombia</strong>:<br />
+Price of Wheat, Maize, Barley, Rice, Sorghum, Dry beans, Sesame seed, Soya Beans, Sugar cane, Lentils, Oil Palm Fruit are guaranteed prices.<br />
+Cassava; Potatoes; Yams; Beans, dry; Tomatoes; Onions, dry; Garlic; Carrots; Cauliflower; Cabbages; Lettuce; Cucumbers and Gherkins; Beans, green; Eggplants; Chillies and Peppers, Green; Pumpkins, Squash, Gourds; Watermelons; Bananas; Plantains; Pineapples; Avocados; Mangoes; Oranges; Lemons and Limes; Papayas; Apples, Pears; Peaches and Nectarines; Strawberries are wholesale prices. <br />
+Green coffee: average domestic price. Source ICO for 2003.</p><br />
+
+<p><strong>Congo (Republic of)</strong>:<br />
+Semi-official data are unit values derived from the tables on the values of agriculture production in the “L’Économie congolaise”, from the “Centre National de la Statistique et des Études Économiques”.</p><br />
+
+<p><strong>Cook Islands</strong>:<br />
+Fruit Tropical Fresh NES: Noni (Morinda Citrofolia).</p><br />
+
+<p><strong>Costarica</strong>:<br />
+Tobacco price refers to   “Banda” variety.</p><br />
+
+<p><strong>Cote d’Ivoire</strong>:<br />
+Prices for coffee green, cocoa, seed cotton, kola nuts and natural rubber refer to administered prices.<br />
+Countrystat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=CIV">FAOSTAT</a> data.</p><br />
+
+<p><strong>Czech Republic</strong>:<br />
+Czechoslovakia split into Czech Republic and Slovakia in January 1993.<br />
+Wheat: average of wheat for human food and for animal feed.<br />
+Barley: average of barley for human food and for animal feed.<br />
+Flax: price refers to Flax Straw, retted.<br />
+Prices of Cattle, Pig, Duck, Turkey, Rabbit, Chicken meat and live weight are wholesale prices.</p><br />
+
+<p><strong>Croatia</strong>:<br />
+Croatia declared its independence in 1991. Price data are available from 1994 onwards due to the war that started in 1991 and subsequent hyper-inflation. Data were compiled and made regularly available after the introduction of the new currency, the Kuna, which took place in 1994.<br />
+All data are unit values.<br />
+Mixed grain: including sorghum, millet, buckwheat and other cereals.<br />
+Oranges and mandarins: from 1994 until 1997 oranges and mandarins we collected together. <br />
+Watermelons: including musk melons.</p><br />
+
+<p><strong>Cyprus</strong>:<br />
+All figures for 2009 are provisional.<br />
+Vegetable fresh nes include beetroots and celery.<br />
+Production of spinach and lettuce is in 1000 bundles instead of MT</p><br />
+
+
+<p><a onclick="toggleDiv('texthidC');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+
+<div id="texthidD" style="DISPLAY: none"><br />
+<strong>D</strong>
+<div id="addText">
+<br />
+<p><strong>Dominican Rep</strong>:<br />
+As of the year 2007, sorghum prices are provided by the technicians of the Vice-Ministry of production division, Ministry of agriculture.<br />
+Yautias or Malanga: includes the prices of the different types of yautias (white, yellow, purple and coconut)<br />
+Dry beans includes prices of red, black and white beans.<br />
+Tomatoes: includes tomato table (salad) and industrial tomato prices</p><br />
+
+<p><a onclick="toggleDiv('texthidD');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+
+<div id="texthidE" style="DISPLAY: none"><br />
+<strong>E</strong>
+<div id="addText">
+<br />
+
+
+<p><strong>Ecuador</strong>:<br />
+Maize: Maize for human consumption.</p><br />
+
+<p><strong>El Salvador</strong>:<br />
+Coffee, green: source used is International Coffee Organization from 1993 onwards.<br />
+Prices may not only refer to producer prices but also to wholesale or retail prices.</p><br />
+
+<p><strong>Eritrea</strong>:<br />
+In 1993 Ethiopia PDR split into Ethiopia and Eritrea. Prices of 1991 and 1992 of Ethiopia PDR can be found under country code 62. <br />
+All Prices are consumer prices.</p><br />
+
+<p><strong>Estonia</strong>:<br />
+Prices are Unit Value prices<br />
+Cattle Live Weight: Price of Cattle for Slaughter.<br />
+Pig Live Weight:  Price of Pigs for Slaughter.<br />
+Chicken Live Weight:  Price of Chicken for Slaughter.</p><br />
+
+<p><strong>Ethiopia</strong>:<br />
+In 1993 Ethiopia PDR split into Ethiopia and Eritrea. Prices of 1991 and 1992 of Ethiopia PDR can be found under country code 62. No price data collection took place in 1993 so all prices are estimated for that year. 1994 prices are averages of four months only.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidE');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidF" style="DISPLAY: none"><br />
+<strong>F</strong>
+<div id="addText">
+<br />
+<p><strong>Fiji</strong>:<br />
+Prices are unit values. </p><br />
+
+<p><strong>France</strong>:<br />
+All prices are based on Unit Values from the Economic Accounts of Agriculture.</p><br />
+
+<p><strong>Finland:</strong>:<br />
+Wheat: includes only bread wheat<br />
+Barley: includes only feed barley<br />						
+Peas, dry: the data collection was discontinued in 2009<br />
+Cucumbers and Gherkins: includes only cucumbers<br />					
+Cow milk, whole, fresh: actual fat and protein content, the yearly co-operative payment is included</p><br />
+
+<p><a onclick="toggleDiv('texthidF');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidG" style="DISPLAY: none"><br />
+<strong>G</strong>
+<div id="addText">
+<br />
+<p><strong>Georgia</strong>:<br />
+Due to the absence of primary data on prices received by farmers, data from 1997 to 2003 are given equalling to 80 percent of corresponding consumer prices. Prices for 2006-2008 are the average unit prices obtained by dividing total sales of all varieties of the product by total quantity sold. The data are obtained from the sample survey of agricultural holdings and are available only from 2006 when the survey started.
+Price data were collected from 1994 onwards</p><br />
+
+<p><strong>Germany</strong>:<br />
+Prices of Biological Cattle Meat, Wool, Biological Sheep Meat and Biological Pig Meat are Unit Values from the Economic Accounts of Agriculture, from Eurostat Database. </p><br />
+
+<p><strong>Ghana</strong>:<br />
+Prices of Maize, Millet, Sorghum, Cassava, Taro, Yams, Oil of Palm, Tomatoes, Onions Dry, Bananas, Plantains and Hen Eggs are wholesale prices.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidG');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidH" style="DISPLAY: none"><br />
+<strong>H</strong>
+<div id="addText">
+<br />
+<p><strong>Honduras</strong>:<br />
+Green Coffee: Prices of Café Verde “Oro” <br />
+Pig meat and Chicken Meat prices are Consumer Prices</p><br />
+
+<p><strong>Hungary</strong>:<br />
+Producer prices are provided as procurement prices. The source of official producer price data of agricultural products is monthly questionnaires on the procurement activity of enterprises that acquire agricultural products for processing or resale purposes, and the monthly survey of agricultural crop and livestock markets, conducted by the Hungarian Central Statistical Office.<br />
+Apples: mainly apples for industrial use.<br />
+Pimento: Hungarian red spice and paprika.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidH');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidI" style="DISPLAY: none"><br />
+<strong>I</strong>
+<div id="addText">
+<br />
+<p><strong>India</strong>:<br />
+Prices are simple averages of farm harvest prices across states. Prices in 2007 and 2008 refer to Minimum Support Prices.</p><br />
+
+<p><strong>Iraq</strong>:<br />
+Cereals and potatoes prices are wholesale prices.</p><br />
+
+<p><strong>Ireland</strong>:<br />
+Official prices for vegetables and potatoes are wholesale prices.</p><br />
+
+<p><strong>Israel</strong>:<br />
+All prices are unit values.<br />
+Nuts nes: Pecan nuts.<br />
+Tomatoes: for fresh market only.</p><br />
+
+<p><strong>Italy</strong>:<br />
+All prices from 2002 onwards are unit values from Economic Accounts of Agriculture, from Eurostat Database</p><br />
+
+
+<p><a onclick="toggleDiv('texthidI');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidJ" style="DISPLAY: none"><br />
+<strong>J</strong>
+<div id="addText">
+<br />
+<p><strong>Jamaica</strong>:<br />
+Coffee, green: the farm gate price for Blue Mountain coffee is used.</p><br />
+
+<p><strong>Japan</strong>:<br />
+Cattle meat: price of Kobe beef<br />
+Cattle meat: price of Kobe beef
+The following products are mixed producer and wholesale prices: Potatoes; Sweet potatoes; Yams; Taro (cocoyam); Chestnuts; Tomatoes; Onions and Shallots, Green; Onions, Dry; Garlic; Carrots; Leeks and Oth.Alliac.Veg; Cabbages; Lettuce; Cucumbers and Gherkins; Peas, Green; Beans, Green; String Beans; Asparagus; Eggplants; Chillies and Peppers, Green; Spinach; Pumpkins, Squash, Gourds; Green Corn (Maize); Watermelons; Cantaloupes and other Melons; Pineapples; Oranges; Tangerines, Mandarines, Clementines, Satsma; Grapes; Apples; Pears; Apricots; Cherries; Peaches and Nectarines; Plums; Strawberries; Kiwi Fruit; Persimmons; Ginger<br />
+Cauliflower; Broad Beans, green; Mushrooms; Bananas; Lemons and Limes are wholesale prices.<br />
+Vegetables Fresh NES series refers to Japanese radish</p><br />
+
+
+<p><a onclick="toggleDiv('texthidJ');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidK" style="DISPLAY: none"><br />
+<strong>K</strong>
+<div id="addText">
+<br />
+<p><strong>Kenya</strong>:<br />
+Prices of wheat, barley, oats, millet, sorghum, all starchy roots, dry beans and live animals are unit values.<br />
+Coffee and tea prices are auction prices.</p><br />
+
+<p><strong>Korea, Republic</strong>:<br />
+Pulses nes: Bean sprout (soybean).<br />
+Tea nes: Fresh Ginseng.<br />
+Price of Vegetables fresh nes: average prices of young radish and radish.<br />
+Following a change of methodology, data series have been revised for some commodities such as millet, tomatoes, potatoes, leading to significant changes in 2006.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidK');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidL" style="DISPLAY: none"><br />
+<strong>L</strong>
+<div id="addText">
+<br />
+<p><strong>Latvia</strong>:<br />
+Latvia became independent from the USSR in 1991.<br />
+Prices are available from 1992 onwards.</p><br />
+
+<p><strong>Lebanon</strong>:<br />
+Price data were collected from 1995.<br />
+For years 2010 and 2011 all data are estimation provided directly by the country.</p><br />
+
+<p><strong>Lithuania</strong>:<br />
+Prices of 1992 are expressed in Talonas; from 1993 onwards prices are expressed in Litai.<br />
+Wheat: food wheat prices, since 2000 according to EU methodology.<br />
+Barley: feed barley prices, since 2000 according to EU methodology. <br />
+Potatoes: main crop food potatoes<br />
+Sugar beet: prices are unit values<br />
+Cabbage: white cabbage prices, since 2000 according to EU methodology.<br />
+Currants: black currants<br />
+Cow Milk: 3.4 fat, 3% protein content, since 2000 according to EU methodology.<br />
+Chicken meat and live weight: poultry price until 1999, price of chicken only since 2000. </p><br />
+
+<p><strong>Luxembourg</strong>:<br />
+Prices of Horse Live Weight are unit values from Economic Accounts of Agriculture, from Eurostat Database.<br />
+Grapes: Grapes for wine.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidL');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidM" style="DISPLAY: none"><br />
+<strong>M</strong>
+<div id="addText">
+<br />
+<p><strong>Macedonia</strong>:<br />
+Macedonia declared its independence in November 1991. <br />
+Price data were collected from 1992 onwards.</p><br />
+
+<p><strong>Malaysia</strong>:<br />
+Source of Rubber prices: Malaysian Rubber Board.<br />
+Natural Rubber: domestic price of « bulk latex ». <br />
+Dry Rubber: average price of RSS1, RSS3 and SMR20 FOB prices.<br />
+Prices of all Indigenous meats are wholesale prices.</p><br />
+
+<p><strong>Malawi</strong>:<br />
+Countrystat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=MWI">FAOSTAT</a> data.</p><br />
+
+<p><strong>Mali</strong>:<br />
+Pulses nes: sugar pea.<br />
+Countrystat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=MLI">FAOSTAT</a> data.</p><br />
+
+<p><strong>Malta</strong>:<br />
+Prices in local currency units in 2008 show variation from previous years due to a change in national currency.</p><br />
+
+<p><strong>Mauritius</strong>:<br />
+Sugar cane: prices paid to planters.<br />
+Prices of Sweet potatoes, Cassava, Taro, pineapples and of all vegetables - except onions, and garlic - are wholesale prices.</p><br />
+
+<p><strong>Mexico</strong>:<br />
+Peas dry corresponds to tare.<br />
+Vetches  corresponds to ebo (janamago or vetch).<br />
+Cashew nuts with shell  corresponds to cashew (marañon).<br />
+Chestnuts corresponds to walnut (nuez de castilla).<br />
+Rape seed includes rapeseed and canola (colza y canola).<br />
+Seed of mustard corresponds to mustard (mostaza).<br />
+Seed Sesame corresponds to Sesame (ajonjolí).<br />
+Tomato is “jitomate”.<br />
+Other legumes alliaceous  corresponds to leek.<br />
+Coles  corresponds to cabbage (col repollo).<br />
+Peas green corresponds  to pea (chícharo).<br />
+Beans green corresponds to green beans (ejote).<br />
+Peppers fresh corresponds to green chile bell pepper.<br />
+Pumpkins, all classes corresponds to pumpkins.<br />
+Corn green corresponds to corn.<br />
+Ocro is okra.<br />
+Bananas corresponds to all varieties of bananas, excluding the plantain (macho).<br />
+Plantain: (plátano macho)<br />
+Tang.Mand.Clement.Satsma fits series by inclusion of the Mandarin.<br />
+Lemons and limes are adjusted series by inclusion of limes.<br />
+Peaches and nectarines corresponds to Peach.<br />
+Aradano blue is blueberry.<br />
+Persimmons  corresponds to macheix.<br />
+Green coffee is “café cereza”.<br />
+Tea is lemon tea (té limón).<br />
+Anise seeds, Bad, fennel corresponds only to anise.<br />
+Rye grass and ryegrass includes rye grass green and grass ryegrass (rye grass en verde y zacate ballico).<br />
+Natural rubber, latex is rubber hevea (a hule hevea).</p><br />
+
+<p><strong>Morocco</strong>:<br />
+Onions and shallots, green; Onions, dry; Carrots; Cauliflower, Cabbages; Cucumbers and Gherkins; Peas, green; String Beans; Broad Beans, green; Artichokes; Eggplants (aubergines); Chillies and Peppers, green; Pumpkins, Squash, Gourds; Watermelons, Cantaloupes and other Melons; Bananas; Figs; Avocadoes; Lemons and Limes; Grapes; Apples; Pears; Quinces; Apricots are wholesale prices. </p><br />
+
+
+<p><a onclick="toggleDiv('texthidM');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidN" style="DISPLAY: none"><br />
+<strong>N</strong>
+<div id="addText">
+<br />
+<p><strong>Nepal</strong>:<br />
+Prices are a mix of wholesale and consumer prices. <br />
+Prices refer to crop year and not the calendar year. E.g. 1998 prices refer to the 1997/1998 crop year.<br />
+Livestock prices: price data collected in local markets.<br />
+Sheep live weight: Ram only.</p><br />
+
+<p><strong>Netherlands</strong>:<br />
+Prices of Maize and Goat live weight are Unit Values from the Economic Accounts of Agriculture, while Prices of the other commodities are Selling Prices at the Farmgate, all from Eurostat database</p><br />
+
+<p><strong>New Zealand</strong>:<br />
+Reference period is year ending June for the following commodities: Cereals; Potatoes; Onions, dry; Peas, green; Asparagus; Squash; Avocadoes; Tangerines, Mandarins, Clementines; Lemons & Limes; Grapes; Apricots; Cherries; Strawberries; Currants; Persimmons;</p><br />
+
+<p><strong>Nicaragua</strong>:<br />
+Prices of Cattle Meat, Pig meat and Hen Eggs are wholesale prices.<br />
+Coffee, green: used source is International Coffee Organization database.</p><br />
+
+<p><strong>Niger</strong>:<br />
+Spices NES: Souchet (cyperus esculentus) - local name for chufa, tiger nut, earth of almond or yellow nutsedge.</p><br />
+
+<p><strong>Nigeria</strong>:<br />
+Countrystat data has been used when available and consistent with existing FAOSTAT data.</p><br />
+
+<p><strong>Norway</strong>:<br />
+Vegetables, fresh NES refers to price of kohlrabi.<br />
+Currants: Price refers to black currant.<br />
+Meat NES price refers to price of reindeer meat (tame reindeer)</p><br />
+
+
+<p><a onclick="toggleDiv('texthidN');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidP" style="DISPLAY: none"><br />
+<strong>P</strong>
+<div id="addText">
+<br />
+<p><strong>Pakistan</strong>:<br />
+All prices are wholesale prices.<br />
+Pulses NES: Mash pulse.<br />
+Dry Beans: Mung pulse.<br />
+Chick Peas: Gram.<br />
+Cattle and Buffalo: Adult (Dry) for Slaughter.<br />
+Sheep and Goat: Males for Slaughter.<br />
+Poultry: Broiler for Slaughter.</p><br />
+
+<p><strong>Paraguay</strong>:<br />
+Geese: guinea fowl.</p><br />
+
+<p><strong>Peru</strong>:<br />
+Maize: average price of “Maiz Amarillo Duro” and “Maiz Amilaceo”.<br />
+Other Camel (meat and live weight): Alpaca.<br />
+Tang.Mand.Clement.Satsma reflects prices of mandarins only<br />
+Limes and lemons reflects prices of limes only<br />
+Peaches and nectarines reflects prices of peaches only</p><br />
+
+<p><strong>Philippines</strong>:<br />
+Yams: Ube (purple yams)<br />
+Beans, dry: Mungo, green.<br />
+Cow peas, dry: Bush Sitao (Paayap)<br />
+Pigeon peas: Kadios, dry<br />
+Nuts, nes: Pili nuts without shellChillies & Peppers, Green: panigang (green finger pepper).<br />
+Melons: muskmelon<br />
+Vegetables, nes: average price of Pechay baguio, Pechay native, Raddish and Turnips.<br />
+Grapefruits and pomelos: pomelos only<br />
+Citrus fruit nes: calamondin or calamansi. <br />
+Natural rubber: coagulated rubber, cuplump.<br />
+Price of Coffee Green: is the prices average of Arabica, Robusta and Excelsa Coffee- Dry Beans. </p><br />
+
+<p><strong>Portugal</strong>:<br />
+Wheat: price of soft wheat.<br />
+Cattle Live Weight: price of Calves Live Weight.<br />
+Sheep Live Weight: Price of Fattening Lambs Live Weight. <br />
+A change of data source occurred in 2006: as of that year, prices are taken directly from Eurostat. Before that year, prices were provided to FAO directly by the member country.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidP');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidQ" style="DISPLAY: none"><br />
+<strong>Q</strong>
+<div id="addText">
+<br />
+
+<p><strong>Qatar</strong>:<br />
+All data are unit values.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidQ');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidR" style="DISPLAY: none"><br />
+<strong>R</strong>
+<div id="addText">
+<br />
+<p><strong>Romania</strong>:<br />
+Barley; Oats; Maize; Potatoes; Tomatoes; Cucumbers and Gherkins; Peas, Green; Beans, Green; Grapes; Hen eggs with shell; Natural Honey are a mixture of producer and wholesale prices. Beans, dry; Peas, dry; Walnuts; Onions, Dry; Garlic; Carrots; Leeks and Oth.Alliac.Veg; Cauliflower; Cabbages; Lettuce; Eggplants; Mushrooms; Chillies and Peppers, Green; Spinach; Pumpkins, Squash, Gourds; Chicory Roots; Watermelons; Cantaloupes and other Melons; Apples; Pears; Apricots; Cherries; Sour Cherries; Peaches and Nectarines; Plums; Strawberries are wholesale prices.</p><br />
+
+<p><strong>Russian Federation</strong>:<br />
+Vegetables nec: Table beet<br />
+Apples, Pears, Quinces: Prices of Seed Fruit.<br />
+Apricots, Sour Cherries, Cherries, Peaches, Plums: Prices of Stone Fruit.<br />
+Strawberries, Raspberries, Gooseberries, Currants: Prices of Berries. <br />
+Indigenous Sheep Meat, Indigenous Goat Meat: Price of Sheep and Goat.</p><br />
+
+<p><strong>Rwanda</strong>:<br />
+Prices are unit values. <br />
+Prices of 1994 are entirely estimated.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidR');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidS" style="DISPLAY: none"><br />
+<strong>S</strong>
+<div id="addText">
+<br />
+<p><strong>Saudi Arabia</strong>:<br />
+All prices are consumer prices.<br />
+Prices are collected from 1999.<br />
+Wheat: procurement Price.</p><br />
+
+<p><strong>Saint Lucia</strong>:<br />
+Prices of all products are wholesales prices.<br />
+Yautia (cocoyam): tannia variety<br />
+Taro (coco yam): dasheen variety<br />
+Coconuts: dry coconuts.</p><br />
+
+<p><strong>Serbia Montenegro</strong>:<br />
+Price data are available from 1994 onwards. Data were compiled and made regularly available after the introduction of the new currency, the Serbian Dinar. </p><br />
+
+<p><strong>Slovakia</strong>:<br />
+Czechoslovakia split into Czech Republic and Slovakia in January 1993. Prices are available from 1993 onwards.<br />
+Cabbages: price of White Cabbage, Quality I.<br />
+Grapes: price of Wine Grapes.<br />
+Pimento, All spice: Red Pepper.<br />
+Melons: price of Roth Melon.<br />
+Cattle meat: Price of Bulls for slaughter.<br />
+Sheep meat: price of Fattened lambs for slaughter.<br />
+Pig meat: price of Pigs for slaughter.</p><br />
+
+<p><strong>Slovenia</strong>:<br />
+Slovenia became independent from Yugoslavia in 1991. Prices are available from 1991 onwards.</p><br />
+
+<p><strong>South Africa:</strong>:<br />
+2011 monthly data are the sales from Fresh Products Markets.</p><br />
+
+<p><strong>Sri Lanka</strong>:<br />
+Tea prices from 1991 to 1998 are Colombo City prices and from 1999 onwards are average green leaf prices.</p><br />
+
+<p><strong>Sudan</strong>:<br />
+Price data are wholesale prices.<br />
+Tea nes: Kerkadih or Karkadé.<br />
+Cotton Lint: ICCO prices of Barakat cotton.</p><br />
+
+<p><strong>Suriname</strong>:<br />
+Prices are all consumer prices except Paddy rice that is a harvest price. <br />
+Price of raw milk: price received by the farmer when the milk is delivered to the processing plant. </p><br />
+
+<p><strong>Sweden</strong>:<br />
+Prices of Honey and Wool are Unit Values from the Economic Accounts of Agriculture.</p><br />
+
+<p><strong>Syria</strong>:<br />
+Wheat, Barley, Maize, Sugar Beets: Producer Prices.<br />
+All other price data are consumer prices.<br />
+Cotton lint: ICCO prices from 1997 onwards.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidS');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidT" style="DISPLAY: none"><br />
+<strong>T</strong>
+<div id="addText">
+<br />
+<p><strong>Thailand</strong>:<br />
+Dry beans: Mung beans.<br />
+Tobacco: Virginia, cured.</p><br />
+
+<p><strong>Togo</strong>:<br />
+Bambara bean: voandzou (local name)<br />
+Prices are for agricultural marketing year<br />
+Countrystat data has been used when available and consistent with existing FAOSTAT data</p><br />
+
+<p><strong>Trinidad and Tobago</strong>:<br />
+Yautia (Cocoyam or Tannia): Eddoe variety. <br />
+Taro (coco yam): Dasheen variety.<br />
+Green beans: bodi.<br />
+Coffee, green: source International Coffee Organization database.<br />
+Cow milk: price paid by major purchasers.</p><br />
+
+<p><strong>Tunisia</strong>:<br />
+Grape: grape for wine production.</p><br />
+
+<p><strong>Turkmenistan</strong>:<br />
+Price data are available only from 1997 onwards.</p><br />
+
+
+<p><a onclick="toggleDiv('texthidT');" href="javascript:void(0)"><strong>close</strong></a></p>
+
+</div>
+</div>
+<div id="texthidU" style="DISPLAY: none"><br />
+<strong>U</strong>
+<div id="addText">
+<br />
+<p><strong>United Kingdom</strong>:<br />
+Barley: Barley feed.<br />
+Prices of Triticale, Gooseberries, Duck Meat, Turkey Meat, Chicken Meat, Horse Meat and Honey are basic prices.<br />
+Prices of Cabbages, Asparagus, Lettuce, Tomatoes, Cauliflower, Cucumbers, Onions, Onions dry, Leeks, Beans Green, Peas Green, Broad Beans Green, Carrots, Mushrooms, Vegetables Fresh nes, Apples, Pears, Cherries, Plums, Strawberries, Currants, Berries nes, are wholesale prices. <br />
+Prices of Hops are Unit Values from the Economic Accounts of Agriculture.</p><br />
+
+<p><strong>United Republic of Tanzania:</strong>:<br />
+CountryStat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=TZA">FAOSTAT</a> data.</p><br />
+
+<p><strong>Uruguay</strong>:<br />
+Potatoes; Sweet Potatoes; Tomatoes; Onions, dry; Garlic; Carrots; Chillies and Peppers, Green; Pumpkins, Squash, Gourds; Green Corn (Maize); Watermelons; Cantaloupes and other Melons; Oranges; Tangerines, Mandarines, Clementines, Satsma; Grapefruit and Pomelos; Lemons and Limes; Grapes; Apples; Pears; Quinces; Peaches and Nectarines; Plums; Wool, not carded, greasy; Hen eggs, with shell; Beeswax are wholesale prices.</p><br />
+
+<p><strong>USA</strong>:<br />
+Nuts nes: Pecan nuts<br />
+Peas, dry: Field peas.<br />
+Green beans: Lima beans.<br />
+String beans: Snap beans.<br />
+Onion and leeks and okra prices refer to California only.<br />
+Price of Pumpkins from 1996to1999 refer to California only.<br />
+Lettuce and chicory price refer to lettuce only.<br />
+Vegetable n.e.c. refers to Celery only.<br />
+Grapefruit (inc.pomelos): Grapefruit only.<br />
+Cherries: Sweet Cherries.<br />
+Tobacco unmanifactured: Crop Year Prices.<br />
+Lemons and Limes: price of lemons only.<br />
+Sour cherries: Tart cherries.<br />
+Chicken Live Weight: Broilers.<br />
+Goat Live Weight monthly prices: Lamb</p><br />
+
+<p><a onclick="toggleDiv('texthidU');" href="javascript:void(0)"><strong>close</strong></a><br />
+</p>
+</div>
+</div>
+
+<div id="texthidZ" style="DISPLAY: none"><br />
+<strong>Z</strong>
+<div id="addText">
+<br />
+<p><strong>Zambia:</strong>:<br />
+CountryStat data has been used when available and consistent with existing <a href="http://countrystat.org/home.aspx?c=ZMB">FAOSTAT</a> data.</p><br />
+
+<p><a onclick="toggleDiv('texthidZ');" href="javascript:void(0)"><strong>close</strong></a><br />
+</p><br />
+
+</div>
+</div>
+<br />
+
+-->

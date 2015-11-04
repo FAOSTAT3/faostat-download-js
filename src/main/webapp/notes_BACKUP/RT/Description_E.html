@@ -1,0 +1,689 @@
+<script>
+
+
+function toggleDiv(element){
+       
+     if(document.getElementById(element).style.display=="none"){document.getElementById(element).style.display="block"}
+        else{document.getElementById(element).style.display="none"}
+} 
+</script>
+<div class="download-notes">
+<div class="noteHead"> <h2>Pesticides (trade)</h2> <img id='DOMAIN_IMG' src="images/R.png" width="50" height="50" /></div>
+
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/R.png');
+</script>
+<div class="backBtn"><p class='goto' id='R_notes'> < Back </p></div>
+<br>
+<p><strong><b>Pesticides (trade)</b> </strong>– refer to insecticides, fungicides, herbicides, disinfectants and others covered by the Harmonised Coding System (HS) code 3808. Data refer to the value of the trade expressed in 1000 USD and quantity in net weight expressed in kilograms. Data are available from 1961 to 2011. Figures relating to 2012 are also available whenever the countries provided this information; however world, continental and regional aggregates are not complete and therefore not available for 2012.</p><br />
+
+<p><strong><b>Source</b> </strong>– the primary source is the UN COMTRADE database supplemented by data from national statistical authorities. Missing data relating to total Pesticides have been estimated taking into account the trade statistics of trading partners or by calculating the average of the previous three years.</p>
+<br/><br/>
+<div class='modulePadding moduleScrollBars' id='modcont_ctl03_DesktopThreePanes1_ThreePanes_ctl03'  style='POSITION: static; '>
+
+
+<p><strong><b>Codes and Description of Elements </b></strong></p>
+<p><ul class='bullet-list'>
+    <li>61 Imports quantity (net weight in kilogram) of pesticides imported</li>
+    <li>62 Imports value (1000 USD) of pesticides imported </li>
+    <li>91 Exports quantity (net weight in kilogram) of pesticides exported by a country </li>
+    <li>92 Exports value (1000 USD) of pesticides exported by a country </li>
+</ul></p><br />
+<p>Differences between figures given for total exports and total imports of any one commodity may be due to several factors, e.g. the time lag between the dispatch of goods from the exporting country and their arrival in the importing country; the use of a different classification of the same product by different countries; or the fact that some countries supply data on general trade while others give data on special trade.</p><br />
+<p><strong><b>Trade in Rotterdam Convention Pesticides</b></strong></p><br />
+
+<p><strong><b>Rotterdam Convention on</b> </strong>the Prior Informed Consent (PIC) procedure<strong><b>for certain
+    hazardous chemicals and pesticides in International Trade</b></strong>: The Convention was initiated by FAO and UNEP in 1989 and entered into force on 24 February 2004. The Convention establishes a legally binding obligation to enable countries to decide which potentially hazardous chemicals they want to import /export and to exclude those they cannot manage safely. As per June 2010, there are 134 parties to the Rotterdam Convention.</p><br />
+<p>In view of the Rotterdam Convention the FAO Statistics Division is starting with the year 2007, to monitor and identify into FAOSTAT database the trade in pesticides (excluding industrial chemicals) that have been banned or severely restricted for health or environmental reasons. The database covers two types of information: (a) Mixtures, Preparations containing Substance in value (1000 USD); (b) Pure Substance in quantity (NetWeight (kg)) and value (1000 USD).
+    <strong><b>Please note that the extraction made on &ldquo;Pure Substance&rdquo; is not meant to sum
+        up to &ldquo;Hazardous pesticides&rdquo; Mixtures/Preparation. Data are available where reported by the countries.</b> </strong></p><br />
+
+<p>Annex III to the Rotterdam Convention currently contains 40 chemicals (pesticides and industrial chemicals, including all forms of asbestos except chrysotile. Annex III and Decision Guidance Documents on each chemical subject to the PIC procedure can be accessed in: <a href="http://www.pic.int/home.php?type=t&amp;id=29&amp;sid=30">http://www.pic.int/home.php?type=t&amp;id=29&amp;sid=30</a> For more information please visit: <a href="http://www.pic.int/">http://www.pic.int/</a></p>
+<br>
+
+<p><a onclick="toggleDiv('Pesthid');" href="javascript:void(0)"><strong>Show more / Hide</strong></a></p><br />
+<div id="Pesthid" style="DISPLAY: none">
+<div id="addTextPest">
+<!--
+<table class='hor-minimalist-b'>
+    <thead>
+    	<tr>
+			<th colspan='5'>Pure Substance - Correspondance Table</th>
+        </tr>
+        <tr>
+            <th>FAOSTAT Code</th>
+            <th>FAOSTAT</th>
+            <th>HS Code</th>
+            <th>HS</th>
+            <th>Prior Informed Consent (PIC)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="HEIGHT: 40.8pt">
+            <td>1422
+            </td>
+            <td>Mercury compounds etc. excl. amalgams
+            </td>
+            <td>2852
+            </td>
+            <td>Compounds, inorganic/organic, of mercury, excluding amalgams.
+            </td>
+            <td>Mercury compounds including inorganic mercury compounds, alkyl mercury compounds and alkyloxyalkyl and aryl mercury compounds
+            </td>
+        </tr>
+        <tr style="HEIGHT: 21pt">
+            <td>1423
+            </td>
+            <td>Ethylene dichloride
+            </td>
+            <td>2903.15
+            </td>
+            <td>1,2-Dichloroethane (ethylene dichloride)
+            </td>
+            <td>Ethylene dichloride
+            </td>
+        </tr>
+        <tr style="HEIGHT: 26.25pt">
+            <td>1424
+            </td>
+            <td>Ethylene dibromide (1,2-dibromoethane)
+            </td>
+            <td>2903.31
+            </td>
+            <td>Ethylene dibromide (ISO) (1,2-dibromoethane)
+            </td>
+            <td>1,2-dibromoethane (EDB)
+            </td>
+        </tr>
+        <tr style="HEIGHT: 22.2pt">
+            <td>1425
+            </td>
+            <td>HCH (mixed isomers) / Lindane
+            </td>
+            <td>2903.51
+            </td>
+            <td>1,2,3,4,5,6-Hexachlorocyclohexane
+            </td>
+            <td>HCH (mixed isomers) / Lindane
+            </td>
+        </tr>
+        <tr>
+            <td>1426
+            </td>
+            <td>Aldrin, Chlordane, Heptachlor
+            </td>
+            <td>2903.52
+            </td>
+            <td>Aldrin (ISO), chlordane (ISO)&amp;heptachlor (ISO)
+            </td>
+            <td>Aldrin, Chlordane, Heptachlor
+            </td>
+        </tr>
+        <tr>
+            <td>1427
+            </td>
+            <td>DDT, Hexachlorobenzene
+            </td>
+            <td>2903.62
+            </td>
+            <td>Hexachlorobenzene &amp; DDT (1,1,1-trichloro-2,2-bis(p-chlorophenyl)ethane)
+            </td>
+            <td>DDT, Hexachlorobenzene
+            </td>
+        </tr>
+        <tr>
+            <td>1428
+            </td>
+            <td>Pentachlorophenol
+            </td>
+            <td>2908.11
+            </td>
+            <td>Pentachlorophenol (ISO)
+            </td>
+            <td>Pentachlorophenol
+            </td>
+        </tr>
+        <tr>
+            <td>1429
+            </td>
+            <td>Salts of Pentachlorophenol (excl 280811)
+            </td>
+            <td>2908.19
+            </td>
+            <td>Halogenated derivatives of phenols/phenol-alcohols containing only halogen substituents &amp; their salts (excl. of 2908.11)
+            </td>
+            <td>Salts of Pentachlorophenol (excl 280811)
+            </td>
+        </tr>
+        <tr style="HEIGHT: 21pt">
+            <td>1430
+            </td>
+            <td>Dinoseb and dinoseb salts
+            </td>
+            <td>2908.91
+            </td>
+            <td>Dinoseb (ISO)&amp;its salts
+            </td>
+            <td>Dinoseb and dinoseb salts
+            </td>
+        </tr>
+        <tr>
+        	<td>
+        	1431
+            </td>
+            <td>DNOC and its salts (excl. 290811-290891)&nbsp;
+            </td>
+            <td>2908.99
+            </td>
+            <td>Halogenated/sulphonated/nitrated/nitrosated derivatives of phenols/phenol-alcohols (excl. of 2908.11-2908.91)
+            </td>
+            <td>DNOC and its salts (such as ammonium salt, potassium salt and sodium salt)&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>1432
+            </td>
+            <td>Oxirane (ethylene oxide)
+            </td>
+            <td>2910.10
+            </td>
+            <td>Oxirane (ethylene oxide)
+            </td>
+            <td>Ethylene oxide
+            </td>
+        </tr>
+        <tr>
+            <td>1433
+            </td>
+            <td>Dieldrin
+            </td>
+            <td>2910.40
+            </td>
+            <td>Dieldrin (ISO, </span><span style="FONT-SIZE: 7pt">INN</span><span style="FONT-SIZE: 7pt">)
+            </td>
+            <td>Dieldrin
+            </td>
+        </tr>
+        <tr>
+            <td>1434
+            </td>
+            <td>Dinoseb acetate
+            </td>
+            <td>2915.36
+            </td>
+            <td>Dinoseb (ISO) acetate
+            </td>
+            <td>Dinoseb acetate
+            </td>
+        </tr>
+        <tr>
+            <td>1435
+            </td>
+            <td>Binapacryl
+            </td>
+            <td>2916.36
+            </td>
+            <td>Binapacryl (ISO)
+            </td>
+            <td>Binapacryl
+            </td>
+        </tr>
+        <tr>
+            <td>1436
+            </td>
+            <td>Chlorobenzilate
+            </td>
+            <td>2918.18
+            </td>
+            <td>Chlorobenzilate (ISO)
+            </td>
+            <td>Chlorobenzilate
+            </td>
+        </tr>
+        <tr>
+            <td>1437
+            </td>
+            <td>2,4,5-T and its salts and esters
+            </td>
+            <td>2918.91
+            </td>
+            <td>2,4,5-T (ISO) (2,4,5-trichlorophenoxyacetic acid), its salts&amp;esters
+            </td>
+            <td>2,4,5-T and its salts and esters
+            </td>
+        </tr>
+        <tr>
+            <td>1438
+            </td>
+            <td>Parathion &amp; parathion-methyl
+            </td>
+            <td>2920.11
+            </td>
+            <td>Parathion (ISO)&amp;parathion-methyl (ISO) (methyl-parathion)
+            </td>
+            <td>Parathion / Methyl-parathion (emulsifiable concentrates (EC) with 19.5%, 40%, 50%, 60% active ingredient and dusts containing 1.5%, 2% and 3% active ingredient)
+            </td>
+        </tr>
+        <tr>
+            <td>1439
+            </td>
+            <td>Fluoroacetamide, monocrotophos &amp; phosphamidon
+            </td>
+            <td>2924.12
+            </td>
+            <td>Fluoroacetamide (ISO), monocrotophos (ISO)&amp;phosphamidon (ISO)
+            </td>
+            <td>Fluoroacetamide / Monocrotophos / Phosphamidon (Soluble liquid formulations of the substance that exceed 1000 g active ingredient/l)
+            </td>
+        </tr>
+        <tr>
+            <td>1440
+            </td>
+            <td>Chlordimeform
+            </td>
+            <td>2925.21
+            </td>
+            <td>Chlordimeform (ISO)
+            </td>
+            <td>Chlordimeform
+            </td>
+        </tr>
+        <tr>
+            <td>1441
+            </td>
+            <td>Captafol &amp; methamidophos
+            </td>
+            <td>2930.50
+            </td>
+            <td>Captafol (ISO)&amp;methamidophos (ISO)
+            </td>
+            <td>Captafol, Methamidophos (Soluble liquid formulations of the substance that exceed 600&nbsp;g active ingredient/l)
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+</div>
+<br /><br /><br />
+</div>-->
+
+<p>
+<table style="MARGIN: auto auto auto 4.8pt; WIDTH: 498pt; BORDER-COLLAPSE: collapse" cellspacing="0" cellpadding="0" width="664" border="0">
+<tbody>
+<tr style="HEIGHT: 24.75pt">
+    <td style="BORDER-RIGHT: black 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 498pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24.75pt" nowrap="nowrap" width="664" colspan="5">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">PURE</span></strong><strong><span style="FONT-SIZE: 7pt"> SUBSTANCE - CORRESPONDENCE TABLE</span></strong></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 37.5pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 37.5pt" width="59">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">FAOSTAT</span></strong><strong><span style="FONT-SIZE: 7pt"><br />
+            code</span></strong></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 37.5pt" nowrap="nowrap" width="176">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">FAOSTAT</span></strong></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 37.5pt" width="57">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">HS<br />
+            code</span></strong></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 37.5pt" nowrap="nowrap" width="185">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">HS</span></strong></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; BACKGROUND: silver; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 37.5pt" nowrap="nowrap" width="187">
+        <div align="center"><strong><span style="FONT-SIZE: 7pt">Prior Informed Consent (</span></strong><strong><span style="FONT-SIZE: 7pt">PIC</span></strong><strong><span style="FONT-SIZE: 7pt">)</span></strong></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 40.8pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 40.8pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1422</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 40.8pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Mercury compounds etc. excl. amalgams</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 40.8pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2852</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 40.8pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Compounds, inorganic/organic, of mercury, excluding amalgams.</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 40.8pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Mercury compounds including inorganic mercury compounds, alkyl mercury compounds and alkyloxyalkyl and aryl mercury compounds </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1423</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Ethylene dichloride</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2903.15</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">1,2-Dichloroethane (ethylene dichloride)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Ethylene dichloride</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 26.25pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 26.25pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1424</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 26.25pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Ethylene dibromide (1,2-dibromoethane)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 26.25pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2903.31</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 26.25pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Ethylene dibromide (ISO) (1,2-dibromoethane)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 26.25pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">1,2-dibromoethane (EDB)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 22.2pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.2pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1425</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.2pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">HCH (mixed isomers) / Lindane</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.2pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2903.51</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.2pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">1,2,3,4,5,6-Hexachlorocyclohexane</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.2pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">HCH (mixed isomers) / Lindane</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 24pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1426</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Aldrin, Chlordane, Heptachlor </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2903.52</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Aldrin (ISO), chlordane (ISO)&amp;heptachlor (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 24pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Aldrin, Chlordane, Heptachlor </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 27pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 27pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1427</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 27pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">DDT, Hexachlorobenzene</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 27pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2903.62</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 27pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Hexachlorobenzene &amp; DDT (1,1,1-trichloro-2,2-bis(p-chlorophenyl)ethane)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 27pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">DDT, Hexachlorobenzene</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 23.4pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 23.4pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1428</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 23.4pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Pentachlorophenol </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 23.4pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2908.11</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 23.4pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Pentachlorophenol (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 23.4pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Pentachlorophenol </span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 36.6pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.6pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1429</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.6pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Salts of Pentachlorophenol (excl 280811)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.6pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2908.19</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.6pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Halogenated derivatives of phenols/phenol-alcohols containing only halogen substituents &amp; their salts (excl. of 2908.11)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.6pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Salts of Pentachlorophenol (excl 280811)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1430</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Dinoseb and dinoseb salts</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2908.91</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Dinoseb (ISO)&amp;its salts</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Dinoseb and dinoseb salts</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 33.6pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1431</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">DNOC and its salts (excl. 290811-290891)&nbsp;</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2908.99</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Halogenated/sulphonated/nitrated/nitrosated derivatives of phenols/phenol-alcohols (excl. of 2908.11-2908.91)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">DNOC and its salts (such as ammonium salt, potassium salt and sodium salt)&nbsp;</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1432</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Oxirane (ethylene oxide)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2910.10</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Oxirane (ethylene oxide)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Ethylene oxide</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1433</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Dieldrin</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2910.40</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Dieldrin (ISO, </span><span style="FONT-SIZE: 7pt">INN</span><span style="FONT-SIZE: 7pt">)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Dieldrin</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1434</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Dinoseb acetate</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2915.36</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Dinoseb (ISO) acetate</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Dinoseb acetate</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1435</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Binapacryl</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2916.36</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Binapacryl (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Binapacryl</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1436</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Chlorobenzilate</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2918.18</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Chlorobenzilate (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Chlorobenzilate</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 22.8pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.8pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1437</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.8pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">2,4,5-T and its salts and esters</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.8pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2918.91</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.8pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">2,4,5-T (ISO) (2,4,5-trichlorophenoxyacetic acid), its salts&amp;esters</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 22.8pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">2,4,5-T and its salts and esters</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 43.8pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 43.8pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1438</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 43.8pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Parathion &amp; parathion-methyl </span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 43.8pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2920.11</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 43.8pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Parathion (ISO)&amp;parathion-methyl (ISO) (methyl-parathion)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 43.8pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Parathion / Methyl-parathion (emulsifiable concentrates (EC) with 19.5%, 40%, 50%, 60% active ingredient and dusts containing 1.5%, 2% and 3% active ingredient)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 42pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 42pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1439</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 42pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Fluoroacetamide, monocrotophos &amp; phosphamidon</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 42pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2924.12</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 42pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Fluoroacetamide (ISO), monocrotophos (ISO)&amp;phosphamidon (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 42pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Fluoroacetamide / Monocrotophos / Phosphamidon (Soluble liquid formulations of the substance that exceed 1000 g active ingredient/l)</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 21pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1440</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Chlordimeform</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2925.21</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Chlordimeform (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 21pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Chlordimeform</span></div>
+    </td>
+</tr>
+<tr style="HEIGHT: 33.6pt">
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 44pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" nowrap="nowrap" width="59">
+        <div align="center"><span style="FONT-SIZE: 7pt">1441</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 132pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="176">
+        <div><span style="FONT-SIZE: 7pt">Captafol &amp; methamidophos</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 43pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="57">
+        <div align="center"><span style="FONT-SIZE: 7pt">2930.50</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 139pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="185">
+        <div><span style="FONT-SIZE: 7pt">Captafol (ISO)&amp;methamidophos (ISO)</span></div>
+    </td>
+    <td style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d4d0c8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #d4d0c8; WIDTH: 140pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 33.6pt; BACKGROUND-COLOR: transparent" width="187">
+        <div><span style="FONT-SIZE: 7pt">Captafol, Methamidophos (Soluble liquid formulations of the substance that exceed 600&nbsp;g active ingredient/l)</span></div>
+    </td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<div>&nbsp;</div>
+
+<p>&nbsp;</p>
+<br />
+
+
+</div>
+<br />
+</div>

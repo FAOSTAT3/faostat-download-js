@@ -1,0 +1,63 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Tierras forestales</h2> <img id='DOMAIN_IMG' src="images/G2.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G2.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G2_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+<p>Las emisiones/absorciones de CO2 anuales netas procedentes de las tierras forestales consisten en la ganancia/p&eacute;rdida neta de las existencias de carbono en el dep&oacute;sito de  biomasa viva (a&eacute;rea y subterr&aacute;nea) asociada con Tierras Forestales (Gesti&oacute;n Forestal) y Conversi&oacute;n Neta de Bosques. Calculadas en el Nivel 1 y Enfoque 1, con el m&eacute;todo de diferencia de existencias, de acuerdo con las Directrices para los Inventarios Nacionales de GEI del IPCC de 2006, y mediante el uso de los datos del &aacute;rea y existencias de carbono recopilados por pa&iacute;ses en la Evaluaci&oacute;n de los Recursos Forestales Mundiales (FRA) de 2010 de la FAO; disponibles por pa&iacute;s, con cobertura global y relativos al periodo 1990-presente, con actualizaciones peri&oacute;dicas en consonancia con el FRA. </p>
+<br><br>
+<!--The mapping between IPCC and FAOSTAT definition of forest land is reported below:
+<br><br>
+<table style='width: 100%;' cellspacing='10px'>
+	<thead>
+		<tr>
+			<th align='center'>
+				IPCC
+			</th>
+			<th align='center'>
+				FAOSTAT
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				Forest Land includes all land with woody vegetation consistent with thresholds used to define Forest Land in the national greenhouse gas inventory. It also includes systems with a vegetation structure that currently fall below, but in situ could potentially reach the threshold values used by a country to define the Forest Land category.
+			</td>
+			<td>
+				Forest area is the land spanning more than 0.5 hectares with trees higher than 5 metres and a canopy cover of more than 10 percent, or trees able to reach these thresholds in situ (FRA). It does not include land that is predominantly under agricultural or urban land use. Forest is determined both by the presence of trees and the absence of other predominant land uses. The trees should be able to reach a minimum height of 5 metres in situ. Areas under reforestation that have not yet reached but are expected to reach a canopy cover of 10 percent and a tree height of 5 m are included, as are temporarily unstocked areas, resulting from human intervention or natural causes, which are expected to regenerate.
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				<i>Includes:</i> areas with bamboo and palms provided that height and canopy cover criteria are met; forest roads, firebreaks and other small open areas; forest in national parks, nature reserves and other protected areas such as those of specific scientific, historical, cultural or spiritual interest; windbreaks, shelterbelts and corridors of trees with an area of more than 0.5 hectares and width of more than 20 metres; plantations primarily used for forestry or protective purposes, such as: rubber-wood plantations and cork, oak stands. 
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				<i>Excludes:</i> tree stands in agricultural production systems, for example in fruit plantations and agro-forestry systems. The term also excludes trees in urban parks and gardens.
+			</td>
+		</tr>
+	</tbody>
+</table>-->
+<br><br>
+<a id='PDF' href='/faostat-download-js/PDF/ES/TierrasForestales.pdf' target='_blank'>Show Metadata</a>
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GF.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GF.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GF.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

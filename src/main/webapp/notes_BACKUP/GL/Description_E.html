@@ -1,0 +1,26 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Land Use Total</h2> <img id='DOMAIN_IMG' src="images/G2.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G2.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G2_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+    <p>Land Use Total contains all GHG emissions and removals produced in the different Land Use sub-domains, representing the six IPCC Land Use categories: cropland, forest land, grassland, wetlands, settlements, and other land, also collectively referred to as emissions/removals from the Forestry and Other Land Use (FOLU) sector. FOLU emissions consist of CO2 (carbon dioxide), CH4(methane) and N2O (nitrous oxide) associated with land management activities. CO2 emissions/removals are derived from estimated net carbon stock changes in above and below-ground biomass pools of forest land, including forest land converted to other land uses. CH4 and N2O, and additional CO2 emissions are estimated for fires and drainage of organic soils. Based on FAOSTAT and FRA activity data as well as on geospatial information analysis, they are computed at Tier 1 and Approach 1 of the 2006 IPCC Guidelines for National GHG Inventories. Estimates are available by country, with global coverage and relative to the period 1990 to present, with annual updates.</p>
+
+    <br><br>
+<a id='PDF' href='/faostat-download-js/PDF/EN/LandUseTotal.pdf' target='_blank'>Show Metadata</a>
+
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GL.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GL.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GL.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

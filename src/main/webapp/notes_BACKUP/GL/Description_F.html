@@ -1,0 +1,26 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Utilisation des terres total</h2> <img id='DOMAIN_IMG' src="images/G2.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G2.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G2_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+<br>
+    <p>Le domaine Total Utilisation des terres contient toutes les &eacute;missions et absorptions de GES produites sous les diff&eacute;rents sous-domaines d'utilisation des terres, repr&eacute;sentant les six cat&eacute;gories d'utilisation des terres du GIEC: les terres cultiv&eacute;es, les terres foresti&egrave;res, les prairies, les zones humides, les &eacute;tablissements et les autres terres, &eacute;galement appel&eacute;es collectivement les &eacute;missions/absorptions issues du secteur de la foresterie et des autres utilisations des terres (FOLU). Les &eacute;missions FOLU se composent de CO2 (dioxyde de carbone), de CH4 (m&eacute;thane) et de N2O (oxyde nitreux) associ&eacute;s aux activit&eacute;s de gestion des terres. Les &eacute;missions/absorptions de CO2 sont calcul&eacute;es &agrave; partir des estimations des variations nettes du stock de carbone dans les r&eacute;servoirs de biomasses a&eacute;riennes et souterraines des for&ecirc;ts, y compris les terres foresti&egrave;res converties &agrave; d'autres utilisations. Les &eacute;missions de CH4 et de N2O, et celles additionnelles de CO2, sont estim&eacute;es pour les feux et le drainage des sols organiques. Fond&eacute;es sur les donn&eacute;es d'activit&eacute; FAOSTAT et FRA ainsi que sur l'analyse d'informations g&eacute;ospatiales, ces &eacute;missions sont calcul&eacute;es selon la niveau 1 et le m&eacute;thode 1 des Lignes directrices 2006 du GIEC pour les inventaires nationaux des GES. Ces estimations sont disponibles par pays, d'une couverture mondiale et relatives &agrave; une p&eacute;riode de 1990 &agrave; nos jours, avec des mises &agrave; jour annuelles. </p>
+
+    <br><br>
+<a id='PDF' href='/faostat-download-js/PDF/FR/UtilisationDesTerresTotal.pdf' target='_blank'>Show Metadata</a>
+
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GL.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GL.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GL.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

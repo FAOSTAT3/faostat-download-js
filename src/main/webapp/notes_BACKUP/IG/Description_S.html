@@ -1,0 +1,96 @@
+<script type="text/javascript">
+    function showHide() {
+        if ($('#hideCN').css('display') == 'none')
+            $('#hideCN').css('display', 'inline');  
+        else
+            $('#hideCN').css('display', 'none');
+    }
+</script>
+<div class="download-notes">
+<div class="noteHead"> <h2>Gasto público</h2> <img id='DOMAIN_IMG' src="images/I.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/I.png');
+</script>
+<div class="backBtn"><p class='goto' id='I_notes'> < Detrás </p></div>
+<br/>
+
+<p>La información sobre el gasto público presentada hace referencia a las <strong>Esferas centrales de las funciones del gobierno pertinentes para el sector agrícola</strong> basadas en la Clasificación de las funciones del gobierno (CFG) según se describen en el Manual de estadísticas de finanzas públicas, 2001 (MEFP 2001)</i>. </p><br />
+
+<p>La CFG es esencial para realizar comparaciones a nivel internacional sobre el grado en que los gobiernos participan en las funciones económicas y sociales, ya que evita los problemas relacionados con cambios en la organización de un gobierno dado y los problemas ligados a diferencias de organización entre países. </p><br />
+
+<p>Las estadísticas sobre el gasto en los sectores agrícola, forestal y pesquero y en la protección del medio ambiente pueden utilizarse para estudiar la eficacia de los programas públicos de apoyo con miras al establecimiento de un entorno propicio para la provisión de bienes públicos esenciales con un elevado rendimiento económico y social. La CFG proporciona agregados clave que podrían utilizarse como indicadores o medidores de los resultados y los logros. A continuación se describe la composición de los agregados incluidos en la Base de datos estadísticos sustantivos de la Organización (FAOSTAT). </p><br />
+
+<p><strong>Agricultura, Silvicultura, Pesca y caza</strong>, que está compuesto por: </p><br />
+<p> <a onclick="javascript:document.getElementById('Agriculture').style.display='block';" href="javascript:void(0)"><strong>Agricultura</strong> (comprende cultivos y ganado): </a></p><br />
+<div id="Agriculture" style="DISPLAY: none"><br />
+<ul style="padding-left:20px">
+
+<li>Administración de asuntos y servicios de agricultura; conservación, bonificación o expansión de tierras de labranza; reforma agraria y colonización de tierras; supervisión y reglamentación del sector agrícola;</li>
+<li>Construcción o gestión de sistemas de crecidas, riego y avenamiento, inclusive donaciones, préstamos o subsidios para la ejecución de esas obras;</li>
+<li>Gestión o apoyo de programas o planes para estabilizar o mejorar los precios e ingresos del sector agrícola; gestión o apoyo de servicios de extensión o servicios veterinarios a los productores agropecuarios, servicios de lucha contra las plagas, de inspección de las cosechas y de clasificación según la calidad;</li> 
+<li>Producción y difusión de información general, documentación técnica y estadísticas sobre asuntos y servicios agrícolas;</li> 
+<li>Indemnizaciones, donaciones, préstamos o subsidios a los agricultores en relación con actividades agrícolas, inclusive pagos para restringir o estimular la producción de determinados cultivos o para dejar tierras en barbecho;</li>
+<li>Administración y gestión de organismos gubernamentales dedicados a la investigación aplicada y desarrollo experimental relacionados con la agricultura;</li>
+<li>Donaciones, préstamos o subsidios en apoyo a investigación aplicada y desarrollo experimental relacionados con la agricultura realizados por institutos de investigación y universidades.</li>
+</ul>
+<a onclick="document.getElementById('Agriculture').style.display='none';" href="javascript:void(0)">Cerrar</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('Forestry').style.display='block';" href="javascript:void(0)"><strong>Silvicultura</strong> (comprende productos forestales además de la madera): </a></p><br />
+<div id="Forestry" style="DISPLAY: none"><br />
+<ul style="padding-left:20px">
+<li>Administración de asuntos y servicios forestales; conservación, ampliación y explotación racionalizada de reservas forestales; supervisión y reglamentación de explotaciones forestales y concesión de licencias para la tala de árboles;</li> 
+<li>Gestión o apoyo de labores de reforestación, lucha contra las plagas y enfermedades, servicios de prevención y lucha contra los incendios de bosques y servicios de extensión a las empresas de explotación forestal;</li>
+<li>Producción y difusión de información general, documentación técnica y estadísticas sobre asuntos y servicios forestales;</li> 
+<li>Donaciones, préstamos o subsidios en apoyo de actividades forestales comerciales;</li>
+<li>Administración y gestión de organismos gubernamentales dedicados a la investigación aplicada y desarrollo experimental relacionados con la silvicultura;</li> 
+<li>Donaciones, préstamos o subsidios en apoyo a investigación aplicada y desarrollo experimental relacionados con la silvicultura realizados por institutos de investigación y universidades.</li>
+</ul>
+<a onclick="document.getElementById('Forestry').style.display='none';" href="javascript:void(0)">Cerrar</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('Fishing').style.display='block';" href="javascript:void(0)"><strong>Pesca y caza</strong> (comprende pesca y caza comerciales y pesca y caza deportivas que se realizan fuera de parques y reservas naturales): </a></p><br />
+<div id="Fishing" style="DISPLAY: none"><br />
+<ul style="padding-left:20px">
+<li>Administración de asuntos y servicios de pesca; protección, propagación y explotación racionalizada de poblaciones de peces;supervisión y reglamentación de la pesca de agua dulce, oceánica y costera, la piscicultura y la concesión de licencias de pesca;</li>
+<li>Gestión o apoyo de viveros de peces, servicios de extensión, actividades de repoblación, etc.;</li> 
+<li>Producción y difusión de información general, documentación técnica y estadísticas sobre asuntos y servicios de pesca;</li>
+<li>Donaciones, préstamos o subsidios en apoyo a actividades de pesca y caza comerciales, inclusive la construcción o explotación de viveros de peces.</li>
+</ul>
+<a onclick="document.getElementById('Fishing').style.display='none';" href="javascript:void(0)">Cerrar</a> </center></div><br />
+
+<p> <a onclick="javascript:document.getElementById('EnvProt').style.display='block';" href="javascript:void(0)"><strong>Protección del medio ambiente:</strong>: </a></p><br />
+<div id="EnvProt" style="DISPLAY: none">
+El desglose que se realiza en la CFG de dichos gastos se basa en la Clasificación de Actividades de Protección del Medio Ambiente (CAPE) elaborada en el Sistema Europeo de Recolección de Información Económica sobre el Medio Ambiente (SERIEE) de la Oficina de Estadística de las Comunidades Europeas (Eurostat). Los grupos principales son los siguientes: <br /><br />
+<ul style="padding-left:20px">
+<li>Ordenación de desechos, que abarca la recogida, el tratamiento y la eliminación de los desechos;</li>
+<li>Ordenación de aguas residuales, que abarca la gestión del sistema de alcantarillado y el tratamiento de las aguas residuales;</li>
+<li>Reducción de la contaminación, que abarca las actividades relacionadas con la protección del aire ambiente y del clima, la protección del suelo y de las aguas subterráneas, la reducción de los ruidos y las vibraciones y la protección contra la radiación;</li>
+<li>Protección de la diversidad biológica y del paisaje, que abarca las actividades relacionadas con la protección de especies de la fauna y la flora (tales como, por ejemplo, la reintroducción de especies extinguidas y la recuperación de especies en peligro de extinción), la protección de determinados hábitats (inclusive la ordenación de parques y de reservas naturales) y la protección de paisajes por sus valores estéticos (por ejemplo, la reparación de paisajes deteriorados con fines de fortalecer su valor estético y la rehabilitación de minas y canteras abandonadas);</li>
+<li>Investigación y desarrollo relacionados con la protección del medio ambiente, que abarca la investigación básica, la investigación aplicada y el desarrollo experimental en relación con la protección del medio ambiente;</li>
+<li>Protección del medio ambiente, no clasificado en otra parte, que abarca asuntos y servicios que no puedan asignarse a ninguno de los cinco grupos antes descritos.</li>
+</ul>
+<a onclick="document.getElementById('EnvProt').style.display='none';" href="javascript:void(0)">Cerrar</a> </center></div><br />
+
+<p><strong>Sector general de las administraciones públicas y sus subsectores</strong></p><br />
+
+<p>Las estadísticas de FAOSTAT sobre el gasto público corresponden al <strong><i>sector consolidado de las administraciones públicas</i></strong>, al <strong><i>subsector de la administración central </i></strong>y a la <strong><i>administración central presupuestaria</i></strong>. No todos los países tienen los tres niveles, lo que puede explicarse con mayor detalle como sigue:</p><br />
+<ul style="padding-left:20px"><li>
+<p><i><strong>El sector general de las administraciones públicas se compone de unidades institucionales residentes que desempeñan como actividad principal las funciones de las administraciones públicas</i></strong>. Este sector comprende todas las unidades de las administraciones públicas y las instituciones sin fines de lucro y no comerciales sometidas al control de las administraciones públicas. Con fines de análisis, resulta a menudo necesario o deseable desglosar el sector general de las administraciones públicas en subsectores, de la siguiente manera:</p> 
+</li>
+</ul><br />
+<ol style="padding-left:40px">
+<li>
+<p><i><strong>El subsector de la administración central, compuesto de las unidades institucionales de la administración central y de aquellas instituciones sin fines de lucro y no comerciales que están sometidas al control de la administración central. </i> </strong> La autoridad política de la administración central abarca todo el territorio del país. Generalmente se compone de una administración central presupuestaria, de unidades extrapresupuestarias y de cajas de seguridad social (salvo que se emplee un subsector separado para estas últimas).</p>
+</li>
+<li>
+<p><i><strong>La administración central presupuestaria es a menudo una sola unidad de la administración central que abarca las actividades fundamentales de los poderes ejecutivo, legislativo y judicial.</i></strong> Este componente de las administraciones públicas generalmente queda cubierto por el presupuesto principal (o general). La reglamentación de los ingresos y los gastos presupuestarios de la administración central suele corresponder a un ministerio de finanzas o su equivalente funcional a través de un presupuesto aprobado por el poder legislativo.</p><br />
+</li>
+</ol>
+<p>En función de las disposiciones administrativas y legales, es posible que exista más de un nivel de administración pública en un país y deberían elaborarse estadísticas para cada nivel (denominado también subsector). Además, en razón de las diferentes disposiciones, la comparación internacional de los datos comunicados para un subsector de las administraciones públicas debería realizarse con cierta prudencia. La mayoría de los países presentan datos correspondientes a la administración central presupuestaria.</p><br />
+
+<p><strong>Distinción entre datos basados en una contabilidad de caja y otros tipos de datos</strong></p><br />
+
+<p>En general, en las estadísticas de hacienda pública del FMI, el momento de registro puede determinarse con arreglo a cuatro criterios: el del valor devengado, el del compromiso, el de exigibilidad y el de caja. En la práctica, no obstante, pueden existir muchas variaciones sobre estos criterios de registro. Con frecuencia los sistemas de contabilidad pueden servirse de criterios de registro mixtos: por ejemplo, los ingresos fiscales pueden registrarse con un criterio de caja en tanto que con otras transacciones puede seguirse un criterio del valor devengado. En principio, en el marco de las estadísticas de hacienda pública del FMI, los flujos económicos se registran según los valores devengados. <strong><i>Con el criterio del valor devengado los flujos se registran en el momento en que se crea, se transforma, intercambia, transfiere o extingue un valor económico.</i></strong> En otras palabras, los efectos de los acontecimientos económicos se registran en el período en que se producen, independientemente de si se recibieron o realizaron pagos o de si estos eran exigibles. Sin embargo, el marco también abarca la elaboración tradicional de informes según el criterio de caja. <strong><i>En el registro según el criterio de caja los flujos se registran en el momento de los ingresos o de los desembolsos.</i></strong> Los datos presentados en FAOSTAT reflejan este rasgo al presentar las series según el criterio de caja o según otros criterios, dependiendo del que se utilice en el país. La mayoría de los países presentan datos fiscales según el criterio de caja.</p><br />
+
+
+</div>
+<br></br>

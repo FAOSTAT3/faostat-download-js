@@ -1,0 +1,24 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Pastizales</h2> <img id='DOMAIN_IMG' src="images/G2.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/G2.png');
+</script>
+    <div class="backBtn">
+        <div class='goto' id='G2_notes'>
+            <div id='back_label' style='width: 100%; text-align: center; padding-top: 3px;'></div>
+        </div>
+    </div>
+    <p>Los datos sobre emisiones de gases (GEI) procedentes de pastizales est&aacute;n limitadas actualmente a emisiones de los suelos org&aacute;nicos bajo pastizales. Son aquellas asociadas con las p&eacute;rdidas de carbono de histosoles drenados bajo pastizales. Calculados en el Nivel 1 y complementados con el uso de datos geoespaciales, seg&uacute;n las Directrices de 2006 del IPCC para los Inventarios Nacionales de GEI. Disponibles por pa&iacute;s, con cobertura global y relativos al per&iacute;odo 1990-presente. </p>
+    <br><br>
+    <a id='PDF' href='/faostat-download-js/PDF/ES/Pastizales.pdf' target='_blank'>Show Metadata</a>
+
+    <script>
+        switch (F3DWLD.CONFIG.lang) {
+            case 'E': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/EN/GG.pdf'); break;
+            case 'F': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/FR/GG.pdf'); break;
+            case 'S': $('#PDF').attr('href', FAOSTATDownload.prefix + 'PDF/ES/GG.pdf'); break;
+        }
+        document.getElementById('PDF').innerHTML = $.i18n.prop('_show_metadata');
+        document.getElementById('back_label').innerHTML = $.i18n.prop('_back');
+    </script>
+</div>

@@ -1,0 +1,22 @@
+<div class="download-notes">
+<div class="noteHead"> <h2>Detailed trade matrix</h2> <img id='DOMAIN_IMG' src="images/T.png" width="50" height="50" /></div>
+<script>
+$('#DOMAIN_IMG').attr('src', FAOSTATDownload.prefix + 'images/T.png');
+</script><br/>
+
+<div class="backBtn"><p class='goto' id='T_notes'> < Back </p></div>
+<br>
+
+<br/>
+<p>While FAO does adjust/modify some official figures where there are evident inconsistencies (such as data entry errors, or out-of-trend unit value variations) the trade matrix data are un-reconciled. That is, a user may find that what country A officially declares as imports from country B will not correspond to what country B officially, and reciprocally, declares as its exports to country A, for a given commodity in a given year (in terms of quantity and/or value). There are a number of reasons which partly explain this:</p><br><br />
+<p>-time lag: an export reported in December of a given year could reach destination in January of the following year (and would only then be reported as an import).<br/>
+-some countries provide data on General Trade (all imports and exports + re-exports) while others on Special Trade (imports for domestic consumption).<br/>
+-for single commodities there could be misclassification of the product between the exporter and importer.<br/>
+-exported quantities could be destroyed or lost en route due to accidents, weather conditions, etc.<br/>
+-simple typing/calculation errors by reporting country (we, however, attempt to rectify these when evident).<br/>
+-data confidentiality by one of the reporters<br/>
+-place of origin/final destination inconsistencies (e.g. country A reports that final destination country for a given export is country C; the goods actually reach country C via another country (B); country C reports that place of origin of goods is country B).<br/>
+-Customs tax avoidance by misrepresenting a commodity on import or not reporting a transhipment. In particular cases: exports are not declared to circumvent an embargo.</p><br><br />
+<p>With regards to discrepancies in reported values of trade (assuming that the corresponding reported quantities are identical):<br/>
+Most countries report export values as Free-On-Board (FOB. i.e. insurance/transport costs are not included), while import values are mostly reported as Cost-Insurance-Freight (CIF. i.e. insurance/transport costs are included).Therefore, for a given agricultural commodity, the reported export value should be lower than the corresponding reported import value. The adjustment factor varies according to commodity, distance, packaging, etc. (For the FAOSTAT trade index numbers a standard incremental factor of 12% is applied to all the export values - but analysis of individual/specific data show that the range could be between 10% and 35% if not more). </p><br><br />
+<p>The trade data here are rounded to the nearest metric ton.</p>
