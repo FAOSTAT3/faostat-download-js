@@ -1445,6 +1445,9 @@ var F3DWLD = (function() {
 
     function buildButtons() {
         var s = '<br>';
+        if (F3DWLD.CONFIG.domainCode === 'EA') {
+            s += '<p>DFA data is mainly based on OECD CRS database downloaded as of 25 June 2015.</p>';
+        }
         s += '<div id="output_buttons">';
         s += '<span class="standard-title table-selection-title">' +
                 $.i18n.prop('_display_output_as').toUpperCase() +
